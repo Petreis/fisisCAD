@@ -1,0 +1,366 @@
+<!DOCTYPE html>
+
+<html class="dark" lang="pt-BR"><head><meta charset="utf-8"/><meta content="width=device-width, initial-scale=1.0, maximum-scale=1.0, user-scalable=no, viewport-fit=cover" name="viewport"/><meta content="mobile_tab" name="shell-type"/><link href="https://fonts.googleapis.com/css2?family=Geist:wght@400;500;600;700&amp;family=JetBrains+Mono:wght@400;500;600&amp;family=Material+Symbols+Outlined:opsz,wght,FILL,GRAD@20..48,100..700,0..1,-50..200" rel="stylesheet"/>
+<link href="https://fonts.googleapis.com/css2?family=Material+Symbols+Outlined:wght,FILL@100..700,0..1&amp;display=swap" rel="stylesheet"/>
+<link href="https://fonts.googleapis.com/css2?family=Geist:wght@100..900&amp;family=JetBrains+Mono:wght@100..900&amp;display=swap" rel="stylesheet"/>
+<link href="https://fonts.googleapis.com/css2?family=Material+Symbols+Outlined:wght,FILL@100..700,0..1&amp;display=swap" rel="stylesheet"/><style>@layer base{html,body{width:100vw;margin:0;padding:0;}body{overscroll-behavior:none;}.pb-safe{padding-bottom:env(safe-area-inset-bottom,0px);}.pt-safe{padding-top:env(safe-area-inset-top,0px);}main>:first-child{margin-top:0!important;}main>:last-child{margin-bottom:0!important;}}::-webkit-scrollbar{display:none;}</style><script src="https://cdn.tailwindcss.com"></script><script id="tailwind-config">tailwind.config = { darkMode: "class", theme: { extend: { colors: { "inverse-primary": "#006398", "tertiary-fixed": "#dae2fd", "on-tertiary-container": "#22293d", "on-tertiary-fixed-variant": "#3f465c", "on-primary": "#003351", "on-secondary": "#00354a", "on-primary-container": "#002c47", "surface": "#0f131c", "surface-variant": "#31353f", "on-error-container": "#ffdad6", "surface-tint": "#93ccff", "on-tertiary": "#283044", "surface-container-lowest": "#0a0e17", "on-secondary-fixed": "#001e2c", "on-tertiary-fixed": "#131b2e", "surface-container-low": "#181b25", "tertiary-container": "#8990a8", "primary-fixed-dim": "#93ccff", "on-secondary-container": "#00374d", "on-background": "#dfe2ef", "surface-container": "#1c1f29", "on-secondary-fixed-variant": "#004c69", "surface-dim": "#0f131c", "outline-variant": "#3f4850", "on-surface-variant": "#bfc7d2", "secondary-fixed-dim": "#7bd0ff", "error": "#ffb4ab", "error-container": "#93000a", "secondary": "#7bd0ff", "primary-fixed": "#cce5ff", "on-error": "#690005", "on-primary-fixed": "#001d31", "inverse-on-surface": "#2c303a", "secondary-container": "#00a6e0", "on-primary-fixed-variant": "#004b73", "primary-container": "#3198dc", "tertiary": "#bec6e0", "primary": "#93ccff", "surface-container-high": "#262a34", "surface-bright": "#353943", "tertiary-fixed-dim": "#bec6e0", "outline": "#89929b", "inverse-surface": "#dfe2ef", "surface-container-highest": "#31353f", "on-surface": "#dfe2ef", "background": "#0f131c", "secondary-fixed": "#c4e7ff" }, borderRadius: { "DEFAULT": "0.125rem", "lg": "0.25rem", "xl": "0.5rem", "full": "0.75rem" }, spacing: { "space-xl": "1rem", "space-lg": "0.75rem", "space-md": "0.5rem", "margin": "0.75rem", "space-sm": "0.375rem", "space-xs": "0.25rem", "gutter": "0.5rem" }, fontFamily: { "headline-md": ["Geist"], "label-sm": ["JetBrains Mono"], "body-md": ["JetBrains Mono"], "title-md": ["Geist"], "body-lg": ["JetBrains Mono"], "body-sm": ["JetBrains Mono"], "telemetry-num": ["JetBrains Mono"], "headline-lg": ["Geist"], "label-md": ["JetBrains Mono"], "headline-sm": ["Geist"] }, fontSize: { "headline-md": ["1.25rem", { "lineHeight": "1.75rem", "letterSpacing": "-0.015em", "fontWeight": "600" }], "label-sm": ["0.625rem", { "lineHeight": "0.875rem", "letterSpacing": "0.04em", "fontWeight": "500" }], "body-md": ["0.75rem", { "lineHeight": "1.125rem", "letterSpacing": "0em", "fontWeight": "400" }], "title-md": ["0.875rem", { "lineHeight": "1.25rem", "letterSpacing": "0em", "fontWeight": "500" }], "body-lg": ["0.875rem", { "lineHeight": "1.375rem", "letterSpacing": "-0.01em", "fontWeight": "400" }], "body-sm": ["0.6875rem", { "lineHeight": "1rem", "letterSpacing": "0.01em", "fontWeight": "400" }], "telemetry-num": ["0.75rem", { "lineHeight": "1rem", "letterSpacing": "-0.02em", "fontWeight": "600" }], "headline-lg": ["1.5rem", { "lineHeight": "2rem", "letterSpacing": "-0.02em", "fontWeight": "600" }], "label-md": ["0.75rem", { "lineHeight": "1rem", "letterSpacing": "0.02em", "fontWeight": "500" }], "headline-sm": ["1rem", { "lineHeight": "1.5rem", "letterSpacing": "-0.01em", "fontWeight": "600" }] } } } };</script><style>
+    body {
+      min-height: max(884px, 100dvh);
+    }
+  </style>
+<style>
+    body {
+      min-height: max(884px, 100dvh);
+    }
+  </style>
+  </head><body class="bg-surface text-on-surface font-body-md text-body-md flex flex-col min-h-screen"><header class="fixed top-0 w-full z-50 pt-safe bg-surface/90 backdrop-blur-xl shadow-[0_1px_8px_rgba(0,0,0,0.35)]"><div class="h-20 px-space-md flex flex-col justify-center gap-space-xs"><div class="flex items-center justify-between w-full"><div class="flex items-center gap-space-sm"><div class="w-11 h-11 flex items-center justify-center rounded-lg bg-surface-container-high text-primary"><span class="material-symbols-outlined text-[20px]">view_in_ar</span></div><div class="flex flex-col"><div class="flex items-center gap-space-xs"><span class="font-title-md text-title-md text-on-surface truncate max-w-[170px]">Suporte_Mancal_v2.fisis</span><span class="px-space-xs py-0.5 rounded-DEFAULT bg-primary-container/20 text-primary font-label-sm text-label-sm uppercase">Modo 3D Ativo</span></div><span class="font-label-sm text-label-sm text-on-surface-variant truncate">Modelagem</span></div></div><div class="flex items-center gap-space-xs"><div class="flex items-center bg-surface-container rounded-lg p-0.5"><button class="w-11 h-11 flex items-center justify-center text-on-surface-variant hover:text-on-surface transition-colors" title="Desfazer"><span class="material-symbols-outlined text-[18px]">undo</span></button><button class="w-11 h-11 flex items-center justify-center text-on-surface-variant hover:text-on-surface transition-colors" title="Refazer"><span class="material-symbols-outlined text-[18px]">redo</span></button></div><button class="w-11 h-11 flex items-center justify-center rounded-lg bg-surface-container text-on-surface-variant hover:text-on-surface transition-colors" title="Configurações de Malha"><span class="material-symbols-outlined text-[18px]">grain</span></button><button class="w-11 h-11 flex items-center justify-center rounded-lg bg-surface-container text-on-surface-variant hover:text-on-surface transition-colors" title="Exportar CAD/STEP"><span class="material-symbols-outlined text-[18px]">file_export</span></button><div class="w-8 h-8 rounded-full bg-primary flex items-center justify-center ml-space-xs"><span class="material-symbols-outlined text-on-primary text-[18px]">person</span></div></div></div></div></header><main class="flex flex-col relative w-full pt-20 pb-28 bg-surface"><div class="flex flex-col w-full">
+<!-- Sub-Header Técnico com Metadados Físicos -->
+<div class="px-space-md py-space-sm bg-surface-container-low flex flex-col gap-space-xs">
+<div class="flex items-center justify-between">
+<div class="flex items-center gap-space-xs min-w-0">
+<span class="material-symbols-outlined text-primary text-[18px] shrink-0">science</span>
+<span class="font-title-md text-title-md text-on-surface truncate">Suporte_Mancal_v3.fisis</span>
+</div>
+<div class="flex items-center gap-1.5 px-space-xs py-0.5 rounded-DEFAULT bg-primary/10 text-primary">
+<span class="w-1.5 h-1.5 rounded-full bg-primary animate-pulse shrink-0"></span>
+<span class="font-label-sm text-label-sm uppercase tracking-wider">FÍSICA: PRÉ-PROCESSAMENTO</span>
+</div>
+</div>
+<!-- Navegação de Abas do Estúdio -->
+<div class="grid grid-cols-3 gap-space-xs bg-surface-container-lowest p-0.5 rounded-lg text-center font-label-sm text-label-sm">
+<button class="py-1.5 px-space-xs rounded-DEFAULT bg-surface-container-high text-primary font-semibold shadow-sm flex items-center justify-center gap-1">
+<span class="material-symbols-outlined text-[14px]">tune</span>
+<span>Material</span>
+</button>
+<button class="py-1.5 px-space-xs rounded-DEFAULT text-on-surface-variant hover:text-on-surface flex items-center justify-center gap-1">
+<span class="material-symbols-outlined text-[14px]">anchor</span>
+<span>Contorno (BC)</span>
+</button>
+<button class="py-1.5 px-space-xs rounded-DEFAULT text-on-surface-variant hover:text-on-surface flex items-center justify-center gap-1">
+<span class="material-symbols-outlined text-[14px]">grid_4x4</span>
+<span>Malha &amp; Nós</span>
+</button>
+</div>
+</div>
+<!-- Viewport 3D de Inspeção Física & Condições de Contorno -->
+<div class="relative w-full h-80 bg-surface-container-lowest overflow-hidden select-none">
+<!-- SVG Canvas de Renderização Isométrica com Malha & HUD CAE -->
+<svg class="w-full h-full" fill="none" viewbox="0 0 400 320" xmlns="http://www.w3.org/2000/svg">
+<defs>
+<!-- Gradientes da Peça e Força -->
+<lineargradient id="mancalShade" x1="0%" x2="100%" y1="0%" y2="100%">
+<stop offset="0%" stop-color="#31353f"></stop>
+<stop offset="50%" stop-color="#1c1f29"></stop>
+<stop offset="100%" stop-color="#0f131c"></stop>
+</lineargradient>
+<lineargradient id="forceGrad" x1="0%" x2="0%" y1="0%" y2="100%">
+<stop offset="0%" stop-color="#ffb4ab"></stop>
+<stop offset="100%" stop-color="#93000a"></stop>
+</lineargradient>
+<pattern height="16" id="gridFEA" patternunits="userSpaceOnUse" width="16">
+<path d="M 16 0 L 0 0 0 16" fill="none" stroke="#262a34" stroke-width="0.75"></path>
+</pattern>
+<!-- Hachura de Engaste Estrutural -->
+<pattern height="6" id="hatchEncastre" patterntransform="rotate(45)" patternunits="userSpaceOnUse" width="6">
+<line stroke="#93ccff" stroke-opacity="0.4" stroke-width="1.2" x1="0" x2="0" y1="0" y2="6"></line>
+</pattern>
+</defs>
+<!-- Grade de Piso do Espaço 3D -->
+<rect fill="url(#gridFEA)" height="100%" opacity="0.6" width="100%"></rect>
+<!-- Linhas de Construção / Datum Isométrico -->
+<g opacity="0.25" stroke="#89929b" stroke-dasharray="2 2" stroke-width="0.8">
+<line x1="40" x2="360" y1="260" y2="260"></line>
+<line x1="200" x2="200" y1="50" y2="280"></line>
+</g>
+<!-- Hachura da Base com Vínculos de Encastre -->
+<rect fill="url(#hatchEncastre)" height="14" width="240" x="80" y="246"></rect>
+<!-- Triângulos de Apoio Fixo (Encastre 6-DOF) -->
+<g fill="#93ccff" opacity="0.85">
+<polygon points="100,246 94,258 106,258"></polygon>
+<polygon points="150,246 144,258 156,258"></polygon>
+<polygon points="250,246 244,258 256,258"></polygon>
+<polygon points="300,246 294,258 306,258"></polygon>
+<!-- Micro traços de aterramento rígido -->
+<line stroke="#93ccff" stroke-width="1.5" x1="90" x2="110" y1="260" y2="260"></line>
+<line stroke="#93ccff" stroke-width="1.5" x1="140" x2="160" y1="260" y2="260"></line>
+<line stroke="#93ccff" stroke-width="1.5" x1="240" x2="260" y1="260" y2="260"></line>
+<line stroke="#93ccff" stroke-width="1.5" x1="290" x2="310" y1="260" y2="260"></line>
+</g>
+<!-- Geometria do Mancal Mecânico (Sólido Paramétrico) -->
+<!-- Sapata de Fixação -->
+<path d="M 80 246 L 110 215 L 290 215 L 320 246 Z" fill="url(#mancalShade)" stroke="#7bd0ff" stroke-width="1.2"></path>
+<!-- Corpo Vertical Cilíndrico e Nervuras -->
+<path d="M 125 215 L 140 135 L 260 135 L 275 215 Z" fill="#1c1f29" stroke="#93ccff" stroke-width="1"></path>
+<!-- Malha FEA Triangular sobreposta (Overlay topológico) -->
+<g fill="none" opacity="0.65" stroke="#3f4850" stroke-width="0.6">
+<polygon points="140,135 170,175 125,215"></polygon>
+<polygon points="170,175 230,175 200,215"></polygon>
+<polygon points="170,175 200,215 125,215"></polygon>
+<polygon points="230,175 260,135 275,215"></polygon>
+<polygon points="230,175 200,215 275,215"></polygon>
+</g>
+<!-- Alojamento do Eixo Superior (Mancal Cilíndrico com Posição de Carga) -->
+<ellipse cx="200" cy="130" fill="#0f131c" rx="46" ry="46" stroke="#7bd0ff" stroke-width="1.8"></ellipse>
+<ellipse cx="200" cy="130" fill="#0a0e17" rx="30" ry="30" stroke="#3198dc" stroke-dasharray="3 1.5" stroke-width="1"></ellipse>
+<!-- Distribuição de Pressão Parcial (Arcos concêntricos em ciano) -->
+<path d="M 174 145 A 30 30 0 0 0 226 145" opacity="0.75" stroke="#7bd0ff" stroke-linecap="round" stroke-width="3"></path>
+<path d="M 178 140 A 30 30 0 0 0 222 140" opacity="0.5" stroke="#93ccff" stroke-width="1.5"></path>
+<!-- Vetor de Carga Concentrada F_radial (Âmbar/Laranja Neon de Alta Visibilidade) -->
+<g class="cursor-pointer" id="forceVectorGroup">
+<line stroke="#ffb4ab" stroke-linecap="round" stroke-width="3.5" x1="200" x2="200" y1="65" y2="122"></line>
+<polygon fill="#ffb4ab" points="200,132 193,118 207,118"></polygon>
+<!-- Círculo de aplicação do vetor -->
+<circle cx="200" cy="65" fill="#690005" r="3.5" stroke="#ffb4ab" stroke-width="1.5"></circle>
+</g>
+<!-- Marcador de Centro de Gravidade (CG/CM) -->
+<g transform="translate(200, 185)">
+<circle cx="0" cy="0" fill="#0a0e17" r="7" stroke="#7bd0ff" stroke-width="1"></circle>
+<path d="M -7 0 A 7 7 0 0 1 0 -7 L 0 0 Z" fill="#7bd0ff"></path>
+<path d="M 0 0 L 0 7 A 7 7 0 0 1 7 0 Z" fill="#7bd0ff"></path>
+<!-- Eixos baricêntricos pontilhados -->
+<line stroke="#7bd0ff" stroke-dasharray="1 1" stroke-width="0.8" x1="-14" x2="14" y1="0" y2="0"></line>
+<line stroke="#7bd0ff" stroke-dasharray="1 1" stroke-width="0.8" x1="0" x2="0" y1="-14" y2="14"></line>
+</g>
+</svg>
+<!-- Overlay HUD: Vetor de Carga Callout -->
+<div class="absolute top-4 left-1/2 -translate-x-1/2 bg-surface-container-lowest/90 px-space-sm py-1 rounded-DEFAULT shadow-md flex items-center gap-1.5">
+<span class="w-2 h-2 rounded-full bg-error shrink-0"></span>
+<span class="font-telemetry-num text-telemetry-num text-error font-semibold">F_radial = -12.5 kN</span>
+<span class="font-label-sm text-label-sm text-on-surface-variant">[0, -12500, 0] N</span>
+</div>
+<!-- HUD Inferior Esquerdo: Informações de Baricentro (CG) e Pressão -->
+<div class="absolute bottom-3 left-3 flex flex-col gap-1">
+<div class="px-space-xs py-0.5 rounded-DEFAULT bg-surface-container-lowest/80 text-on-surface-variant font-label-sm text-label-sm flex items-center gap-1 shadow-sm">
+<span class="text-secondary font-bold">CG:</span>
+<span class="font-telemetry-num text-telemetry-num text-on-surface">[0.0, 18.4, 0.0] mm</span>
+</div>
+<div class="px-space-xs py-0.5 rounded-DEFAULT bg-surface-container-lowest/80 text-on-surface-variant font-label-sm text-label-sm flex items-center gap-1 shadow-sm">
+<span class="text-primary font-bold">P_contato:</span>
+<span class="font-telemetry-num text-telemetry-num text-on-surface">4.2 MPa (cos²)</span>
+</div>
+</div>
+<!-- HUD Inferior Direito: Orientação Gravitacional & Referencial -->
+<div class="absolute bottom-3 right-3 flex flex-col items-end gap-1">
+<span class="px-space-xs py-0.5 rounded-DEFAULT bg-surface-container-lowest/80 font-label-sm text-label-sm text-on-surface-variant">g = -9.81 m/s² [Z]</span>
+<div class="w-8 h-8 rounded-lg bg-surface-container-lowest/90 shadow-md flex items-center justify-center">
+<span class="font-label-sm text-label-sm font-bold text-secondary">ISO</span>
+</div>
+</div>
+</div>
+<!-- Conteúdo de Engenharia e Parâmetros Físicos -->
+<div class="p-space-md flex flex-col gap-space-lg">
+<!-- Card de Biblioteca de Materiais -->
+<div class="p-space-md rounded-xl bg-surface-container-low shadow-sm flex flex-col gap-space-md">
+<div class="flex items-center justify-between">
+<div class="flex items-center gap-space-xs">
+<div class="w-8 h-8 rounded-lg bg-surface-container-high text-primary flex items-center justify-center">
+<span class="material-symbols-outlined text-[18px]">layers</span>
+</div>
+<div class="flex flex-col">
+<span class="font-label-sm text-label-sm text-on-surface-variant uppercase">Material Atribuído</span>
+<span class="font-title-md text-title-md text-on-surface font-semibold truncate max-w-[200px]">Aço Liga AISI 4140</span>
+</div>
+</div>
+<button class="px-space-sm py-1.5 rounded-DEFAULT bg-surface-container-high text-primary hover:bg-surface-variant transition-colors font-label-sm text-label-sm flex items-center gap-1 shadow-sm">
+<span class="material-symbols-outlined text-[14px]">swap_horiz</span>
+<span>Biblioteca</span>
+</button>
+</div>
+<!-- Grid Técnico Constitutivo (6 Parâmetros com Valores & Símbolos) -->
+<div class="grid grid-cols-2 gap-space-xs">
+<!-- Densidade -->
+<div class="p-space-sm rounded-DEFAULT bg-surface-container flex flex-col gap-0.5">
+<div class="flex items-center justify-between">
+<span class="font-label-sm text-label-sm text-on-surface-variant">Densidade (ρ)</span>
+<span class="font-label-sm text-label-sm text-secondary">g/cm³</span>
+</div>
+<div class="flex items-baseline gap-1">
+<span class="font-telemetry-num text-telemetry-num text-on-surface font-bold text-[0.875rem]">7.85</span>
+<span class="font-label-sm text-label-sm text-outline">(7850 kg/m³)</span>
+</div>
+</div>
+<!-- Módulo de Young -->
+<div class="p-space-sm rounded-DEFAULT bg-surface-container flex flex-col gap-0.5">
+<div class="flex items-center justify-between">
+<span class="font-label-sm text-label-sm text-on-surface-variant">Módulo Young (E)</span>
+<span class="font-label-sm text-label-sm text-secondary">GPa</span>
+</div>
+<span class="font-telemetry-num text-telemetry-num text-on-surface font-bold text-[0.875rem]">210.0</span>
+</div>
+<!-- Poisson -->
+<div class="p-space-sm rounded-DEFAULT bg-surface-container flex flex-col gap-0.5">
+<div class="flex items-center justify-between">
+<span class="font-label-sm text-label-sm text-on-surface-variant">Poisson (ν)</span>
+<span class="font-label-sm text-label-sm text-secondary">adim.</span>
+</div>
+<span class="font-telemetry-num text-telemetry-num text-on-surface font-bold text-[0.875rem]">0.29</span>
+</div>
+<!-- Escoamento -->
+<div class="p-space-sm rounded-DEFAULT bg-surface-container flex flex-col gap-0.5">
+<div class="flex items-center justify-between">
+<span class="font-label-sm text-label-sm text-on-surface-variant">Escoamento (σ_y)</span>
+<span class="font-label-sm text-label-sm text-secondary">MPa</span>
+</div>
+<span class="font-telemetry-num text-telemetry-num text-on-surface font-bold text-[0.875rem]">655.0</span>
+</div>
+<!-- Limite Ruptura -->
+<div class="p-space-sm rounded-DEFAULT bg-surface-container flex flex-col gap-0.5">
+<div class="flex items-center justify-between">
+<span class="font-label-sm text-label-sm text-on-surface-variant">Ruptura (σ_u)</span>
+<span class="font-label-sm text-label-sm text-secondary">MPa</span>
+</div>
+<span class="font-telemetry-num text-telemetry-num text-on-surface font-bold text-[0.875rem]">1020.0</span>
+</div>
+<!-- Atrito Estático/Dinâmico -->
+<div class="p-space-sm rounded-DEFAULT bg-surface-container flex flex-col gap-0.5">
+<div class="flex items-center justify-between">
+<span class="font-label-sm text-label-sm text-on-surface-variant">Atrito (μ_s / μ_k)</span>
+<span class="font-label-sm text-label-sm text-secondary">coef.</span>
+</div>
+<span class="font-telemetry-num text-telemetry-num text-on-surface font-bold text-[0.875rem]">0.61 / 0.47</span>
+</div>
+</div>
+<!-- Resumo de Propriedades de Massa Computadas -->
+<div class="p-space-xs rounded-DEFAULT bg-surface-container-lowest flex items-center justify-between font-label-sm text-label-sm">
+<span class="text-on-surface-variant">Massa: <strong class="text-on-surface font-telemetry-num">1.121 kg</strong></span>
+<span class="text-outline">•</span>
+<span class="text-on-surface-variant">Vol: <strong class="text-on-surface font-telemetry-num">142.8 cm³</strong></span>
+<span class="text-outline">•</span>
+<span class="text-on-surface-variant">I_xx: <strong class="text-on-surface font-telemetry-num">4.82e-4 kg·m²</strong></span>
+</div>
+</div>
+<!-- Gerenciador de Condições de Contorno (Boundary Conditions Manager) -->
+<div class="flex flex-col gap-space-sm">
+<div class="flex items-center justify-between">
+<div class="flex items-center gap-space-xs">
+<span class="font-title-md text-title-md text-on-surface font-semibold">Condições de Contorno (BCs)</span>
+<span class="w-5 h-5 rounded-full bg-surface-container-high flex items-center justify-center font-label-sm text-label-sm text-primary">3</span>
+</div>
+<button class="px-space-xs py-1 rounded-DEFAULT bg-primary-container text-on-primary font-label-sm text-label-sm font-semibold flex items-center gap-1 shadow-sm hover:opacity-90 transition-opacity" id="addBcBtn">
+<span class="material-symbols-outlined text-[14px]">add</span>
+<span>Adicionar</span>
+</button>
+</div>
+<!-- Lista de Condições Aplicadas -->
+<div class="flex flex-col gap-space-xs">
+<!-- Condição 1: Engaste Fixo na Base -->
+<div class="p-space-sm rounded-lg bg-surface-container flex items-start justify-between">
+<div class="flex items-start gap-space-sm">
+<div class="w-7 h-7 rounded-DEFAULT bg-primary/10 text-primary flex items-center justify-center shrink-0 mt-0.5">
+<span class="material-symbols-outlined text-[16px]">anchor</span>
+</div>
+<div class="flex flex-col gap-0.5">
+<div class="flex items-center gap-1.5">
+<span class="font-title-md text-title-md text-on-surface">Engaste Fixo Base (Encastre)</span>
+<span class="px-1 py-0.2 rounded-DEFAULT bg-surface-container-high text-primary font-label-sm text-label-sm">6-DOF</span>
+</div>
+<span class="font-label-sm text-label-sm text-on-surface-variant">Local: 4x Furos de Fixação Flange [M10]</span>
+<span class="font-telemetry-num text-telemetry-num text-secondary">Ux=Uy=Uz=0 • Rx=Ry=Rz=0</span>
+</div>
+</div>
+<button class="w-8 h-8 rounded-DEFAULT bg-surface-container-high text-on-surface-variant hover:text-on-surface flex items-center justify-center">
+<span class="material-symbols-outlined text-[16px]">edit</span>
+</button>
+</div>
+<!-- Condição 2: Carga Radial Dinâmica do Mancal -->
+<div class="p-space-sm rounded-lg bg-surface-container flex items-start justify-between">
+<div class="flex items-start gap-space-sm">
+<div class="w-7 h-7 rounded-DEFAULT bg-error/10 text-error flex items-center justify-center shrink-0 mt-0.5">
+<span class="material-symbols-outlined text-[16px]">south</span>
+</div>
+<div class="flex flex-col gap-0.5">
+<div class="flex items-center gap-1.5">
+<span class="font-title-md text-title-md text-on-surface">Carga Radial do Eixo</span>
+<span class="px-1 py-0.2 rounded-DEFAULT bg-error-container/30 text-error font-label-sm text-label-sm">Força</span>
+</div>
+<span class="font-label-sm text-label-sm text-on-surface-variant">Local: Face Cilíndrica Interna Ø24mm</span>
+<span class="font-telemetry-num text-telemetry-num text-error font-semibold">Magnitude: -12.50 kN (Direção -Y)</span>
+</div>
+</div>
+<button class="w-8 h-8 rounded-DEFAULT bg-surface-container-high text-on-surface-variant hover:text-on-surface flex items-center justify-center">
+<span class="material-symbols-outlined text-[16px]">edit</span>
+</button>
+</div>
+<!-- Condição 3: Pressão de Aperto de Contato -->
+<div class="p-space-sm rounded-lg bg-surface-container flex items-start justify-between">
+<div class="flex items-start gap-space-sm">
+<div class="w-7 h-7 rounded-DEFAULT bg-secondary-container/20 text-secondary flex items-center justify-center shrink-0 mt-0.5">
+<span class="material-symbols-outlined text-[16px]">compress</span>
+</div>
+<div class="flex flex-col gap-0.5">
+<div class="flex items-center gap-1.5">
+<span class="font-title-md text-title-md text-on-surface">Pré-tensão de Flange</span>
+<span class="px-1 py-0.2 rounded-DEFAULT bg-surface-container-high text-secondary font-label-sm text-label-sm">Pressão</span>
+</div>
+<span class="font-label-sm text-label-sm text-on-surface-variant">Local: Face Anelar Superior</span>
+<span class="font-telemetry-num text-telemetry-num text-secondary">Distribuída: 2.50 MPa uniforme</span>
+</div>
+</div>
+<button class="w-8 h-8 rounded-DEFAULT bg-surface-container-high text-on-surface-variant hover:text-on-surface flex items-center justify-center">
+<span class="material-symbols-outlined text-[16px]">edit</span>
+</button>
+</div>
+</div>
+</div>
+<!-- Status de Integridade do Solucionador & Verificação Prévia -->
+<div class="p-space-sm rounded-lg bg-surface-container-low flex items-center gap-space-sm">
+<span class="material-symbols-outlined text-primary text-[20px] shrink-0">verified</span>
+<div class="flex flex-col min-w-0">
+<span class="font-title-md text-title-md text-on-surface font-semibold">Geometria Estanque (Watertight)</span>
+<span class="font-label-sm text-label-sm text-on-surface-variant truncate">0 arestas abertas • 0 nós sem restrição • Pronto para FEA</span>
+</div>
+</div>
+<!-- Barra de Execução Pré-Simulação -->
+<div class="flex flex-col gap-space-xs mt-space-xs">
+<div class="flex items-center gap-space-xs">
+<button class="flex-1 h-11 px-space-md rounded-lg bg-surface-container-high text-on-surface font-label-md text-label-md font-semibold flex items-center justify-center gap-1.5 hover:bg-surface-variant transition-colors shadow-sm" id="meshBtn">
+<span class="material-symbols-outlined text-[18px]">polyline</span>
+<span>Gerar Malha</span>
+</button>
+<button class="flex-1 h-11 px-space-md rounded-lg bg-primary-container text-on-primary font-label-md text-label-md font-semibold flex items-center justify-center gap-1.5 hover:opacity-90 transition-opacity shadow-sm" id="simBtn">
+<span>Ir para Simulação</span>
+<span class="material-symbols-outlined text-[18px]">arrow_forward</span>
+</button>
+</div>
+<div class="flex items-center justify-center gap-1 text-on-surface-variant font-label-sm text-label-sm py-1">
+<span class="material-symbols-outlined text-[14px]">bolt</span>
+<span>Tempo estimado de discretização: ~1.4s</span>
+</div>
+</div>
+</div>
+</div>
+<script>
+  (function() {
+    // Sincroniza o estado ativo da barra de navegação inferior do shell para 'Materiais'
+    try {
+      const navLinks = document.querySelectorAll('footer nav a');
+      navLinks.forEach(link => {
+        const path = link.getAttribute('data-path');
+        if (path === 'materiais') {
+          link.classList.remove('text-on-surface-variant');
+          link.classList.add('text-primary', 'bg-surface-container-high', 'font-semibold');
+        } else {
+          link.classList.remove('text-primary', 'bg-surface-container-high', 'font-semibold');
+          link.classList.add('text-on-surface-variant');
+        }
+      });
+    } catch(e) {}
+
+    // Microinteração do Vetor de Força no Viewport
+    const forceGroup = document.getElementById('forceVectorGroup');
+    if (forceGroup) {
+      forceGroup.addEventListener('click', function() {
+        this.classList.toggle('opacity-50');
+      });
+    }
+
+    // Ação do Botão Adicionar BC
+    const addBcBtn = document.getElementById('addBcBtn');
+    if (addBcBtn) {
+      addBcBtn.addEventListener('click', function() {
+        this.classList.add('scale-95');
+        setTimeout(() => this.classList.remove('scale-95'), 120);
+      });
+    }
+  })();
+</script></main><footer class="fixed bottom-0 w-full z-50 pb-safe bg-surface/95 backdrop-blur-xl shadow-[0_-1px_12px_rgba(0,0,0,0.45)]"><div class="h-6 px-space-md bg-surface-container-lowest flex items-center justify-between font-telemetry-num text-telemetry-num"><div class="flex items-center gap-space-md text-on-surface-variant"><span class="flex items-center gap-1"><span class="text-error font-bold">X:</span>124.50</span><span class="flex items-center gap-1"><span class="text-secondary font-bold">Y:</span>45.00</span><span class="flex items-center gap-1"><span class="text-primary font-bold">Z:</span>82.20</span><span class="text-outline font-label-sm text-label-sm">mm</span></div><div class="flex items-center gap-space-md"><span class="inline-flex items-center gap-1 text-label-sm font-label-sm text-secondary"><span class="w-1.5 h-1.5 rounded-full bg-secondary animate-pulse"></span>SNAP: VÉRTICE</span><button class="px-space-xs py-0.5 rounded-DEFAULT bg-surface-container text-primary font-label-sm text-label-sm">UNIDADE: MM</button></div></div><nav class="h-16 px-space-xs flex items-center justify-around" data-active-classes="text-primary bg-surface-container-high font-semibold"><a class="flex-1 h-11 flex flex-col items-center justify-center rounded-lg text-on-surface-variant hover:text-on-surface transition-colors gap-0.5" data-path="modelagem" href="#"><span class="material-symbols-outlined text-[18px]">deployed_code</span><span class="font-label-sm text-label-sm">Modelagem</span></a><a class="flex-1 h-11 flex flex-col items-center justify-center rounded-lg text-on-surface-variant hover:text-on-surface transition-colors gap-0.5" data-path="materiais" href="#"><span class="material-symbols-outlined text-[18px]">layers</span><span class="font-label-sm text-label-sm">Materiais</span></a><a class="flex-1 h-11 flex flex-col items-center justify-center rounded-lg text-on-surface-variant hover:text-on-surface transition-colors gap-0.5" data-path="simulacao" href="#"><span class="material-symbols-outlined text-[18px]">speed</span><span class="font-label-sm text-label-sm">Simulação</span></a><a class="flex-1 h-11 flex flex-col items-center justify-center rounded-lg text-on-surface-variant hover:text-on-surface transition-colors gap-0.5" data-path="analise" href="#"><span class="material-symbols-outlined text-[18px]">insights</span><span class="font-label-sm text-label-sm">Análise</span></a></nav></footer></body></html>

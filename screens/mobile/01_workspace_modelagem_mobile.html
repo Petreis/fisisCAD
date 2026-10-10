@@ -1,0 +1,471 @@
+<!DOCTYPE html>
+
+<html class="dark" lang="pt-BR"><head><meta charset="utf-8"/><meta content="width=device-width, initial-scale=1.0, maximum-scale=1.0, user-scalable=no, viewport-fit=cover" name="viewport"/><meta content="mobile_tab" name="shell-type"/><link href="https://fonts.googleapis.com/css2?family=Geist:wght@400;500;600;700&family=JetBrains+Mono:wght@400;500;600&family=Material+Symbols+Outlined:opsz,wght,FILL,GRAD@20..48,100..700,0..1,-50..200" rel="stylesheet"/>
+<link href="https://fonts.googleapis.com/css2?family=Material+Symbols+Outlined:wght,FILL@100..700,0..1&display=swap" rel="stylesheet"/>
+<link href="https://fonts.googleapis.com/css2?family=Geist:wght@100..900&family=JetBrains+Mono:wght@100..900&display=swap" rel="stylesheet"/><style>@layer base{html,body{width:100vw;margin:0;padding:0;}body{overscroll-behavior:none;}.pb-safe{padding-bottom:env(safe-area-inset-bottom,0px);}.pt-safe{padding-top:env(safe-area-inset-top,0px);}main>:first-child{margin-top:0!important;}main>:last-child{margin-bottom:0!important;}}::-webkit-scrollbar{display:none;}</style><script src="https://cdn.tailwindcss.com"></script><script id="tailwind-config">tailwind.config = { darkMode: "class", theme: { extend: { colors: { "inverse-primary": "#006398", "tertiary-fixed": "#dae2fd", "on-tertiary-container": "#22293d", "on-tertiary-fixed-variant": "#3f465c", "on-primary": "#003351", "on-secondary": "#00354a", "on-primary-container": "#002c47", "surface": "#0f131c", "surface-variant": "#31353f", "on-error-container": "#ffdad6", "surface-tint": "#93ccff", "on-tertiary": "#283044", "surface-container-lowest": "#0a0e17", "on-secondary-fixed": "#001e2c", "on-tertiary-fixed": "#131b2e", "surface-container-low": "#181b25", "tertiary-container": "#8990a8", "primary-fixed-dim": "#93ccff", "on-secondary-container": "#00374d", "on-background": "#dfe2ef", "surface-container": "#1c1f29", "on-secondary-fixed-variant": "#004c69", "surface-dim": "#0f131c", "outline-variant": "#3f4850", "on-surface-variant": "#bfc7d2", "secondary-fixed-dim": "#7bd0ff", "error": "#ffb4ab", "error-container": "#93000a", "secondary": "#7bd0ff", "primary-fixed": "#cce5ff", "on-error": "#690005", "on-primary-fixed": "#001d31", "inverse-on-surface": "#2c303a", "secondary-container": "#00a6e0", "on-primary-fixed-variant": "#004b73", "primary-container": "#3198dc", "tertiary": "#bec6e0", "primary": "#93ccff", "surface-container-high": "#262a34", "surface-bright": "#353943", "tertiary-fixed-dim": "#bec6e0", "outline": "#89929b", "inverse-surface": "#dfe2ef", "surface-container-highest": "#31353f", "on-surface": "#dfe2ef", "background": "#0f131c", "secondary-fixed": "#c4e7ff" }, borderRadius: { "DEFAULT": "0.125rem", "lg": "0.25rem", "xl": "0.5rem", "full": "0.75rem" }, spacing: { "space-xl": "1rem", "space-lg": "0.75rem", "space-md": "0.5rem", "margin": "0.75rem", "space-sm": "0.375rem", "space-xs": "0.25rem", "gutter": "0.5rem" }, fontFamily: { "headline-md": ["Geist"], "label-sm": ["JetBrains Mono"], "body-md": ["JetBrains Mono"], "title-md": ["Geist"], "body-lg": ["JetBrains Mono"], "body-sm": ["JetBrains Mono"], "telemetry-num": ["JetBrains Mono"], "headline-lg": ["Geist"], "label-md": ["JetBrains Mono"], "headline-sm": ["Geist"] }, fontSize: { "headline-md": ["1.25rem", { "lineHeight": "1.75rem", "letterSpacing": "-0.015em", "fontWeight": "600" }], "label-sm": ["0.625rem", { "lineHeight": "0.875rem", "letterSpacing": "0.04em", "fontWeight": "500" }], "body-md": ["0.75rem", { "lineHeight": "1.125rem", "letterSpacing": "0em", "fontWeight": "400" }], "title-md": ["0.875rem", { "lineHeight": "1.25rem", "letterSpacing": "0em", "fontWeight": "500" }], "body-lg": ["0.875rem", { "lineHeight": "1.375rem", "letterSpacing": "-0.01em", "fontWeight": "400" }], "body-sm": ["0.6875rem", { "lineHeight": "1rem", "letterSpacing": "0.01em", "fontWeight": "400" }], "telemetry-num": ["0.75rem", { "lineHeight": "1rem", "letterSpacing": "-0.02em", "fontWeight": "600" }], "headline-lg": ["1.5rem", { "lineHeight": "2rem", "letterSpacing": "-0.02em", "fontWeight": "600" }], "label-md": ["0.75rem", { "lineHeight": "1rem", "letterSpacing": "0.02em", "fontWeight": "500" }], "headline-sm": ["1rem", { "lineHeight": "1.5rem", "letterSpacing": "-0.01em", "fontWeight": "600" }] } } } };</script><style>
+    body {
+      min-height: max(884px, 100dvh);
+    }
+  </style>
+  </head><body class="bg-surface text-on-surface font-body-md text-body-md flex flex-col min-h-screen"><header class="fixed top-0 w-full z-50 pt-safe bg-surface/90 backdrop-blur-xl shadow-[0_1px_8px_rgba(0,0,0,0.35)]"><div class="h-20 px-space-md flex flex-col justify-center gap-space-xs"><div class="flex items-center justify-between w-full"><div class="flex items-center gap-space-sm"><div class="w-11 h-11 flex items-center justify-center rounded-lg bg-surface-container-high text-primary"><span class="material-symbols-outlined text-[20px]">view_in_ar</span></div><div class="flex flex-col"><div class="flex items-center gap-space-xs"><span class="font-title-md text-title-md text-on-surface truncate max-w-[170px]">Suporte_Mancal_v2.fisis</span><span class="px-space-xs py-0.5 rounded-DEFAULT bg-primary-container/20 text-primary font-label-sm text-label-sm uppercase">Modo 3D Ativo</span></div><span class="font-label-sm text-label-sm text-on-surface-variant truncate">Modelagem</span></div></div><div class="flex items-center gap-space-xs"><div class="flex items-center bg-surface-container rounded-lg p-0.5"><button class="w-11 h-11 flex items-center justify-center text-on-surface-variant hover:text-on-surface transition-colors" title="Desfazer"><span class="material-symbols-outlined text-[18px]">undo</span></button><button class="w-11 h-11 flex items-center justify-center text-on-surface-variant hover:text-on-surface transition-colors" title="Refazer"><span class="material-symbols-outlined text-[18px]">redo</span></button></div><button class="w-11 h-11 flex items-center justify-center rounded-lg bg-surface-container text-on-surface-variant hover:text-on-surface transition-colors" title="Configurações de Malha"><span class="material-symbols-outlined text-[18px]">grain</span></button><button class="w-11 h-11 flex items-center justify-center rounded-lg bg-surface-container text-on-surface-variant hover:text-on-surface transition-colors" title="Exportar CAD/STEP"><span class="material-symbols-outlined text-[18px]">file_export</span></button><div class="w-8 h-8 rounded-full bg-primary flex items-center justify-center ml-space-xs"><span class="material-symbols-outlined text-on-primary text-[18px]">person</span></div></div></div></div></header><main class="flex flex-col relative w-full pt-20 pb-28 bg-surface"><div class="flex flex-col w-full relative select-none">
+<!-- Top Contextual Sub-bar / Mode & Sketch Planes Selector -->
+<section class="w-full px-space-md py-space-xs bg-surface-container-low flex flex-col gap-space-xs shadow-sm">
+<div class="flex items-center justify-between gap-space-sm w-full overflow-x-auto">
+<!-- 2D Sketch vs 3D Solid Mode Selector -->
+<div class="inline-flex p-0.5 bg-surface-container-lowest rounded-lg shrink-0">
+<button class="px-space-sm py-1 rounded-DEFAULT text-on-surface-variant font-label-sm text-label-sm flex items-center gap-1 transition-colors hover:text-on-surface" id="btn-mode-2d">
+<span class="material-symbols-outlined text-[14px]">edit_note</span>
+          Croqui 2D
+        </button>
+<button class="px-space-sm py-1 rounded-DEFAULT bg-primary-container text-on-primary font-label-sm text-label-sm flex items-center gap-1 shadow-sm" id="btn-mode-3d">
+<span class="material-symbols-outlined text-[14px]">deployed_code</span>
+          Sólido 3D
+        </button>
+</div>
+<!-- Quick Datum Planes Pill -->
+<div class="flex items-center gap-1 shrink-0 overflow-x-auto">
+<button class="px-space-xs py-0.5 rounded-DEFAULT bg-surface-container text-primary font-label-sm text-label-sm flex items-center gap-1 hover:bg-surface-container-high transition-colors">
+<span class="w-1.5 h-1.5 rounded-full bg-error"></span>
+          Plano XY
+        </button>
+<button class="px-space-xs py-0.5 rounded-DEFAULT bg-surface-container text-on-surface-variant font-label-sm text-label-sm flex items-center gap-1 hover:bg-surface-container-high transition-colors">
+<span class="w-1.5 h-1.5 rounded-full bg-secondary"></span>
+          Plano XZ
+        </button>
+<button class="px-space-xs py-0.5 rounded-DEFAULT bg-surface-container text-on-surface-variant font-label-sm text-label-sm flex items-center gap-1 hover:bg-surface-container-high transition-colors">
+<span class="w-1.5 h-1.5 rounded-full bg-surface-tint"></span>
+          Plano YZ
+        </button>
+</div>
+<!-- Solver Status Badge -->
+<div class="shrink-0 flex items-center gap-1 px-space-xs py-0.5 rounded-DEFAULT bg-surface-container-highest text-secondary font-label-sm text-label-sm">
+<span class="material-symbols-outlined text-[14px] text-secondary">check_circle</span>
+<span>TOTALMENTE RESTRITO</span>
+</div>
+</div>
+<!-- 3D Feature Operations Strip -->
+<div class="flex items-center gap-space-xs overflow-x-auto py-0.5">
+<!-- Active Tool: Extrude -->
+<button class="h-8 px-space-sm rounded-DEFAULT bg-primary text-on-primary font-label-sm text-label-sm flex items-center gap-1 shrink-0 shadow-sm">
+<span class="material-symbols-outlined text-[16px]">open_in_full</span>
+<span>Extrusão</span>
+<span class="px-1 py-0.2 bg-on-primary/20 text-on-primary rounded-DEFAULT text-[10px]">35mm</span>
+</button>
+<!-- Revolve -->
+<button class="h-8 px-space-sm rounded-DEFAULT bg-surface-container text-on-surface hover:bg-surface-container-high font-label-sm text-label-sm flex items-center gap-1 shrink-0 transition-colors">
+<span class="material-symbols-outlined text-[16px]">sync</span>
+<span>Revolução</span>
+</button>
+<!-- Sweep -->
+<button class="h-8 px-space-sm rounded-DEFAULT bg-surface-container text-on-surface hover:bg-surface-container-high font-label-sm text-label-sm flex items-center gap-1 shrink-0 transition-colors">
+<span class="material-symbols-outlined text-[16px]">gesture</span>
+<span>Varredura</span>
+</button>
+<!-- Fillet / Chamfer -->
+<button class="h-8 px-space-sm rounded-DEFAULT bg-surface-container text-on-surface hover:bg-surface-container-high font-label-sm text-label-sm flex items-center gap-1 shrink-0 transition-colors">
+<span class="material-symbols-outlined text-[16px]">rounded_corner</span>
+<span>Filete R3</span>
+</button>
+<!-- Hole Wizard -->
+<button class="h-8 px-space-sm rounded-DEFAULT bg-surface-container text-on-surface hover:bg-surface-container-high font-label-sm text-label-sm flex items-center gap-1 shrink-0 transition-colors">
+<span class="material-symbols-outlined text-[16px]">adjust</span>
+<span>Furação</span>
+</button>
+<!-- Boolean Shell -->
+<button class="h-8 px-space-sm rounded-DEFAULT bg-surface-container text-on-surface hover:bg-surface-container-high font-label-sm text-label-sm flex items-center gap-1 shrink-0 transition-colors">
+<span class="material-symbols-outlined text-[16px]">layers</span>
+<span>Booleana</span>
+</button>
+</div>
+</section>
+<!-- Main Viewport Canvas Simulation Area -->
+<div class="relative w-full h-[410px] bg-surface-container-lowest overflow-hidden">
+<!-- Isometric Grid & Construction Axis Background -->
+<svg class="absolute inset-0 w-full h-full pointer-events-none opacity-40" xmlns="http://www.w3.org/2000/svg">
+<defs>
+<pattern height="62.35" id="iso-mesh-pattern" patterntransform="scale(1)" patternunits="userSpaceOnUse" width="36">
+<path d="M 0 0 L 18 31.17 L 36 0 M 18 31.17 L 18 62.35 M 0 62.35 L 18 31.17 L 36 62.35" fill="none" stroke="#262a34" stroke-width="0.8"></path>
+</pattern>
+<!-- Gradients for realistic mechanical shading -->
+<lineargradient id="bracket-metal-main" x1="0%" x2="100%" y1="0%" y2="100%">
+<stop offset="0%" stop-color="#3198dc" stop-opacity="0.9"></stop>
+<stop offset="45%" stop-color="#181b25" stop-opacity="0.95"></stop>
+<stop offset="100%" stop-color="#0f131c" stop-opacity="1"></stop>
+</lineargradient>
+<lineargradient id="bracket-cyl-top" x1="0%" x2="0%" y1="0%" y2="100%">
+<stop offset="0%" stop-color="#93ccff" stop-opacity="0.85"></stop>
+<stop offset="100%" stop-color="#3198dc" stop-opacity="0.6"></stop>
+</lineargradient>
+<lineargradient id="flange-base" x1="0%" x2="100%" y1="0%" y2="0%">
+<stop offset="0%" stop-color="#262a34"></stop>
+<stop offset="50%" stop-color="#31353f"></stop>
+<stop offset="100%" stop-color="#1c1f29"></stop>
+</lineargradient>
+</defs>
+<!-- Background Grid -->
+<rect fill="url(#iso-mesh-pattern)" height="100%" width="100%"></rect>
+<!-- Major Construction Datum Lines & Ground Grid -->
+<line stroke="#31353f" stroke-dasharray="4,4" stroke-width="1.2" x1="0" x2="420" y1="290" y2="120"></line>
+<line stroke="#31353f" stroke-dasharray="4,4" stroke-width="1.2" x1="0" x2="420" y1="120" y2="290"></line>
+<!-- Ground Origin Projection Crosshair -->
+<circle cx="210" cy="225" fill="#7bd0ff" fill-opacity="0.9" r="3.5"></circle>
+<circle cx="210" cy="225" fill="none" r="8" stroke="#7bd0ff" stroke-dasharray="2,2" stroke-width="1"></circle>
+</svg>
+<!-- 3D Parametric CAD Solid Geometry (Isometric Mancal de Rolamento / Flanged Bearing Bracket) -->
+<svg class="absolute inset-0 w-full h-full pointer-events-none" fill="none" viewbox="0 0 390 410" xmlns="http://www.w3.org/2000/svg">
+<!-- Shadow on floor -->
+<ellipse cx="205" cy="275" fill="#000000" fill-opacity="0.45" rx="100" ry="24"></ellipse>
+<!-- Base Plate (Prismatic Flange) -->
+<polygon fill="url(#flange-base)" points="105,250 205,295 305,250 205,205" stroke="#7bd0ff" stroke-linejoin="round" stroke-width="1.2"></polygon>
+<polygon fill="#181b25" points="105,250 105,264 205,309 205,295" stroke="#3198dc" stroke-linejoin="round" stroke-width="1.2"></polygon>
+<polygon fill="#0f131c" points="205,295 205,309 305,264 305,250" stroke="#3198dc" stroke-linejoin="round" stroke-width="1.2"></polygon>
+<!-- Flange Mounting Holes (Left & Right) -->
+<ellipse cx="140" cy="242" fill="#0a0e17" rx="11" ry="5.5" stroke="#7bd0ff" stroke-width="1"></ellipse>
+<ellipse cx="270" cy="242" fill="#0a0e17" rx="11" ry="5.5" stroke="#7bd0ff" stroke-width="1"></ellipse>
+<!-- Cylindrical Upright Boss (Main Bearing Housing Body) -->
+<!-- Rear Wireframe/Tessellation Lines (CAE Mesh Mode preview) -->
+<line opacity="0.6" stroke="#3198dc" stroke-dasharray="2,2" stroke-width="0.8" x1="165" x2="165" y1="210" y2="120"></line>
+<line opacity="0.6" stroke="#3198dc" stroke-dasharray="2,2" stroke-width="0.8" x1="245" x2="245" y1="210" y2="120"></line>
+<line opacity="0.6" stroke="#3198dc" stroke-dasharray="2,2" stroke-width="0.8" x1="185" x2="185" y1="222" y2="132"></line>
+<line opacity="0.6" stroke="#3198dc" stroke-dasharray="2,2" stroke-width="0.8" x1="225" x2="225" y1="222" y2="132"></line>
+<!-- Solid Cylinder Body -->
+<path d="M 155 125 L 155 215 C 155 240, 255 240, 255 215 L 255 125 Z" fill="url(#bracket-metal-main)" stroke="#93ccff" stroke-linejoin="round" stroke-width="1.6"></path>
+<!-- Parametric Reinforcement Gussets / Ribs (Lateral Stiffeners) -->
+<polygon fill="#1c1f29" opacity="0.9" points="120,248 155,215 155,160" stroke="#7bd0ff" stroke-width="1"></polygon>
+<polygon fill="#262a34" opacity="0.9" points="290,248 255,215 255,160" stroke="#7bd0ff" stroke-width="1"></polygon>
+<!-- Main Cylinder Top Face & Fillet Rim (Extrusão 2 Ativa com Realce Ciano) -->
+<ellipse cx="205" cy="125" fill="url(#bracket-cyl-top)" rx="50" ry="24" stroke="#93ccff" stroke-width="2"></ellipse>
+<!-- Internal Concentric Bore / Furo Central Passante (H7) -->
+<ellipse cx="205" cy="125" fill="#0a0e17" rx="27" ry="13" stroke="#38bdf8" stroke-width="1.8"></ellipse>
+<path d="M 178 125 C 178 145, 232 145, 232 125 L 232 150 C 232 170, 178 170, 178 150 Z" fill="#000000" fill-opacity="0.85"></path>
+<!-- Mesh Wireframe Highlights (Iso-Curves) -->
+<ellipse cx="205" cy="165" fill="none" opacity="0.7" rx="49" ry="22" stroke="#7bd0ff" stroke-dasharray="3,3" stroke-width="0.75"></ellipse>
+<ellipse cx="205" cy="195" fill="none" opacity="0.5" rx="48.5" ry="21" stroke="#7bd0ff" stroke-dasharray="3,3" stroke-width="0.75"></ellipse>
+<line stroke="#93ccff" stroke-dasharray="3,3" stroke-width="1" x1="205" x2="205" y1="149" y2="238"></line>
+<!-- Dynamic Extrusion Vector Arrow (HUD Gizmo Indicating Extrude Direction) -->
+<line stroke="#7bd0ff" stroke-linecap="round" stroke-width="2.5" x1="205" x2="205" y1="125" y2="65"></line>
+<polygon fill="#7bd0ff" points="205,55 199,69 211,69"></polygon>
+<text fill="#7bd0ff" font-family="JetBrains Mono" font-size="10" font-weight="600" x="216" y="80">dz +45.0</text>
+<!-- Technical Engineering Callouts & Cotas de Precisão -->
+<!-- 1. Flange Total Width Dimension: 120.00 mm -->
+<g opacity="0.95">
+<line stroke="#89929b" stroke-width="0.8" x1="95" x2="95" y1="255" y2="330"></line>
+<line stroke="#89929b" stroke-width="0.8" x1="315" x2="315" y1="255" y2="330"></line>
+<line stroke="#89929b" stroke-width="1" x1="95" x2="315" y1="322" y2="322"></line>
+<polygon fill="#89929b" points="95,322 102,320 102,324"></polygon>
+<polygon fill="#89929b" points="315,322 308,320 308,324"></polygon>
+</g>
+</svg>
+<!-- Floating Technical Dimension Pill HUDs -->
+<!-- Dimension 1: Length 120.00 mm -->
+<div class="absolute left-1/2 -translate-x-1/2 bottom-12 px-space-xs py-0.5 rounded-DEFAULT bg-surface-container-lowest text-on-surface shadow-sm font-label-sm text-label-sm flex items-center gap-1 z-10">
+<span class="material-symbols-outlined text-[12px] text-primary">straighten</span>
+<span class="font-telemetry-num text-telemetry-num">120.00 mm ± 0.05</span>
+</div>
+<!-- Dimension 2: Bore Diameter Ø24.00 (H7) -->
+<div class="absolute top-[88px] left-[68px] px-space-xs py-0.5 rounded-DEFAULT bg-surface-container-lowest text-secondary shadow-sm font-label-sm text-label-sm flex items-center gap-1 z-10">
+<span class="w-1.5 h-1.5 rounded-full bg-secondary"></span>
+<span class="font-telemetry-num text-telemetry-num font-bold">Ø24.00 mm (H7)</span>
+</div>
+<!-- Dimension 3: Outer Bearing Radius R24.00 mm -->
+<div class="absolute top-[148px] right-4 px-space-xs py-0.5 rounded-DEFAULT bg-surface-container-lowest text-primary shadow-sm font-label-sm text-label-sm flex items-center gap-1 z-10">
+<span class="w-1.5 h-1.5 rounded-full bg-primary"></span>
+<span class="font-telemetry-num text-telemetry-num font-bold">R24.00 mm</span>
+</div>
+<!-- Top Right: Interactive 3D ViewCube & Compass Ring -->
+<div class="absolute top-space-sm right-space-sm z-20 flex flex-col items-center">
+<div class="relative w-16 h-16 bg-surface-container/90 backdrop-blur-md rounded-xl p-1 shadow-md flex items-center justify-center">
+<!-- Isometric Mini Cube Visualization with Clickable Faces -->
+<div class="relative w-12 h-12 flex items-center justify-center">
+<!-- TOP Face -->
+<button class="absolute top-0 px-1 py-0.5 rounded-DEFAULT bg-primary-container text-on-primary font-label-sm text-[8px] font-bold shadow-sm hover:scale-105 active:scale-95 transition-transform" title="Vista Superior">
+            TOP
+          </button>
+<!-- FRONT Face -->
+<button class="absolute bottom-1 left-0 px-1 py-0.5 rounded-DEFAULT bg-surface-container-high text-on-surface font-label-sm text-[8px] font-bold shadow-sm hover:scale-105 active:scale-95 transition-transform" title="Vista Frontal">
+            FRONT
+          </button>
+<!-- RIGHT Face -->
+<button class="absolute bottom-1 right-0 px-1 py-0.5 rounded-DEFAULT bg-surface-container-highest text-on-surface font-label-sm text-[8px] font-bold shadow-sm hover:scale-105 active:scale-95 transition-transform" title="Vista Lateral Direita">
+            RIGHT
+          </button>
+<!-- Isometric Center Pill -->
+<button class="w-5 h-5 rounded-full bg-primary text-on-primary font-label-sm text-[7px] font-bold flex items-center justify-center shadow-md hover:scale-110 active:scale-95 transition-transform" title="Isométrica Padrão">
+            ISO
+          </button>
+</div>
+</div>
+<!-- Compass Degree Readout -->
+<span class="mt-0.5 font-telemetry-num text-[9px] text-on-surface-variant">ROT: 45° | INC: 30°</span>
+</div>
+<!-- Bottom Left: 3D Coordinate Axis Triad (Gizmo) -->
+<div class="absolute bottom-3 left-space-sm z-20 flex items-center gap-space-xs p-space-xs bg-surface-container/85 backdrop-blur-md rounded-lg shadow-sm">
+<svg fill="none" height="44" viewbox="0 0 44 44" width="44">
+<!-- Origin Point -->
+<circle cx="14" cy="30" fill="#dfe2ef" r="2.5"></circle>
+<!-- X Axis (Red) -->
+<line stroke="#ffb4ab" stroke-linecap="round" stroke-width="2" x1="14" x2="38" y1="30" y2="30"></line>
+<polygon fill="#ffb4ab" points="41,30 36,27 36,33"></polygon>
+<text fill="#ffb4ab" font-family="JetBrains Mono" font-size="8" font-weight="700" x="36" y="24">X</text>
+<!-- Y Axis (Green / Secondary Cyan) -->
+<line stroke="#7bd0ff" stroke-linecap="round" stroke-width="2" x1="14" x2="28" y1="30" y2="16"></line>
+<polygon fill="#7bd0ff" points="31,13 25,15 29,19"></polygon>
+<text fill="#7bd0ff" font-family="JetBrains Mono" font-size="8" font-weight="700" x="30" y="10">Y</text>
+<!-- Z Axis (Blue / Primary) -->
+<line stroke="#93ccff" stroke-linecap="round" stroke-width="2" x1="14" x2="14" y1="30" y2="6"></line>
+<polygon fill="#93ccff" points="14,3 11,8 17,8"></polygon>
+<text fill="#93ccff" font-family="JetBrains Mono" font-size="8" font-weight="700" x="6" y="10">Z</text>
+</svg>
+<div class="flex flex-col text-[10px] font-telemetry-num leading-tight text-on-surface-variant">
+<span class="text-error">X: 0.000</span>
+<span class="text-secondary">Y: 0.000</span>
+<span class="text-primary">Z: 0.000</span>
+</div>
+</div>
+<!-- In-Viewport Gestures Helper Badge (Discreet) -->
+<div class="absolute top-space-sm left-space-sm z-20 flex items-center gap-1.5 px-space-xs py-1 rounded-lg bg-surface-container/80 backdrop-blur-md text-on-surface-variant font-label-sm text-[10px] shadow-sm">
+<span class="material-symbols-outlined text-[13px] text-primary">touch_app</span>
+<span class="truncate">1 Dedo: Órbita • 2 Dedos: Pan • Pinça: Zoom</span>
+</div>
+</div>
+<!-- Collapsible Parametric Feature Dependency Tree (Árvore de Operações) -->
+<section class="w-full px-space-md py-space-sm bg-surface-container flex flex-col gap-space-xs shadow-sm">
+<div class="flex items-center justify-between">
+<div class="flex items-center gap-space-xs">
+<span class="material-symbols-outlined text-[18px] text-primary">account_tree</span>
+<span class="font-title-md text-title-md text-on-surface">Histórico Paramétrico</span>
+<span class="px-space-xs py-0.2 rounded-DEFAULT bg-surface-container-highest text-on-surface-variant font-label-sm text-label-sm">7 Etapas</span>
+</div>
+<button class="w-7 h-7 flex items-center justify-center rounded-DEFAULT bg-surface-container-high text-on-surface hover:text-primary transition-colors" id="toggle-tree-btn">
+<span class="material-symbols-outlined text-[18px]">unfold_less</span>
+</button>
+</div>
+<!-- Tree Items Container -->
+<div class="flex flex-col gap-1 mt-1 max-h-48 overflow-y-auto pr-0.5" id="feature-tree-list">
+<!-- 1. Origin & Datum Planes -->
+<div class="flex items-center justify-between px-space-sm py-1 rounded-DEFAULT bg-surface-container-low hover:bg-surface-container-high transition-colors">
+<div class="flex items-center gap-space-xs">
+<span class="material-symbols-outlined text-[16px] text-tertiary">folder_special</span>
+<span class="font-body-md text-body-md text-on-surface">Origem (XY, XZ, YZ, 0,0,0)</span>
+</div>
+<span class="material-symbols-outlined text-[16px] text-on-surface-variant">visibility</span>
+</div>
+<!-- 2. Sketch 1: Base -->
+<div class="flex items-center justify-between px-space-sm py-1 rounded-DEFAULT bg-surface-container-low hover:bg-surface-container-high transition-colors pl-4">
+<div class="flex items-center gap-space-xs">
+<span class="material-symbols-outlined text-[16px] text-secondary">polyline</span>
+<span class="font-body-md text-body-md text-on-surface">Esboço 1: Base (120x60)</span>
+<span class="material-symbols-outlined text-[14px] text-secondary" title="Totalmente Restrito">verified</span>
+</div>
+<span class="material-symbols-outlined text-[16px] text-on-surface-variant">visibility</span>
+</div>
+<!-- 3. Extrude 1: Base -->
+<div class="flex items-center justify-between px-space-sm py-1 rounded-DEFAULT bg-surface-container-low hover:bg-surface-container-high transition-colors pl-6">
+<div class="flex items-center gap-space-xs">
+<span class="material-symbols-outlined text-[16px] text-primary">deployed_code</span>
+<span class="font-body-md text-body-md text-on-surface">Extrusão 1 (Base - 15.0 mm)</span>
+</div>
+<span class="material-symbols-outlined text-[16px] text-on-surface-variant">visibility</span>
+</div>
+<!-- 4. Sketch 2: Cylinder Profile -->
+<div class="flex items-center justify-between px-space-sm py-1 rounded-DEFAULT bg-surface-container-low hover:bg-surface-container-high transition-colors pl-4">
+<div class="flex items-center gap-space-xs">
+<span class="material-symbols-outlined text-[16px] text-secondary">circle</span>
+<span class="font-body-md text-body-md text-on-surface">Esboço 2 (Círculo Diâm. 48)</span>
+<span class="material-symbols-outlined text-[14px] text-secondary">verified</span>
+</div>
+<span class="material-symbols-outlined text-[16px] text-on-surface-variant">visibility</span>
+</div>
+<!-- 5. Active Feature: Extrusão 2 (Mancal Superior) -->
+<div class="flex items-center justify-between px-space-sm py-1 rounded-DEFAULT bg-primary-container/25 text-primary hover:bg-primary-container/35 transition-colors pl-6">
+<div class="flex items-center gap-space-xs">
+<span class="material-symbols-outlined text-[16px] text-primary">settings_suggest</span>
+<span class="font-body-md text-body-md font-semibold text-primary">Extrusão 2 (Mancal - 45.0 mm)</span>
+<span class="px-1 py-0.2 rounded-DEFAULT bg-primary text-on-primary font-label-sm text-[9px] uppercase">Editando</span>
+</div>
+<span class="material-symbols-outlined text-[16px] text-primary">edit</span>
+</div>
+<!-- 6. Concentric Hole -->
+<div class="flex items-center justify-between px-space-sm py-1 rounded-DEFAULT bg-surface-container-low hover:bg-surface-container-high transition-colors pl-4">
+<div class="flex items-center gap-space-xs">
+<span class="material-symbols-outlined text-[16px] text-error">adjust</span>
+<span class="font-body-md text-body-md text-on-surface">Furo Concêntrico (Ø24.0 Passante)</span>
+</div>
+<span class="material-symbols-outlined text-[16px] text-on-surface-variant">visibility</span>
+</div>
+<!-- 7. Fillet R3 -->
+<div class="flex items-center justify-between px-space-sm py-1 rounded-DEFAULT bg-surface-container-low hover:bg-surface-container-high transition-colors pl-4">
+<div class="flex items-center gap-space-xs">
+<span class="material-symbols-outlined text-[16px] text-tertiary">rounded_corner</span>
+<span class="font-body-md text-body-md text-on-surface">Filete R3.0 (Arestas Externas)</span>
+</div>
+<span class="material-symbols-outlined text-[16px] text-on-surface-variant">visibility</span>
+</div>
+</div>
+</section>
+<!-- Parametric Property Inspector Sheet (Painel da Operação Ativa) -->
+<section class="w-full px-space-md py-space-md bg-surface-container-high flex flex-col gap-space-sm shadow-md">
+<!-- Header of the Selected Feature -->
+<div class="flex items-center justify-between w-full">
+<div class="flex items-center gap-space-xs">
+<div class="w-7 h-7 rounded-DEFAULT bg-primary flex items-center justify-center text-on-primary">
+<span class="material-symbols-outlined text-[18px]">straighten</span>
+</div>
+<div class="flex flex-col">
+<span class="font-headline-sm text-headline-sm text-on-surface">Extrusão 2 (Mancal Superior)</span>
+<span class="font-label-sm text-label-sm text-on-surface-variant">Operação Paramétrica Ativa</span>
+</div>
+</div>
+<div class="flex items-center gap-space-xs">
+<button class="w-8 h-8 rounded-DEFAULT bg-surface-container flex items-center justify-center text-on-surface-variant hover:text-error transition-colors" title="Cancelar Modificação">
+<span class="material-symbols-outlined text-[18px]">close</span>
+</button>
+<button class="w-8 h-8 rounded-DEFAULT bg-primary flex items-center justify-center text-on-primary hover:bg-primary-fixed transition-colors" title="Validar Operação">
+<span class="material-symbols-outlined text-[18px]">check</span>
+</button>
+</div>
+</div>
+<!-- Inspector Numerical Steppers & Direction Switches -->
+<div class="grid grid-cols-1 gap-space-sm mt-1">
+<!-- Input 1: Depth (d) -->
+<div class="flex items-center justify-between p-space-xs rounded-DEFAULT bg-surface-container-lowest">
+<div class="flex flex-col pl-space-xs">
+<span class="font-label-sm text-label-sm text-on-surface-variant">Profundidade (d)</span>
+<div class="flex items-baseline gap-1">
+<span class="font-telemetry-num text-headline-sm text-on-surface" id="depth-val">45.00</span>
+<span class="font-label-sm text-label-sm text-primary">mm</span>
+</div>
+</div>
+<div class="flex items-center gap-1">
+<button class="w-9 h-9 rounded-DEFAULT bg-surface-container flex items-center justify-center text-on-surface hover:bg-surface-container-high active:scale-95 transition-all" id="btn-depth-minus">
+<span class="material-symbols-outlined text-[18px]">remove</span>
+</button>
+<button class="w-9 h-9 rounded-DEFAULT bg-surface-container flex items-center justify-center text-on-surface hover:bg-surface-container-high active:scale-95 transition-all" id="btn-depth-plus">
+<span class="material-symbols-outlined text-[18px]">add</span>
+</button>
+</div>
+</div>
+<!-- Input 2: Direction Strategy Selector -->
+<div class="flex flex-col gap-1 p-space-xs rounded-DEFAULT bg-surface-container-lowest">
+<span class="font-label-sm text-label-sm text-on-surface-variant px-space-xs">Condição Final / Direção</span>
+<div class="grid grid-cols-3 gap-1">
+<button class="py-1.5 px-space-xs rounded-DEFAULT bg-primary-container text-on-primary font-label-sm text-label-sm font-semibold flex items-center justify-center gap-1 shadow-sm">
+<span class="material-symbols-outlined text-[14px]">arrow_upward</span>
+            Cega
+          </button>
+<button class="py-1.5 px-space-xs rounded-DEFAULT bg-surface-container text-on-surface-variant font-label-sm text-label-sm flex items-center justify-center gap-1 hover:text-on-surface transition-colors">
+<span class="material-symbols-outlined text-[14px]">vertical_align_center</span>
+            Simétrica
+          </button>
+<button class="py-1.5 px-space-xs rounded-DEFAULT bg-surface-container text-on-surface-variant font-label-sm text-label-sm flex items-center justify-center gap-1 hover:text-on-surface transition-colors">
+<span class="material-symbols-outlined text-[14px]">align_justify_space_even</span>
+            Até Superfície
+          </button>
+</div>
+</div>
+<!-- Input 3: Draft Angle -->
+<div class="flex items-center justify-between p-space-xs rounded-DEFAULT bg-surface-container-lowest">
+<div class="flex flex-col pl-space-xs">
+<span class="font-label-sm text-label-sm text-on-surface-variant">Ângulo de Saída (Draft)</span>
+<div class="flex items-baseline gap-1">
+<span class="font-telemetry-num text-title-md text-on-surface" id="draft-val">0.0</span>
+<span class="font-label-sm text-label-sm text-secondary">graus</span>
+</div>
+</div>
+<div class="flex items-center gap-1">
+<button class="w-8 h-8 rounded-DEFAULT bg-surface-container flex items-center justify-center text-on-surface hover:bg-surface-container-high transition-colors" id="btn-draft-minus">
+<span class="material-symbols-outlined text-[16px]">remove</span>
+</button>
+<button class="w-8 h-8 rounded-DEFAULT bg-surface-container flex items-center justify-center text-on-surface hover:bg-surface-container-high transition-colors" id="btn-draft-plus">
+<span class="material-symbols-outlined text-[16px]">add</span>
+</button>
+</div>
+</div>
+</div>
+<!-- Live Engineering Telemetry Badge (Mass & Volume Properties) -->
+<div class="w-full p-space-xs rounded-DEFAULT bg-surface-container-lowest flex items-center justify-between text-on-surface-variant font-telemetry-num text-[11px]">
+<div class="flex items-center gap-1">
+<span class="material-symbols-outlined text-[14px] text-primary">scale</span>
+<span>Aço SAE 1045</span>
+</div>
+<div class="flex items-center gap-space-sm text-on-surface">
+<span>Vol: <strong class="text-primary font-bold">142.8 cm³</strong></span>
+<span>Massa: <strong class="text-secondary font-bold">1.12 kg</strong></span>
+</div>
+</div>
+<!-- Primary Modal Actions -->
+<div class="flex items-center gap-space-sm mt-1">
+<button class="flex-1 h-10 px-space-md rounded-DEFAULT bg-primary text-on-primary font-title-md text-title-md font-semibold flex items-center justify-center gap-space-xs hover:bg-primary-fixed active:scale-[0.98] transition-all shadow-sm">
+<span class="material-symbols-outlined text-[18px]">done_all</span>
+        Confirmar Operação
+      </button>
+<button class="h-10 px-space-md rounded-DEFAULT bg-surface-container text-on-surface hover:bg-surface-container-lowest font-title-md text-title-md flex items-center justify-center gap-space-xs transition-colors">
+<span class="material-symbols-outlined text-[18px]">lock_clock</span>
+        Restrições 2D
+      </button>
+</div>
+</section>
+</div>
+<!-- Inline Interaction Logic for Engineering Workspace -->
+<script>
+  (function initCadWorkspace() {
+    // Stepper logic for Extrusion Depth
+    const depthEl = document.getElementById('depth-val');
+    const btnDepthPlus = document.getElementById('btn-depth-plus');
+    const btnDepthMinus = document.getElementById('btn-depth-minus');
+
+    let currentDepth = 45.00;
+
+    if (btnDepthPlus && depthEl) {
+      btnDepthPlus.addEventListener('click', () => {
+        currentDepth += 1.00;
+        depthEl.textContent = currentDepth.toFixed(2);
+      });
+    }
+
+    if (btnDepthMinus && depthEl) {
+      btnDepthMinus.addEventListener('click', () => {
+        if (currentDepth > 1.00) {
+          currentDepth -= 1.00;
+          depthEl.textContent = currentDepth.toFixed(2);
+        }
+      });
+    }
+
+    // Stepper logic for Draft Angle
+    const draftEl = document.getElementById('draft-val');
+    const btnDraftPlus = document.getElementById('btn-draft-plus');
+    const btnDraftMinus = document.getElementById('btn-draft-minus');
+
+    let currentDraft = 0.0;
+
+    if (btnDraftPlus && draftEl) {
+      btnDraftPlus.addEventListener('click', () => {
+        currentDraft += 0.5;
+        draftEl.textContent = currentDraft.toFixed(1);
+      });
+    }
+
+    if (btnDraftMinus && draftEl) {
+      btnDraftMinus.addEventListener('click', () => {
+        if (currentDraft > -15.0) {
+          currentDraft -= 0.5;
+          draftEl.textContent = currentDraft.toFixed(1);
+        }
+      });
+    }
+
+    // Toggle Collapsible Feature Tree
+    const toggleTreeBtn = document.getElementById('toggle-tree-btn');
+    const treeList = document.getElementById('feature-tree-list');
+
+    if (toggleTreeBtn && treeList) {
+      toggleTreeBtn.addEventListener('click', () => {
+        const isCollapsed = treeList.classList.toggle('hidden');
+        toggleTreeBtn.innerHTML = isCollapsed 
+          ? '<span class="material-symbols-outlined text-[18px]">unfold_more</span>'
+          : '<span class="material-symbols-outlined text-[18px]">unfold_less</span>';
+      });
+    }
+  })();
+</script></main><footer class="fixed bottom-0 w-full z-50 pb-safe bg-surface/95 backdrop-blur-xl shadow-[0_-1px_12px_rgba(0,0,0,0.45)]"><div class="h-6 px-space-md bg-surface-container-lowest flex items-center justify-between font-telemetry-num text-telemetry-num"><div class="flex items-center gap-space-md text-on-surface-variant"><span class="flex items-center gap-1"><span class="text-error font-bold">X:</span>124.50</span><span class="flex items-center gap-1"><span class="text-secondary font-bold">Y:</span>45.00</span><span class="flex items-center gap-1"><span class="text-primary font-bold">Z:</span>82.20</span><span class="text-outline font-label-sm text-label-sm">mm</span></div><div class="flex items-center gap-space-md"><span class="inline-flex items-center gap-1 text-label-sm font-label-sm text-secondary"><span class="w-1.5 h-1.5 rounded-full bg-secondary animate-pulse"></span>SNAP: VÉRTICE</span><button class="px-space-xs py-0.5 rounded-DEFAULT bg-surface-container text-primary font-label-sm text-label-sm">UNIDADE: MM</button></div></div><nav class="h-16 px-space-xs flex items-center justify-around" data-active-classes="text-primary bg-surface-container-high font-semibold"><a aria-current="page" class="flex-1 h-11 flex flex-col items-center justify-center rounded-lg transition-colors gap-0.5 text-primary bg-surface-container-high font-semibold" data-path="modelagem" href="#"><span class="material-symbols-outlined text-[18px]">deployed_code</span><span class="font-label-sm text-label-sm">Modelagem</span></a><a class="flex-1 h-11 flex flex-col items-center justify-center rounded-lg text-on-surface-variant hover:text-on-surface transition-colors gap-0.5" data-path="materiais" href="#"><span class="material-symbols-outlined text-[18px]">layers</span><span class="font-label-sm text-label-sm">Materiais</span></a><a class="flex-1 h-11 flex flex-col items-center justify-center rounded-lg text-on-surface-variant hover:text-on-surface transition-colors gap-0.5" data-path="simulacao" href="#"><span class="material-symbols-outlined text-[18px]">speed</span><span class="font-label-sm text-label-sm">Simulação</span></a><a class="flex-1 h-11 flex flex-col items-center justify-center rounded-lg text-on-surface-variant hover:text-on-surface transition-colors gap-0.5" data-path="analise" href="#"><span class="material-symbols-outlined text-[18px]">insights</span><span class="font-label-sm text-label-sm">Análise</span></a></nav></footer></body></html>

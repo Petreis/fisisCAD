@@ -1,0 +1,646 @@
+<!DOCTYPE html>
+
+<html class="dark" lang="en"><head><meta charset="utf-8"/><meta content="width=device-width, initial-scale=1.0" name="viewport"/><meta content="web_standard" name="shell-type"/><title>FisisCAD PRO</title><link href="https://fonts.googleapis.com" rel="preconnect"/><link crossorigin="" href="https://fonts.gstatic.com" rel="preconnect"/><link href="https://fonts.googleapis.com/css2?family=Geist:wght@400;500;600;700&amp;family=JetBrains+Mono:wght@400;500;600&amp;display=swap" rel="stylesheet"/><link href="https://fonts.googleapis.com/css2?family=Material+Symbols+Outlined:opsz,wght,FILL,GRAD@20..48,100..700,0..1,-50..200" rel="stylesheet"/>
+<link href="https://fonts.googleapis.com/css2?family=Material+Symbols+Outlined:wght,FILL@100..700,0..1&amp;display=swap" rel="stylesheet"/><style>@layer base { html, body { margin: 0; padding: 0; } body { overscroll-behavior: none; } main > :first-child { margin-top: 0 !important; } main > :last-child { margin-bottom: 0 !important; } } ::-webkit-scrollbar { display: none; }</style><script src="https://cdn.tailwindcss.com"></script><script id="tailwind-config">tailwind.config = { darkMode: "class", theme: { extend: { "colors": { "secondary-fixed": "#c4e7ff", "on-tertiary-fixed": "#131b2e", "on-tertiary-container": "#22293d", "background": "#0f131c", "secondary": "#7bd0ff", "primary-fixed": "#cce5ff", "on-primary": "#003351", "tertiary-fixed-dim": "#bec6e0", "error": "#ffb4ab", "on-primary-container": "#002c47", "inverse-surface": "#dfe2ef", "surface-container-low": "#181b25", "secondary-container": "#00a6e0", "on-secondary": "#00354a", "inverse-primary": "#006398", "surface-container-high": "#262a34", "on-secondary-fixed": "#001e2c", "tertiary": "#bec6e0", "on-surface-variant": "#bfc7d2", "surface-container-highest": "#31353f", "outline": "#89929b", "surface-container": "#1c1f29", "surface-dim": "#0f131c", "on-surface": "#dfe2ef", "inverse-on-surface": "#2c303a", "on-primary-fixed-variant": "#004b73", "on-tertiary": "#283044", "on-error-container": "#ffdad6", "secondary-fixed-dim": "#7bd0ff", "surface-container-lowest": "#0a0e17", "primary": "#93ccff", "primary-container": "#3198dc", "surface-tint": "#93ccff", "tertiary-container": "#8990a8", "tertiary-fixed": "#dae2fd", "on-secondary-fixed-variant": "#004c69", "on-secondary-container": "#00374d", "on-error": "#690005", "on-tertiary-fixed-variant": "#3f465c", "primary-fixed-dim": "#93ccff", "surface-variant": "#31353f", "error-container": "#93000a", "outline-variant": "#3f4850", "on-background": "#dfe2ef", "on-primary-fixed": "#001d31", "surface": "#0f131c", "surface-bright": "#353943" }, "borderRadius": { "DEFAULT": "0.125rem", "lg": "0.25rem", "xl": "0.5rem", "full": "0.75rem" }, "spacing": { "space-xs": "0.25rem", "gutter": "0.5rem", "space-lg": "0.75rem", "margin": "0.75rem", "space-md": "0.5rem", "space-xl": "1rem", "space-sm": "0.375rem" }, "fontFamily": { "headline-md": [ "Geist" ], "headline-sm": [ "Geist" ], "headline-lg": [ "Geist" ], "label-md": [ "JetBrains Mono" ], "telemetry-num": [ "JetBrains Mono" ], "title-md": [ "Geist" ], "body-sm": [ "JetBrains Mono" ], "label-sm": [ "JetBrains Mono" ], "body-md": [ "JetBrains Mono" ], "body-lg": [ "JetBrains Mono" ] }, "fontSize": { "headline-md": [ "1.25rem", { "lineHeight": "1.75rem", "letterSpacing": "-0.015em", "fontWeight": "600" } ], "headline-sm": [ "1rem", { "lineHeight": "1.5rem", "letterSpacing": "-0.01em", "fontWeight": "600" } ], "headline-lg": [ "1.5rem", { "lineHeight": "2rem", "letterSpacing": "-0.02em", "fontWeight": "600" } ], "label-md": [ "0.75rem", { "lineHeight": "1rem", "letterSpacing": "0.02em", "fontWeight": "500" } ], "telemetry-num": [ "0.75rem", { "lineHeight": "1rem", "letterSpacing": "-0.02em", "fontWeight": "600" } ], "title-md": [ "0.875rem", { "lineHeight": "1.25rem", "letterSpacing": "0em", "fontWeight": "500" } ], "body-sm": [ "0.6875rem", { "lineHeight": "1rem", "letterSpacing": "0.01em", "fontWeight": "400" } ], "label-sm": [ "0.625rem", { "lineHeight": "0.875rem", "letterSpacing": "0.04em", "fontWeight": "500" } ], "body-md": [ "0.75rem", { "lineHeight": "1.125rem", "letterSpacing": "0em", "fontWeight": "400" } ], "body-lg": [ "0.875rem", { "lineHeight": "1.375rem", "letterSpacing": "-0.01em", "fontWeight": "400" } ] } } } };</script></head><body class="bg-background font-body-md text-on-surface antialiased selection:bg-primary-container selection:text-on-primary"><header class="fixed top-0 left-0 right-0 z-50 bg-surface-container-lowest/90 backdrop-blur-xl shadow-[0_1px_8px_rgba(0,0,0,0.35)]"><div class="h-14 w-full px-margin flex items-center justify-between gap-space-lg"><div class="flex items-center gap-space-lg shrink-0"><div class="flex items-center gap-space-sm"><div class="w-7 h-7 rounded bg-primary-container flex items-center justify-center"><span class="material-symbols-outlined text-on-primary-container text-[18px]">architecture</span></div><span class="font-headline-sm text-headline-sm font-bold tracking-tight text-primary">FisisCAD <span class="text-secondary font-mono text-label-sm font-semibold px-space-xs py-0.5 rounded bg-surface-container-high">PRO</span></span></div><div class="hidden lg:flex items-center gap-space-xs font-label-md text-label-md text-outline"><span class="material-symbols-outlined text-[14px]">folder</span><span class="hover:text-on-surface transition-colors cursor-pointer">Structural_Analysis</span><span class="text-outline-variant">/</span><span class="text-on-surface font-semibold">Beam_Section_Rev4.step</span></div></div><nav class="hidden xl:flex items-center gap-space-xs font-label-md text-label-md" data-active-classes="bg-primary-container text-on-primary-container font-semibold rounded-lg"><a class="px-space-md py-space-xs text-on-surface-variant hover:text-on-surface hover:bg-surface-container-high transition-all rounded" data-path="inicio-hub" href="#">1. Início / Hub</a><a aria-current="page" class="px-space-md py-space-xs transition-all bg-primary-container text-on-primary-container font-semibold rounded-lg" data-path="modelagem-cad" href="#">2. Modelagem CAD (AutoCAD/Inventor)</a><a class="px-space-md py-space-xs text-on-surface-variant hover:text-on-surface hover:bg-surface-container-high transition-all rounded" data-path="selecao-de-ensaios-fisicos" href="#">3. Seleção de Ensaios Físicos</a><a class="px-space-md py-space-xs text-on-surface-variant hover:text-on-surface hover:bg-surface-container-high transition-all rounded" data-path="simulacao-fea" href="#">4. Simulação &amp; FEA</a></nav><div class="flex items-center gap-space-md shrink-0"><div class="hidden sm:flex items-center gap-space-xs"><div class="flex items-center gap-space-xs px-space-sm py-0.5 rounded bg-surface-container-high font-telemetry-num text-telemetry-num"><span class="w-1.5 h-1.5 rounded-full bg-secondary animate-pulse"></span><span class="text-secondary font-semibold">SOLVER READY</span></div><div class="flex items-center px-space-sm py-0.5 rounded bg-surface-container font-label-sm text-label-sm text-on-surface-variant"><span class="font-semibold text-tertiary">SI (mm, N, MPa)</span></div></div><div class="w-8 h-8 rounded-full bg-primary flex items-center justify-center"><span class="material-symbols-outlined text-on-primary text-[18px]">person</span></div></div></div></header><main class="w-full pt-14 bg-background min-h-screen"><div class="flex flex-col w-full">
+<!-- Ribbon Superior de Ferramentas CAD (Estilo Autodesk Inventor / AutoCAD) -->
+<header class="w-full bg-surface-container-low text-on-surface shadow-md select-none relative z-30">
+<!-- Linha Superior de Abas e Ações Globais -->
+<div class="flex items-center justify-between px-space-md bg-surface-container-lowest h-10 gap-space-md">
+<div class="flex items-center gap-space-xs overflow-x-auto no-scrollbar">
+<button class="px-space-md py-1 text-label-md font-label-md rounded flex items-center gap-1.5 transition-all text-on-surface-variant hover:text-on-surface hover:bg-surface-container" id="tab-btn-sketch" onclick="switchRibbonTab('sketch')">
+<span class="material-symbols-outlined text-[16px]">edit_note</span>
+<span>Esboço 2D</span>
+</button>
+<button class="px-space-md py-1 text-label-md font-label-md rounded flex items-center gap-1.5 transition-all bg-primary-container text-on-primary-container font-semibold" id="tab-btn-model" onclick="switchRibbonTab('model')">
+<span class="material-symbols-outlined text-[16px]">view_in_ar</span>
+<span>Modelo 3D</span>
+</button>
+<button class="px-space-md py-1 text-label-md font-label-md rounded flex items-center gap-1.5 transition-all text-on-surface-variant hover:text-on-surface hover:bg-surface-container" id="tab-btn-inspect" onclick="switchRibbonTab('inspect')">
+<span class="material-symbols-outlined text-[16px]">square_foot</span>
+<span>Inspeção &amp; Medição</span>
+</button>
+<span class="text-outline-variant font-label-sm mx-1">|</span>
+<div class="flex items-center gap-1 text-on-surface-variant text-label-sm font-label-sm">
+<span class="px-1.5 py-0.5 rounded bg-surface-container text-secondary">AISI 4340</span>
+<span class="px-1.5 py-0.5 rounded bg-surface-container text-tertiary">Workplane: XY</span>
+</div>
+</div>
+<!-- Transição CTA Principal para Módulo de Ensaios Físicos -->
+<div class="flex items-center gap-space-sm shrink-0">
+<div class="hidden md:flex items-center gap-2 px-space-sm py-1 bg-surface-container rounded font-label-sm text-on-surface-variant">
+<span class="w-2 h-2 rounded-full bg-secondary animate-pulse"></span>
+<span>Malha Paramétrica: Válida</span>
+</div>
+<button class="flex items-center gap-space-xs px-space-md py-1.5 rounded-lg bg-gradient-to-r from-secondary-container to-primary text-on-primary font-label-md font-bold shadow-lg shadow-secondary-container/20 hover:brightness-110 active:scale-98 transition-all">
+<span class="material-symbols-outlined text-[18px]">science</span>
+<span>Preparar para Ensaios Físicos</span>
+<span class="material-symbols-outlined text-[16px]">arrow_forward</span>
+</button>
+</div>
+</div>
+<!-- Grupos de Ações Ribbon (Conteúdo Dinâmico por Aba) -->
+<div class="p-space-sm bg-surface-container flex items-center gap-space-lg overflow-x-auto no-scrollbar min-h-[76px]" id="ribbon-panel-model">
+<!-- Grupo 1: Criar Sólido -->
+<div class="flex flex-col items-center shrink-0">
+<div class="flex items-center gap-space-xs">
+<button class="flex flex-col items-center justify-center p-space-xs w-14 h-12 rounded bg-surface-container-high hover:bg-surface-container-highest text-on-surface transition-all active:scale-95 group" onclick="executeCadCommand('EXTRUDE')">
+<span class="material-symbols-outlined text-[20px] text-secondary group-hover:scale-110 transition-transform">layers</span>
+<span class="text-label-sm font-label-sm mt-0.5">Extrusão</span>
+</button>
+<button class="flex flex-col items-center justify-center p-space-xs w-14 h-12 rounded bg-surface-container-high hover:bg-surface-container-highest text-on-surface transition-all active:scale-95 group" onclick="executeCadCommand('REVOLVE')">
+<span class="material-symbols-outlined text-[20px] text-primary group-hover:scale-110 transition-transform">rotate_90_degrees_ccw</span>
+<span class="text-label-sm font-label-sm mt-0.5">Revolução</span>
+</button>
+<button class="flex flex-col items-center justify-center p-space-xs w-14 h-12 rounded bg-surface-container-high hover:bg-surface-container-highest text-on-surface transition-all active:scale-95 group" onclick="executeCadCommand('SWEEP')">
+<span class="material-symbols-outlined text-[20px] text-tertiary group-hover:scale-110 transition-transform">timeline</span>
+<span class="text-label-sm font-label-sm mt-0.5">Varredura</span>
+</button>
+<button class="flex flex-col items-center justify-center p-space-xs w-14 h-12 rounded bg-surface-container-high hover:bg-surface-container-highest text-on-surface transition-all active:scale-95 group" onclick="executeCadCommand('LOFT')">
+<span class="material-symbols-outlined text-[20px] text-secondary group-hover:scale-110 transition-transform">filter_drama</span>
+<span class="text-label-sm font-label-sm mt-0.5">Loft</span>
+</button>
+</div>
+<span class="text-label-sm font-label-sm text-outline uppercase tracking-wider mt-1 text-[9px]">Criar Sólido</span>
+</div>
+<div class="h-10 w-0.5 bg-surface-container-highest shrink-0"></div>
+<!-- Grupo 2: Modificar -->
+<div class="flex flex-col items-center shrink-0">
+<div class="flex items-center gap-space-xs">
+<button class="flex flex-col items-center justify-center p-space-xs w-14 h-12 rounded bg-surface-container-high hover:bg-surface-container-highest text-on-surface transition-all active:scale-95 group" onclick="executeCadCommand('FILLET')">
+<span class="material-symbols-outlined text-[20px] text-on-surface-variant group-hover:text-primary transition-colors">rounded_corner</span>
+<span class="text-label-sm font-label-sm mt-0.5">Filete</span>
+</button>
+<button class="flex flex-col items-center justify-center p-space-xs w-14 h-12 rounded bg-surface-container-high hover:bg-surface-container-highest text-on-surface transition-all active:scale-95 group" onclick="executeCadCommand('CHAMFER')">
+<span class="material-symbols-outlined text-[20px] text-on-surface-variant group-hover:text-primary transition-colors">crop_free</span>
+<span class="text-label-sm font-label-sm mt-0.5">Chanfro</span>
+</button>
+<button class="flex flex-col items-center justify-center p-space-xs w-14 h-12 rounded bg-surface-container-high hover:bg-surface-container-highest text-on-surface transition-all active:scale-95 group" onclick="executeCadCommand('SHELL')">
+<span class="material-symbols-outlined text-[20px] text-on-surface-variant group-hover:text-primary transition-colors">inbox</span>
+<span class="text-label-sm font-label-sm mt-0.5">Casca</span>
+</button>
+<button class="flex flex-col items-center justify-center p-space-xs w-14 h-12 rounded bg-surface-container-high hover:bg-surface-container-highest text-on-surface transition-all active:scale-95 group" onclick="executeCadCommand('HOLE')">
+<span class="material-symbols-outlined text-[20px] text-secondary group-hover:text-primary transition-colors">fiber_manual_record</span>
+<span class="text-label-sm font-label-sm mt-0.5">Furo M10</span>
+</button>
+</div>
+<span class="text-label-sm font-label-sm text-outline uppercase tracking-wider mt-1 text-[9px]">Modificar Peça</span>
+</div>
+<div class="h-10 w-0.5 bg-surface-container-highest shrink-0"></div>
+<!-- Grupo 3: Padrões & Matrizes -->
+<div class="flex flex-col items-center shrink-0">
+<div class="flex items-center gap-space-xs">
+<button class="flex flex-col items-center justify-center p-space-xs w-16 h-12 rounded bg-surface-container-high hover:bg-surface-container-highest text-on-surface transition-all active:scale-95 group" onclick="executeCadCommand('CIRCULAR_PATTERN')">
+<span class="material-symbols-outlined text-[20px] text-secondary group-hover:rotate-45 transition-transform">donut_large</span>
+<span class="text-label-sm font-label-sm mt-0.5">Circular</span>
+</button>
+<button class="flex flex-col items-center justify-center p-space-xs w-16 h-12 rounded bg-surface-container-high hover:bg-surface-container-highest text-on-surface transition-all active:scale-95 group" onclick="executeCadCommand('RECT_PATTERN')">
+<span class="material-symbols-outlined text-[20px] text-on-surface-variant group-hover:text-secondary transition-colors">grid_view</span>
+<span class="text-label-sm font-label-sm mt-0.5">Linear</span>
+</button>
+</div>
+<span class="text-label-sm font-label-sm text-outline uppercase tracking-wider mt-1 text-[9px]">Padrão Geométrico</span>
+</div>
+<div class="h-10 w-0.5 bg-surface-container-highest shrink-0"></div>
+<!-- Visualização Rápida de Modos CAD -->
+<div class="flex flex-col items-center shrink-0 ml-auto pr-space-md">
+<div class="flex items-center gap-1 bg-surface-container-lowest p-1 rounded">
+<button class="px-2 py-1 rounded bg-primary-container text-on-primary-container text-label-sm font-label-sm flex items-center gap-1" title="Sombreado com Arestas">
+<span class="material-symbols-outlined text-[14px]">tonality</span>
+<span class="hidden xl:inline">Sombreado</span>
+</button>
+<button class="px-2 py-1 rounded hover:bg-surface-container-high text-on-surface-variant hover:text-on-surface text-label-sm font-label-sm flex items-center gap-1" title="Estrutura de Arame (Wireframe)">
+<span class="material-symbols-outlined text-[14px]">grid_4x4</span>
+<span class="hidden xl:inline">Arestas</span>
+</button>
+<button class="px-2 py-1 rounded hover:bg-surface-container-high text-on-surface-variant hover:text-on-surface text-label-sm font-label-sm flex items-center gap-1" title="Linhas Ocultas">
+<span class="material-symbols-outlined text-[14px]">visibility</span>
+</button>
+</div>
+<span class="text-label-sm font-label-sm text-outline uppercase tracking-wider mt-1 text-[9px]">Estilo Visual</span>
+</div>
+</div>
+<!-- Aba Esboço 2D (Oculta por padrão para alternância) -->
+<div class="hidden p-space-sm bg-surface-container flex items-center gap-space-lg overflow-x-auto no-scrollbar min-h-[76px]" id="ribbon-panel-sketch">
+<div class="flex flex-col items-center shrink-0">
+<div class="flex items-center gap-space-xs">
+<button class="flex flex-col items-center justify-center p-space-xs w-14 h-12 rounded bg-surface-container-high hover:bg-surface-container-highest text-on-surface transition-all" onclick="executeCadCommand('LINE')">
+<span class="material-symbols-outlined text-[20px] text-secondary">horizontal_rule</span>
+<span class="text-label-sm font-label-sm mt-0.5">Linha</span>
+</button>
+<button class="flex flex-col items-center justify-center p-space-xs w-14 h-12 rounded bg-surface-container-high hover:bg-surface-container-highest text-on-surface transition-all" onclick="executeCadCommand('CIRCLE')">
+<span class="material-symbols-outlined text-[20px] text-secondary">radio_button_unchecked</span>
+<span class="text-label-sm font-label-sm mt-0.5">Círculo</span>
+</button>
+<button class="flex flex-col items-center justify-center p-space-xs w-14 h-12 rounded bg-surface-container-high hover:bg-surface-container-highest text-on-surface transition-all" onclick="executeCadCommand('SPLINE')">
+<span class="material-symbols-outlined text-[20px] text-secondary">gesture</span>
+<span class="text-label-sm font-label-sm mt-0.5">Spline</span>
+</button>
+<button class="flex flex-col items-center justify-center p-space-xs w-14 h-12 rounded bg-surface-container-high hover:bg-surface-container-highest text-on-surface transition-all" onclick="executeCadCommand('RECTANGLE')">
+<span class="material-symbols-outlined text-[20px] text-secondary">crop_square</span>
+<span class="text-label-sm font-label-sm mt-0.5">Retângulo</span>
+</button>
+</div>
+<span class="text-label-sm font-label-sm text-outline uppercase tracking-wider mt-1 text-[9px]">Desenho Vetorial</span>
+</div>
+<div class="h-10 w-0.5 bg-surface-container-highest shrink-0"></div>
+<div class="flex flex-col items-center shrink-0">
+<div class="flex items-center gap-space-xs">
+<button class="flex flex-col items-center justify-center p-space-xs w-14 h-12 rounded bg-surface-container-high hover:bg-surface-container-highest text-on-surface transition-all" onclick="executeCadCommand('CONSTRAINT_PARALLEL')">
+<span class="material-symbols-outlined text-[20px] text-primary">drag_handle</span>
+<span class="text-label-sm font-label-sm mt-0.5">Paralelo</span>
+</button>
+<button class="flex flex-col items-center justify-center p-space-xs w-14 h-12 rounded bg-surface-container-high hover:bg-surface-container-highest text-on-surface transition-all" onclick="executeCadCommand('CONSTRAINT_TANGENT')">
+<span class="material-symbols-outlined text-[20px] text-primary">line_curve</span>
+<span class="text-label-sm font-label-sm mt-0.5">Tangente</span>
+</button>
+<button class="flex flex-col items-center justify-center p-space-xs w-16 h-12 rounded bg-surface-container-high hover:bg-surface-container-highest text-on-surface transition-all" onclick="executeCadCommand('CONSTRAINT_COINCIDENT')">
+<span class="material-symbols-outlined text-[20px] text-primary">adjust</span>
+<span class="text-label-sm font-label-sm mt-0.5">Coincidente</span>
+</button>
+<button class="flex flex-col items-center justify-center p-space-xs w-16 h-12 rounded bg-secondary/10 text-secondary hover:bg-secondary/20 transition-all" onclick="executeCadCommand('SMART_DIMENSION')">
+<span class="material-symbols-outlined text-[20px]">straighten</span>
+<span class="text-label-sm font-label-sm mt-0.5 font-bold">Cota Int.</span>
+</button>
+</div>
+<span class="text-label-sm font-label-sm text-outline uppercase tracking-wider mt-1 text-[9px]">Restrições &amp; Cotas</span>
+</div>
+</div>
+<!-- Aba Inspeção & Medição -->
+<div class="hidden p-space-sm bg-surface-container flex items-center gap-space-lg overflow-x-auto no-scrollbar min-h-[76px]" id="ribbon-panel-inspect">
+<div class="flex flex-col items-center shrink-0">
+<div class="flex items-center gap-space-xs">
+<button class="flex flex-col items-center justify-center p-space-xs w-16 h-12 rounded bg-surface-container-high hover:bg-surface-container-highest text-on-surface transition-all" onclick="executeCadCommand('INSPECT_MASS')">
+<span class="material-symbols-outlined text-[20px] text-secondary">scale</span>
+<span class="text-label-sm font-label-sm mt-0.5">Massa (kg)</span>
+</button>
+<button class="flex flex-col items-center justify-center p-space-xs w-16 h-12 rounded bg-surface-container-high hover:bg-surface-container-highest text-on-surface transition-all" onclick="executeCadCommand('INSPECT_COG')">
+<span class="material-symbols-outlined text-[20px] text-tertiary">center_focus_strong</span>
+<span class="text-label-sm font-label-sm mt-0.5">Centro Grav.</span>
+</button>
+<button class="flex flex-col items-center justify-center p-space-xs w-16 h-12 rounded bg-surface-container-high hover:bg-surface-container-highest text-on-surface transition-all" onclick="executeCadCommand('INSPECT_INERTIA')">
+<span class="material-symbols-outlined text-[20px] text-primary">motion_photos_on</span>
+<span class="text-label-sm font-label-sm mt-0.5">Inércia [I]</span>
+</button>
+<button class="flex flex-col items-center justify-center p-space-xs w-20 h-12 rounded bg-surface-container-high hover:bg-surface-container-highest text-on-surface transition-all" onclick="executeCadCommand('INSPECT_CLASH')">
+<span class="material-symbols-outlined text-[20px] text-error">join_inner</span>
+<span class="text-label-sm font-label-sm mt-0.5">Interferência</span>
+</button>
+</div>
+<span class="text-label-sm font-label-sm text-outline uppercase tracking-wider mt-1 text-[9px]">Propriedades Físicas CAD</span>
+</div>
+</div>
+</header>
+<!-- Espaço Central de Trabalho (Split: Árvore CAD à Esquerda, Viewport 3D no Centro) -->
+<div class="flex-1 flex w-full relative min-h-[720px] overflow-hidden bg-background">
+<!-- Árvore de Operações Paramétricas (Feature Tree - Autodesk Inventor Style) -->
+<aside class="w-72 lg:w-80 bg-surface-container-low flex flex-col shrink-0 select-none z-20 shadow-xl transition-all duration-200">
+<!-- Cabeçalho da Feature Tree -->
+<div class="p-space-sm bg-surface-container flex items-center justify-between">
+<div class="flex items-center gap-space-xs">
+<span class="material-symbols-outlined text-[18px] text-primary">account_tree</span>
+<span class="font-headline-sm text-title-md font-bold text-on-surface">Histórico Modelo</span>
+</div>
+<div class="flex items-center gap-1">
+<button class="w-6 h-6 rounded flex items-center justify-center hover:bg-surface-container-high text-on-surface-variant" title="Recolher Todos">
+<span class="material-symbols-outlined text-[16px]">unfold_less</span>
+</button>
+<button class="w-6 h-6 rounded flex items-center justify-center hover:bg-surface-container-high text-on-surface-variant" title="Filtro de Entidades">
+<span class="material-symbols-outlined text-[16px]">filter_alt</span>
+</button>
+</div>
+</div>
+<!-- Identificação do Documento & Material -->
+<div class="px-space-md py-space-sm bg-surface-container-lowest flex items-center justify-between text-label-sm font-label-sm">
+<div class="flex items-center gap-1.5 truncate">
+<span class="material-symbols-outlined text-[14px] text-secondary">token</span>
+<span class="font-semibold text-on-surface truncate">Mancal_Flange_AltaCarga.ipt</span>
+</div>
+<span class="px-1.5 py-0.2 rounded bg-surface-container-high text-secondary">Sólido 1</span>
+</div>
+<!-- Lista Hierárquica de Recursos Paramétricos -->
+<div class="flex-1 overflow-y-auto p-space-xs font-label-sm text-label-sm space-y-0.5">
+<!-- Nó Origem (Pasta de Planos) -->
+<div class="rounded hover:bg-surface-container/60 transition-colors">
+<div class="flex items-center gap-1 px-2 py-1.5 text-on-surface cursor-pointer" onclick="toggleTreeNode('origin-folder')">
+<span class="material-symbols-outlined text-[14px] text-outline transition-transform" id="origin-folder-arrow">arrow_drop_down</span>
+<span class="material-symbols-outlined text-[16px] text-outline">folder_open</span>
+<span class="font-medium">Origem Global</span>
+</div>
+<div class="pl-6 pr-2 py-0.5 space-y-0.5 text-on-surface-variant" id="origin-folder">
+<div class="flex items-center justify-between py-1 px-1 rounded hover:bg-surface-container-high cursor-pointer">
+<span class="flex items-center gap-1.5"><span class="w-2 h-2 rounded-full bg-secondary/80"></span>Plano YZ</span>
+<span class="material-symbols-outlined text-[14px] text-outline hover:text-on-surface">visibility_off</span>
+</div>
+<div class="flex items-center justify-between py-1 px-1 rounded hover:bg-surface-container-high cursor-pointer">
+<span class="flex items-center gap-1.5"><span class="w-2 h-2 rounded-full bg-secondary/80"></span>Plano XZ</span>
+<span class="material-symbols-outlined text-[14px] text-outline hover:text-on-surface">visibility_off</span>
+</div>
+<div class="flex items-center justify-between py-1 px-1 rounded bg-secondary-container/10 text-secondary cursor-pointer">
+<span class="flex items-center gap-1.5 font-bold"><span class="w-2 h-2 rounded-full bg-secondary"></span>Plano XY (Ativo)</span>
+<span class="material-symbols-outlined text-[14px] text-secondary">visibility</span>
+</div>
+<div class="flex items-center justify-between py-1 px-1 rounded hover:bg-surface-container-high cursor-pointer">
+<span class="flex items-center gap-1.5"><span class="w-1.5 h-1.5 rounded bg-outline"></span>Eixo Z [Vetor Normal]</span>
+<span class="material-symbols-outlined text-[14px] text-outline">visibility_off</span>
+</div>
+</div>
+</div>
+<!-- Operação 1: Extrusão Base -->
+<div class="rounded hover:bg-surface-container/60 transition-colors">
+<div class="flex items-center justify-between px-2 py-1.5 cursor-pointer text-on-surface hover:text-primary">
+<div class="flex items-center gap-1.5 truncate">
+<span class="material-symbols-outlined text-[14px] text-outline">arrow_right</span>
+<span class="material-symbols-outlined text-[16px] text-secondary">layers</span>
+<span class="truncate font-semibold">Extrusão_Base 15mm</span>
+</div>
+<span class="text-outline font-telemetry-num text-[10px]">d=15.0</span>
+</div>
+<!-- Sub-esboço acoplado -->
+<div class="pl-7 pr-2 py-0.5 text-on-surface-variant flex items-center justify-between">
+<div class="flex items-center gap-1.5">
+<span class="material-symbols-outlined text-[14px] text-outline">architecture</span>
+<span class="text-[11px]">Esboço 1 [Totalmente Restrito]</span>
+</div>
+<span class="material-symbols-outlined text-[12px] text-secondary">check_circle</span>
+</div>
+</div>
+<!-- Operação 2: Revolução Mancal -->
+<div class="rounded bg-surface-container-high/40 transition-colors">
+<div class="flex items-center justify-between px-2 py-1.5 cursor-pointer text-on-surface">
+<div class="flex items-center gap-1.5 truncate">
+<span class="material-symbols-outlined text-[14px] text-outline">arrow_right</span>
+<span class="material-symbols-outlined text-[16px] text-primary">rotate_90_degrees_ccw</span>
+<span class="truncate font-semibold">Revolução_Cubo_Mancal</span>
+</div>
+<span class="text-outline font-telemetry-num text-[10px]">360°</span>
+</div>
+<div class="pl-7 pr-2 py-0.5 text-on-surface-variant flex items-center justify-between">
+<div class="flex items-center gap-1.5">
+<span class="material-symbols-outlined text-[14px] text-outline">architecture</span>
+<span class="text-[11px]">Esboço 2 [Perfil Perpendicular]</span>
+</div>
+<span class="material-symbols-outlined text-[12px] text-secondary">check_circle</span>
+</div>
+</div>
+<!-- Operação 3: Furos M10 (4x) -->
+<div class="rounded hover:bg-surface-container/60 transition-colors">
+<div class="flex items-center justify-between px-2 py-1.5 cursor-pointer text-on-surface">
+<div class="flex items-center gap-1.5 truncate">
+<span class="material-symbols-outlined text-[14px] text-outline">arrow_right</span>
+<span class="material-symbols-outlined text-[16px] text-secondary">adjust</span>
+<span class="truncate">Furos M10 (4x Matriz)</span>
+</div>
+<span class="text-outline font-telemetry-num text-[10px]">PCD Ø85</span>
+</div>
+</div>
+<!-- Operação 4: Filete R3.0mm -->
+<div class="rounded hover:bg-surface-container/60 transition-colors">
+<div class="flex items-center justify-between px-2 py-1.5 cursor-pointer text-on-surface">
+<div class="flex items-center gap-1.5 truncate">
+<span class="material-symbols-outlined text-[14px] text-outline">arrow_right</span>
+<span class="material-symbols-outlined text-[16px] text-tertiary">rounded_corner</span>
+<span class="truncate">Filete R3.0mm [8 Arestas]</span>
+</div>
+<span class="text-outline font-telemetry-num text-[10px]">R=3.0</span>
+</div>
+</div>
+<!-- Marcador de Fim da Árvore de Peça (End of Part) -->
+<div class="py-2 px-2 flex items-center gap-2">
+<div class="h-0.5 flex-1 bg-primary/40"></div>
+<span class="text-primary font-mono text-[9px] uppercase tracking-widest px-1 bg-surface-container rounded">Fim da Peça (EOP)</span>
+<div class="h-0.5 flex-1 bg-primary/40"></div>
+</div>
+<!-- Cartão Atributo de Material & Liga -->
+<div class="mt-4 p-space-sm rounded bg-surface-container-lowest space-y-1">
+<div class="flex items-center justify-between text-outline">
+<span class="text-[10px] uppercase font-bold tracking-wider">Material Selecionado</span>
+<span class="material-symbols-outlined text-[14px] text-primary">edit</span>
+</div>
+<div class="text-headline-sm font-headline-sm text-secondary font-bold">Aço AISI 4340 Normalizado</div>
+<div class="text-[10px] text-on-surface-variant font-mono space-y-0.5 pt-1">
+<div class="flex justify-between"><span>Densidade:</span> <span class="text-on-surface">7.85 g/cm³</span></div>
+<div class="flex justify-between"><span>Mód. Elasticidade (E):</span> <span class="text-on-surface">205 GPa</span></div>
+<div class="flex justify-between"><span>Escoamento (σy):</span> <span class="text-on-surface">710 MPa</span></div>
+<div class="flex justify-between"><span>Poisson (ν):</span> <span class="text-on-surface">0.29</span></div>
+</div>
+</div>
+</div>
+</aside>
+<!-- Viewport CAD Central com Grid Milimétrico, Geometria Paramétrica e HUD -->
+<main class="flex-1 relative flex flex-col overflow-hidden bg-surface-container-lowest">
+<!-- Fundo Técnico: Grid Milimétrico com Coordenadas Infinitas SVG -->
+<div class="absolute inset-0 z-0 pointer-events-none opacity-80">
+<svg class="w-full h-full" xmlns="http://www.w3.org/2000/svg">
+<defs>
+<pattern height="20" id="cad-small-grid" patternunits="userSpaceOnUse" width="20">
+<path d="M 20 0 L 0 0 0 20" fill="none" stroke="rgba(137, 146, 155, 0.08)" stroke-width="1"></path>
+</pattern>
+<pattern height="100" id="cad-major-grid" patternunits="userSpaceOnUse" width="100">
+<rect fill="url(#cad-small-grid)" height="100" width="100"></rect>
+<path d="M 100 0 L 0 0 0 100" fill="none" stroke="rgba(147, 204, 255, 0.15)" stroke-width="1.2"></path>
+</pattern>
+<!-- Gradiente Sombreado de Iluminação Técnica Peça 3D -->
+<radialgradient cx="45%" cy="40%" id="meshGrad" r="65%">
+<stop offset="0%" stop-color="#3198dc" stop-opacity="0.45"></stop>
+<stop offset="70%" stop-color="#00354a" stop-opacity="0.75"></stop>
+<stop offset="100%" stop-color="#0a0e17" stop-opacity="0.95"></stop>
+</radialgradient>
+</defs>
+<rect fill="url(#cad-major-grid)" height="100%" width="100%"></rect>
+<!-- Eixo de Origem Cartesiana Central -->
+<line stroke="rgba(239, 68, 68, 0.3)" stroke-dasharray="8 4" stroke-width="1.5" x1="15%" x2="85%" y1="65%" y2="65%"></line>
+<line stroke="rgba(34, 197, 94, 0.3)" stroke-dasharray="8 4" stroke-width="1.5" x1="50%" x2="50%" y1="10%" y2="90%"></line>
+</svg>
+</div>
+<!-- Barra de Controle Rápido Superior do Viewport -->
+<div class="relative z-10 p-space-sm flex items-center justify-between pointer-events-none">
+<!-- Controles de Câmera & Visualização -->
+<div class="pointer-events-auto flex items-center gap-1 p-1 rounded-lg bg-surface-container/90 backdrop-blur-md shadow-md text-on-surface">
+<button class="p-1.5 rounded hover:bg-surface-container-high text-on-surface-variant hover:text-primary transition-colors" title="Zoom Extents (Z+E)">
+<span class="material-symbols-outlined text-[18px]">zoom_in_map</span>
+</button>
+<button class="p-1.5 rounded hover:bg-surface-container-high text-on-surface-variant hover:text-primary transition-colors" title="Pan Dinâmico (Botão Meio)">
+<span class="material-symbols-outlined text-[18px]">pan_tool</span>
+</button>
+<button class="p-1.5 rounded hover:bg-surface-container-high text-on-surface-variant hover:text-primary transition-colors" title="Órbita Livre 3D">
+<span class="material-symbols-outlined text-[18px]">sync</span>
+</button>
+<div class="h-4 w-0.5 bg-outline-variant mx-1"></div>
+<button class="px-2 py-1 rounded bg-secondary-container/20 text-secondary text-label-sm font-label-sm font-semibold flex items-center gap-1">
+<span class="material-symbols-outlined text-[14px]">view_real_size</span>
+<span>Perspectiva</span>
+</button>
+</div>
+<!-- ViewCube Interativo (Top-Right / Estilo CAD Autodesk) -->
+<div class="pointer-events-auto flex flex-col items-center">
+<div class="w-16 h-16 relative bg-surface-container-high/90 rounded-md backdrop-blur-md shadow-2xl flex items-center justify-center cursor-pointer hover:bg-surface-bright transition-all group" id="viewcube">
+<!-- Representação 3D Isométrica do ViewCube -->
+<div class="relative w-12 h-12">
+<!-- Top Face -->
+<div class="absolute inset-x-2 top-0 h-4 bg-primary-container/70 rounded-xs flex items-center justify-center text-[8px] font-mono font-bold text-on-primary-container group-hover:bg-primary-container">
+                TOPO
+              </div>
+<!-- Front Face -->
+<div class="absolute inset-x-2 bottom-1 h-5 bg-surface-container-highest flex items-center justify-center text-[8px] font-mono font-bold text-on-surface">
+                FRENTE
+              </div>
+<!-- Right Side -->
+<div class="absolute right-0 top-3 bottom-3 w-2 bg-outline-variant/60 rounded-xs"></div>
+</div>
+<!-- Bússola Orientação -->
+<span class="absolute -top-3 text-[9px] font-mono font-bold text-secondary">N</span>
+<span class="absolute -right-3 text-[9px] font-mono text-outline">L</span>
+</div>
+<span class="text-[9px] font-mono text-outline mt-1 font-semibold">ISOMÉTRICO WCS</span>
+</div>
+</div>
+<!-- Renderização da Peça Técnica no Viewport (Visualização Paramétrica Ativa) -->
+<div class="relative flex-1 flex items-center justify-center p-4">
+<!-- Modelo Renderizado via SVG de Precisão com Cotas e Restrições Ativas -->
+<div class="relative w-full max-w-2xl h-[420px] flex items-center justify-center">
+<svg class="w-full h-full drop-shadow-2xl" viewbox="0 0 600 420" xmlns="http://www.w3.org/2000/svg">
+<!-- Workplane Grid Local (Plano Inclinado XY) -->
+<g opacity="0.35">
+<polygon fill="none" points="120,310 480,310 540,240 180,240" stroke="#7bd0ff" stroke-dasharray="4 2" stroke-width="1.2"></polygon>
+<line stroke="#7bd0ff" stroke-width="0.75" x1="210" x2="270" y1="310" y2="240"></line>
+<line stroke="#7bd0ff" stroke-width="0.75" x1="300" x2="360" y1="310" y2="240"></line>
+<line stroke="#7bd0ff" stroke-width="0.75" x1="390" x2="450" y1="310" y2="240"></line>
+</g>
+<!-- Geometria Sólida do Flange Mecânico (Sombreado com Arestas CAD) -->
+<!-- Base Retangular Extrudada -->
+<polygon fill="url(#meshGrad)" points="160,260 440,260 480,210 200,210" stroke="#7bd0ff" stroke-width="1.8"></polygon>
+<polygon fill="#002c47" points="160,260 440,260 440,285 160,285" stroke="#7bd0ff" stroke-width="1.8"></polygon>
+<polygon fill="#001d31" points="440,260 480,210 480,235 440,285" stroke="#7bd0ff" stroke-width="1.8"></polygon>
+<!-- Cubo Mancal Central Cilindro Revolvido -->
+<path d="M 260,235 L 260,130 C 260,110 340,110 340,130 L 340,235 Z" fill="url(#meshGrad)" stroke="#93ccff" stroke-width="2"></path>
+<!-- Topo do Mancal com Furo Central Transpassante -->
+<ellipse cx="300" cy="130" fill="#003351" rx="40" ry="18" stroke="#93ccff" stroke-width="2"></ellipse>
+<ellipse cx="300" cy="130" fill="#0a0e17" rx="22.5" ry="10" stroke="#3198dc" stroke-dasharray="2 1" stroke-width="1.5"></ellipse>
+<!-- 4 Furos M10 com Indicadores de Restrição Conexos -->
+<!-- Furo Esquerda 1 -->
+<ellipse cx="205" cy="245" fill="#0a0e17" rx="9" ry="4.5" stroke="#7bd0ff" stroke-width="1.2"></ellipse>
+<circle cx="205" cy="245" fill="#ef4444" r="1.5"></circle>
+<!-- Furo Direita 2 -->
+<ellipse cx="435" cy="245" fill="#0a0e17" rx="9" ry="4.5" stroke="#7bd0ff" stroke-width="1.2"></ellipse>
+<circle cx="435" cy="245" fill="#ef4444" r="1.5"></circle>
+<!-- Furo Trás Esquerda 3 -->
+<ellipse cx="235" cy="222" fill="#0a0e17" rx="7.5" ry="3.8" stroke="#7bd0ff" stroke-width="1.2"></ellipse>
+<!-- Furo Trás Direita 4 -->
+<ellipse cx="410" cy="222" fill="#0a0e17" rx="7.5" ry="3.8" stroke="#7bd0ff" stroke-width="1.2"></ellipse>
+<!-- Linha de Cota de Engenharia: Diâmetro Furo Central Ø 45.00mm -->
+<g class="transition-opacity hover:opacity-100 cursor-pointer">
+<line marker-end="url(#arrow)" marker-start="url(#arrow)" stroke="#38bdf8" stroke-width="1.5" x1="277.5" x2="322.5" y1="130" y2="130"></line>
+<line stroke="#38bdf8" stroke-width="1" x1="277.5" x2="277.5" y1="120" y2="140"></line>
+<line stroke="#38bdf8" stroke-width="1" x1="322.5" x2="322.5" y1="120" y2="140"></line>
+</g>
+<!-- Cota de Comprimento Total: 120.00mm -->
+<g>
+<line stroke="#38bdf8" stroke-width="1.5" x1="160" x2="440" y1="315" y2="315"></line>
+<line stroke="#38bdf8" stroke-dasharray="3 2" stroke-width="1" x1="160" x2="160" y1="288" y2="325"></line>
+<line stroke="#38bdf8" stroke-dasharray="3 2" stroke-width="1" x1="440" x2="440" y1="288" y2="325"></line>
+<polygon fill="#38bdf8" points="160,315 167,312 167,318"></polygon>
+<polygon fill="#38bdf8" points="440,315 433,312 433,318"></polygon>
+</g>
+<!-- Cota de Altura Extrusão Base: 15.00mm -->
+<g>
+<line stroke="#38bdf8" stroke-width="1.5" x1="130" x2="130" y1="260" y2="285"></line>
+<line stroke="#38bdf8" stroke-width="0.8" x1="120" x2="158" y1="260" y2="260"></line>
+<line stroke="#38bdf8" stroke-width="0.8" x1="120" x2="158" y1="285" y2="285"></line>
+<polygon fill="#38bdf8" points="130,260 127,266 133,266"></polygon>
+<polygon fill="#38bdf8" points="130,285 127,279 133,279"></polygon>
+</g>
+</svg>
+<!-- Badges de Cota HUD Flutuantes (HTML/Tailwind Overlay com Alta Nitidez) -->
+<!-- Cota Ø 45.00mm -->
+<div class="absolute top-[21%] left-[50%] -translate-x-1/2 px-2 py-0.5 rounded bg-surface-container-lowest/90 text-secondary font-mono text-[11px] font-bold shadow-lg flex items-center gap-1 border-b-2 border-secondary">
+<span class="material-symbols-outlined text-[13px]">radio_button_checked</span>
+<span>Ø 45.00 mm</span>
+</div>
+<!-- Cota Comprimento 120.00mm -->
+<div class="absolute bottom-[17%] left-[50%] -translate-x-1/2 px-2.5 py-0.5 rounded bg-surface-container-lowest/90 text-secondary font-mono text-[11px] font-bold shadow-lg flex items-center gap-1 border-b-2 border-secondary">
+<span class="material-symbols-outlined text-[13px]">straighten</span>
+<span>120.00 mm</span>
+</div>
+<!-- Cota Altura Base 15.00mm -->
+<div class="absolute bottom-[28%] left-[16%] px-1.5 py-0.5 rounded bg-surface-container-lowest/90 text-secondary font-mono text-[10px] font-bold shadow-lg border-l-2 border-secondary">
+<span>h: 15.00 mm</span>
+</div>
+<!-- Marcador de Distância Entre Centros PCD Ø85.00 -->
+<div class="absolute bottom-[44%] right-[22%] px-2 py-0.5 rounded bg-surface-container-high/90 text-on-surface font-mono text-[10px] flex items-center gap-1 shadow">
+<span class="w-1.5 h-1.5 rounded-full bg-secondary"></span>
+<span>PCD Ø 85.00 mm</span>
+</div>
+</div>
+<!-- Tríade de Coordenadas Globais XYZ (Lower-Left do Viewport) -->
+<div class="absolute bottom-4 left-4 p-2 rounded-lg bg-surface-container-low/85 backdrop-blur-md shadow-lg flex flex-col items-center">
+<div class="relative w-14 h-14">
+<!-- Eixo X (Vermelho) -->
+<div class="absolute bottom-2 left-2 w-10 h-0.5 bg-red-500 origin-left"></div>
+<span class="absolute bottom-0 right-0 text-[10px] font-mono font-bold text-red-400">X</span>
+<!-- Eixo Y (Verde) -->
+<div class="absolute bottom-2 left-2 w-0.5 h-10 bg-green-500 origin-bottom"></div>
+<span class="absolute top-0 left-3 text-[10px] font-mono font-bold text-green-400">Y</span>
+<!-- Eixo Z (Azul / Diagonal) -->
+<div class="absolute bottom-2 left-2 w-7 h-0.5 bg-blue-500 origin-left -rotate-45"></div>
+<span class="absolute top-2 right-1 text-[10px] font-mono font-bold text-blue-400">Z</span>
+<!-- Ponto Origem -->
+<div class="absolute bottom-1.5 left-1.5 w-1.5 h-1.5 rounded-full bg-on-surface"></div>
+</div>
+<span class="text-[9px] font-mono text-outline font-semibold">WCS mm</span>
+</div>
+<!-- Painel Flutuante Rápido: 'Validação Física da Peça' (Destaque para Ensaios) -->
+<div class="absolute top-4 right-4 w-80 rounded-xl bg-surface-container/95 backdrop-blur-xl p-space-md shadow-2xl text-on-surface border-t-2 border-primary/60">
+<div class="flex items-center justify-between pb-space-xs">
+<div class="flex items-center gap-1.5">
+<span class="material-symbols-outlined text-secondary text-[20px]">analytics</span>
+<span class="font-headline-sm text-title-md font-bold text-primary">Validação Física da Peça</span>
+</div>
+<span class="px-1.5 py-0.5 rounded bg-surface-container-highest text-secondary text-[10px] font-mono font-bold">FEA READY</span>
+</div>
+<p class="text-label-sm font-label-sm text-on-surface-variant mb-space-sm">
+            Geometria paramétrica contínua e sem auto-interferências. Propriedades inerciais calculadas:
+          </p>
+<!-- Métricas de Massa e Volume -->
+<div class="grid grid-cols-3 gap-space-xs bg-surface-container-lowest p-space-sm rounded-lg mb-space-sm font-mono text-center">
+<div>
+<div class="text-[9px] text-outline uppercase font-semibold">Volume</div>
+<div class="text-body-md font-bold text-on-surface">485.2</div>
+<div class="text-[8px] text-outline">cm³</div>
+</div>
+<div>
+<div class="text-[9px] text-outline uppercase font-semibold">Massa</div>
+<div class="text-body-md font-bold text-secondary">3.82</div>
+<div class="text-[8px] text-outline">kg</div>
+</div>
+<div>
+<div class="text-[9px] text-outline uppercase font-semibold">Izz</div>
+<div class="text-body-md font-bold text-tertiary">0.042</div>
+<div class="text-[8px] text-outline">kg·m²</div>
+</div>
+</div>
+<!-- Status de Verificação de Geometria -->
+<div class="space-y-1 mb-space-md text-[11px] font-mono">
+<div class="flex items-center justify-between text-on-surface-variant">
+<span class="flex items-center gap-1">
+<span class="material-symbols-outlined text-[14px] text-secondary">check</span> Vértices Manifold
+              </span>
+<span class="text-secondary font-bold">100% OK</span>
+</div>
+<div class="flex items-center justify-between text-on-surface-variant">
+<span class="flex items-center gap-1">
+<span class="material-symbols-outlined text-[14px] text-secondary">check</span> Fechamento Volumétrico
+              </span>
+<span class="text-secondary font-bold">Sólido Hermético</span>
+</div>
+</div>
+<!-- Botão de Avanço Rápido para a Próxima Etapa de Física -->
+<button class="w-full py-2 px-space-md rounded-lg bg-primary-container text-on-primary-container hover:bg-secondary transition-all font-label-md font-bold flex items-center justify-center gap-2 group shadow-md shadow-primary-container/25">
+<span>Definir Condições de Contorno e Leis da Física</span>
+<span class="material-symbols-outlined text-[18px] group-hover:translate-x-1 transition-transform">arrow_forward</span>
+</button>
+</div>
+</div>
+<!-- Barra de Comando Interativa (Estilo AutoCAD Command Prompt) -->
+<footer class="relative z-10 w-full bg-surface-container-low px-space-md py-1.5 flex flex-col gap-1 shadow-inner select-none">
+<!-- Histórico do Prompt -->
+<div class="hidden sm:flex items-center gap-4 text-outline font-label-sm text-[11px]">
+<span class="truncate">FisisCAD&gt; Carregando parâmetros dimensionais... Restrições aplicadas com sucesso.</span>
+<span class="ml-auto text-on-surface-variant shrink-0 font-mono">SNAP: ATIVO (1.000mm)</span>
+</div>
+<!-- Linha Ativa de Digitação de Comando -->
+<div class="flex items-center gap-space-sm bg-surface-container-lowest px-space-sm py-1 rounded">
+<span class="text-secondary font-mono text-label-md font-bold select-none">Comando:</span>
+<input class="flex-1 bg-transparent text-on-surface font-mono text-label-md outline-none border-none placeholder-outline focus:ring-0" id="cad-cli-input" type="text" value="EXTRUDE [Selecionar perfil ou especificar distância: 15.00mm]"/>
+<div class="flex items-center gap-1">
+<button class="px-2 py-0.5 rounded bg-surface-container-high hover:bg-surface-container-highest text-on-surface font-mono text-[11px] transition-colors" onclick="submitCliCommand()">
+              ENTER
+            </button>
+<button class="p-1 rounded hover:bg-surface-container-high text-outline hover:text-on-surface" onclick="clearCliPrompt()" title="Cancelar / ESC">
+<span class="material-symbols-outlined text-[14px]">close</span>
+</button>
+</div>
+</div>
+</footer>
+</main>
+</div>
+</div>
+<script>
+  // Alternância de Abas Ribbon
+  function switchRibbonTab(tabId) {
+    const tabs = ['sketch', 'model', 'inspect'];
+    tabs.forEach(tab => {
+      const panel = document.getElementById(`ribbon-panel-${tab}`);
+      const btn = document.getElementById(`tab-btn-${tab}`);
+      if (tab === tabId) {
+        panel?.classList.remove('hidden');
+        btn?.classList.add('bg-primary-container', 'text-on-primary-container', 'font-semibold');
+        btn?.classList.remove('text-on-surface-variant');
+      } else {
+        panel?.classList.add('hidden');
+        btn?.classList.remove('bg-primary-container', 'text-on-primary-container', 'font-semibold');
+        btn?.classList.add('text-on-surface-variant');
+      }
+    });
+  }
+
+  // Execução de Comandos Rápidos na Linha de Prompt CAD
+  function executeCadCommand(cmd) {
+    const input = document.getElementById('cad-cli-input');
+    if (!input) return;
+    
+    const commandPrompts = {
+      'EXTRUDE': 'EXTRUDE [Especificar distância de extrusão ou inverter vetor: 15.00mm]',
+      'REVOLVE': 'REVOLVE [Selecionar eixo de rotação e ângulo: 360°]',
+      'SWEEP': 'SWEEP [Selecionar curva de trajetória]',
+      'LOFT': 'LOFT [Adicionar seções transversais]',
+      'FILLET': 'FILLET [Selecionar arestas para arredondamento: R = 3.00mm]',
+      'CHAMFER': 'CHAMFER [Definir distância de corte chanfrado]',
+      'SHELL': 'SHELL [Especificar espessura de parede constante]',
+      'HOLE': 'HOLE [Posicionar centro do furo na face: M10x1.5]',
+      'CIRCULAR_PATTERN': 'PATTERN_CIRCULAR [Especificar quantidade e ângulo total]',
+      'RECT_PATTERN': 'PATTERN_RECT [Definir espaçamento X e Y]',
+      'SMART_DIMENSION': 'DIMENSION [Selecionar dois pontos ou entidade linear]',
+      'INSPECT_MASS': 'MASSPROP [Calculando tensores de inércia e centroide...]',
+      'INSPECT_COG': 'COG [Centro de Gravidade: X=0.00, Y=18.42, Z=0.00 mm]',
+      'INSPECT_INERTIA': 'INERTIA [Ixx: 0.038, Iyy: 0.042, Izz: 0.042 kg·m²]',
+      'INSPECT_CLASH': 'CLASH_DETECT [Zero interferências detectadas no sólido]'
+    };
+
+    input.value = commandPrompts[cmd] || `EXECUTAR: ${cmd}`;
+    input.focus();
+  }
+
+  function submitCliCommand() {
+    const input = document.getElementById('cad-cli-input');
+    if (input) {
+      input.value = 'Comando: PRONTO [Aguardando nova instrução ou clique na viewport]';
+    }
+  }
+
+  function clearCliPrompt() {
+    const input = document.getElementById('cad-cli-input');
+    if (input) {
+      input.value = 'Comando:';
+      input.focus();
+    }
+  }
+
+  function toggleTreeNode(elementId) {
+    const el = document.getElementById(elementId);
+    const arrow = document.getElementById(`${elementId}-arrow`);
+    if (el) {
+      el.classList.toggle('hidden');
+      if (arrow) {
+        arrow.textContent = el.classList.contains('hidden') ? 'arrow_right' : 'arrow_drop_down';
+      }
+    }
+  }
+
+  // Interatividade com o ViewCube (Feedback de orientação)
+  const viewCube = document.getElementById('viewcube');
+  if (viewCube) {
+    viewCube.addEventListener('click', () => {
+      executeCadCommand('CAMERA_SNAP_ISOMETRIC');
+    });
+  }
+</script></main><footer class="w-full bg-surface-container-lowest py-space-sm"><div class="w-full px-margin flex flex-wrap items-center justify-between gap-space-md text-on-surface-variant font-label-sm text-label-sm"><div><span>FisisCAD PRO v4.2.1-rc</span><span class="mx-space-xs text-outline-variant">|</span><span>PARASOLID KERNEL CONNECTED</span></div><div class="flex items-center gap-space-lg"><span class="font-telemetry-num text-telemetry-num text-on-surface">X: 0.000 Y: 0.000 Z: 0.000 mm</span><span class="text-outline-variant">|</span><span class="text-primary">SOLVER: DIRECT MULTIFRONTAL PARDISO</span></div></div></footer></body></html>

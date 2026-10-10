@@ -1,0 +1,405 @@
+<!DOCTYPE html>
+
+<html lang="en">
+<head>
+<meta charset="utf-8"/>
+<meta content="width=device-width,initial-scale=1.0" name="viewport"/>
+<script src="https://cdn.tailwindcss.com?plugins=forms,container-queries"></script>
+<style>
+    * { margin: 0; padding: 0; box-sizing: border-box; }
+    html, body {
+      width: 100%;
+      height: 100%;
+      overflow: hidden;
+      background: #000;
+    }
+  </style>
+</head>
+<body>
+<!-- STITCH_THREEJS_START:ANIMATION_24 class="fixed inset-0 w-full h-full bg-transparent" -->
+<div class="fixed inset-0 w-full h-full bg-transparent" style="display:block;">
+<script src="https://ajax.googleapis.com/ajax/libs/threejs/r125/three.min.js"></script>
+<div id="threejs-container-ANIMATION_24" style="width:100%;height:100%"></div>
+<script>
+(function() {
+  const container = document.getElementById('threejs-container-ANIMATION_24');
+  const devicePixelRatio = window.devicePixelRatio || 1;
+  // Three.js Interactive Physical Simulation with Impactor Mass and Shape Controls
+const width = container.clientWidth || window.innerWidth;
+const height = container.clientHeight || window.innerHeight;
+
+const scene = new THREE.Scene();
+
+// Camera setup
+const camera = new THREE.PerspectiveCamera(45, width / height, 0.1, 1000);
+camera.position.set(13, 14, 18);
+camera.lookAt(0, 1.6, 0);
+
+// Renderer
+const renderer = new THREE.WebGLRenderer({ alpha: true, antialias: true });
+renderer.setSize(width, height);
+renderer.setPixelRatio(Math.min(window.devicePixelRatio, 2));
+renderer.shadowMap.enabled = true;
+renderer.shadowMap.type = THREE.PCFSoftShadowMap;
+container.appendChild(renderer.domElement);
+
+// Lighting
+const ambientLight = new THREE.AmbientLight(0xffffff, 0.7);
+scene.add(ambientLight);
+
+const dirLight = new THREE.DirectionalLight(0x38bdf8, 1.5);
+dirLight.position.set(15, 25, 12);
+dirLight.castShadow = true;
+dirLight.shadow.mapSize.width = 1024;
+dirLight.shadow.mapSize.height = 1024;
+scene.add(dirLight);
+
+const fillLight = new THREE.DirectionalLight(0xa855f7, 0.6);
+fillLight.position.set(-15, 10, -10);
+scene.add(fillLight);
+
+// Group to hold the entire interactable model & workplane
+const worldGroup = new THREE.Group();
+scene.add(worldGroup);
+
+// --- 1. Tinkercad-style Workplane / Technical Grid ---
+const gridHelper = new THREE.GridHelper(26, 26, 0x0284c7, 0x1e293b);
+gridHelper.position.y = 0;
+worldGroup.add(gridHelper);
+
+const planeGeo = new THREE.PlaneGeometry(26, 26);
+const planeMat = new THREE.MeshBasicMaterial({
+  color: 0x0a101d,
+  transparent: true,
+  opacity: 0.65,
+  depthWrite: false,
+  side: THREE.DoubleSide
+});
+const workplaneMesh = new THREE.Mesh(planeGeo, planeMat);
+workplaneMesh.rotation.x = -Math.PI / 2;
+workplaneMesh.position.y = -0.01;
+workplaneMesh.receiveShadow = true;
+worldGroup.add(workplaneMesh);
+
+// Coordinate Axes (RGB = XYZ)
+const axesHelper = new THREE.AxesHelper(4.5);
+axesHelper.position.set(-11, 0.05, 11);
+worldGroup.add(axesHelper);
+
+// --- 2. Bearing Mount / Mancal (Base & Cylindrical Hub) ---
+const mancalGroup = new THREE.Group();
+worldGroup.add(mancalGroup);
+
+// Base Plate
+const baseGeo = new THREE.BoxGeometry(7.2, 0.8, 7.2);
+const baseMat = new THREE.MeshPhongMaterial({
+  color: 0x1e293b,
+  specular: 0x38bdf8,
+  shininess: 40
+});
+const baseMesh = new THREE.Mesh(baseGeo, baseMat);
+baseMesh.position.set(0, 0.4, 0);
+baseMesh.castShadow = true;
+baseMesh.receiveShadow = true;
+mancalGroup.add(baseMesh);
+
+const baseEdges = new THREE.LineSegments(
+  new THREE.EdgesGeometry(baseGeo),
+  new THREE.LineBasicMaterial({ color: 0x38bdf8, linewidth: 1.5 })
+);
+baseMesh.add(baseEdges);
+
+// Cylindrical Bearing Housing
+const cylGeo = new THREE.CylinderGeometry(2.2, 2.2, 4.5, 36);
+const cylMat = new THREE.MeshPhongMaterial({
+  color: 0x111c2e,
+  specular: 0x0284c7,
+  shininess: 60
+});
+const cylMesh = new THREE.Mesh(cylGeo, cylMat);
+cylMesh.position.set(0, 2.8, 0);
+cylMesh.castShadow = true;
+cylMesh.receiveShadow = true;
+mancalGroup.add(cylMesh);
+
+const cylEdges = new THREE.LineSegments(
+  new THREE.EdgesGeometry(cylGeo),
+  new THREE.LineBasicMaterial({ color: 0x60a5fa, linewidth: 1 })
+);
+cylMesh.add(cylEdges);
+
+// Inner Bore
+const boreGeo = new THREE.CylinderGeometry(1.2, 1.2, 4.6, 32);
+const boreMat = new THREE.MeshPhongMaterial({
+  color: 0x070b14,
+  shininess: 20
+});
+const boreMesh = new THREE.Mesh(boreGeo, boreMat);
+boreMesh.position.set(0, 2.8, 0);
+mancalGroup.add(boreMesh);
+
+// 4 Corner Mounting Holes
+const holeGeo = new THREE.CylinderGeometry(0.35, 0.35, 0.82, 16);
+const holeMat = new THREE.MeshBasicMaterial({ color: 0x0284c7 });
+[[-2.7, -2.7], [2.7, -2.7], [-2.7, 2.7], [2.7, 2.7]].forEach(([hx, hz]) => {
+  const h = new THREE.Mesh(holeGeo, holeMat);
+  h.position.set(hx, 0.41, hz);
+  mancalGroup.add(h);
+});
+
+// --- 3. Dynamic Rigid Impactor with Multiple Shapes (Cube, Sphere, Wedge/Cylinder) ---
+let currentMass = 4.50; // kg
+let currentShape = 'cube'; // 'cube' | 'sphere' | 'wedge'
+const impactorGroup = new THREE.Group();
+worldGroup.add(impactorGroup);
+
+const impactorMat = new THREE.MeshPhongMaterial({
+  color: 0x0284c7,
+  emissive: 0x034977,
+  specular: 0xffffff,
+  shininess: 80,
+  transparent: true,
+  opacity: 0.92
+});
+
+const impactorWireMat = new THREE.LineBasicMaterial({ color: 0x7dd3fc, linewidth: 2 });
+const bboxMat = new THREE.LineDashedMaterial({
+  color: 0xf43f5e,
+  dashSize: 0.3,
+  gapSize: 0.2
+});
+
+let meshContainer = new THREE.Group();
+impactorGroup.add(meshContainer);
+
+function buildImpactorMesh(shape) {
+  // Clear previous mesh container children
+  while (meshContainer.children.length > 0) {
+    const obj = meshContainer.children[0];
+    if (obj.geometry) obj.geometry.dispose();
+    meshContainer.remove(obj);
+  }
+
+  let geo, bboxGeo, edgesGeo;
+  const baseDim = 2.4;
+
+  if (shape === 'sphere') {
+    geo = new THREE.SphereGeometry(baseDim * 0.62, 32, 24);
+    const m = new THREE.Mesh(geo, impactorMat);
+    m.castShadow = true;
+    meshContainer.add(m);
+
+    // Lat/Long wire lines
+    const wireGeo = new THREE.WireframeGeometry(geo);
+    const wire = new THREE.LineSegments(wireGeo, impactorWireMat);
+    meshContainer.add(wire);
+
+    bboxGeo = new THREE.BoxGeometry(baseDim * 1.25, baseDim * 1.25, baseDim * 1.25);
+  } else if (shape === 'wedge') {
+    // Cylindrical wedge / impactor cylinder on its side
+    geo = new THREE.CylinderGeometry(baseDim * 0.55, baseDim * 0.55, baseDim * 1.1, 24);
+    geo.rotateZ(Math.PI / 2);
+    const m = new THREE.Mesh(geo, impactorMat);
+    m.castShadow = true;
+    meshContainer.add(m);
+
+    edgesGeo = new THREE.EdgesGeometry(geo);
+    const edges = new THREE.LineSegments(edgesGeo, impactorWireMat);
+    meshContainer.add(edges);
+
+    bboxGeo = new THREE.BoxGeometry(baseDim * 1.25, baseDim * 1.2, baseDim * 1.2);
+  } else {
+    // Default: Cube
+    geo = new THREE.BoxGeometry(baseDim, baseDim, baseDim);
+    const m = new THREE.Mesh(geo, impactorMat);
+    m.castShadow = true;
+    meshContainer.add(m);
+
+    edgesGeo = new THREE.EdgesGeometry(geo);
+    const edges = new THREE.LineSegments(edgesGeo, impactorWireMat);
+    meshContainer.add(edges);
+
+    bboxGeo = new THREE.BoxGeometry(baseDim * 1.08, baseDim * 1.08, baseDim * 1.08);
+  }
+
+  const bboxEdges = new THREE.LineSegments(new THREE.EdgesGeometry(bboxGeo), bboxMat);
+  bboxEdges.computeLineDistances();
+  meshContainer.add(bboxEdges);
+
+  updateImpactorMass(currentMass);
+}
+
+// Function to update visual scale according to mass
+function updateImpactorMass(massVal) {
+  currentMass = Math.max(0.5, Math.min(25.0, massVal));
+  const scaleFactor = Math.pow(currentMass / 4.50, 1 / 3);
+  meshContainer.scale.set(scaleFactor, scaleFactor, scaleFactor);
+  
+  const forceScale = currentMass / 4.50;
+  arrowHelper.setLength(3.6 * Math.sqrt(forceScale), 0.8, 0.5);
+}
+
+// Function to update impactor shape
+function setImpactorShape(shape) {
+  if (['cube', 'sphere', 'wedge'].includes(shape)) {
+    currentShape = shape;
+    buildImpactorMesh(shape);
+  }
+}
+
+// Build initial shape
+buildImpactorMesh('cube');
+
+// Expose globally to window
+window.setFisisCadImpactorMass = updateImpactorMass;
+window.setFisisCadImpactorShape = setImpactorShape;
+
+// --- 4. Contact Flash & Force Vectors ---
+const contactPointGeo = new THREE.SphereGeometry(0.28, 16, 16);
+const contactPointMat = new THREE.MeshBasicMaterial({
+  color: 0xfbbf24,
+  wireframe: true
+});
+const contactPoint = new THREE.Mesh(contactPointGeo, contactPointMat);
+contactPoint.position.set(0, 5.05, 0);
+worldGroup.add(contactPoint);
+
+const arrowDir = new THREE.Vector3(0.5, 1, 0.2).normalize();
+const arrowOrigin = new THREE.Vector3(0, 5.05, 0);
+const arrowLength = 3.6;
+const arrowHelper = new THREE.ArrowHelper(arrowDir, arrowOrigin, arrowLength, 0xf43f5e, 0.8, 0.5);
+worldGroup.add(arrowHelper);
+
+const frictionDir = new THREE.Vector3(1, 0, 0).normalize();
+const frictionHelper = new THREE.ArrowHelper(frictionDir, arrowOrigin, 1.8, 0x38bdf8, 0.4, 0.3);
+worldGroup.add(frictionHelper);
+
+// --- 5. Mouse Orbit & Pan Interaction ---
+let isDragging = false;
+let previousMousePosition = { x: 0, y: 0 };
+let targetRotationY = 0;
+let targetRotationX = 0;
+let currentRotationY = 0;
+let currentRotationX = 0;
+
+const domElem = renderer.domElement;
+domElem.style.cursor = 'grab';
+
+domElem.addEventListener('mousedown', (e) => {
+  isDragging = true;
+  previousMousePosition = { x: e.clientX, y: e.clientY };
+  domElem.style.cursor = 'grabbing';
+});
+
+window.addEventListener('mouseup', () => {
+  isDragging = false;
+  domElem.style.cursor = 'grab';
+});
+
+window.addEventListener('mousemove', (e) => {
+  if (!isDragging) return;
+  const deltaX = e.clientX - previousMousePosition.x;
+  const deltaY = e.clientY - previousMousePosition.y;
+
+  targetRotationY += deltaX * 0.008;
+  targetRotationX = Math.max(-Math.PI / 4, Math.min(Math.PI / 3, targetRotationX + deltaY * 0.008));
+  previousMousePosition = { x: e.clientX, y: e.clientY };
+});
+
+domElem.addEventListener('wheel', (e) => {
+  e.preventDefault();
+  const zoomFactor = e.deltaY * 0.02;
+  const newFov = Math.max(20, Math.min(75, camera.fov + zoomFactor));
+  camera.fov = newFov;
+  camera.updateProjectionMatrix();
+}, { passive: false });
+
+domElem.addEventListener('touchstart', (e) => {
+  if (e.touches.length === 1) {
+    isDragging = true;
+    previousMousePosition = { x: e.touches[0].clientX, y: e.touches[0].clientY };
+  }
+});
+window.addEventListener('touchend', () => { isDragging = false; });
+window.addEventListener('touchmove', (e) => {
+  if (!isDragging || e.touches.length !== 1) return;
+  const deltaX = e.touches[0].clientX - previousMousePosition.x;
+  const deltaY = e.touches[0].clientY - previousMousePosition.y;
+  targetRotationY += deltaX * 0.008;
+  targetRotationX = Math.max(-Math.PI / 4, Math.min(Math.PI / 3, targetRotationX + deltaY * 0.008));
+  previousMousePosition = { x: e.touches[0].clientX, y: e.touches[0].clientY };
+});
+
+// --- 6. Physics Simulation Animation Loop ---
+let clock = new THREE.Clock();
+
+function animate() {
+  requestAnimationFrame(animate);
+
+  const elapsedTime = clock.getElapsedTime();
+
+  currentRotationY += (targetRotationY - currentRotationY) * 0.1;
+  currentRotationX += (targetRotationX - currentRotationX) * 0.1;
+
+  worldGroup.rotation.y = currentRotationY;
+  worldGroup.rotation.x = currentRotationX;
+
+  const cycle = (elapsedTime * 0.8) % 2.5;
+  const scaleOffset = (Math.pow(currentMass / 4.50, 1 / 3) - 1.0) * 1.2;
+
+  if (cycle < 1.2) {
+    const progress = cycle / 1.2;
+    const easeY = 1 - Math.pow(1 - progress, 2);
+    impactorGroup.position.set(0, 10.5 + scaleOffset - easeY * 4.2, 0);
+    impactorGroup.rotation.set(progress * 0.4, progress * 0.8, progress * 0.2);
+
+    contactPoint.visible = false;
+    arrowHelper.visible = false;
+    frictionHelper.visible = false;
+  } else if (cycle >= 1.2 && cycle < 1.45) {
+    const impactProg = (cycle - 1.2) / 0.25;
+    impactorGroup.position.set(0, 6.3 + scaleOffset - Math.sin(impactProg * Math.PI) * 0.12, 0);
+    impactorGroup.rotation.set(0.48, 0.96, 0.24);
+
+    contactPoint.visible = true;
+    contactPoint.scale.setScalar((1 + Math.sin(impactProg * Math.PI) * 0.8) * Math.pow(currentMass / 4.5, 0.4));
+    arrowHelper.visible = true;
+    frictionHelper.visible = true;
+
+    const vibMag = 0.04 * (currentMass / 4.5);
+    mancalGroup.position.y = -Math.sin(impactProg * Math.PI * 4) * vibMag;
+  } else {
+    const reboundProg = (cycle - 1.45) / 1.05;
+    const easeOut = Math.sin(reboundProg * (Math.PI / 2));
+    impactorGroup.position.set(
+      -reboundProg * 1.5,
+      6.3 + scaleOffset + easeOut * (3.5 * Math.pow(4.5 / currentMass, 0.2)),
+      reboundProg * 0.8
+    );
+    impactorGroup.rotation.set(0.48 + reboundProg * 1.2, 0.96 + reboundProg * 0.6, 0.24 + reboundProg * 0.4);
+
+    contactPoint.visible = false;
+    arrowHelper.visible = false;
+    frictionHelper.visible = false;
+    mancalGroup.position.y = 0;
+  }
+
+  renderer.render(scene, camera);
+}
+
+animate();
+
+function onWindowResize() {
+  const newWidth = container.clientWidth || window.innerWidth;
+  const newHeight = container.clientHeight || window.innerHeight;
+  camera.aspect = newWidth / newHeight;
+  camera.updateProjectionMatrix();
+  renderer.setSize(newWidth, newHeight);
+}
+window.addEventListener('resize', onWindowResize);
+})();
+</script>
+</div>
+<!-- STITCH_THREEJS_END:ANIMATION_24 -->
+</body>
+</html>

@@ -1,0 +1,89 @@
+rules_version = '2';
+
+service cloud.firestore {
+  match /databases/{database}/documents {
+
+    // Funções Auxiliares de Autenticação e Permissão
+    function isAuthenticated() {
+      return request.auth != null;
+    }
+
+    function isUser(userId) {
+      return isAuthenticated() && request.auth.uid == userId;
+    }
+
+    function getUserRole(projectData) {
+      return projectData.membros[request.auth.uid];
+    }
+
+    function isProjectOwner(projectData) {
+      return isAuthenticated() && (
+        projectData.criadorId == request.auth.uid || 
+        getUserRole(projectData) == 'owner'
+      );
+    }
+
+    function canReadProject(projectData) {
+      return isAuthenticated() && (
+        isProjectOwner(projectData) || 
+        getUserRole(projectData) in ['owner', 'editor', 'viewer']
+      );
+    }
+
+    function canEditProject(projectData) {
+      return isAuthenticated() && (
+        isProjectOwner(projectData) || 
+        getUserRole(projectData) in ['owner', 'editor']
+      );
+    }
+
+    // ----------------------------------------------------
+    // Coleção: 'usuarios' (Perfil, Projetos Pessoais & Compartilhados)
+    // ----------------------------------------------------
+    match /usuarios/{userId} {
+      // Leitura pública para que usuários possam buscar outros por e-mail no compartilhamento
+      allow read: if isAuthenticated();
+      
+      // Criação e Atualização pelo próprio usuário autenticado
+      allow create, update: if isUser(userId);
+      allow delete: if isUser(userId);
+    }
+
+    // ----------------------------------------------------
+    // Coleção: 'projetos' (Projetos .cad e Permissões por Papel)
+    // ----------------------------------------------------
+    match /projetos/{projectId} {
+      // Leitura: Criador ou usuários autorizados no mapa 'membros' (owner, editor, viewer)
+      allow read: if canReadProject(resource.data);
+
+      // Criação: Usuário autenticado que define a si mesmo como 'criadorId' e 'owner' em 'membros'
+      allow create: if isAuthenticated() 
+        && request.resource.data.criadorId == request.auth.uid
+        && request.resource.data.membros[request.auth.uid] == 'owner';
+
+      // Atualização (Edição Simultânea):
+      // Editors e Owners podem modificar conteúdo .cad
+      // Apenas o OWNER pode alterar a estrutura de permissões 'membros'
+      allow update: if canEditProject(resource.data)
+        && (
+          !request.resource.data.diff(resource.data).affectedKeys().hasAny(['membros', 'criadorId'])
+          || isProjectOwner(resource.data)
+        );
+
+      // Exclusão: Estrita ao proprietário/criador do projeto
+      allow delete: if isProjectOwner(resource.data);
+    }
+
+    // ----------------------------------------------------
+    // Coleção: 'Projetos' com isolamento estrito por usuário
+    // Estrutura: Projetos/{userId}/itens/{projectId}
+    // ----------------------------------------------------
+    match /Projetos/{userId} {
+      allow read, write: if isUser(userId);
+
+      match /itens/{projectId} {
+        allow read, write, delete: if isUser(userId);
+      }
+    }
+  }
+}

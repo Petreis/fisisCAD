@@ -1,0 +1,1195 @@
+<!DOCTYPE html>
+
+<html class="dark" lang="en"><head><meta charset="utf-8"/><meta content="width=device-width, initial-scale=1.0" name="viewport"/><meta content="web_standard" name="shell-type"/><style>@layer base{html,body{margin:0;padding:0;}body{overscroll-behavior:none;}main>:first-child{margin-top:0!important;}main>:last-child{margin-bottom:0!important;}}::-webkit-scrollbar{display:none;}</style><link href="https://fonts.googleapis.com/css2?family=Material+Symbols+Outlined:opsz,wght,FILL,GRAD@20..48,100..700,0..1,-50..200" rel="stylesheet"/>
+<link href="https://fonts.googleapis.com/css2?family=Material+Symbols+Outlined:wght,FILL@100..700,0..1&amp;display=swap" rel="stylesheet"/><script src="https://cdn.tailwindcss.com?plugins=forms,container-queries"></script><script id="tailwind-config">tailwind.config = {
+    darkMode: "class",
+    theme: {
+      extend: {
+        "colors": {
+          "secondary": "#7bd0ff",
+          "on-secondary-fixed": "#001e2c",
+          "primary-fixed-dim": "#93ccff",
+          "on-secondary-container": "#00374d",
+          "outline-variant": "#3f4850",
+          "on-background": "#dfe2ef",
+          "on-surface-variant": "#bfc7d2",
+          "inverse-on-surface": "#2c303a",
+          "surface-container-low": "#181b25",
+          "outline": "#89929b",
+          "surface-container-high": "#262a34",
+          "surface-container-highest": "#31353f",
+          "primary-fixed": "#cce5ff",
+          "on-primary-fixed": "#001d31",
+          "on-tertiary-container": "#22293d",
+          "tertiary": "#bec6e0",
+          "tertiary-fixed": "#dae2fd",
+          "on-error-container": "#ffdad6",
+          "surface-tint": "#93ccff",
+          "secondary-fixed": "#c4e7ff",
+          "error-container": "#93000a",
+          "on-tertiary": "#283044",
+          "surface-dim": "#0f131c",
+          "surface-bright": "#353943",
+          "error": "#ffb4ab",
+          "on-tertiary-fixed": "#131b2e",
+          "on-secondary-fixed-variant": "#004c69",
+          "on-error": "#690005",
+          "tertiary-container": "#8990a8",
+          "on-primary-container": "#002c47",
+          "surface-container-lowest": "#0a0e17",
+          "primary": "#93ccff",
+          "on-tertiary-fixed-variant": "#3f465c",
+          "surface": "#0f131c",
+          "inverse-surface": "#dfe2ef",
+          "tertiary-fixed-dim": "#bec6e0",
+          "primary-container": "#3198dc",
+          "background": "#0f131c",
+          "on-primary": "#003351",
+          "on-secondary": "#00354a",
+          "secondary-fixed-dim": "#7bd0ff",
+          "surface-variant": "#31353f",
+          "surface-container": "#1c1f29",
+          "on-surface": "#dfe2ef",
+          "inverse-primary": "#006398",
+          "secondary-container": "#00a6e0",
+          "on-primary-fixed-variant": "#004b73"
+        },
+        "borderRadius": {
+          "DEFAULT": "0.125rem",
+          "lg": "0.25rem",
+          "xl": "0.5rem",
+          "full": "0.75rem"
+        },
+        "spacing": {
+          "margin": "0.75rem",
+          "space-xl": "1rem",
+          "gutter": "0.5rem",
+          "space-md": "0.5rem",
+          "space-lg": "0.75rem",
+          "space-sm": "0.375rem",
+          "space-xs": "0.25rem"
+        },
+        "fontFamily": {
+          "headline-sm": [
+            "Geist"
+          ],
+          "telemetry-num": [
+            "JetBrains Mono"
+          ],
+          "label-sm": [
+            "JetBrains Mono"
+          ],
+          "body-md": [
+            "JetBrains Mono"
+          ],
+          "title-md": [
+            "Geist"
+          ],
+          "body-sm": [
+            "JetBrains Mono"
+          ],
+          "label-md": [
+            "JetBrains Mono"
+          ],
+          "headline-lg": [
+            "Geist"
+          ],
+          "body-lg": [
+            "JetBrains Mono"
+          ],
+          "headline-md": [
+            "Geist"
+          ]
+        },
+        "fontSize": {
+          "headline-sm": [
+            "1rem",
+            {
+              "lineHeight": "1.5rem",
+              "letterSpacing": "-0.01em",
+              "fontWeight": "600"
+            }
+          ],
+          "telemetry-num": [
+            "0.75rem",
+            {
+              "lineHeight": "1rem",
+              "letterSpacing": "-0.02em",
+              "fontWeight": "600"
+            }
+          ],
+          "label-sm": [
+            "0.625rem",
+            {
+              "lineHeight": "0.875rem",
+              "letterSpacing": "0.04em",
+              "fontWeight": "500"
+            }
+          ],
+          "body-md": [
+            "0.75rem",
+            {
+              "lineHeight": "1.125rem",
+              "letterSpacing": "0em",
+              "fontWeight": "400"
+            }
+          ],
+          "title-md": [
+            "0.875rem",
+            {
+              "lineHeight": "1.25rem",
+              "letterSpacing": "0em",
+              "fontWeight": "500"
+            }
+          ],
+          "body-sm": [
+            "0.6875rem",
+            {
+              "lineHeight": "1rem",
+              "letterSpacing": "0.01em",
+              "fontWeight": "400"
+            }
+          ],
+          "label-md": [
+            "0.75rem",
+            {
+              "lineHeight": "1rem",
+              "letterSpacing": "0.02em",
+              "fontWeight": "500"
+            }
+          ],
+          "headline-lg": [
+            "1.5rem",
+            {
+              "lineHeight": "2rem",
+              "letterSpacing": "-0.02em",
+              "fontWeight": "600"
+            }
+          ],
+          "body-lg": [
+            "0.875rem",
+            {
+              "lineHeight": "1.375rem",
+              "letterSpacing": "-0.01em",
+              "fontWeight": "400"
+            }
+          ],
+          "headline-md": [
+            "1.25rem",
+            {
+              "lineHeight": "1.75rem",
+              "letterSpacing": "-0.015em",
+              "fontWeight": "600"
+            }
+          ]
+        }
+      },
+    },
+  }</script></head><body class="bg-surface font-body-md text-on-surface select-none"><header class="fixed top-0 w-full z-50 bg-surface-container-low shadow-[0_1px_8px_rgba(0,0,0,0.04)]"><div class="h-12 w-full px-margin flex items-center justify-between bg-surface-container-lowest"><div class="flex items-center gap-space-lg"><div class="flex items-center gap-space-xs"><span class="material-symbols-outlined text-primary text-[20px]">view_in_ar</span><span class="font-title-md text-title-md font-bold tracking-tight text-on-surface">FisisCAD <span class="text-primary text-[10px] uppercase px-1 py-0.5 rounded bg-surface-container-high">PRO</span></span></div><div class="flex items-center gap-space-sm pl-space-md"><span class="font-body-sm text-body-sm text-on-surface-variant font-medium">Suporte_Mancal_v2.step</span><span class="px-1.5 py-0.5 rounded bg-surface-container-high text-secondary text-[9px] uppercase tracking-wider font-label-sm">v2.4-fea</span></div><div class="hidden lg:flex items-center gap-space-xs pl-space-md"><button class="p-1 text-on-surface-variant hover:text-on-surface hover:bg-surface-container rounded"><span class="material-symbols-outlined text-[16px]">undo</span></button><button class="p-1 text-on-surface-variant hover:text-on-surface hover:bg-surface-container rounded"><span class="material-symbols-outlined text-[16px]">redo</span></button></div></div><div class="flex items-center gap-space-md"><div class="hidden sm:flex items-center bg-surface-container px-space-sm py-0.5 rounded gap-space-xs"><button class="px-2 py-0.5 rounded text-on-surface bg-surface-container-high font-label-sm text-label-sm">3D Solid</button><button class="px-2 py-0.5 rounded text-on-surface-variant hover:text-on-surface font-label-sm text-label-sm">Physics SIM</button></div><div class="flex items-center gap-space-xs bg-surface-container-high px-2 py-1 rounded"><span class="font-label-sm text-label-sm text-secondary">UNIT: SI (mm/kg)</span></div><div class="flex items-center gap-space-sm pl-space-sm"><button class="flex items-center gap-1 px-2.5 py-1 rounded bg-surface-container hover:bg-surface-container-high text-on-surface text-label-sm font-label-sm"><span class="material-symbols-outlined text-[14px]">download</span><span>Export</span></button><div class="w-8 h-8 rounded-full bg-primary flex items-center justify-center"><span class="material-symbols-outlined text-on-primary text-[18px]">person</span></div></div></div></div><div class="h-8 w-full px-margin flex items-center justify-between bg-surface-container-low"><nav class="flex items-center gap-space-xs" data-active-classes="bg-primary-container text-on-primary-container font-bold rounded"><a class="px-3 py-1 font-label-md text-label-md text-on-surface-variant hover:text-on-surface transition-colors" data-path="modelagem-2d3d" href="#">1. Modelagem 2D/3D</a><a class="px-3 py-1 font-label-md text-label-md text-on-surface-variant hover:text-on-surface transition-colors" data-path="materiais-bcs" href="#">2. Materiais &amp; BCs</a><a class="px-3 py-1 font-label-md text-label-md bg-primary-container text-on-primary-container font-bold rounded transition-colors" data-path="simulacao-fisica" href="#">3. Simulação Física</a><a class="px-3 py-1 font-label-md text-label-md text-on-surface-variant hover:text-on-surface transition-colors" data-path="analise-relatorios" href="#">4. Análise &amp; Relatórios</a></nav><div class="hidden md:flex items-center gap-space-md"><span class="font-label-sm text-label-sm text-outline">SOLVER: OpenFOAM / CalculiX</span></div></div></header><main class="w-full pt-20 bg-surface min-h-[calc(100vh-1.5rem)]"><div class="flex flex-col w-full">
+<!-- Interactive Viewport Wrapper with Grid and Panels -->
+<div class="relative w-full h-[calc(100vh-6.5rem)] overflow-hidden bg-surface-container-lowest flex flex-col justify-between">
+<!-- Interactive 3D Three.js Simulation Viewport Canvas -->
+<!-- STITCH_THREEJS_START:ANIMATION_24 class="absolute inset-0 w-full h-full bg-transparent" -->
+<div class="absolute inset-0 w-full h-full bg-transparent" style="display:block;">
+<script src="https://ajax.googleapis.com/ajax/libs/threejs/r125/three.min.js"></script>
+<div id="threejs-container-ANIMATION_24" style="width:100%;height:100%"></div>
+<script>
+(function() {
+  const container = document.getElementById('threejs-container-ANIMATION_24');
+  const devicePixelRatio = window.devicePixelRatio || 1;
+  // Three.js Interactive Physical Simulation with Impactor Mass and Shape Controls
+const width = container.clientWidth || window.innerWidth;
+const height = container.clientHeight || window.innerHeight;
+
+const scene = new THREE.Scene();
+
+// Camera setup
+const camera = new THREE.PerspectiveCamera(45, width / height, 0.1, 1000);
+camera.position.set(13, 14, 18);
+camera.lookAt(0, 1.6, 0);
+
+// Renderer
+const renderer = new THREE.WebGLRenderer({ alpha: true, antialias: true });
+renderer.setSize(width, height);
+renderer.setPixelRatio(Math.min(window.devicePixelRatio, 2));
+renderer.shadowMap.enabled = true;
+renderer.shadowMap.type = THREE.PCFSoftShadowMap;
+container.appendChild(renderer.domElement);
+
+// Lighting
+const ambientLight = new THREE.AmbientLight(0xffffff, 0.7);
+scene.add(ambientLight);
+
+const dirLight = new THREE.DirectionalLight(0x38bdf8, 1.5);
+dirLight.position.set(15, 25, 12);
+dirLight.castShadow = true;
+dirLight.shadow.mapSize.width = 1024;
+dirLight.shadow.mapSize.height = 1024;
+scene.add(dirLight);
+
+const fillLight = new THREE.DirectionalLight(0xa855f7, 0.6);
+fillLight.position.set(-15, 10, -10);
+scene.add(fillLight);
+
+// Group to hold the entire interactable model & workplane
+const worldGroup = new THREE.Group();
+scene.add(worldGroup);
+
+// --- 1. Tinkercad-style Workplane / Technical Grid ---
+const gridHelper = new THREE.GridHelper(26, 26, 0x0284c7, 0x1e293b);
+gridHelper.position.y = 0;
+worldGroup.add(gridHelper);
+
+const planeGeo = new THREE.PlaneGeometry(26, 26);
+const planeMat = new THREE.MeshBasicMaterial({
+  color: 0x0a101d,
+  transparent: true,
+  opacity: 0.65,
+  depthWrite: false,
+  side: THREE.DoubleSide
+});
+const workplaneMesh = new THREE.Mesh(planeGeo, planeMat);
+workplaneMesh.rotation.x = -Math.PI / 2;
+workplaneMesh.position.y = -0.01;
+workplaneMesh.receiveShadow = true;
+worldGroup.add(workplaneMesh);
+
+// Coordinate Axes (RGB = XYZ)
+const axesHelper = new THREE.AxesHelper(4.5);
+axesHelper.position.set(-11, 0.05, 11);
+worldGroup.add(axesHelper);
+
+// --- 2. Bearing Mount / Mancal (Base & Cylindrical Hub) ---
+const mancalGroup = new THREE.Group();
+worldGroup.add(mancalGroup);
+
+// Base Plate
+const baseGeo = new THREE.BoxGeometry(7.2, 0.8, 7.2);
+const baseMat = new THREE.MeshPhongMaterial({
+  color: 0x1e293b,
+  specular: 0x38bdf8,
+  shininess: 40
+});
+const baseMesh = new THREE.Mesh(baseGeo, baseMat);
+baseMesh.position.set(0, 0.4, 0);
+baseMesh.castShadow = true;
+baseMesh.receiveShadow = true;
+mancalGroup.add(baseMesh);
+
+const baseEdges = new THREE.LineSegments(
+  new THREE.EdgesGeometry(baseGeo),
+  new THREE.LineBasicMaterial({ color: 0x38bdf8, linewidth: 1.5 })
+);
+baseMesh.add(baseEdges);
+
+// Cylindrical Bearing Housing
+const cylGeo = new THREE.CylinderGeometry(2.2, 2.2, 4.5, 36);
+const cylMat = new THREE.MeshPhongMaterial({
+  color: 0x111c2e,
+  specular: 0x0284c7,
+  shininess: 60
+});
+const cylMesh = new THREE.Mesh(cylGeo, cylMat);
+cylMesh.position.set(0, 2.8, 0);
+cylMesh.castShadow = true;
+cylMesh.receiveShadow = true;
+mancalGroup.add(cylMesh);
+
+const cylEdges = new THREE.LineSegments(
+  new THREE.EdgesGeometry(cylGeo),
+  new THREE.LineBasicMaterial({ color: 0x60a5fa, linewidth: 1 })
+);
+cylMesh.add(cylEdges);
+
+// Inner Bore
+const boreGeo = new THREE.CylinderGeometry(1.2, 1.2, 4.6, 32);
+const boreMat = new THREE.MeshPhongMaterial({
+  color: 0x070b14,
+  shininess: 20
+});
+const boreMesh = new THREE.Mesh(boreGeo, boreMat);
+boreMesh.position.set(0, 2.8, 0);
+mancalGroup.add(boreMesh);
+
+// 4 Corner Mounting Holes
+const holeGeo = new THREE.CylinderGeometry(0.35, 0.35, 0.82, 16);
+const holeMat = new THREE.MeshBasicMaterial({ color: 0x0284c7 });
+[[-2.7, -2.7], [2.7, -2.7], [-2.7, 2.7], [2.7, 2.7]].forEach(([hx, hz]) => {
+  const h = new THREE.Mesh(holeGeo, holeMat);
+  h.position.set(hx, 0.41, hz);
+  mancalGroup.add(h);
+});
+
+// --- 3. Dynamic Rigid Impactor with Multiple Shapes (Cube, Sphere, Wedge/Cylinder) ---
+let currentMass = 4.50; // kg
+let currentShape = 'cube'; // 'cube' | 'sphere' | 'wedge'
+const impactorGroup = new THREE.Group();
+worldGroup.add(impactorGroup);
+
+const impactorMat = new THREE.MeshPhongMaterial({
+  color: 0x0284c7,
+  emissive: 0x034977,
+  specular: 0xffffff,
+  shininess: 80,
+  transparent: true,
+  opacity: 0.92
+});
+
+const impactorWireMat = new THREE.LineBasicMaterial({ color: 0x7dd3fc, linewidth: 2 });
+const bboxMat = new THREE.LineDashedMaterial({
+  color: 0xf43f5e,
+  dashSize: 0.3,
+  gapSize: 0.2
+});
+
+let meshContainer = new THREE.Group();
+impactorGroup.add(meshContainer);
+
+function buildImpactorMesh(shape) {
+  // Clear previous mesh container children
+  while (meshContainer.children.length > 0) {
+    const obj = meshContainer.children[0];
+    if (obj.geometry) obj.geometry.dispose();
+    meshContainer.remove(obj);
+  }
+
+  let geo, bboxGeo, edgesGeo;
+  const baseDim = 2.4;
+
+  if (shape === 'sphere') {
+    geo = new THREE.SphereGeometry(baseDim * 0.62, 32, 24);
+    const m = new THREE.Mesh(geo, impactorMat);
+    m.castShadow = true;
+    meshContainer.add(m);
+
+    // Lat/Long wire lines
+    const wireGeo = new THREE.WireframeGeometry(geo);
+    const wire = new THREE.LineSegments(wireGeo, impactorWireMat);
+    meshContainer.add(wire);
+
+    bboxGeo = new THREE.BoxGeometry(baseDim * 1.25, baseDim * 1.25, baseDim * 1.25);
+  } else if (shape === 'wedge') {
+    // Cylindrical wedge / impactor cylinder on its side
+    geo = new THREE.CylinderGeometry(baseDim * 0.55, baseDim * 0.55, baseDim * 1.1, 24);
+    geo.rotateZ(Math.PI / 2);
+    const m = new THREE.Mesh(geo, impactorMat);
+    m.castShadow = true;
+    meshContainer.add(m);
+
+    edgesGeo = new THREE.EdgesGeometry(geo);
+    const edges = new THREE.LineSegments(edgesGeo, impactorWireMat);
+    meshContainer.add(edges);
+
+    bboxGeo = new THREE.BoxGeometry(baseDim * 1.25, baseDim * 1.2, baseDim * 1.2);
+  } else {
+    // Default: Cube
+    geo = new THREE.BoxGeometry(baseDim, baseDim, baseDim);
+    const m = new THREE.Mesh(geo, impactorMat);
+    m.castShadow = true;
+    meshContainer.add(m);
+
+    edgesGeo = new THREE.EdgesGeometry(geo);
+    const edges = new THREE.LineSegments(edgesGeo, impactorWireMat);
+    meshContainer.add(edges);
+
+    bboxGeo = new THREE.BoxGeometry(baseDim * 1.08, baseDim * 1.08, baseDim * 1.08);
+  }
+
+  const bboxEdges = new THREE.LineSegments(new THREE.EdgesGeometry(bboxGeo), bboxMat);
+  bboxEdges.computeLineDistances();
+  meshContainer.add(bboxEdges);
+
+  updateImpactorMass(currentMass);
+}
+
+// Function to update visual scale according to mass
+function updateImpactorMass(massVal) {
+  currentMass = Math.max(0.5, Math.min(25.0, massVal));
+  const scaleFactor = Math.pow(currentMass / 4.50, 1 / 3);
+  meshContainer.scale.set(scaleFactor, scaleFactor, scaleFactor);
+  
+  const forceScale = currentMass / 4.50;
+  arrowHelper.setLength(3.6 * Math.sqrt(forceScale), 0.8, 0.5);
+}
+
+// Function to update impactor shape
+function setImpactorShape(shape) {
+  if (['cube', 'sphere', 'wedge'].includes(shape)) {
+    currentShape = shape;
+    buildImpactorMesh(shape);
+  }
+}
+
+// Build initial shape
+buildImpactorMesh('cube');
+
+// Expose globally to window
+window.setFisisCadImpactorMass = updateImpactorMass;
+window.setFisisCadImpactorShape = setImpactorShape;
+
+// --- 4. Contact Flash & Force Vectors ---
+const contactPointGeo = new THREE.SphereGeometry(0.28, 16, 16);
+const contactPointMat = new THREE.MeshBasicMaterial({
+  color: 0xfbbf24,
+  wireframe: true
+});
+const contactPoint = new THREE.Mesh(contactPointGeo, contactPointMat);
+contactPoint.position.set(0, 5.05, 0);
+worldGroup.add(contactPoint);
+
+const arrowDir = new THREE.Vector3(0.5, 1, 0.2).normalize();
+const arrowOrigin = new THREE.Vector3(0, 5.05, 0);
+const arrowLength = 3.6;
+const arrowHelper = new THREE.ArrowHelper(arrowDir, arrowOrigin, arrowLength, 0xf43f5e, 0.8, 0.5);
+worldGroup.add(arrowHelper);
+
+const frictionDir = new THREE.Vector3(1, 0, 0).normalize();
+const frictionHelper = new THREE.ArrowHelper(frictionDir, arrowOrigin, 1.8, 0x38bdf8, 0.4, 0.3);
+worldGroup.add(frictionHelper);
+
+// --- 5. Mouse Orbit & Pan Interaction ---
+let isDragging = false;
+let previousMousePosition = { x: 0, y: 0 };
+let targetRotationY = 0;
+let targetRotationX = 0;
+let currentRotationY = 0;
+let currentRotationX = 0;
+
+const domElem = renderer.domElement;
+domElem.style.cursor = 'grab';
+
+domElem.addEventListener('mousedown', (e) => {
+  isDragging = true;
+  previousMousePosition = { x: e.clientX, y: e.clientY };
+  domElem.style.cursor = 'grabbing';
+});
+
+window.addEventListener('mouseup', () => {
+  isDragging = false;
+  domElem.style.cursor = 'grab';
+});
+
+window.addEventListener('mousemove', (e) => {
+  if (!isDragging) return;
+  const deltaX = e.clientX - previousMousePosition.x;
+  const deltaY = e.clientY - previousMousePosition.y;
+
+  targetRotationY += deltaX * 0.008;
+  targetRotationX = Math.max(-Math.PI / 4, Math.min(Math.PI / 3, targetRotationX + deltaY * 0.008));
+  previousMousePosition = { x: e.clientX, y: e.clientY };
+});
+
+domElem.addEventListener('wheel', (e) => {
+  e.preventDefault();
+  const zoomFactor = e.deltaY * 0.02;
+  const newFov = Math.max(20, Math.min(75, camera.fov + zoomFactor));
+  camera.fov = newFov;
+  camera.updateProjectionMatrix();
+}, { passive: false });
+
+domElem.addEventListener('touchstart', (e) => {
+  if (e.touches.length === 1) {
+    isDragging = true;
+    previousMousePosition = { x: e.touches[0].clientX, y: e.touches[0].clientY };
+  }
+});
+window.addEventListener('touchend', () => { isDragging = false; });
+window.addEventListener('touchmove', (e) => {
+  if (!isDragging || e.touches.length !== 1) return;
+  const deltaX = e.touches[0].clientX - previousMousePosition.x;
+  const deltaY = e.touches[0].clientY - previousMousePosition.y;
+  targetRotationY += deltaX * 0.008;
+  targetRotationX = Math.max(-Math.PI / 4, Math.min(Math.PI / 3, targetRotationX + deltaY * 0.008));
+  previousMousePosition = { x: e.touches[0].clientX, y: e.touches[0].clientY };
+});
+
+// --- 6. Physics Simulation Animation Loop ---
+let clock = new THREE.Clock();
+
+function animate() {
+  requestAnimationFrame(animate);
+
+  const elapsedTime = clock.getElapsedTime();
+
+  currentRotationY += (targetRotationY - currentRotationY) * 0.1;
+  currentRotationX += (targetRotationX - currentRotationX) * 0.1;
+
+  worldGroup.rotation.y = currentRotationY;
+  worldGroup.rotation.x = currentRotationX;
+
+  const cycle = (elapsedTime * 0.8) % 2.5;
+  const scaleOffset = (Math.pow(currentMass / 4.50, 1 / 3) - 1.0) * 1.2;
+
+  if (cycle < 1.2) {
+    const progress = cycle / 1.2;
+    const easeY = 1 - Math.pow(1 - progress, 2);
+    impactorGroup.position.set(0, 10.5 + scaleOffset - easeY * 4.2, 0);
+    impactorGroup.rotation.set(progress * 0.4, progress * 0.8, progress * 0.2);
+
+    contactPoint.visible = false;
+    arrowHelper.visible = false;
+    frictionHelper.visible = false;
+  } else if (cycle >= 1.2 && cycle < 1.45) {
+    const impactProg = (cycle - 1.2) / 0.25;
+    impactorGroup.position.set(0, 6.3 + scaleOffset - Math.sin(impactProg * Math.PI) * 0.12, 0);
+    impactorGroup.rotation.set(0.48, 0.96, 0.24);
+
+    contactPoint.visible = true;
+    contactPoint.scale.setScalar((1 + Math.sin(impactProg * Math.PI) * 0.8) * Math.pow(currentMass / 4.5, 0.4));
+    arrowHelper.visible = true;
+    frictionHelper.visible = true;
+
+    const vibMag = 0.04 * (currentMass / 4.5);
+    mancalGroup.position.y = -Math.sin(impactProg * Math.PI * 4) * vibMag;
+  } else {
+    const reboundProg = (cycle - 1.45) / 1.05;
+    const easeOut = Math.sin(reboundProg * (Math.PI / 2));
+    impactorGroup.position.set(
+      -reboundProg * 1.5,
+      6.3 + scaleOffset + easeOut * (3.5 * Math.pow(4.5 / currentMass, 0.2)),
+      reboundProg * 0.8
+    );
+    impactorGroup.rotation.set(0.48 + reboundProg * 1.2, 0.96 + reboundProg * 0.6, 0.24 + reboundProg * 0.4);
+
+    contactPoint.visible = false;
+    arrowHelper.visible = false;
+    frictionHelper.visible = false;
+    mancalGroup.position.y = 0;
+  }
+
+  renderer.render(scene, camera);
+}
+
+animate();
+
+function onWindowResize() {
+  const newWidth = container.clientWidth || window.innerWidth;
+  const newHeight = container.clientHeight || window.innerHeight;
+  camera.aspect = newWidth / newHeight;
+  camera.updateProjectionMatrix();
+  renderer.setSize(newWidth, newHeight);
+}
+window.addEventListener('resize', onWindowResize);
+})();
+</script>
+</div>
+<!-- STITCH_THREEJS_END:ANIMATION_24 -->
+<!-- In-Viewport HUD Dimensional & Vector Callout Pills (Tinkercad-style live badges) -->
+<div class="absolute top-[35%] left-[41%] -translate-x-1/2 -translate-y-full flex flex-col gap-1 pointer-events-auto z-10">
+<div class="flex items-center gap-1.5 px-2.5 py-1 rounded bg-surface-container-lowest/90 backdrop-blur shadow-md border border-outline-variant/30">
+<span class="w-2 h-2 rounded-full bg-error animate-pulse"></span>
+<span class="font-label-sm text-label-sm uppercase text-on-surface-variant font-bold">Vetor Força Normal:</span>
+<span class="font-telemetry-num text-telemetry-num font-bold text-error" id="hud-peak-force">Fn = 18.42 kN</span>
+</div>
+<div class="flex items-center gap-1.5 px-2.5 py-1 rounded bg-surface-container-lowest/90 backdrop-blur shadow-md border border-outline-variant/30">
+<span class="w-2 h-2 rounded-full bg-secondary"></span>
+<span class="font-label-sm text-label-sm uppercase text-on-surface-variant font-bold">Atrito Dinâmico:</span>
+<span class="font-telemetry-num text-telemetry-num font-bold text-secondary" id="hud-friction">Ft = 3.61 kN (μ=0.35)</span>
+</div>
+</div>
+<div class="absolute top-[49%] left-[54%] flex flex-col gap-1 pointer-events-auto z-10">
+<div class="flex items-center gap-1.5 px-2.5 py-1 rounded bg-surface-container-lowest/90 backdrop-blur shadow-md border border-outline-variant/30">
+<span class="material-symbols-outlined text-[14px] text-primary">bolt</span>
+<span class="font-label-sm text-label-sm uppercase text-on-surface-variant">Ponto de Impacto:</span>
+<span class="font-telemetry-num text-telemetry-num text-primary font-bold">X: 142.5 Y: -88.1 Z: 0.0 mm</span>
+</div>
+<div class="flex items-center gap-1.5 px-2 py-0.5 rounded bg-surface-container-high/90 border border-outline-variant/30">
+<span class="font-label-sm text-label-sm text-on-surface-variant">Rebote v':</span>
+<span class="font-telemetry-num text-telemetry-num text-on-surface font-semibold">-4.82 m/s</span>
+<span class="text-secondary font-label-sm text-label-sm">| e = 0.65</span>
+</div>
+</div>
+<!-- TOP FLOATING BAR: Solver Telemetry & Viewport Toolbars (Tinkercad-style) -->
+<div class="relative z-20 w-full p-margin flex items-start justify-between pointer-events-none">
+<!-- Left Top: Solver Status Ribbon & Breadcrumb Mode -->
+<div class="flex flex-col gap-space-xs pointer-events-auto">
+<div class="flex items-center gap-space-sm bg-surface-container-low/90 backdrop-blur px-3 py-1.5 rounded shadow-lg border border-outline-variant/30">
+<div class="flex items-center gap-2">
+<span class="relative flex h-2.5 w-2.5">
+<span class="animate-ping absolute inline-flex h-full w-full rounded-full bg-secondary opacity-75"></span>
+<span class="relative inline-flex rounded-full h-2.5 w-2.5 bg-secondary"></span>
+</span>
+<span class="font-headline-sm text-headline-sm font-bold tracking-tight text-on-surface">Simulação Dinâmica Transiente</span>
+</div>
+<span class="text-outline-variant font-label-sm">/</span>
+<span class="font-label-sm text-label-sm text-secondary bg-surface-container-highest px-2 py-0.5 rounded uppercase tracking-wider font-semibold">
+            RK4 • CCD Ativo
+          </span>
+<div class="flex items-center gap-1 bg-surface-container px-2 py-0.5 rounded">
+<span class="material-symbols-outlined text-primary text-[14px]">speed</span>
+<span class="font-telemetry-num text-telemetry-num text-primary font-bold">59.8 FPS</span>
+</div>
+</div>
+<div class="flex items-center gap-space-xs text-on-surface-variant font-body-sm text-body-sm pl-1">
+<span>Malha Estrutural: <strong>14.280 Nós TET10</strong></span>
+<span>•</span>
+<span>Passo de Integração: <strong>Δt = 0.0005s</strong></span>
+</div>
+</div>
+<!-- Center Top: Tinkercad-inspired Workplane Tools & Shape Injection Bar -->
+<div class="hidden lg:flex items-center gap-space-xs bg-surface-container-low/95 backdrop-blur p-1 rounded shadow-xl pointer-events-auto border border-outline-variant/30">
+<button class="flex items-center gap-1.5 px-3 py-1.5 rounded bg-primary-container text-on-primary-container font-label-md text-label-md font-semibold shadow-sm transition-all hover:brightness-110" title="Plano de Trabalho / Workplane (W)">
+<span class="material-symbols-outlined text-[18px]">grid_4x4</span>
+<span>Plano de Trabalho</span>
+</button>
+<button class="flex items-center gap-1.5 px-3 py-1.5 rounded text-on-surface hover:bg-surface-container-high transition-colors font-label-md text-label-md" title="Régua Métrica Interativa (R)">
+<span class="material-symbols-outlined text-[18px] text-secondary">straighten</span>
+<span>Régua 3D</span>
+</button>
+<button class="flex items-center gap-1.5 px-3 py-1.5 rounded text-on-surface hover:bg-surface-container-high transition-colors font-label-md text-label-md" title="Medição Dinâmica de Distância e Tensão">
+<span class="material-symbols-outlined text-[18px] text-secondary">square_foot</span>
+<span>Cotas HUD</span>
+</button>
+<div class="w-[1px] h-6 bg-outline-variant mx-1"></div>
+<!-- Primitive Collision Shape Drop Tools (Tinkercad style) -->
+<span class="font-label-sm text-label-sm text-outline-variant px-1 uppercase">Colisor:</span>
+<button class="p-1.5 rounded bg-surface-container-high text-primary hover:bg-surface-container-highest transition-colors" title="Inserir Cubo Rígido">
+<span class="material-symbols-outlined text-[18px]">view_in_ar</span>
+</button>
+<button class="p-1.5 rounded hover:bg-surface-container-high text-on-surface-variant hover:text-on-surface transition-colors" title="Inserir Esfera Balística">
+<span class="material-symbols-outlined text-[18px]">sports_baseball</span>
+</button>
+<button class="p-1.5 rounded hover:bg-surface-container-high text-on-surface-variant hover:text-on-surface transition-colors" title="Inserir Cilindro de Prova">
+<span class="material-symbols-outlined text-[18px]">mic_detect_auto</span>
+</button>
+</div>
+<!-- Right Top: ViewCube & Viewport Camera Controls (Tinkercad signature) -->
+<div class="flex items-start gap-space-md pointer-events-auto">
+<!-- Floating Viewport Utility Strip -->
+<div class="flex flex-col gap-1 bg-surface-container-low/90 backdrop-blur p-1 rounded shadow-lg border border-outline-variant/30">
+<button class="w-8 h-8 rounded flex items-center justify-center text-on-surface-variant hover:text-on-surface hover:bg-surface-container-high transition-colors" title="Vista Inicial (Home)">
+<span class="material-symbols-outlined text-[18px]">home</span>
+</button>
+<button class="w-8 h-8 rounded flex items-center justify-center text-on-surface-variant hover:text-on-surface hover:bg-surface-container-high transition-colors" title="Enquadrar / Ajustar na Tela">
+<span class="material-symbols-outlined text-[18px]">fit_screen</span>
+</button>
+<button class="w-8 h-8 rounded flex items-center justify-center text-on-surface-variant hover:text-on-surface hover:bg-surface-container-high transition-colors" title="Zoom +">
+<span class="material-symbols-outlined text-[18px]">zoom_in</span>
+</button>
+<button class="w-8 h-8 rounded flex items-center justify-center text-on-surface-variant hover:text-on-surface hover:bg-surface-container-high transition-colors" title="Zoom -">
+<span class="material-symbols-outlined text-[18px]">zoom_out</span>
+</button>
+<button class="w-8 h-8 rounded flex items-center justify-center text-secondary bg-surface-container-high transition-colors font-label-sm font-bold" title="Alternar Perspectiva / Projeção Ortogonal">
+            3D
+          </button>
+</div>
+<!-- 3D Interactive ViewCube (Tinkercad signature navigation gadget) -->
+<div class="w-20 h-20 bg-surface-container-low/95 backdrop-blur rounded p-1.5 shadow-xl flex flex-col items-center justify-center relative cursor-grab active:cursor-grabbing hover:bg-surface-container border border-outline-variant/30">
+<div class="relative w-14 h-14 bg-surface-container-high rounded shadow-inner flex items-center justify-center transform perspective-500">
+<!-- Simulated Isometric Cube Faces -->
+<div class="absolute inset-x-2 top-0.5 h-3.5 bg-surface-container-highest rounded-t flex items-center justify-center font-label-sm text-[8px] font-bold text-secondary">
+              TOPO
+            </div>
+<div class="absolute inset-y-2 left-0.5 w-3.5 bg-surface-container-highest rounded-l flex items-center justify-center font-label-sm text-[8px] font-bold text-on-surface-variant">
+              ESQ
+            </div>
+<div class="w-8 h-8 bg-surface-container flex items-center justify-center font-label-sm text-[9px] font-bold text-on-surface shadow-sm">
+              FRENTE
+            </div>
+<div class="absolute inset-y-2 right-0.5 w-3.5 bg-surface-container-highest rounded-r flex items-center justify-center font-label-sm text-[8px] font-bold text-on-surface-variant">
+              DIR
+            </div>
+</div>
+<div class="w-full flex justify-between px-1 mt-0.5 font-label-sm text-[8px] text-outline">
+<span>ISO</span>
+<span class="text-secondary">ISOMÉTRICO</span>
+</div>
+</div>
+</div>
+</div>
+<!-- MIDDLE LAYER: Left Physics Inspector HUD & Right Telemetry Live Gauges -->
+<div class="relative z-10 w-full px-margin flex justify-between items-start pointer-events-none -mt-4">
+<!-- LEFT HUD: Physics Parameter & Boundary Conditions Dock -->
+<div class="w-84 bg-surface-container-low/95 backdrop-blur rounded shadow-2xl p-space-md pointer-events-auto flex flex-col gap-space-sm max-h-[calc(100vh-16rem)] overflow-y-auto border border-outline-variant/30">
+<!-- Panel Header & Physics Mode Switch -->
+<div class="flex items-center justify-between pb-space-xs">
+<div class="flex items-center gap-1.5">
+<span class="material-symbols-outlined text-secondary text-[18px]">tune</span>
+<span class="font-title-md text-title-md font-bold text-on-surface">Configuração Física</span>
+</div>
+<span class="font-label-sm text-label-sm text-outline uppercase">SIM-FEA</span>
+</div>
+<!-- Simulation Mode Toggle Pill -->
+<div class="grid grid-cols-2 gap-1 p-0.5 bg-surface-container-highest rounded">
+<button class="py-1 px-2 rounded bg-primary text-on-primary font-label-sm text-label-sm font-bold flex items-center justify-center gap-1 shadow">
+<span class="material-symbols-outlined text-[14px]">sports_volleyball</span>
+<span>Impacto RBD</span>
+</button>
+<button class="py-1 px-2 rounded text-on-surface-variant hover:text-on-surface font-label-sm text-label-sm flex items-center justify-center gap-1">
+<span class="material-symbols-outlined text-[14px]">air</span>
+<span>CFD Túnel</span>
+</button>
+</div>
+<!-- Boundary Condition Cards -->
+<div class="flex flex-col gap-space-xs mt-1">
+<!-- Environmental Parameters -->
+<div class="p-space-sm rounded bg-surface-container flex flex-col gap-1.5">
+<div class="flex items-center justify-between">
+<span class="font-label-sm text-label-sm text-on-surface-variant font-semibold">Gravidade Global (g)</span>
+<span class="px-1.5 py-0.2 rounded bg-surface-container-highest text-secondary font-telemetry-num text-telemetry-num font-bold">9.81 m/s² [-Z]</span>
+</div>
+<div class="flex items-center justify-between text-body-sm text-body-sm text-on-surface-variant">
+<span>Amortecimento do Ar:</span>
+<span class="font-telemetry-num text-telemetry-num text-on-surface">0.02 N·s/m</span>
+</div>
+</div>
+<!-- Dynamic Contact & Collision Parameters -->
+<div class="p-space-sm rounded bg-surface-container flex flex-col gap-2">
+<div class="flex items-center justify-between">
+<span class="font-title-md text-body-md font-bold text-on-surface">Contato &amp; Materiais</span>
+<span class="w-2 h-2 rounded-full bg-secondary"></span>
+</div>
+<!-- Param 1: Coef Restituicao -->
+<div class="flex flex-col gap-1">
+<div class="flex justify-between font-label-sm text-label-sm">
+<span class="text-on-surface-variant">Restituição Normal (e):</span>
+<span class="font-telemetry-num font-bold text-secondary">0.65</span>
+</div>
+<div class="w-full h-1.5 bg-surface-container-highest rounded-full overflow-hidden">
+<div class="h-full bg-secondary rounded-full" style="width: 65%;"></div>
+</div>
+</div>
+<!-- Param 2: Atrito Dinamico -->
+<div class="flex flex-col gap-1">
+<div class="flex justify-between font-label-sm text-label-sm">
+<span class="text-on-surface-variant">Atrito de Coulomb (μ):</span>
+<span class="font-telemetry-num font-bold text-primary">0.35 (Aço-Bronze)</span>
+</div>
+<div class="w-full h-1.5 bg-surface-container-highest rounded-full overflow-hidden">
+<div class="h-full bg-primary rounded-full" style="width: 35%;"></div>
+</div>
+</div>
+</div>
+<!-- Rigid Impactor Properties - Interactive Mass & Shape Controls -->
+<div class="p-space-sm rounded bg-surface-container flex flex-col gap-2 border border-outline-variant/40">
+<div class="flex items-center justify-between">
+<span class="font-label-sm text-label-sm text-secondary font-bold uppercase tracking-wider flex items-center gap-1">
+<span class="material-symbols-outlined text-[15px]">weight</span>
+<span>Objeto de Choque (Impactor)</span>
+</span>
+<span class="text-[9px] font-label-sm uppercase px-1.5 py-0.5 rounded bg-surface-container-highest text-secondary font-bold" id="badge-impact-class">Nominal</span>
+</div>
+<!-- Interactive Impactor Shape Selector -->
+<div class="p-2 rounded bg-surface-container-high flex flex-col gap-1.5 border border-outline-variant/20">
+<div class="flex items-center justify-between">
+<span class="font-label-sm text-label-sm text-outline font-semibold">Geometria do Colisor:</span>
+<span class="font-label-sm text-[10px] text-primary font-mono font-bold" id="label-active-shape-contact">Área Pontual</span>
+</div>
+<div class="grid grid-cols-3 gap-1">
+<button class="shape-selector-btn py-1.5 px-1.5 rounded flex flex-col items-center justify-center gap-0.5 text-center transition-all bg-[#0284c7] text-white border border-sky-400 font-bold shadow-sm" data-shape="cube" title="Geometria Cúbica (Impacto de Canto/Face)" type="button">
+<span class="material-symbols-outlined text-[17px]">crop_square</span>
+<span class="text-[9px] font-label-sm">Cubo</span>
+</button>
+<button class="shape-selector-btn py-1.5 px-1.5 rounded flex flex-col items-center justify-center gap-0.5 text-center transition-all bg-surface-container text-on-surface-variant hover:text-on-surface hover:bg-surface-container-highest border border-transparent font-medium" data-shape="sphere" title="Geometria Esférica (Impacto Hertziano)" type="button">
+<span class="material-symbols-outlined text-[17px]">sports_baseball</span>
+<span class="text-[9px] font-label-sm">Esfera</span>
+</button>
+<button class="shape-selector-btn py-1.5 px-1.5 rounded flex flex-col items-center justify-center gap-0.5 text-center transition-all bg-surface-container text-on-surface-variant hover:text-on-surface hover:bg-surface-container-highest border border-transparent font-medium" data-shape="wedge" title="Cunha Cilíndrica (Impacto Linear)" type="button">
+<span class="material-symbols-outlined text-[17px]">view_column</span>
+<span class="text-[9px] font-label-sm leading-tight">Cunha Cil.</span>
+</button>
+</div>
+<div class="flex items-center justify-between text-[9px] font-label-sm pt-0.5 px-0.5 text-outline">
+<span>Perfil de Contato:</span>
+<span class="text-secondary font-mono" id="label-shape-profile">Aresta Viva / Achatamento</span>
+</div>
+</div>
+<!-- Impactor Mass Stepper & Direct Value -->
+<div class="p-2 rounded bg-surface-container-high flex flex-col gap-1.5">
+<div class="flex items-center justify-between">
+<span class="font-label-sm text-label-sm text-outline font-semibold">Massa do Impactor (m)</span>
+<div class="flex items-center gap-1">
+<button class="w-6 h-6 rounded bg-surface-container-highest hover:bg-surface-bright flex items-center justify-center text-on-surface font-bold text-sm transition-colors active:scale-95" id="btn-mass-dec" title="Diminuir massa (-0.5kg)" type="button">-</button>
+<span class="font-telemetry-num text-body-lg font-bold text-primary w-20 text-center bg-surface-container-lowest px-1.5 py-0.5 rounded border border-outline-variant/30" id="label-mass-display">4.50 kg</span>
+<button class="w-6 h-6 rounded bg-surface-container-highest hover:bg-surface-bright flex items-center justify-center text-on-surface font-bold text-sm transition-colors active:scale-95" id="btn-mass-inc" title="Aumentar massa (+0.5kg)" type="button">+</button>
+</div>
+</div>
+<!-- Continuous Precision Range Slider -->
+<div class="flex flex-col gap-1 pt-1">
+<div class="flex justify-between font-label-sm text-[9px] text-outline">
+<span>0.50 kg</span>
+<span class="text-secondary">Faixa Contínua</span>
+<span>20.00 kg</span>
+</div>
+<input class="w-full accent-[#93ccff] bg-surface-container-highest h-1.5 rounded cursor-pointer" id="input-mass-slider" max="20.00" min="0.50" step="0.10" type="range" value="4.50"/>
+</div>
+<!-- Standardized Test Mass Presets -->
+<div class="flex flex-col gap-1 pt-1">
+<span class="font-label-sm text-[9px] text-outline uppercase tracking-wider">Presets de Ensaio:</span>
+<div class="grid grid-cols-4 gap-1">
+<button class="preset-mass-btn py-1 px-1 rounded bg-surface-container text-on-surface-variant hover:text-on-surface hover:bg-surface-container-highest text-[9px] font-label-sm text-center transition-colors" data-mass="1.20" type="button">1.2 kg<br/><span class="text-[8px] text-outline">Leve</span></button>
+<button class="preset-mass-btn py-1 px-1 rounded bg-primary-container text-on-primary-container font-bold text-[9px] font-label-sm text-center shadow-sm transition-colors" data-mass="4.50" type="button">4.5 kg<br/><span class="text-[8px]">Nominal</span></button>
+<button class="preset-mass-btn py-1 px-1 rounded bg-surface-container text-on-surface-variant hover:text-on-surface hover:bg-surface-container-highest text-[9px] font-label-sm text-center transition-colors" data-mass="10.00" type="button">10.0 kg<br/><span class="text-[8px] text-outline">Severo</span></button>
+<button class="preset-mass-btn py-1 px-1 rounded bg-surface-container text-on-surface-variant hover:text-on-surface hover:bg-surface-container-highest text-[9px] font-label-sm text-center transition-colors" data-mass="18.50" type="button">18.5 kg<br/><span class="text-[8px] text-outline">Crítico</span></button>
+</div>
+</div>
+</div>
+<!-- Secondary Kinematic Values (v0 and Linear Momentum) -->
+<div class="grid grid-cols-2 gap-2">
+<div class="p-1.5 rounded bg-surface-container-high flex flex-col">
+<span class="font-label-sm text-label-sm text-outline">Velocidade (v₀)</span>
+<span class="font-telemetry-num text-telemetry-num text-error font-bold">12.00 m/s</span>
+</div>
+<div class="p-1.5 rounded bg-surface-container-high flex flex-col">
+<span class="font-label-sm text-label-sm text-outline">Momento (p = m·v)</span>
+<span class="font-telemetry-num text-telemetry-num text-on-surface font-bold" id="label-momentum">54.0 N·s</span>
+</div>
+</div>
+<div class="flex items-center justify-between text-body-sm text-body-sm pt-0.5">
+<span class="text-on-surface-variant">Energia Cinética Inicial:</span>
+<span class="font-telemetry-num text-telemetry-num font-bold text-primary" id="label-kinetic-energy">324.0 J</span>
+</div>
+</div>
+<!-- Precision Solver Details -->
+<div class="flex items-center justify-between px-2 py-1 rounded bg-surface-container-highest/60 text-body-sm font-body-sm">
+<span class="text-outline">CCD Penetration:</span>
+<span class="text-secondary font-telemetry-num font-semibold">0.000 mm (Rigid)</span>
+</div>
+</div>
+</div>
+<!-- RIGHT HUD: Live FEA Gauges, Transient Charts & Technical Report CTA -->
+<div class="w-84 bg-surface-container-low/95 backdrop-blur rounded shadow-2xl p-space-md pointer-events-auto flex flex-col gap-space-sm border border-outline-variant/30">
+<!-- Header -->
+<div class="flex items-center justify-between pb-space-xs">
+<div class="flex items-center gap-1.5">
+<span class="material-symbols-outlined text-primary text-[18px]">monitoring</span>
+<span class="font-title-md text-title-md font-bold text-on-surface">Telemetria de Tensão</span>
+</div>
+<span class="px-2 py-0.5 rounded bg-surface-container-high text-primary font-label-sm text-label-sm font-semibold">TET10 MESH</span>
+</div>
+<!-- Metric Grid -->
+<div class="grid grid-cols-2 gap-space-xs">
+<!-- Peak Force Metric Card -->
+<div class="p-2.5 rounded bg-surface-container flex flex-col justify-between">
+<span class="font-label-sm text-label-sm text-on-surface-variant">Pico de Força (Fn)</span>
+<div class="flex items-baseline gap-1 mt-1">
+<span class="font-telemetry-num text-headline-sm font-bold text-error" id="metric-peak-force">18.42</span>
+<span class="font-label-sm text-label-sm text-error">kN</span>
+</div>
+<span class="font-body-sm text-[10px] text-outline">@ t = 1.482 s</span>
+</div>
+<!-- Instant Von Mises Stress -->
+<div class="p-2.5 rounded bg-surface-container flex flex-col justify-between">
+<span class="font-label-sm text-label-sm text-on-surface-variant">Von Mises Max</span>
+<div class="flex items-baseline gap-1 mt-1">
+<span class="font-telemetry-num text-headline-sm font-bold text-primary" id="metric-von-mises">584.2</span>
+<span class="font-label-sm text-label-sm text-primary">MPa</span>
+</div>
+<div class="flex items-center gap-1 mt-0.5">
+<span class="font-label-sm text-[10px] text-on-surface" id="metric-fs">FS = 1.12</span>
+<span class="w-1.5 h-1.5 rounded-full bg-secondary" id="metric-fs-dot"></span>
+</div>
+</div>
+<!-- Total Impulse -->
+<div class="p-2.5 rounded bg-surface-container flex flex-col justify-between">
+<span class="font-label-sm text-label-sm text-on-surface-variant">Impulso Total</span>
+<div class="flex items-baseline gap-1 mt-1">
+<span class="font-telemetry-num text-title-md font-bold text-on-surface" id="metric-impulse">142.5</span>
+<span class="font-label-sm text-label-sm text-on-surface-variant">N·s</span>
+</div>
+<span class="font-body-sm text-[10px] text-secondary">Integral ∫F dt</span>
+</div>
+<!-- Dissipated Energy -->
+<div class="p-2.5 rounded bg-surface-container flex flex-col justify-between">
+<span class="font-label-sm text-label-sm text-on-surface-variant">Energia Dissipada</span>
+<div class="flex items-baseline gap-1 mt-1">
+<span class="font-telemetry-num text-title-md font-bold text-secondary" id="metric-dissipated">86.4</span>
+<span class="font-label-sm text-label-sm text-secondary">J</span>
+</div>
+<span class="font-body-sm text-[10px] text-outline-variant">54.2% E_cinética</span>
+</div>
+</div>
+<!-- Inline Transient Chart: Força Transiente F(t) -->
+<div class="p-space-sm rounded bg-surface-container flex flex-col gap-1.5">
+<div class="flex items-center justify-between">
+<span class="font-label-sm text-label-sm font-bold text-on-surface">Pulso de Força Transiente F(t)</span>
+<span class="font-telemetry-num text-[10px] text-primary" id="chart-peak-label">Pico: 18.42 kN</span>
+</div>
+<!-- Vector Sparkline Curve -->
+<div class="h-20 w-full bg-surface-container-lowest rounded p-1 flex items-end">
+<svg class="w-full h-full overflow-visible" fill="none" viewbox="0 0 240 60">
+<!-- Grid hairline guidelines -->
+<line stroke="#31353f" stroke-dasharray="3 3" stroke-width="0.75" x1="0" x2="240" y1="15" y2="15"></line>
+<line stroke="#31353f" stroke-dasharray="3 3" stroke-width="0.75" x1="0" x2="240" y1="35" y2="35"></line>
+<line opacity="0.6" stroke="#7bd0ff" stroke-dasharray="2 2" stroke-width="1" x1="160" x2="160" y1="0" y2="60"></line>
+<!-- Baseline Area Gradient -->
+<path d="M 0 58 L 70 58 Q 110 58 130 52 T 155 8 L 160 5 L 168 18 Q 185 45 200 56 L 240 58 L 240 60 L 0 60 Z" fill="#93ccff" fill-opacity="0.1"></path>
+<!-- Force Curve (Sharp impact peak) -->
+<path d="M 0 58 L 70 58 Q 110 58 130 52 T 155 8 L 160 5 L 168 18 Q 185 45 200 56 L 240 58" stroke="#93ccff" stroke-linecap="round" stroke-width="2"></path>
+<!-- Current Playback Cursor Point -->
+<circle cx="160" cy="5" fill="#ffffff" r="4" stroke="#ffb4ab" stroke-width="2"></circle>
+</svg>
+</div>
+<div class="flex justify-between font-telemetry-num text-[9px] text-outline">
+<span>0.0s</span>
+<span class="text-secondary font-bold">t = 1.482s</span>
+<span>2.5s</span>
+</div>
+</div>
+<!-- Quick Navigation CTA directly linked to Tab 4 of the Shell -->
+<a class="w-full py-2.5 px-3 rounded bg-primary-container text-on-primary-container font-label-md text-label-md font-bold flex items-center justify-between shadow transition-transform hover:scale-[1.01] active:scale-[0.99]" href="#">
+<span class="flex items-center gap-1.5">
+<span class="material-symbols-outlined text-[18px]">assessment</span>
+<span>Relatório Técnico Completo</span>
+</span>
+<span class="material-symbols-outlined text-[16px]">arrow_forward</span>
+</a>
+</div>
+</div>
+<!-- BOTTOM FLOATING CONSOLE: Physics Timeline & Multi-Speed Playback Deck -->
+<div class="relative z-30 w-full px-margin pb-3 pointer-events-none">
+<div class="w-full bg-surface-container-low/95 backdrop-blur rounded shadow-2xl p-space-sm flex flex-col gap-2 pointer-events-auto border border-outline-variant/30">
+<!-- Scrubber Bar Track & Frame Cursor -->
+<div class="flex items-center gap-space-md">
+<span class="font-telemetry-num text-telemetry-num text-secondary font-bold min-w-16">1.482 s</span>
+<div class="relative w-full h-3 bg-surface-container-highest rounded cursor-pointer group flex items-center">
+<!-- Simulated Buffered Simulation Range -->
+<div class="absolute left-0 top-0 bottom-0 bg-surface-container-high rounded" style="width: 78%;"></div>
+<!-- Current Time Fill -->
+<div class="absolute left-0 top-0 bottom-0 bg-primary-container rounded" style="width: 59.2%;"></div>
+<!-- Impact Event Marker Flag -->
+<div class="absolute top-0 bottom-0 w-1 bg-error z-10" style="left: 59.2%;" title="Impact Event Point (t=1.482s)"></div>
+<!-- Interactive Scrubber Handle (Tinkercad-style Cyan Pill) -->
+<div class="absolute top-1/2 -translate-y-1/2 -translate-x-1/2 w-4 h-5 bg-secondary rounded shadow-md group-hover:scale-110 transition-transform flex items-center justify-center cursor-grab" style="left: 59.2%;">
+<div class="w-0.5 h-2.5 bg-on-secondary-fixed"></div>
+</div>
+</div>
+<span class="font-telemetry-num text-telemetry-num text-on-surface-variant min-w-16 text-right">2.500 s</span>
+</div>
+<!-- Playback Command Controls & Telemetry Readouts -->
+<div class="flex flex-wrap items-center justify-between gap-space-sm pt-0.5">
+<!-- Frame Readout Info -->
+<div class="flex items-center gap-space-sm font-telemetry-num text-telemetry-num text-on-surface-variant">
+<span>Frame: <strong class="text-on-surface">2964</strong> / 5000</span>
+<span class="text-outline">|</span>
+<span>Penetração residual: <strong class="text-secondary">0.00 mm</strong></span>
+</div>
+<!-- Center Transport Buttons -->
+<div class="flex items-center gap-space-xs">
+<button class="w-8 h-8 rounded flex items-center justify-center bg-surface-container hover:bg-surface-container-high text-on-surface transition-colors" title="Reiniciar Simulação (T=0)">
+<span class="material-symbols-outlined text-[18px]">replay</span>
+</button>
+<button class="w-8 h-8 rounded flex items-center justify-center bg-surface-container hover:bg-surface-container-high text-on-surface transition-colors" title="Retroceder 1 Frame">
+<span class="material-symbols-outlined text-[18px]">skip_previous</span>
+</button>
+<!-- Primary Pause/Play Active Button -->
+<button class="px-4 h-9 rounded bg-primary text-on-primary font-label-md text-label-md font-bold flex items-center gap-1.5 shadow hover:brightness-110 active:scale-95 transition-all" title="Pausar / Retomar Simulação (Space)">
+<span class="material-symbols-outlined text-[20px]" style="font-variation-settings: 'FILL' 1;">pause</span>
+<span>PAUSADO</span>
+</button>
+<button class="w-8 h-8 rounded flex items-center justify-center bg-surface-container hover:bg-surface-container-high text-on-surface transition-colors" title="Avançar 1 Frame">
+<span class="material-symbols-outlined text-[18px]">skip_next</span>
+</button>
+</div>
+<!-- Speed Selector Pills & Contact Resolution Status -->
+<div class="flex items-center gap-space-md">
+<!-- Speed Toggles -->
+<div class="flex items-center bg-surface-container p-0.5 rounded gap-0.5">
+<button class="px-2 py-0.5 rounded font-label-sm text-label-sm text-on-surface-variant hover:text-on-surface">0.1x</button>
+<button class="px-2 py-0.5 rounded font-label-sm text-label-sm text-on-surface-variant hover:text-on-surface">0.25x</button>
+<button class="px-2 py-0.5 rounded font-label-sm text-label-sm bg-surface-container-highest text-secondary font-bold">0.5x</button>
+<button class="px-2 py-0.5 rounded font-label-sm text-label-sm text-on-surface-variant hover:text-on-surface">1.0x Real</button>
+</div>
+<!-- Resolution Quality Badge -->
+<div class="hidden sm:flex items-center gap-1 px-2.5 py-1 rounded bg-surface-container-high">
+<span class="material-symbols-outlined text-secondary text-[14px]">verified</span>
+<span class="font-label-sm text-label-sm text-on-surface font-semibold">CCD Tolerância 10⁻⁵</span>
+</div>
+</div>
+</div>
+</div>
+</div>
+</div>
+</div></main><footer class="fixed bottom-0 left-0 right-0 h-6 bg-surface-container-lowest z-40 px-margin flex items-center justify-between"><div class="flex items-center gap-space-md font-telemetry-num text-telemetry-num text-on-surface-variant"><span>X: <span class="text-primary">142.500 mm</span></span><span>Y: <span class="text-primary">-88.125 mm</span></span><span>Z: <span class="text-primary">0.000 mm</span></span><span class="text-outline">|</span><span>Δ SNAP: <span class="text-secondary">0.500 mm</span></span></div><div class="flex items-center gap-space-lg font-telemetry-num text-telemetry-num"><div class="flex items-center gap-1"><span class="w-1.5 h-1.5 rounded-full bg-secondary"></span><span class="text-on-surface font-label-sm text-label-sm">SOLVER READY</span></div><span class="text-outline">|</span><span class="text-on-surface-variant font-label-sm text-label-sm">GRID: 1.0mm (TET10 MESH)</span></div></footer>
+<!-- Interactive Impactor Mass and Shape Synchronization Script -->
+<script>
+  (function() {
+    const slider = document.getElementById('input-mass-slider');
+    const labelDisplay = document.getElementById('label-mass-display');
+    const btnInc = document.getElementById('btn-mass-inc');
+    const btnDec = document.getElementById('btn-mass-dec');
+    const presetBtns = document.querySelectorAll('.preset-mass-btn');
+    const shapeBtns = document.querySelectorAll('.shape-selector-btn');
+    const labelActiveShapeContact = document.getElementById('label-active-shape-contact');
+    const labelShapeProfile = document.getElementById('label-shape-profile');
+
+    const labelKinetic = document.getElementById('label-kinetic-energy');
+    const labelMomentum = document.getElementById('label-momentum');
+    const badgeClass = document.getElementById('badge-impact-class');
+    const metricPeakForce = document.getElementById('metric-peak-force');
+    const metricVonMises = document.getElementById('metric-von-mises');
+    const metricImpulse = document.getElementById('metric-impulse');
+    const metricDissipated = document.getElementById('metric-dissipated');
+    const metricFS = document.getElementById('metric-fs');
+    const chartPeakLabel = document.getElementById('chart-peak-label');
+    const hudPeakForce = document.getElementById('hud-peak-force');
+    const hudFriction = document.getElementById('hud-friction');
+
+    const v0 = 12.00; // m/s
+    let currentShape = 'cube';
+
+    const shapeMeta = {
+      cube: {
+        contact: 'Área Pontual',
+        profile: 'Aresta Viva / Achatamento',
+        forceCoeff: 1.0,
+        stressCoeff: 1.0
+      },
+      sphere: {
+        contact: 'Contato Esférico',
+        profile: 'Hertziano Pontual (Pico Rápido)',
+        forceCoeff: 1.15,
+        stressCoeff: 1.28
+      },
+      wedge: {
+        contact: 'Aresta Linear',
+        profile: 'Distribuição Cilíndrica Uniaxial',
+        forceCoeff: 0.92,
+        stressCoeff: 0.88
+      }
+    };
+
+    function updateCalculations(mass) {
+      mass = parseFloat(mass);
+      if (isNaN(mass)) mass = 4.50;
+      mass = Math.max(0.50, Math.min(20.00, mass));
+
+      // Synchronize input elements
+      labelDisplay.textContent = mass.toFixed(2) + ' kg';
+      if (parseFloat(slider.value) !== mass) {
+        slider.value = mass.toFixed(2);
+      }
+
+      // 1. Kinetic Energy: E_k = 0.5 * m * v0^2
+      const Ek = 0.5 * mass * (v0 * v0);
+      labelKinetic.textContent = Ek.toFixed(1) + ' J';
+
+      // 2. Momentum: p = m * v0
+      const p = mass * v0;
+      labelMomentum.textContent = p.toFixed(1) + ' N·s';
+
+      // 3. Peak Force: Proportional to sqrt(m) and affected by shape
+      const massRatio = mass / 4.50;
+      const sMeta = shapeMeta[currentShape] || shapeMeta.cube;
+      const fnPeak = 18.42 * Math.sqrt(massRatio) * sMeta.forceCoeff;
+      const ftDynamic = 3.61 * Math.sqrt(massRatio) * sMeta.forceCoeff;
+      metricPeakForce.textContent = fnPeak.toFixed(2);
+      if (chartPeakLabel) chartPeakLabel.textContent = 'Pico: ' + fnPeak.toFixed(2) + ' kN';
+      if (hudPeakForce) hudPeakForce.textContent = 'Fn = ' + fnPeak.toFixed(2) + ' kN';
+      if (hudFriction) hudFriction.textContent = 'Ft = ' + ftDynamic.toFixed(2) + ' kN (μ=0.35)';
+
+      // 4. Von Mises stress and Factor of Safety
+      const vonMises = 584.2 * Math.pow(massRatio, 0.45) * sMeta.stressCoeff;
+      metricVonMises.textContent = vonMises.toFixed(1);
+      const yieldStress = 650.0;
+      const fs = (yieldStress / vonMises).toFixed(2);
+      metricFS.textContent = 'FS = ' + fs;
+
+      // 5. Total Impulse & Dissipated Energy
+      const impulse = 142.5 * Math.sqrt(massRatio);
+      metricImpulse.textContent = impulse.toFixed(1);
+      const dissipated = Ek * 0.2667;
+      metricDissipated.textContent = dissipated.toFixed(1);
+
+      // Classification Badge
+      if (mass < 2.5) {
+        badgeClass.textContent = 'Leve';
+        badgeClass.className = 'text-[9px] font-label-sm uppercase px-1.5 py-0.5 rounded bg-surface-container-highest text-secondary font-bold';
+      } else if (mass <= 7.0) {
+        badgeClass.textContent = 'Nominal';
+        badgeClass.className = 'text-[9px] font-label-sm uppercase px-1.5 py-0.5 rounded bg-primary-container text-on-primary-container font-bold';
+      } else if (mass <= 14.0) {
+        badgeClass.textContent = 'Severo';
+        badgeClass.className = 'text-[9px] font-label-sm uppercase px-1.5 py-0.5 rounded bg-secondary-container text-on-secondary-container font-bold';
+      } else {
+        badgeClass.textContent = 'Crítico';
+        badgeClass.className = 'text-[9px] font-label-sm uppercase px-1.5 py-0.5 rounded bg-error-container text-on-error-container font-bold';
+      }
+
+      // Update preset buttons styling
+      presetBtns.forEach(btn => {
+        const btnMass = parseFloat(btn.getAttribute('data-mass'));
+        if (Math.abs(btnMass - mass) < 0.1) {
+          btn.className = 'preset-mass-btn py-1 px-1 rounded bg-primary-container text-on-primary-container font-bold text-[9px] font-label-sm text-center shadow-sm transition-colors';
+        } else {
+          btn.className = 'preset-mass-btn py-1 px-1 rounded bg-surface-container text-on-surface-variant hover:text-on-surface hover:bg-surface-container-highest text-[9px] font-label-sm text-center transition-colors';
+        }
+      });
+
+      // Synchronize with Three.js scene
+      if (window.setFisisCadImpactorMass) {
+        window.setFisisCadImpactorMass(mass);
+      }
+    }
+
+    function setImpactorShape(shape) {
+      if (!shapeMeta[shape]) return;
+      currentShape = shape;
+
+      // Update shape button styles
+      shapeBtns.forEach(btn => {
+        const btnShape = btn.getAttribute('data-shape');
+        if (btnShape === shape) {
+          btn.className = 'shape-selector-btn py-1.5 px-1.5 rounded flex flex-col items-center justify-center gap-0.5 text-center transition-all bg-[#0284c7] text-white border border-sky-400 font-bold shadow-sm';
+        } else {
+          btn.className = 'shape-selector-btn py-1.5 px-1.5 rounded flex flex-col items-center justify-center gap-0.5 text-center transition-all bg-surface-container text-on-surface-variant hover:text-on-surface hover:bg-surface-container-highest border border-transparent font-medium';
+        }
+      });
+
+      // Update telemetry text labels
+      if (labelActiveShapeContact) labelActiveShapeContact.textContent = shapeMeta[shape].contact;
+      if (labelShapeProfile) labelShapeProfile.textContent = shapeMeta[shape].profile;
+
+      // Synchronize with Three.js scene
+      if (window.setFisisCadImpactorShape) {
+        window.setFisisCadImpactorShape(shape);
+      }
+
+      // Recalculate forces for new geometry
+      const currentMass = parseFloat(slider ? slider.value : 4.50);
+      updateCalculations(currentMass);
+    }
+
+    // Attach shape selector events
+    shapeBtns.forEach(btn => {
+      btn.addEventListener('click', () => {
+        const shape = btn.getAttribute('data-shape');
+        setImpactorShape(shape);
+      });
+    });
+
+    if (slider) {
+      slider.addEventListener('input', (e) => {
+        updateCalculations(parseFloat(e.target.value));
+      });
+    }
+
+    if (btnInc) {
+      btnInc.addEventListener('click', () => {
+        const cur = parseFloat(slider.value) || 4.50;
+        updateCalculations(cur + 0.50);
+      });
+    }
+
+    if (btnDec) {
+      btnDec.addEventListener('click', () => {
+        const cur = parseFloat(slider.value) || 4.50;
+        updateCalculations(cur - 0.50);
+      });
+    }
+
+    presetBtns.forEach(btn => {
+      btn.addEventListener('click', () => {
+        const massVal = parseFloat(btn.getAttribute('data-mass'));
+        updateCalculations(massVal);
+      });
+    });
+
+    // Initial sync
+    window.addEventListener('load', () => {
+      updateCalculations(4.50);
+      setImpactorShape('cube');
+    });
+  })();
+</script>
+</body></html>

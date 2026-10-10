@@ -1,0 +1,543 @@
+<!DOCTYPE html>
+
+<html class="dark" lang="en"><head><meta charset="utf-8"/><meta content="width=device-width, initial-scale=1.0" name="viewport"/><meta content="web_standard" name="shell-type"/><title>FisisCAD PRO</title><link href="https://fonts.googleapis.com" rel="preconnect"/><link crossorigin="" href="https://fonts.gstatic.com" rel="preconnect"/><link href="https://fonts.googleapis.com/css2?family=Geist:wght@400;500;600;700&amp;family=JetBrains+Mono:wght@400;500;600&amp;display=swap" rel="stylesheet"/><link href="https://fonts.googleapis.com/css2?family=Material+Symbols+Outlined:opsz,wght,FILL,GRAD@20..48,100..700,0..1,-50..200" rel="stylesheet"/>
+<link href="https://fonts.googleapis.com/css2?family=Material+Symbols+Outlined:wght,FILL@100..700,0..1&amp;display=swap" rel="stylesheet"/><style>@layer base { html, body { margin: 0; padding: 0; } body { overscroll-behavior: none; } main > :first-child { margin-top: 0 !important; } main > :last-child { margin-bottom: 0 !important; } } ::-webkit-scrollbar { display: none; }</style><script src="https://cdn.tailwindcss.com"></script><script id="tailwind-config">tailwind.config = { darkMode: "class", theme: { extend: { "colors": { "secondary-fixed": "#c4e7ff", "on-tertiary-fixed": "#131b2e", "on-tertiary-container": "#22293d", "background": "#0f131c", "secondary": "#7bd0ff", "primary-fixed": "#cce5ff", "on-primary": "#003351", "tertiary-fixed-dim": "#bec6e0", "error": "#ffb4ab", "on-primary-container": "#002c47", "inverse-surface": "#dfe2ef", "surface-container-low": "#181b25", "secondary-container": "#00a6e0", "on-secondary": "#00354a", "inverse-primary": "#006398", "surface-container-high": "#262a34", "on-secondary-fixed": "#001e2c", "tertiary": "#bec6e0", "on-surface-variant": "#bfc7d2", "surface-container-highest": "#31353f", "outline": "#89929b", "surface-container": "#1c1f29", "surface-dim": "#0f131c", "on-surface": "#dfe2ef", "inverse-on-surface": "#2c303a", "on-primary-fixed-variant": "#004b73", "on-tertiary": "#283044", "on-error-container": "#ffdad6", "secondary-fixed-dim": "#7bd0ff", "surface-container-lowest": "#0a0e17", "primary": "#93ccff", "primary-container": "#3198dc", "surface-tint": "#93ccff", "tertiary-container": "#8990a8", "tertiary-fixed": "#dae2fd", "on-secondary-fixed-variant": "#004c69", "on-secondary-container": "#00374d", "on-error": "#690005", "on-tertiary-fixed-variant": "#3f465c", "primary-fixed-dim": "#93ccff", "surface-variant": "#31353f", "error-container": "#93000a", "outline-variant": "#3f4850", "on-background": "#dfe2ef", "on-primary-fixed": "#001d31", "surface": "#0f131c", "surface-bright": "#353943" }, "borderRadius": { "DEFAULT": "0.125rem", "lg": "0.25rem", "xl": "0.5rem", "full": "0.75rem" }, "spacing": { "space-xs": "0.25rem", "gutter": "0.5rem", "space-lg": "0.75rem", "margin": "0.75rem", "space-md": "0.5rem", "space-xl": "1rem", "space-sm": "0.375rem" }, "fontFamily": { "headline-md": [ "Geist" ], "headline-sm": [ "Geist" ], "headline-lg": [ "Geist" ], "label-md": [ "JetBrains Mono" ], "telemetry-num": [ "JetBrains Mono" ], "title-md": [ "Geist" ], "body-sm": [ "JetBrains Mono" ], "label-sm": [ "JetBrains Mono" ], "body-md": [ "JetBrains Mono" ], "body-lg": [ "JetBrains Mono" ] }, "fontSize": { "headline-md": [ "1.25rem", { "lineHeight": "1.75rem", "letterSpacing": "-0.015em", "fontWeight": "600" } ], "headline-sm": [ "1rem", { "lineHeight": "1.5rem", "letterSpacing": "-0.01em", "fontWeight": "600" } ], "headline-lg": [ "1.5rem", { "lineHeight": "2rem", "letterSpacing": "-0.02em", "fontWeight": "600" } ], "label-md": [ "0.75rem", { "lineHeight": "1rem", "letterSpacing": "0.02em", "fontWeight": "500" } ], "telemetry-num": [ "0.75rem", { "lineHeight": "1rem", "letterSpacing": "-0.02em", "fontWeight": "600" } ], "title-md": [ "0.875rem", { "lineHeight": "1.25rem", "letterSpacing": "0em", "fontWeight": "500" } ], "body-sm": [ "0.6875rem", { "lineHeight": "1rem", "letterSpacing": "0.01em", "fontWeight": "400" } ], "label-sm": [ "0.625rem", { "lineHeight": "0.875rem", "letterSpacing": "0.04em", "fontWeight": "500" } ], "body-md": [ "0.75rem", { "lineHeight": "1.125rem", "letterSpacing": "0em", "fontWeight": "400" } ], "body-lg": [ "0.875rem", { "lineHeight": "1.375rem", "letterSpacing": "-0.01em", "fontWeight": "400" } ] } } } };</script></head><body class="bg-background font-body-md text-on-surface antialiased selection:bg-primary-container selection:text-on-primary"><header class="fixed top-0 left-0 right-0 z-50 bg-surface-container-lowest/90 backdrop-blur-xl shadow-[0_1px_8px_rgba(0,0,0,0.35)]"><div class="h-14 w-full px-margin flex items-center justify-between gap-space-lg"><div class="flex items-center gap-space-lg shrink-0"><div class="flex items-center gap-space-sm"><div class="w-7 h-7 rounded bg-primary-container flex items-center justify-center"><span class="material-symbols-outlined text-on-primary-container text-[18px]">architecture</span></div><span class="font-headline-sm text-headline-sm font-bold tracking-tight text-primary">FisisCAD <span class="text-secondary font-mono text-label-sm font-semibold px-space-xs py-0.5 rounded bg-surface-container-high">PRO</span></span></div><div class="hidden lg:flex items-center gap-space-xs font-label-md text-label-md text-outline"><span class="material-symbols-outlined text-[14px]">folder</span><span class="hover:text-on-surface transition-colors cursor-pointer">Structural_Analysis</span><span class="text-outline-variant">/</span><span class="text-on-surface font-semibold">Beam_Section_Rev4.step</span></div></div><nav class="hidden xl:flex items-center gap-space-xs font-label-md text-label-md" data-active-classes="bg-primary-container text-on-primary-container font-semibold rounded-lg"><a class="px-space-md py-space-xs text-on-surface-variant hover:text-on-surface hover:bg-surface-container-high transition-all rounded" data-path="inicio-hub" href="#">1. Início / Hub</a><a class="px-space-md py-space-xs text-on-surface-variant hover:text-on-surface hover:bg-surface-container-high transition-all rounded" data-path="modelagem-cad" href="#">2. Modelagem CAD (AutoCAD/Inventor)</a><a class="px-space-md py-space-xs text-on-surface-variant hover:text-on-surface hover:bg-surface-container-high transition-all rounded" data-path="selecao-de-ensaios-fisicos" href="#">3. Seleção de Ensaios Físicos</a><a class="px-space-md py-space-xs text-on-surface-variant hover:text-on-surface hover:bg-surface-container-high transition-all rounded" data-path="simulacao-fea" href="#">4. Simulação &amp; FEA</a></nav><div class="flex items-center gap-space-md shrink-0"><div class="hidden sm:flex items-center gap-space-xs"><div class="flex items-center gap-space-xs px-space-sm py-0.5 rounded bg-surface-container-high font-telemetry-num text-telemetry-num"><span class="w-1.5 h-1.5 rounded-full bg-secondary animate-pulse"></span><span class="text-secondary font-semibold">SOLVER READY</span></div><div class="flex items-center px-space-sm py-0.5 rounded bg-surface-container font-label-sm text-label-sm text-on-surface-variant"><span class="font-semibold text-tertiary">SI (mm, N, MPa)</span></div></div><div class="w-8 h-8 rounded-full bg-primary flex items-center justify-center"><span class="material-symbols-outlined text-on-primary text-[18px]">person</span></div></div></div></header><main class="w-full pt-14 bg-background min-h-screen"><div class="flex flex-col w-full">
+<!-- System Status Banner & Top Telemetry Strip -->
+<section class="w-full bg-surface-container-lowest px-margin py-space-md shadow-md">
+<div class="flex flex-wrap items-center justify-between gap-space-md">
+<div class="flex items-center gap-space-md">
+<div class="flex items-center gap-space-xs px-space-sm py-1 bg-surface-container rounded">
+<span class="w-2 h-2 rounded-full bg-secondary animate-ping"></span>
+<span class="w-2 h-2 rounded-full bg-secondary -ml-2.5"></span>
+<span class="font-telemetry-num text-telemetry-num text-secondary">CUDA RT-CORES: 4,096 @ 2.1 GHz</span>
+</div>
+<div class="hidden md:flex items-center gap-space-xs px-space-sm py-1 bg-surface-container rounded font-label-sm text-label-sm text-on-surface-variant">
+<span class="material-symbols-outlined text-[14px] text-primary">memory</span>
+<span>VRAM: 14.2 / 16.0 GB ALLOCATED</span>
+</div>
+<div class="hidden lg:flex items-center gap-space-xs px-space-sm py-1 bg-surface-container rounded font-label-sm text-label-sm text-on-surface-variant">
+<span class="material-symbols-outlined text-[14px] text-tertiary">alt_route</span>
+<span>CALCULIX 2.21 + OPENFOAM v2312 ACTIVE</span>
+</div>
+</div>
+<div class="flex items-center gap-space-sm font-label-sm text-label-sm">
+<span class="text-outline">ENV:</span>
+<span class="px-space-xs py-0.5 rounded bg-surface-container-high text-primary font-semibold">KERNEL v2.4-PRO (64-BIT)</span>
+<span class="text-outline">SYS LATENCY:</span>
+<span class="font-telemetry-num text-telemetry-num text-secondary">0.42 ms</span>
+</div>
+</div>
+</section>
+<!-- Main Grid Workspace -->
+<div class="w-full px-margin py-space-xl">
+<div class="grid grid-cols-1 xl:grid-cols-12 gap-space-xl">
+<!-- Primary Core: Quick Launch & File Management (8 Cols on XL) -->
+<div class="xl:col-span-8 flex flex-col gap-space-xl">
+<!-- Welcome & Quick Action Master Deck -->
+<div class="bg-surface-container rounded-xl p-space-xl shadow-lg relative overflow-hidden">
+<div class="absolute -right-16 -top-16 w-80 h-80 rounded-full bg-primary/5 blur-3xl pointer-events-none"></div>
+<div class="flex flex-col md:flex-row md:items-center justify-between gap-space-md mb-space-lg relative z-10">
+<div>
+<div class="flex items-center gap-space-xs mb-1">
+<span class="font-label-sm text-label-sm text-secondary tracking-widest uppercase">Workspace Hub</span>
+<span class="text-outline">/</span>
+<span class="font-label-sm text-label-sm text-on-surface-variant">Sessão Ativa: Lab Dinâmica de Estruturas</span>
+</div>
+<h1 class="font-headline-lg text-headline-lg text-on-surface font-bold">Ambiente de Pré-Processamento &amp; CAD Físico</h1>
+</div>
+<div class="flex items-center gap-space-xs shrink-0">
+<button class="px-space-md py-space-sm bg-primary hover:bg-primary-container text-on-primary font-headline-sm text-headline-sm rounded flex items-center gap-space-xs transition-colors shadow-sm" id="btn-quick-new">
+<span class="material-symbols-outlined text-[18px]">add_circle</span>
+<span>Novo Projeto</span>
+</button>
+<button class="px-space-md py-space-sm bg-surface-container-high hover:bg-surface-container-highest text-on-surface font-title-md text-title-md rounded flex items-center gap-space-xs transition-colors" id="btn-browse-file">
+<span class="material-symbols-outlined text-[18px] text-secondary">folder_open</span>
+<span>Abrir / Importar</span>
+</button>
+</div>
+</div>
+<!-- Drag and Drop Technical Ingestion Bay -->
+<div class="bg-surface-container-lowest/80 rounded-lg p-space-lg transition-all text-center flex flex-col items-center justify-center cursor-pointer group" id="dropzone">
+<input accept=".step,.stp,.iges,.igs,.dwg,.dxf,.ipt,.sldprt,.stl" class="hidden" id="cad-file-input" multiple="" type="file"/>
+<div class="w-12 h-12 rounded bg-surface-container-high flex items-center justify-center mb-space-sm group-hover:scale-110 transition-transform">
+<span class="material-symbols-outlined text-primary text-[28px]">upload_file</span>
+</div>
+<div class="font-headline-sm text-headline-sm text-on-surface mb-0.5">
+              Arraste malhas ou arquivos CAD para carregar diretamente
+            </div>
+<p class="font-body-sm text-body-sm text-on-surface-variant max-w-xl mb-space-sm">
+              Compatibilidade nativa total com geometria B-Rep e malhas poliédricas.
+              <span class="text-tertiary">STEP, IGES, DWG, DXF, Autodesk IPT, SolidWorks SLDPRT e STL binário.</span>
+</p>
+<div class="flex flex-wrap items-center justify-center gap-space-xs font-label-sm text-label-sm">
+<span class="px-space-xs py-0.5 rounded bg-surface-container-high text-secondary">B-REP KERNEL</span>
+<span class="px-space-xs py-0.5 rounded bg-surface-container-high text-on-surface-variant">AUTO-STITCHING: ON</span>
+<span class="px-space-xs py-0.5 rounded bg-surface-container-high text-on-surface-variant">GEOM CLEANUP: AUTO</span>
+</div>
+</div>
+</div>
+<!-- Domain Template Selectors -->
+<div class="flex flex-col gap-space-md">
+<div class="flex items-center justify-between">
+<h2 class="font-headline-md text-headline-md text-on-surface flex items-center gap-space-xs">
+<span class="material-symbols-outlined text-primary text-[20px]">category</span>
+              Modelos de Inicialização por Domínio Físico
+            </h2>
+<span class="font-label-sm text-label-sm text-outline">Selecione para carregar parâmetros de contorno padrão</span>
+</div>
+<div class="grid grid-cols-1 sm:grid-cols-2 lg:grid-cols-4 gap-space-md">
+<!-- Template 1: Parametric 3D Solid -->
+<div class="bg-surface-container-low hover:bg-surface-container rounded-lg p-space-md flex flex-col justify-between transition-colors cursor-pointer group shadow-sm">
+<div>
+<div class="flex items-center justify-between mb-space-sm">
+<div class="w-8 h-8 rounded bg-primary-container/20 flex items-center justify-center text-primary group-hover:bg-primary group-hover:text-on-primary transition-colors">
+<span class="material-symbols-outlined text-[18px]">view_in_ar</span>
+</div>
+<span class="font-label-sm text-label-sm px-space-xs py-0.5 rounded bg-surface-container-high text-secondary">ISO-10303</span>
+</div>
+<h3 class="font-title-md text-title-md text-on-surface font-semibold mb-1">Peça Paramétrica 3D</h3>
+<p class="font-body-sm text-body-sm text-on-surface-variant">Modelagem B-Rep, esboços com restrições geométricas e extrusões acopladas.</p>
+</div>
+<div class="mt-space-md pt-space-xs flex items-center justify-between text-outline group-hover:text-primary transition-colors">
+<span class="font-label-sm text-label-sm">Início Limpo</span>
+<span class="material-symbols-outlined text-[16px]">arrow_forward</span>
+</div>
+</div>
+<!-- Template 2: Structural FEA -->
+<div class="bg-surface-container-low hover:bg-surface-container rounded-lg p-space-md flex flex-col justify-between transition-colors cursor-pointer group shadow-sm">
+<div>
+<div class="flex items-center justify-between mb-space-sm">
+<div class="w-8 h-8 rounded bg-secondary/10 flex items-center justify-center text-secondary group-hover:bg-secondary group-hover:text-on-secondary transition-colors">
+<span class="material-symbols-outlined text-[18px]">line_axis</span>
+</div>
+<span class="font-label-sm text-label-sm px-space-xs py-0.5 rounded bg-surface-container-high text-tertiary">ESTÁTICO</span>
+</div>
+<h3 class="font-title-md text-title-md text-on-surface font-semibold mb-1">Estrutural &amp; Tensões</h3>
+<p class="font-body-sm text-body-sm text-on-surface-variant">FEA linear e não-linear, malhas tetraédricas C3D10 com von Mises automatizado.</p>
+</div>
+<div class="mt-space-md pt-space-xs flex items-center justify-between text-outline group-hover:text-secondary transition-colors">
+<span class="font-label-sm text-label-sm">CalculiX Solver</span>
+<span class="material-symbols-outlined text-[16px]">arrow_forward</span>
+</div>
+</div>
+<!-- Template 3: CFD Aerodynamics -->
+<div class="bg-surface-container-low hover:bg-surface-container rounded-lg p-space-md flex flex-col justify-between transition-colors cursor-pointer group shadow-sm">
+<div>
+<div class="flex items-center justify-between mb-space-sm">
+<div class="w-8 h-8 rounded bg-primary/10 flex items-center justify-center text-primary group-hover:bg-primary group-hover:text-on-primary transition-colors">
+<span class="material-symbols-outlined text-[18px]">air</span>
+</div>
+<span class="font-label-sm text-label-sm px-space-xs py-0.5 rounded bg-surface-container-high text-primary">RANS / k-ω</span>
+</div>
+<h3 class="font-title-md text-title-md text-on-surface font-semibold mb-1">Túnel de Vento CFD</h3>
+<p class="font-body-sm text-body-sm text-on-surface-variant">Camada limite poliédrica, arrasto parasita (Cd), sustentação (Cl) e esteira.</p>
+</div>
+<div class="mt-space-md pt-space-xs flex items-center justify-between text-outline group-hover:text-primary transition-colors">
+<span class="font-label-sm text-label-sm">OpenFOAM Ready</span>
+<span class="material-symbols-outlined text-[16px]">arrow_forward</span>
+</div>
+</div>
+<!-- Template 4: Impact & RBD -->
+<div class="bg-surface-container-low hover:bg-surface-container rounded-lg p-space-md flex flex-col justify-between transition-colors cursor-pointer group shadow-sm">
+<div>
+<div class="flex items-center justify-between mb-space-sm">
+<div class="w-8 h-8 rounded bg-tertiary/10 flex items-center justify-center text-tertiary group-hover:bg-tertiary group-hover:text-on-tertiary transition-colors">
+<span class="material-symbols-outlined text-[18px]">sports_kabaddi</span>
+</div>
+<span class="font-label-sm text-label-sm px-space-xs py-0.5 rounded bg-surface-container-high text-error">TRANSIENTE</span>
+</div>
+<h3 class="font-title-md text-title-md text-on-surface font-semibold mb-1">Impacto &amp; Queda Livre</h3>
+<p class="font-body-sm text-body-sm text-on-surface-variant">Dinâmica explícita, absorção de energia plástica, deformação e colisão multibody.</p>
+</div>
+<div class="mt-space-md pt-space-xs flex items-center justify-between text-outline group-hover:text-tertiary transition-colors">
+<span class="font-label-sm text-label-sm">Explicit Step</span>
+<span class="material-symbols-outlined text-[16px]">arrow_forward</span>
+</div>
+</div>
+</div>
+</div>
+<!-- Recent Projects Section (Rich Engineering Feed) -->
+<div class="flex flex-col gap-space-md">
+<div class="flex items-center justify-between">
+<div class="flex items-center gap-space-sm">
+<h2 class="font-headline-md text-headline-md text-on-surface flex items-center gap-space-xs">
+<span class="material-symbols-outlined text-secondary text-[20px]">history</span>
+                Projetos &amp; Modelos Recentes
+              </h2>
+<span class="px-space-xs py-0.5 rounded bg-surface-container-high text-on-surface-variant font-telemetry-num text-telemetry-num">3 ARQUIVOS CARREGADOS</span>
+</div>
+<div class="flex items-center gap-space-xs">
+<span class="font-label-sm text-label-sm text-outline hidden sm:inline">Filtrar por:</span>
+<button class="px-space-sm py-1 bg-surface-container hover:bg-surface-container-high rounded font-label-sm text-label-sm text-primary">Todos</button>
+<button class="px-space-sm py-1 bg-surface-container-lowest hover:bg-surface-container-high rounded font-label-sm text-label-sm text-on-surface-variant">STEP / CAD</button>
+<button class="px-space-sm py-1 bg-surface-container-lowest hover:bg-surface-container-high rounded font-label-sm text-label-sm text-on-surface-variant">FEA Mesh</button>
+</div>
+</div>
+<div class="flex flex-col gap-space-md">
+<!-- Project 1: Suporte Mancal -->
+<div class="bg-surface-container-low hover:bg-surface-container rounded-lg p-space-md transition-all shadow-sm flex flex-col md:flex-row gap-space-lg items-center">
+<div class="w-full md:w-56 h-36 rounded bg-surface-container-lowest overflow-hidden shrink-0 relative flex items-center justify-center">
+<img class="w-full h-full object-cover" data-alt="A precision technical 3D CAD render of a mechanical cast iron pillow block bearing bracket with isometric wireframe overlay, dimension callouts in cyan, photorealistic metal sheen, neutral studio lighting on deep navy slate background." src="https://lh3.googleusercontent.com/aida-public/AB6AXuAa6GEIwd_k6mtbTf-rnnEdznkHYCV0LPOtX_QphwtS9JrFCk65HR9-cIbpJxDXpuGYDLPfpTdKvkadI2gBuFKUA3fYCnj6E4rr08KD4gVkOP017SxUuePUhD6Ch2otMDTuVOaC74a_r3TGR8-UQXEwSQRIbFSn44HNa_cKrygsn2jJc1FU7__A_WGbwhCgNtgb4IPg72KViawahune0Wp-_wTa8tmgkaiZzk6oNp1bCpHSTx_EwX3-WA"/>
+<div class="absolute bottom-2 left-2 px-space-xs py-0.5 rounded bg-surface-container-lowest/90 font-telemetry-num text-telemetry-num text-secondary">
+                  CAD + FEA MESH
+                </div>
+</div>
+<div class="flex-1 flex flex-col justify-between w-full min-w-0">
+<div>
+<div class="flex flex-wrap items-center justify-between gap-space-xs mb-1">
+<span class="font-title-md text-title-md text-on-surface font-bold truncate">Suporte_Mancal_v2.step</span>
+<span class="font-label-sm text-label-sm text-outline">Modificado há 28 min</span>
+</div>
+<p class="font-body-sm text-body-sm text-on-surface-variant line-clamp-1 mb-space-sm">
+                    Análise elástica linear sob carga estática radial de 12.5 kN. Fixação por base flangeada com 4 parafusos M12.
+                  </p>
+<div class="grid grid-cols-2 sm:grid-cols-4 gap-space-xs font-telemetry-num text-telemetry-num mb-space-md">
+<div class="bg-surface-container px-space-sm py-1 rounded">
+<span class="text-outline block text-[9px]">ELEMENTOS</span>
+<span class="text-on-surface">148,290 C3D10</span>
+</div>
+<div class="bg-surface-container px-space-sm py-1 rounded">
+<span class="text-outline block text-[9px]">VON MISES MÁX</span>
+<span class="text-secondary">184.2 MPa</span>
+</div>
+<div class="bg-surface-container px-space-sm py-1 rounded">
+<span class="text-outline block text-[9px]">FATOR DE SEG.</span>
+<span class="text-on-surface">1.82 (Aço 1045)</span>
+</div>
+<div class="bg-surface-container px-space-sm py-1 rounded">
+<span class="text-outline block text-[9px]">TAMANHO</span>
+<span class="text-on-surface">24.6 MB</span>
+</div>
+</div>
+</div>
+<div class="flex items-center gap-space-sm pt-space-xs">
+<button class="px-space-md py-space-xs bg-primary text-on-primary hover:bg-primary-container font-label-md text-label-md rounded flex items-center gap-space-xs transition-colors">
+<span class="material-symbols-outlined text-[16px]">draw</span>
+<span>Retomar Modelagem</span>
+</button>
+<button class="px-space-md py-space-xs bg-surface-container-high text-secondary hover:bg-surface-container-highest font-label-md text-label-md rounded flex items-center gap-space-xs transition-colors">
+<span class="material-symbols-outlined text-[16px]">play_arrow</span>
+<span>Ir para Simulação</span>
+</button>
+<button class="w-8 h-8 rounded bg-surface-container hover:bg-surface-container-highest text-outline hover:text-on-surface flex items-center justify-center transition-colors ml-auto">
+<span class="material-symbols-outlined text-[18px]">more_vert</span>
+</button>
+</div>
+</div>
+</div>
+<!-- Project 2: NACA Wing Profile -->
+<div class="bg-surface-container-low hover:bg-surface-container rounded-lg p-space-md transition-all shadow-sm flex flex-col md:flex-row gap-space-lg items-center">
+<div class="w-full md:w-56 h-36 rounded bg-surface-container-lowest overflow-hidden shrink-0 relative flex items-center justify-center">
+<img class="w-full h-full object-cover" data-alt="Aerodynamic airflow visualization around a 2D NACA0012 symmetric airfoil wing profile with velocity streamlines, pressure contours in cyan and blue, technical grid background with geometric crosshairs, engineering CAD style." src="https://lh3.googleusercontent.com/aida-public/AB6AXuD6OaNx4lflYNwQ4023EJ0M_dE1MRT3aCbo_SWrupKdtdD8OfkP1xGLO02MY9h72M0cN03sW6giPU8gGtS_80mvSD2wR19AaZiF4dnaxJetKP9HHhT2QNgQ3uXcqJnb68yjO2_koK3addyZ8IjIYlKZxDQXq_Hq5L_k0zjnWiQi0_nwtRRfJ3y8O0SPZzRJ39S7npOxtocwogDC_7-lU-GSxmQzuRda6Q7DsT729-TYj_JjwMuybsdVsw"/>
+<div class="absolute bottom-2 left-2 px-space-xs py-0.5 rounded bg-surface-container-lowest/90 font-telemetry-num text-telemetry-num text-primary">
+                  CFD VELOCITY FIELD
+                </div>
+</div>
+<div class="flex-1 flex flex-col justify-between w-full min-w-0">
+<div>
+<div class="flex flex-wrap items-center justify-between gap-space-xs mb-1">
+<span class="font-title-md text-title-md text-on-surface font-bold truncate">Perfil_Asa_NACA0012.dwg</span>
+<span class="font-label-sm text-label-sm text-outline">Modificado ontem às 18:40</span>
+</div>
+<p class="font-body-sm text-body-sm text-on-surface-variant line-clamp-1 mb-space-sm">
+                    Estudo de esteira turbulenta e ângulo de estol (AoA de -2° a +16°). Regime subsônico a Mach 0.18.
+                  </p>
+<div class="grid grid-cols-2 sm:grid-cols-4 gap-space-xs font-telemetry-num text-telemetry-num mb-space-md">
+<div class="bg-surface-container px-space-sm py-1 rounded">
+<span class="text-outline block text-[9px]">REYNOLDS</span>
+<span class="text-on-surface">3.0 × 10⁶</span>
+</div>
+<div class="bg-surface-container px-space-sm py-1 rounded">
+<span class="text-outline block text-[9px]">COEF. ARRASTO (Cd)</span>
+<span class="text-secondary">0.0084</span>
+</div>
+<div class="bg-surface-container px-space-sm py-1 rounded">
+<span class="text-outline block text-[9px]">CONVERGÊNCIA</span>
+<span class="text-on-surface">10⁻⁵ (Resíduo p)</span>
+</div>
+<div class="bg-surface-container px-space-sm py-1 rounded">
+<span class="text-outline block text-[9px]">TAMANHO</span>
+<span class="text-on-surface">11.8 MB</span>
+</div>
+</div>
+</div>
+<div class="flex items-center gap-space-sm pt-space-xs">
+<button class="px-space-md py-space-xs bg-primary text-on-primary hover:bg-primary-container font-label-md text-label-md rounded flex items-center gap-space-xs transition-colors">
+<span class="material-symbols-outlined text-[16px]">draw</span>
+<span>Retomar Modelagem</span>
+</button>
+<button class="px-space-md py-space-xs bg-surface-container-high text-secondary hover:bg-surface-container-highest font-label-md text-label-md rounded flex items-center gap-space-xs transition-colors">
+<span class="material-symbols-outlined text-[16px]">query_stats</span>
+<span>Ver Gráficos Cl/Cd</span>
+</button>
+<button class="w-8 h-8 rounded bg-surface-container hover:bg-surface-container-highest text-outline hover:text-on-surface flex items-center justify-center transition-colors ml-auto">
+<span class="material-symbols-outlined text-[18px]">more_vert</span>
+</button>
+</div>
+</div>
+</div>
+<!-- Project 3: Tubular Spaceframe Impact -->
+<div class="bg-surface-container-low hover:bg-surface-container rounded-lg p-space-md transition-all shadow-sm flex flex-col md:flex-row gap-space-lg items-center">
+<div class="w-full md:w-56 h-36 rounded bg-surface-container-lowest overflow-hidden shrink-0 relative flex items-center justify-center">
+<img class="w-full h-full object-cover" data-alt="Detailed CAD engineering wireframe model of a racing tubular spaceframe chassis showing torsional stress vectors, localized plastic deformation zone near front crash box, high-contrast cyan lines on dark background." src="https://lh3.googleusercontent.com/aida-public/AB6AXuDZnoxM61zI8auvUnVryB4BfJnS-XKJFFXHzasJ80a0S3lkW1uLmbhnzzYoLjkMqtOhqbLVCIn0673GpB_myZIhAnKD8eLWV6VsaRN7lpEbWZZAYlNkkuS0ahH8QCwTcUzpBkzHax0RZNgoG1Dt_8IGfqP3xCAqlf6s58hYKfS3DetxvfvCBdxyaoMqCAW-GZe76SsdP4xrBtndM1kbfJyYrFwYeTJLDqNCUnHdJZPMg0upd4-ELHTCOg"/>
+<div class="absolute bottom-2 left-2 px-space-xs py-0.5 rounded bg-surface-container-lowest/90 font-telemetry-num text-telemetry-num text-tertiary">
+                  TRANSIENT EXPLICIT
+                </div>
+</div>
+<div class="flex-1 flex flex-col justify-between w-full min-w-0">
+<div>
+<div class="flex flex-wrap items-center justify-between gap-space-xs mb-1">
+<span class="font-title-md text-title-md text-on-surface font-bold truncate">Chassi_Tubular_Impact.step</span>
+<span class="font-label-sm text-label-sm text-outline">Modificado em 14 Nov</span>
+</div>
+<p class="font-body-sm text-body-sm text-on-surface-variant line-clamp-1 mb-space-sm">
+                    Simulação de desaceleração frontal contra barreira rígida a 54 km/h com absorvedor sanfonado.
+                  </p>
+<div class="grid grid-cols-2 sm:grid-cols-4 gap-space-xs font-telemetry-num text-telemetry-num mb-space-md">
+<div class="bg-surface-container px-space-sm py-1 rounded">
+<span class="text-outline block text-[9px]">TEMPO TRANSIENTE</span>
+<span class="text-on-surface">0.085 s</span>
+</div>
+<div class="bg-surface-container px-space-sm py-1 rounded">
+<span class="text-outline block text-[9px]">ENERGIA ABSORVIDA</span>
+<span class="text-secondary">42.8 kJ</span>
+</div>
+<div class="bg-surface-container px-space-sm py-1 rounded">
+<span class="text-outline block text-[9px]">PICO G</span>
+<span class="text-on-surface">19.4 G</span>
+</div>
+<div class="bg-surface-container px-space-sm py-1 rounded">
+<span class="text-outline block text-[9px]">TAMANHO</span>
+<span class="text-on-surface">104.3 MB</span>
+</div>
+</div>
+</div>
+<div class="flex items-center gap-space-sm pt-space-xs">
+<button class="px-space-md py-space-xs bg-primary text-on-primary hover:bg-primary-container font-label-md text-label-md rounded flex items-center gap-space-xs transition-colors">
+<span class="material-symbols-outlined text-[16px]">draw</span>
+<span>Retomar Modelagem</span>
+</button>
+<button class="px-space-md py-space-xs bg-surface-container-high text-secondary hover:bg-surface-container-highest font-label-md text-label-md rounded flex items-center gap-space-xs transition-colors">
+<span class="material-symbols-outlined text-[16px]">slow_motion_video</span>
+<span>Reproduzir Animação</span>
+</button>
+<button class="w-8 h-8 rounded bg-surface-container hover:bg-surface-container-highest text-outline hover:text-on-surface flex items-center justify-center transition-colors ml-auto">
+<span class="material-symbols-outlined text-[18px]">more_vert</span>
+</button>
+</div>
+</div>
+</div>
+</div>
+</div>
+</div>
+<!-- Right Auxiliary Panel: Formula Reference & Autodesk Shortcut Deck (4 Cols on XL) -->
+<div class="xl:col-span-4 flex flex-col gap-space-xl">
+<!-- Live Physical Constants & Formula Quick-Sheet -->
+<div class="bg-surface-container-low rounded-xl p-space-lg shadow-md">
+<div class="flex items-center justify-between mb-space-md">
+<h2 class="font-headline-sm text-headline-sm text-on-surface flex items-center gap-space-xs">
+<span class="material-symbols-outlined text-primary text-[18px]">functions</span>
+              Relações Físicas &amp; Critérios
+            </h2>
+<span class="font-label-sm text-label-sm text-secondary">PADRÃO SI</span>
+</div>
+<div class="flex flex-col gap-space-sm">
+<!-- Formula Item 1 -->
+<div class="bg-surface-container p-space-sm rounded">
+<div class="flex items-center justify-between mb-1">
+<span class="font-label-sm text-label-sm text-primary font-semibold">Critério von Mises (Escoamento)</span>
+<span class="font-telemetry-num text-telemetry-num text-outline">σv ≤ σ_yield</span>
+</div>
+<div class="font-body-sm text-body-sm text-on-surface-variant bg-surface-container-lowest p-space-xs rounded font-mono">
+                σv = √[ ½ · ((σ₁-σ₂)² + (σ₂-σ₃)² + (σ₃-σ₁)² + 6(τ₁₂²+τ₂₃²+τ₃₁²)) ]
+              </div>
+</div>
+<!-- Formula Item 2 -->
+<div class="bg-surface-container p-space-sm rounded">
+<div class="flex items-center justify-between mb-1">
+<span class="font-label-sm text-label-sm text-secondary font-semibold">Pressão Dinâmica (CFD / Aerodinâmica)</span>
+<span class="font-telemetry-num text-telemetry-num text-outline">q = ½ ρ v²</span>
+</div>
+<div class="font-body-sm text-body-sm text-on-surface-variant bg-surface-container-lowest p-space-xs rounded font-mono">
+                Fd = ½ · ρ · v² · Cd · A  |  Fl = ½ · ρ · v² · Cl · A
+              </div>
+</div>
+<!-- Formula Item 3 -->
+<div class="bg-surface-container p-space-sm rounded">
+<div class="flex items-center justify-between mb-1">
+<span class="font-label-sm text-label-sm text-tertiary font-semibold">Freq. Natural (Grau de Liberdade 1)</span>
+<span class="font-telemetry-num text-telemetry-num text-outline">ωn = √(k / m)</span>
+</div>
+<div class="font-body-sm text-body-sm text-on-surface-variant bg-surface-container-lowest p-space-xs rounded font-mono">
+                fn = (1 / 2π) · √(k_rigidez / m_massa)  [Hz]
+              </div>
+</div>
+</div>
+<div class="mt-space-md pt-space-sm flex items-center justify-between font-label-sm text-label-sm text-on-surface-variant">
+<span>Material Ativo no Contexto:</span>
+<span class="text-on-surface font-semibold">SAE 1045 Recozido (E=205 GPa)</span>
+</div>
+</div>
+<!-- Professional CAD Shortcuts (AutoCAD / Inventor Mapping) -->
+<div class="bg-surface-container-low rounded-xl p-space-lg shadow-md">
+<div class="flex items-center justify-between mb-space-md">
+<h2 class="font-headline-sm text-headline-sm text-on-surface flex items-center gap-space-xs">
+<span class="material-symbols-outlined text-secondary text-[18px]">keyboard</span>
+              Atalhos Rápidos (AutoCAD / Inventor)
+            </h2>
+<span class="font-label-sm text-label-sm px-space-xs py-0.5 rounded bg-surface-container-high text-on-surface">MODO PRO</span>
+</div>
+<div class="flex flex-col gap-space-xs">
+<div class="flex items-center justify-between py-1 bg-surface-container px-space-sm rounded">
+<span class="font-body-sm text-body-sm text-on-surface">Extrusão Paramétrica</span>
+<div class="flex items-center gap-1">
+<kbd class="px-space-xs py-0.5 rounded bg-surface-container-highest font-telemetry-num text-telemetry-num text-primary">E</kbd>
+<span class="text-outline font-label-sm text-label-sm">ou</span>
+<kbd class="px-space-xs py-0.5 rounded bg-surface-container-highest font-telemetry-num text-telemetry-num text-on-surface">EXTRUDE</kbd>
+</div>
+</div>
+<div class="flex items-center justify-between py-1 bg-surface-container px-space-sm rounded">
+<span class="font-body-sm text-body-sm text-on-surface">Novo Esboço 2D (Sketch)</span>
+<div class="flex items-center gap-1">
+<kbd class="px-space-xs py-0.5 rounded bg-surface-container-highest font-telemetry-num text-telemetry-num text-primary">S</kbd>
+<span class="text-outline font-label-sm text-label-sm">na face</span>
+</div>
+</div>
+<div class="flex items-center justify-between py-1 bg-surface-container px-space-sm rounded">
+<span class="font-body-sm text-body-sm text-on-surface">Dimensão Geral (Smart Dimension)</span>
+<div class="flex items-center gap-1">
+<kbd class="px-space-xs py-0.5 rounded bg-surface-container-highest font-telemetry-num text-telemetry-num text-secondary">D</kbd>
+</div>
+</div>
+<div class="flex items-center justify-between py-1 bg-surface-container px-space-sm rounded">
+<span class="font-body-sm text-body-sm text-on-surface">Revolução em Torno do Eixo</span>
+<div class="flex items-center gap-1">
+<kbd class="px-space-xs py-0.5 rounded bg-surface-container-highest font-telemetry-num text-telemetry-num text-on-surface">R</kbd>
+</div>
+</div>
+<div class="flex items-center justify-between py-1 bg-surface-container px-space-sm rounded">
+<span class="font-body-sm text-body-sm text-on-surface">Arredondamento / Filete (Fillet)</span>
+<div class="flex items-center gap-1">
+<kbd class="px-space-xs py-0.5 rounded bg-surface-container-highest font-telemetry-num text-telemetry-num text-on-surface">F</kbd>
+</div>
+</div>
+<div class="flex items-center justify-between py-1 bg-surface-container px-space-sm rounded">
+<span class="font-body-sm text-body-sm text-on-surface">Órbita Livre de Câmera 3D</span>
+<div class="flex items-center gap-1">
+<kbd class="px-space-xs py-0.5 rounded bg-surface-container-highest font-telemetry-num text-telemetry-num text-primary">Shift + MMB</kbd>
+</div>
+</div>
+<div class="flex items-center justify-between py-1 bg-surface-container px-space-sm rounded">
+<span class="font-body-sm text-body-sm text-on-surface">Gerar / Resolver Malha FEA</span>
+<div class="flex items-center gap-1">
+<kbd class="px-space-xs py-0.5 rounded bg-surface-container-highest font-telemetry-num text-telemetry-num text-secondary">F5</kbd>
+</div>
+</div>
+</div>
+<div class="mt-space-md p-space-sm bg-surface-container-lowest rounded text-center">
+<span class="font-label-sm text-label-sm text-outline">
+              Compatibilidade de atalhos configurada para: <strong class="text-on-surface">Autodesk Inventor Pro Preset</strong>
+</span>
+</div>
+</div>
+<!-- Hardware & Solver Node Status Card -->
+<div class="bg-surface-container-low rounded-xl p-space-lg shadow-md">
+<div class="flex items-center justify-between mb-space-sm">
+<h2 class="font-headline-sm text-headline-sm text-on-surface flex items-center gap-space-xs">
+<span class="material-symbols-outlined text-primary text-[18px]">dns</span>
+              Cluster de Simulação
+            </h2>
+<span class="w-2 h-2 rounded-full bg-secondary"></span>
+</div>
+<div class="space-y-space-sm">
+<div>
+<div class="flex justify-between font-label-sm text-label-sm mb-1">
+<span class="text-on-surface-variant">CPU Multithreading (32 Threads)</span>
+<span class="font-telemetry-num text-telemetry-num text-primary">18% Utilização</span>
+</div>
+<div class="w-full bg-surface-container h-1.5 rounded-full overflow-hidden">
+<div class="bg-primary h-full rounded-full" style="width: 18%"></div>
+</div>
+</div>
+<div>
+<div class="flex justify-between font-label-sm text-label-sm mb-1">
+<span class="text-on-surface-variant">Memória de Rigidez Global (RAM)</span>
+<span class="font-telemetry-num text-telemetry-num text-secondary">28.4 / 64.0 GB</span>
+</div>
+<div class="w-full bg-surface-container h-1.5 rounded-full overflow-hidden">
+<div class="bg-secondary h-full rounded-full" style="width: 44%"></div>
+</div>
+</div>
+<div>
+<div class="flex justify-between font-label-sm text-label-sm mb-1">
+<span class="text-on-surface-variant">Buffer de Resíduos de Convergência</span>
+<span class="font-telemetry-num text-telemetry-num text-tertiary">Livre (Pronto)</span>
+</div>
+<div class="w-full bg-surface-container h-1.5 rounded-full overflow-hidden">
+<div class="bg-tertiary h-full rounded-full" style="width: 5%"></div>
+</div>
+</div>
+</div>
+</div>
+</div>
+</div>
+</div>
+<!-- Interactive Script for File Dropzone and Launch Simulation Handlers -->
+<script>
+    (function initHubInteractions() {
+      const dropzone = document.getElementById('dropzone');
+      const fileInput = document.getElementById('cad-file-input');
+      const btnBrowse = document.getElementById('btn-browse-file');
+      const btnQuickNew = document.getElementById('btn-quick-new');
+
+      if (btnBrowse && fileInput) {
+        btnBrowse.addEventListener('click', () => fileInput.click());
+      }
+
+      if (dropzone && fileInput) {
+        dropzone.addEventListener('click', () => fileInput.click());
+
+        ['dragenter', 'dragover'].forEach(event => {
+          dropzone.addEventListener(event, (e) => {
+            e.preventDefault();
+            e.stopPropagation();
+            dropzone.classList.add('bg-surface-container');
+          });
+        });
+
+        ['dragleave', 'drop'].forEach(event => {
+          dropzone.addEventListener(event, (e) => {
+            e.preventDefault();
+            e.stopPropagation();
+            dropzone.classList.remove('bg-surface-container');
+          });
+        });
+
+        dropzone.addEventListener('drop', (e) => {
+          const files = e.dataTransfer.files;
+          if (files.length > 0) {
+            handleSelectedFiles(files);
+          }
+        });
+
+        fileInput.addEventListener('change', (e) => {
+          if (e.target.files.length > 0) {
+            handleSelectedFiles(e.target.files);
+          }
+        });
+      }
+
+      function handleSelectedFiles(files) {
+        const fileNames = Array.from(files).map(f => f.name).join(', ');
+        alert(`Arquivo(s) CAD identificado(s) com sucesso:\n${fileNames}\n\nKernel Parasolid inicializado. Geometria importada pronta para tesselação e análise.`);
+      }
+
+      if (btnQuickNew) {
+        btnQuickNew.addEventListener('click', () => {
+          const defaultName = `Part_${new Date().getFullYear()}${(new Date().getMonth()+1).toString().padStart(2, '0')}${new Date().getDate().toString().padStart(2, '0')}_01.step`;
+          alert(`Iniciando novo espaço paramétrico B-Rep: [${defaultName}]\nCarregando eixos de referência universais (X: Red, Y: Green, Z: Blue).`);
+        });
+      }
+    })();
+  </script>
+</div></main><footer class="w-full bg-surface-container-lowest py-space-sm"><div class="w-full px-margin flex flex-wrap items-center justify-between gap-space-md text-on-surface-variant font-label-sm text-label-sm"><div><span>FisisCAD PRO v4.2.1-rc</span><span class="mx-space-xs text-outline-variant">|</span><span>PARASOLID KERNEL CONNECTED</span></div><div class="flex items-center gap-space-lg"><span class="font-telemetry-num text-telemetry-num text-on-surface">X: 0.000 Y: 0.000 Z: 0.000 mm</span><span class="text-outline-variant">|</span><span class="text-primary">SOLVER: DIRECT MULTIFRONTAL PARDISO</span></div></div></footer></body></html>

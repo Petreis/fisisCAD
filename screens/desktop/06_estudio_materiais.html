@@ -1,0 +1,638 @@
+<!DOCTYPE html>
+
+<html class="dark" lang="en"><head><meta charset="utf-8"/><meta content="width=device-width, initial-scale=1.0" name="viewport"/><meta content="web_standard" name="shell-type"/><style>@layer base{html,body{margin:0;padding:0;}body{overscroll-behavior:none;}main>:first-child{margin-top:0!important;}main>:last-child{margin-bottom:0!important;}}::-webkit-scrollbar{display:none;}</style><link href="https://fonts.googleapis.com/css2?family=Material+Symbols+Outlined:opsz,wght,FILL,GRAD@20..48,100..700,0..1,-50..200" rel="stylesheet"/>
+<link href="https://fonts.googleapis.com/css2?family=Material+Symbols+Outlined:wght,FILL@100..700,0..1&amp;display=swap" rel="stylesheet"/><script src="https://cdn.tailwindcss.com"></script><script id="tailwind-config">tailwind.config = {
+    darkMode: "class",
+    theme: {
+      extend: {
+        "colors": {
+          "secondary": "#7bd0ff",
+          "on-secondary-fixed": "#001e2c",
+          "primary-fixed-dim": "#93ccff",
+          "on-secondary-container": "#00374d",
+          "outline-variant": "#3f4850",
+          "on-background": "#dfe2ef",
+          "on-surface-variant": "#bfc7d2",
+          "inverse-on-surface": "#2c303a",
+          "surface-container-low": "#181b25",
+          "outline": "#89929b",
+          "surface-container-high": "#262a34",
+          "surface-container-highest": "#31353f",
+          "primary-fixed": "#cce5ff",
+          "on-primary-fixed": "#001d31",
+          "on-tertiary-container": "#22293d",
+          "tertiary": "#bec6e0",
+          "tertiary-fixed": "#dae2fd",
+          "on-error-container": "#ffdad6",
+          "surface-tint": "#93ccff",
+          "secondary-fixed": "#c4e7ff",
+          "error-container": "#93000a",
+          "on-tertiary": "#283044",
+          "surface-dim": "#0f131c",
+          "surface-bright": "#353943",
+          "error": "#ffb4ab",
+          "on-tertiary-fixed": "#131b2e",
+          "on-secondary-fixed-variant": "#004c69",
+          "on-error": "#690005",
+          "tertiary-container": "#8990a8",
+          "on-primary-container": "#002c47",
+          "surface-container-lowest": "#0a0e17",
+          "primary": "#93ccff",
+          "on-tertiary-fixed-variant": "#3f465c",
+          "surface": "#0f131c",
+          "inverse-surface": "#dfe2ef",
+          "tertiary-fixed-dim": "#bec6e0",
+          "primary-container": "#3198dc",
+          "background": "#0f131c",
+          "on-primary": "#003351",
+          "on-secondary": "#00354a",
+          "secondary-fixed-dim": "#7bd0ff",
+          "surface-variant": "#31353f",
+          "surface-container": "#1c1f29",
+          "on-surface": "#dfe2ef",
+          "inverse-primary": "#006398",
+          "secondary-container": "#00a6e0",
+          "on-primary-fixed-variant": "#004b73"
+        },
+        "borderRadius": {
+          "DEFAULT": "0.125rem",
+          "lg": "0.25rem",
+          "xl": "0.5rem",
+          "full": "0.75rem"
+        },
+        "spacing": {
+          "margin": "0.75rem",
+          "space-xl": "1rem",
+          "gutter": "0.5rem",
+          "space-md": "0.5rem",
+          "space-lg": "0.75rem",
+          "space-sm": "0.375rem",
+          "space-xs": "0.25rem"
+        },
+        "fontFamily": {
+          "headline-sm": [
+            "Geist"
+          ],
+          "telemetry-num": [
+            "JetBrains Mono"
+          ],
+          "label-sm": [
+            "JetBrains Mono"
+          ],
+          "body-md": [
+            "JetBrains Mono"
+          ],
+          "title-md": [
+            "Geist"
+          ],
+          "body-sm": [
+            "JetBrains Mono"
+          ],
+          "label-md": [
+            "JetBrains Mono"
+          ],
+          "headline-lg": [
+            "Geist"
+          ],
+          "body-lg": [
+            "JetBrains Mono"
+          ],
+          "headline-md": [
+            "Geist"
+          ]
+        },
+        "fontSize": {
+          "headline-sm": [
+            "1rem",
+            {
+              "lineHeight": "1.5rem",
+              "letterSpacing": "-0.01em",
+              "fontWeight": "600"
+            }
+          ],
+          "telemetry-num": [
+            "0.75rem",
+            {
+              "lineHeight": "1rem",
+              "letterSpacing": "-0.02em",
+              "fontWeight": "600"
+            }
+          ],
+          "label-sm": [
+            "0.625rem",
+            {
+              "lineHeight": "0.875rem",
+              "letterSpacing": "0.04em",
+              "fontWeight": "500"
+            }
+          ],
+          "body-md": [
+            "0.75rem",
+            {
+              "lineHeight": "1.125rem",
+              "letterSpacing": "0em",
+              "fontWeight": "400"
+            }
+          ],
+          "title-md": [
+            "0.875rem",
+            {
+              "lineHeight": "1.25rem",
+              "letterSpacing": "0em",
+              "fontWeight": "500"
+            }
+          ],
+          "body-sm": [
+            "0.6875rem",
+            {
+              "lineHeight": "1rem",
+              "letterSpacing": "0.01em",
+              "fontWeight": "400"
+            }
+          ],
+          "label-md": [
+            "0.75rem",
+            {
+              "lineHeight": "1rem",
+              "letterSpacing": "0.02em",
+              "fontWeight": "500"
+            }
+          ],
+          "headline-lg": [
+            "1.5rem",
+            {
+              "lineHeight": "2rem",
+              "letterSpacing": "-0.02em",
+              "fontWeight": "600"
+            }
+          ],
+          "body-lg": [
+            "0.875rem",
+            {
+              "lineHeight": "1.375rem",
+              "letterSpacing": "-0.01em",
+              "fontWeight": "400"
+            }
+          ],
+          "headline-md": [
+            "1.25rem",
+            {
+              "lineHeight": "1.75rem",
+              "letterSpacing": "-0.015em",
+              "fontWeight": "600"
+            }
+          ]
+        }
+      },
+    },
+  }</script></head><body class="bg-surface font-body-md text-on-surface select-none"><header class="fixed top-0 w-full z-50 bg-surface-container-low shadow-[0_1px_8px_rgba(0,0,0,0.04)]"><div class="h-12 w-full px-margin flex items-center justify-between bg-surface-container-lowest"><div class="flex items-center gap-space-lg"><div class="flex items-center gap-space-xs"><span class="material-symbols-outlined text-primary text-[20px]">view_in_ar</span><span class="font-title-md text-title-md font-bold tracking-tight text-on-surface">FisisCAD <span class="text-primary text-[10px] uppercase px-1 py-0.5 rounded bg-surface-container-high">PRO</span></span></div><div class="flex items-center gap-space-sm pl-space-md"><span class="font-body-sm text-body-sm text-on-surface-variant font-medium">Suporte_Mancal_v2.step</span><span class="px-1.5 py-0.5 rounded bg-surface-container-high text-secondary text-[9px] uppercase tracking-wider font-label-sm">v2.4-fea</span></div><div class="hidden lg:flex items-center gap-space-xs pl-space-md"><button class="p-1 text-on-surface-variant hover:text-on-surface hover:bg-surface-container rounded"><span class="material-symbols-outlined text-[16px]">undo</span></button><button class="p-1 text-on-surface-variant hover:text-on-surface hover:bg-surface-container rounded"><span class="material-symbols-outlined text-[16px]">redo</span></button></div></div><div class="flex items-center gap-space-md"><div class="hidden sm:flex items-center bg-surface-container px-space-sm py-0.5 rounded gap-space-xs"><button class="px-2 py-0.5 rounded text-on-surface bg-surface-container-high font-label-sm text-label-sm">3D Solid</button><button class="px-2 py-0.5 rounded text-on-surface-variant hover:text-on-surface font-label-sm text-label-sm">Physics SIM</button></div><div class="flex items-center gap-space-xs bg-surface-container-high px-2 py-1 rounded"><span class="font-label-sm text-label-sm text-secondary">UNIT: SI (mm/kg)</span></div><div class="flex items-center gap-space-sm pl-space-sm"><button class="flex items-center gap-1 px-2.5 py-1 rounded bg-surface-container hover:bg-surface-container-high text-on-surface text-label-sm font-label-sm"><span class="material-symbols-outlined text-[14px]">download</span><span>Export</span></button><div class="w-8 h-8 rounded-full bg-primary flex items-center justify-center"><span class="material-symbols-outlined text-on-primary text-[18px]">person</span></div></div></div></div><div class="h-8 w-full px-margin flex items-center justify-between bg-surface-container-low"><nav class="flex items-center gap-space-xs" data-active-classes="bg-primary-container text-on-primary-container font-bold rounded"><a class="px-3 py-1 font-label-md text-label-md text-on-surface-variant hover:text-on-surface transition-colors" data-path="modelagem-2d3d" href="#">1. Modelagem 2D/3D</a><a class="px-3 py-1 font-label-md text-label-md text-on-surface-variant hover:text-on-surface transition-colors" data-path="materiais-bcs" href="#">2. Materiais &amp; BCs</a><a class="px-3 py-1 font-label-md text-label-md text-on-surface-variant hover:text-on-surface transition-colors" data-path="simulacao-fisica" href="#">3. Simulação Física</a><a class="px-3 py-1 font-label-md text-label-md text-on-surface-variant hover:text-on-surface transition-colors" data-path="analise-relatorios" href="#">4. Análise &amp; Relatórios</a></nav><div class="hidden md:flex items-center gap-space-md"><span class="font-label-sm text-label-sm text-outline">SOLVER: OpenFOAM / CalculiX</span></div></div></header><main class="w-full pt-20 bg-surface min-h-[calc(100vh-1.5rem)]"><div class="flex flex-col w-full h-[calc(100vh-5rem)]">
+<div class="grid grid-cols-12 gap-gutter w-full h-full p-margin overflow-hidden">
+<!-- LEFT SIDEBAR: GERENCIADOR DE BCs & CARGAS -->
+<aside class="col-span-3 flex flex-col h-full bg-surface-container rounded-lg p-space-md shadow-md overflow-hidden">
+<!-- Painel Header -->
+<div class="flex items-center justify-between pb-space-sm bg-surface-container">
+<div class="flex items-center gap-space-xs">
+<span class="material-symbols-outlined text-primary text-[18px]">anchor</span>
+<span class="font-title-md text-title-md font-bold text-on-surface">Coletor de BCs</span>
+</div>
+<span class="px-2 py-0.5 rounded bg-primary-container text-on-primary-container font-label-sm text-label-sm">5 ATIVAS</span>
+</div>
+<!-- Quick Action Buttons -->
+<div class="flex flex-col gap-space-xs my-space-sm">
+<button class="w-full flex items-center justify-center gap-space-xs py-1.5 px-space-sm bg-primary text-on-primary rounded font-label-md text-label-md hover:bg-primary-fixed-dim transition-colors">
+<span class="material-symbols-outlined text-[16px]">add_circle</span>
+<span>Adicionar Condição</span>
+</button>
+<button class="w-full flex items-center justify-center gap-space-xs py-1.5 px-space-sm bg-surface-container-high hover:bg-surface-container-highest text-on-surface rounded font-label-md text-label-md transition-colors">
+<span class="material-symbols-outlined text-secondary text-[16px]">verified</span>
+<span>Verificar Integridade da Malha</span>
+</button>
+</div>
+<!-- Tree Filter / Tabs -->
+<div class="flex items-center gap-1 bg-surface-container-lowest p-0.5 rounded mb-space-sm font-label-sm text-label-sm">
+<button class="flex-1 py-0.5 text-center bg-surface-container text-primary font-bold rounded">Mecânicas</button>
+<button class="flex-1 py-0.5 text-center text-on-surface-variant hover:text-on-surface">Térmicas</button>
+<button class="flex-1 py-0.5 text-center text-on-surface-variant hover:text-on-surface">Inerciais</button>
+</div>
+<!-- BCs Tree List -->
+<div class="flex-1 overflow-y-auto space-y-space-xs pr-1">
+<!-- Item 1: Engaste Fixo Base -->
+<div class="p-space-sm rounded bg-surface-container-low hover:bg-surface-container-high transition-colors group">
+<div class="flex items-center justify-between">
+<div class="flex items-center gap-space-xs min-w-0">
+<span class="material-symbols-outlined text-primary text-[16px]">lock</span>
+<span class="font-headline-sm text-headline-sm text-on-surface truncate">Engaste Fixo Base</span>
+</div>
+<button class="text-secondary hover:text-on-surface" title="Alternar visibilidade">
+<span class="material-symbols-outlined text-[16px]">visibility</span>
+</button>
+</div>
+<p class="font-body-sm text-body-sm text-on-surface-variant mt-0.5">Encastre 6-DOF nos 4 furos M10</p>
+<div class="flex items-center gap-space-xs mt-1.5 font-telemetry-num text-telemetry-num text-on-surface-variant">
+<span class="px-1 py-0.2 rounded bg-surface-container text-primary">Ux=Uy=Uz=0</span>
+<span class="px-1 py-0.2 rounded bg-surface-container text-primary">Rx=Ry=Rz=0</span>
+</div>
+</div>
+<!-- Item 2: Carga Radial Eixo -->
+<div class="p-space-sm rounded bg-surface-container-high transition-colors shadow-sm">
+<div class="flex items-center justify-between">
+<div class="flex items-center gap-space-xs min-w-0">
+<span class="material-symbols-outlined text-error text-[16px]">arrow_downward</span>
+<span class="font-headline-sm text-headline-sm text-on-surface truncate">Carga Radial do Eixo</span>
+</div>
+<div class="flex items-center gap-1">
+<span class="w-1.5 h-1.5 rounded-full bg-error animate-pulse"></span>
+<button class="text-primary hover:text-on-surface">
+<span class="material-symbols-outlined text-[16px]">tune</span>
+</button>
+</div>
+</div>
+<p class="font-body-sm text-body-sm text-on-surface-variant mt-0.5">Rolamento Interno Ø80mm</p>
+<div class="flex items-center justify-between mt-1.5">
+<span class="font-telemetry-num text-telemetry-num text-error font-bold">-12.50 kN (em Y)</span>
+<span class="font-label-sm text-label-sm text-on-surface-variant px-1 rounded bg-surface-container-lowest">Parabólica</span>
+</div>
+</div>
+<!-- Item 3: Pré-tensão Flange -->
+<div class="p-space-sm rounded bg-surface-container-low hover:bg-surface-container-high transition-colors group">
+<div class="flex items-center justify-between">
+<div class="flex items-center gap-space-xs min-w-0">
+<span class="material-symbols-outlined text-secondary text-[16px]">compress</span>
+<span class="font-headline-sm text-headline-sm text-on-surface truncate">Pré-tensão de Flange</span>
+</div>
+<button class="text-secondary hover:text-on-surface">
+<span class="material-symbols-outlined text-[16px]">visibility</span>
+</button>
+</div>
+<p class="font-body-sm text-body-sm text-on-surface-variant mt-0.5">Face de Assentamento Superior</p>
+<div class="flex items-center justify-between mt-1.5 font-telemetry-num text-telemetry-num">
+<span class="text-secondary">P = 2.50 MPa</span>
+<span class="text-on-surface-variant font-label-sm text-label-sm">Uniforme Normal</span>
+</div>
+</div>
+<!-- Item 4: Gravidade Terrestre -->
+<div class="p-space-sm rounded bg-surface-container-low hover:bg-surface-container-high transition-colors group">
+<div class="flex items-center justify-between">
+<div class="flex items-center gap-space-xs min-w-0">
+<span class="material-symbols-outlined text-primary-fixed-dim text-[16px]">public</span>
+<span class="font-headline-sm text-headline-sm text-on-surface truncate">Gravidade Global</span>
+</div>
+<button class="text-secondary hover:text-on-surface">
+<span class="material-symbols-outlined text-[16px]">visibility</span>
+</button>
+</div>
+<p class="font-body-sm text-body-sm text-on-surface-variant mt-0.5">Aceleração de Campo g</p>
+<div class="flex items-center justify-between mt-1.5 font-telemetry-num text-telemetry-num">
+<span class="text-on-surface">G_z = -9.807 m/s²</span>
+<span class="text-primary font-label-sm text-label-sm">Standard 1G</span>
+</div>
+</div>
+<!-- Item 5: Condição Térmica -->
+<div class="p-space-sm rounded bg-surface-container-low hover:bg-surface-container-high transition-colors group">
+<div class="flex items-center justify-between">
+<div class="flex items-center gap-space-xs min-w-0">
+<span class="material-symbols-outlined text-tertiary text-[16px]">thermostat</span>
+<span class="font-headline-sm text-headline-sm text-on-surface truncate">Convecção Livre</span>
+</div>
+<button class="text-secondary hover:text-on-surface">
+<span class="material-symbols-outlined text-[16px]">visibility</span>
+</button>
+</div>
+<p class="font-body-sm text-body-sm text-on-surface-variant mt-0.5">Todas as faces expostas</p>
+<div class="flex items-center justify-between mt-1.5 font-telemetry-num text-telemetry-num text-tertiary">
+<span>h = 15 W/m²·K</span>
+<span>T_inf = 25.0 °C</span>
+</div>
+</div>
+</div>
+<!-- Quick Mesh Status Card -->
+<div class="mt-space-sm p-space-sm bg-surface-container-lowest rounded">
+<div class="flex items-center justify-between text-on-surface-variant font-label-sm text-label-sm">
+<span>GRAUS DE LIBERDADE (DOF)</span>
+<span class="text-primary font-telemetry-num text-telemetry-num font-bold">148,920</span>
+</div>
+<div class="w-full bg-surface-container-high h-1 rounded mt-1 overflow-hidden">
+<div class="bg-secondary h-full w-4/5"></div>
+</div>
+<div class="flex justify-between items-center mt-1 font-body-sm text-body-sm text-on-surface-variant">
+<span>Qualidade Min Jacobiano</span>
+<span class="text-secondary font-telemetry-num text-telemetry-num">0.82 (Ótimo)</span>
+</div>
+</div>
+</aside>
+<!-- CENTER: WORKSPACE 3D FEA VIEWPORT -->
+<main class="col-span-6 flex flex-col h-full bg-surface-container-lowest rounded-lg relative overflow-hidden shadow-xl">
+<!-- Floating Top Layer Controls -->
+<div class="absolute top-space-md left-space-md z-30 flex items-center gap-space-xs bg-surface-container-high/90 backdrop-blur-md px-space-sm py-1 rounded shadow-md">
+<span class="font-label-sm text-label-sm text-on-surface-variant uppercase pl-1">Camadas:</span>
+<button class="px-2 py-0.5 rounded bg-primary text-on-primary font-label-sm text-label-sm font-bold flex items-center gap-1">
+<span class="material-symbols-outlined text-[13px]">check</span> Vínculos
+        </button>
+<button class="px-2 py-0.5 rounded bg-primary text-on-primary font-label-sm text-label-sm font-bold flex items-center gap-1">
+<span class="material-symbols-outlined text-[13px]">check</span> Cargas
+        </button>
+<button class="px-2 py-0.5 rounded bg-surface-container hover:bg-surface-bright text-on-surface font-label-sm text-label-sm flex items-center gap-1">
+<span class="material-symbols-outlined text-[13px]">grid_4x4</span> Malha FEA
+        </button>
+<button class="px-2 py-0.5 rounded bg-primary-container text-on-primary-container font-label-sm text-label-sm flex items-center gap-1">
+<span class="material-symbols-outlined text-[13px]">adjust</span> CG
+        </button>
+<button class="px-2 py-0.5 rounded bg-surface-container hover:bg-surface-bright text-on-surface-variant font-label-sm text-label-sm">
+          Tensões σ0
+        </button>
+</div>
+<!-- Orientation ViewCube in Top Right -->
+<div class="absolute top-space-md right-space-md z-30 flex flex-col items-center gap-1">
+<div class="w-14 h-14 bg-surface-container-high/90 backdrop-blur-md rounded shadow-md flex items-center justify-center relative cursor-pointer hover:bg-surface-container-highest transition-colors">
+<div class="w-10 h-10 bg-surface-container-lowest transform -rotate-12 skew-y-6 flex items-center justify-center">
+<span class="font-telemetry-num text-[9px] font-bold text-primary">ISO</span>
+</div>
+<span class="absolute top-0.5 text-[8px] font-label-sm text-on-surface-variant">TOP</span>
+<span class="absolute bottom-0.5 text-[8px] font-label-sm text-on-surface-variant">FRONT</span>
+<span class="absolute right-0.5 text-[8px] font-label-sm text-on-surface-variant">R</span>
+</div>
+<div class="flex items-center gap-1 bg-surface-container-high/80 px-1.5 py-0.5 rounded text-on-surface-variant font-label-sm text-[9px]">
+<span>PERSPECTIVA</span>
+</div>
+</div>
+<!-- Main Visual Viewport Area (SVG Precision FEA Rendering) -->
+<div class="flex-1 w-full h-full relative flex items-center justify-center overflow-hidden">
+<!-- Isometric Background Grid System -->
+<svg class="absolute inset-0 w-full h-full opacity-20 pointer-events-none" xmlns="http://www.w3.org/2000/svg">
+<defs>
+<pattern height="40" id="feaGrid" patternunits="userSpaceOnUse" width="40">
+<path d="M 40 0 L 0 0 0 40" fill="none" stroke="#93ccff" stroke-dasharray="2,2" stroke-width="0.5"></path>
+</pattern>
+</defs>
+<rect fill="url(#feaGrid)" height="100%" width="100%"></rect>
+</svg>
+<!-- Mechanical Part, Boundary Triangles, Vectors and Center of Mass -->
+<svg class="w-full h-full max-h-[500px] z-10 drop-shadow-2xl select-none" viewbox="0 0 600 480" xmlns="http://www.w3.org/2000/svg">
+<defs>
+<!-- Shading Linear Gradients for Bearing Block -->
+<lineargradient id="bodyGrad" x1="0%" x2="100%" y1="0%" y2="100%">
+<stop offset="0%" stop-color="#31353f"></stop>
+<stop offset="50%" stop-color="#262a34"></stop>
+<stop offset="100%" stop-color="#181b25"></stop>
+</lineargradient>
+<lineargradient id="borePressureGrad" x1="0%" x2="0%" y1="0%" y2="100%">
+<stop offset="0%" stop-color="#38bdf8" stop-opacity="0.3"></stop>
+<stop offset="60%" stop-color="#f97316" stop-opacity="0.7"></stop>
+<stop offset="100%" stop-color="#ef4444" stop-opacity="0.95"></stop>
+</lineargradient>
+<marker id="arrowHeadRed" markerheight="6" markerwidth="6" orient="auto" refx="5" refy="3">
+<polygon fill="#ef4444" points="0 0, 6 3, 0 6"></polygon>
+</marker>
+<marker id="arrowHeadLoad" markerheight="8" markerwidth="8" orient="auto" refx="7" refy="4">
+<polygon fill="#ffb4ab" points="0 0, 8 4, 0 8"></polygon>
+</marker>
+</defs>
+<!-- 3D Plane Shadow Base -->
+<ellipse cx="300" cy="390" fill="#05080f" filter="blur(8px)" opacity="0.6" rx="200" ry="45"></ellipse>
+<!-- BASE PLATE ISO -->
+<polygon fill="#1c1f29" points="130,360 470,360 510,320 170,320" stroke="#93ccff" stroke-opacity="0.3" stroke-width="0.75"></polygon>
+<polygon fill="#181b25" points="130,360 470,360 470,380 130,380" stroke="#93ccff" stroke-opacity="0.2" stroke-width="0.75"></polygon>
+<polygon fill="#0f131c" points="470,360 510,320 510,340 470,380" stroke="#93ccff" stroke-opacity="0.2" stroke-width="0.75"></polygon>
+<!-- 4 MOUNTING BOLT HOLES WITH ENCASTRE CONSTRAINTS (Triangles) -->
+<!-- Hole Left Front (180, 350) -->
+<ellipse cx="190" cy="345" fill="#0a0e17" rx="14" ry="7" stroke="#93ccff" stroke-width="0.5"></ellipse>
+<path d="M 190,345 L 180,365 L 200,365 Z" fill="#7bd0ff" fill-opacity="0.8"></path>
+<line stroke="#7bd0ff" stroke-width="1.5" x1="174" x2="206" y1="367" y2="367"></line>
+<!-- Hole Right Front (420, 350) -->
+<ellipse cx="420" cy="345" fill="#0a0e17" rx="14" ry="7" stroke="#93ccff" stroke-width="0.5"></ellipse>
+<path d="M 420,345 L 410,365 L 430,365 Z" fill="#7bd0ff" fill-opacity="0.8"></path>
+<line stroke="#7bd0ff" stroke-width="1.5" x1="404" x2="436" y1="367" y2="367"></line>
+<!-- Hole Left Rear (215, 328) -->
+<ellipse cx="215" cy="328" fill="#0a0e17" rx="11" ry="5" stroke="#93ccff" stroke-width="0.5"></ellipse>
+<path d="M 215,328 L 207,344 L 223,344 Z" fill="#7bd0ff" fill-opacity="0.8"></path>
+<line stroke="#7bd0ff" stroke-width="1.5" x1="202" x2="228" y1="346" y2="346"></line>
+<!-- Hole Right Rear (445, 328) -->
+<ellipse cx="445" cy="328" fill="#0a0e17" rx="11" ry="5" stroke="#93ccff" stroke-width="0.5"></ellipse>
+<path d="M 445,328 L 437,344 L 453,344 Z" fill="#7bd0ff" fill-opacity="0.8"></path>
+<line stroke="#7bd0ff" stroke-width="1.5" x1="432" x2="458" y1="346" y2="346"></line>
+<!-- MAIN BEARING HOUSING ARCH (PILLOW BLOCK GEOMETRY) -->
+<!-- Main Structural Web -->
+<path d="M 200,340 L 220,200 C 220,135 380,135 380,200 L 400,340 Z" fill="url(#bodyGrad)" stroke="#89929b" stroke-width="0.75"></path>
+<!-- Flange Ribs Left & Right -->
+<path d="M 170,335 L 220,240 L 220,335 Z" fill="#262a34" stroke="#93ccff" stroke-opacity="0.4" stroke-width="0.5"></path>
+<path d="M 430,335 L 380,240 L 380,335 Z" fill="#1c1f29" stroke="#93ccff" stroke-opacity="0.4" stroke-width="0.5"></path>
+<!-- Top Arch Extrusion Edge -->
+<path d="M 220,200 C 220,135 380,135 380,200 L 400,180 C 400,115 240,115 240,180 Z" fill="#353943" stroke="#93ccff" stroke-opacity="0.5" stroke-width="0.5"></path>
+<!-- Cylindrical Bearing Bore Hole (Front and Interior Wall) -->
+<ellipse cx="300" cy="205" fill="#0f131c" rx="60" ry="60" stroke="#93ccff" stroke-width="1.2"></ellipse>
+<ellipse cx="320" cy="188" fill="none" rx="58" ry="58" stroke="#3f4850" stroke-dasharray="3,3" stroke-width="0.75"></ellipse>
+<!-- FEA Pressure Distribution Contour Inside Lower Half of Bore -->
+<path d="M 241,205 A 60 60 0 0 0 359,205 C 345,235 255,235 241,205 Z" fill="url(#borePressureGrad)"></path>
+<!-- Discrete Radial Load Distribution Arrows (Parabolic Contact Pattern) -->
+<line marker-end="url(#arrowHeadRed)" stroke="#ef4444" stroke-width="1.5" x1="265" x2="268" y1="190" y2="215"></line>
+<line marker-end="url(#arrowHeadRed)" stroke="#ef4444" stroke-width="2.2" x1="282" x2="285" y1="175" y2="225"></line>
+<line marker-end="url(#arrowHeadRed)" stroke="#ef4444" stroke-width="3" x1="300" x2="300" y1="165" y2="235"></line>
+<line marker-end="url(#arrowHeadRed)" stroke="#ef4444" stroke-width="2.2" x1="318" x2="315" y1="175" y2="225"></line>
+<line marker-end="url(#arrowHeadRed)" stroke="#ef4444" stroke-width="1.5" x1="335" x2="332" y1="190" y2="215"></line>
+<!-- PROMINENT 3D RADIAL LOAD VECTOR (FY = -12.50 kN) -->
+<line marker-end="url(#arrowHeadLoad)" stroke="#ffb4ab" stroke-linecap="round" stroke-width="4" x1="300" x2="300" y1="60" y2="155"></line>
+<circle cx="300" cy="60" fill="#ef4444" r="5" stroke="#ffffff" stroke-width="1.5"></circle>
+<!-- Callout Tag for Radial Load -->
+<g transform="translate(315, 80)">
+<rect fill="#0a0e17" height="38" rx="4" stroke="#38bdf8" stroke-width="1" width="165" x="0" y="0"></rect>
+<text fill="#ffb4ab" font-family="JetBrains Mono" font-size="11" font-weight="bold" x="8" y="15">F_y = -12.50 kN</text>
+<text fill="#bfc7d2" font-family="JetBrains Mono" font-size="9" x="8" y="28">CARGA RADIAL DO EIXO</text>
+<!-- Pointer line -->
+<path d="M 0,18 L -15,18" stroke="#38bdf8" stroke-width="1"></path>
+</g>
+<!-- CENTER OF GRAVITY (CG) TRIAD MARKER -->
+<!-- Coordinates: [0.0, 18.4, 0.0] mm -->
+<g transform="translate(300, 222)">
+<!-- Axis lines -->
+<line stroke="#ef4444" stroke-width="2" x1="0" x2="26" y1="0" y2="0"></line> <!-- X (Red) -->
+<line stroke="#22c55e" stroke-width="2" x1="0" x2="0" y1="0" y2="-26"></line> <!-- Y (Green) -->
+<line stroke="#3b82f6" stroke-width="2" x1="0" x2="-16" y1="0" y2="12"></line> <!-- Z (Blue) -->
+<!-- CG Quadrant Circle -->
+<circle cx="0" cy="0" fill="none" r="7" stroke="#7bd0ff" stroke-width="1.5"></circle>
+<path d="M 0,0 L 0,-7 A 7 7 0 0 1 7,0 Z" fill="#7bd0ff"></path>
+<path d="M 0,0 L 0,7 A 7 7 0 0 1 -7,0 Z" fill="#7bd0ff"></path>
+</g>
+<!-- CG HUD Callout -->
+<g transform="translate(130, 205)">
+<rect fill="#0a0e17" height="30" rx="3" stroke="#89929b" stroke-width="0.8" width="130" x="0" y="0"></rect>
+<text fill="#7bd0ff" font-family="JetBrains Mono" font-size="9" font-weight="bold" x="6" y="13">CG: [0.0, 18.4, 0.0]</text>
+<text fill="#bfc7d2" font-family="JetBrains Mono" font-size="8" x="6" y="24">MASSA: 3.428 kg</text>
+<line stroke="#89929b" stroke-dasharray="2,2" stroke-width="0.8" x1="130" x2="165" y1="15" y2="17"></line>
+</g>
+<!-- Encastre Constraint Callout Note -->
+<g transform="translate(60, 395)">
+<rect fill="#0a0e17" height="24" rx="3" stroke="#7bd0ff" stroke-width="0.8" width="150" x="0" y="0"></rect>
+<text fill="#7bd0ff" font-family="JetBrains Mono" font-size="9" x="8" y="16">ENCASTRE 4x M10 (FIXO)</text>
+<path d="M 120,0 L 175,-30" stroke="#7bd0ff" stroke-dasharray="2,2" stroke-width="0.8"></path>
+</g>
+</svg>
+<!-- Viewport Compass Axis in Bottom Left -->
+<div class="absolute bottom-space-md left-space-md z-30 flex items-center gap-space-xs bg-surface-container/90 px-space-sm py-1 rounded backdrop-blur-sm">
+<div class="flex items-center gap-1 font-telemetry-num text-telemetry-num">
+<span class="text-error font-bold">X</span>
+<span class="text-secondary font-bold">Y</span>
+<span class="text-primary font-bold">Z</span>
+<span class="text-outline">|</span>
+<span class="text-on-surface-variant font-label-sm text-label-sm">RCS: GLOBAL</span>
+</div>
+</div>
+<!-- Colormap Legend (Stress/Pressure) in Bottom Right -->
+<div class="absolute bottom-space-md right-space-md z-30 bg-surface-container/90 backdrop-blur-md p-space-sm rounded shadow-lg flex flex-col gap-1 w-36">
+<div class="flex items-center justify-between font-label-sm text-label-sm">
+<span class="text-on-surface-variant">Pressão de Contato</span>
+<span class="text-secondary font-bold font-telemetry-num text-telemetry-num">MPa</span>
+</div>
+<div class="h-3 w-full rounded bg-gradient-to-r from-secondary via-amber-400 to-error"></div>
+<div class="flex justify-between font-telemetry-num text-[9px] text-on-surface-variant">
+<span>0.00</span>
+<span>12.5</span>
+<span class="text-error font-bold">28.4</span>
+</div>
+</div>
+</div>
+<!-- Action Banner inside Viewport Base -->
+<div class="h-12 w-full bg-surface-container flex items-center justify-between px-space-md z-30">
+<div class="flex items-center gap-space-md">
+<button class="flex items-center gap-space-xs px-space-md py-1.5 bg-primary-container text-on-primary-container rounded font-label-md text-label-md font-bold hover:brightness-110 transition-all">
+<span class="material-symbols-outlined text-[16px]">grid_on</span>
+<span>Gerar Malha Tetraédrica (FEA)</span>
+</button>
+<div class="hidden xl:flex items-center gap-space-xs font-body-sm text-body-sm text-on-surface-variant">
+<span class="w-2 h-2 rounded-full bg-secondary"></span>
+<span>Discretização: 42.810 nós / 29.412 elementos TET10</span>
+</div>
+</div>
+<button class="flex items-center gap-space-xs px-space-md py-1.5 bg-primary text-on-primary rounded font-label-md text-label-md font-bold hover:bg-primary-fixed transition-colors">
+<span>Validar e Ir para Simulação</span>
+<span class="material-symbols-outlined text-[16px]">arrow_forward</span>
+</button>
+</div>
+</main>
+<!-- RIGHT SIDEBAR: ESTÚDIO DE MATERIAIS & CONSTITUTIVOS -->
+<aside class="col-span-3 flex flex-col h-full bg-surface-container rounded-lg p-space-md shadow-md overflow-hidden">
+<!-- Header do Painel de Material -->
+<div class="flex items-center justify-between pb-space-sm bg-surface-container">
+<div class="flex items-center gap-space-xs">
+<span class="material-symbols-outlined text-secondary text-[18px]">science</span>
+<span class="font-title-md text-title-md font-bold text-on-surface">Material Ativo</span>
+</div>
+<span class="px-1.5 py-0.5 rounded bg-surface-container-high text-secondary font-label-sm text-label-sm">ISOTRÓPICO</span>
+</div>
+<!-- Currently Assigned Material Card -->
+<div class="p-space-sm rounded bg-surface-container-high my-space-xs shadow-sm">
+<div class="flex items-start justify-between">
+<div>
+<div class="font-headline-sm text-headline-sm text-on-surface font-bold">Aço Liga AISI 4140</div>
+<p class="font-body-sm text-body-sm text-on-surface-variant">Cromo-Molibdênio (Temperado &amp; Revenido)</p>
+</div>
+<span class="material-symbols-outlined text-primary text-[20px]">layers</span>
+</div>
+<button class="w-full mt-2.5 py-1 px-space-xs bg-surface-container hover:bg-surface-bright text-secondary rounded font-label-sm text-label-sm flex items-center justify-center gap-1 transition-colors">
+<span class="material-symbols-outlined text-[14px]">swap_horiz</span>
+<span>Trocar Material / Biblioteca</span>
+</button>
+</div>
+<!-- Material Properties Grid & Constitutive Data -->
+<div class="flex-1 overflow-y-auto space-y-space-sm pr-1">
+<div class="font-label-sm text-label-sm text-outline uppercase tracking-wider">Propriedades Mecânicas</div>
+<!-- Propriedades Chave -->
+<div class="grid grid-cols-2 gap-space-xs font-telemetry-num text-telemetry-num">
+<!-- Densidade -->
+<div class="p-space-xs rounded bg-surface-container-low">
+<span class="block text-on-surface-variant font-body-sm text-[10px]">Densidade (ρ)</span>
+<span class="text-on-surface font-bold text-[12px]">7.85 <span class="text-secondary font-normal text-[10px]">g/cm³</span></span>
+<span class="block text-outline text-[9px]">7850 kg/m³</span>
+</div>
+<!-- Módulo de Young -->
+<div class="p-space-xs rounded bg-surface-container-low">
+<span class="block text-on-surface-variant font-body-sm text-[10px]">Módulo Young (E)</span>
+<span class="text-on-surface font-bold text-[12px]">210.0 <span class="text-primary font-normal text-[10px]">GPa</span></span>
+<span class="block text-outline text-[9px]">2.10e5 MPa</span>
+</div>
+<!-- Coef. Poisson -->
+<div class="p-space-xs rounded bg-surface-container-low">
+<span class="block text-on-surface-variant font-body-sm text-[10px]">Coef. Poisson (ν)</span>
+<span class="text-on-surface font-bold text-[12px]">0.290</span>
+<span class="block text-outline text-[9px]">Adimensional</span>
+</div>
+<!-- Escoamento -->
+<div class="p-space-xs rounded bg-surface-container-low">
+<span class="block text-on-surface-variant font-body-sm text-[10px]">Escoamento (σ_y)</span>
+<span class="text-secondary font-bold text-[12px]">655.0 <span class="font-normal text-[10px]">MPa</span></span>
+<span class="block text-outline text-[9px]">Critério von Mises</span>
+</div>
+<!-- Limite Ruptura -->
+<div class="p-space-xs rounded bg-surface-container-low">
+<span class="block text-on-surface-variant font-body-sm text-[10px]">Limite Ruptura (σ_u)</span>
+<span class="text-error font-bold text-[12px]">1020.0 <span class="font-normal text-[10px]">MPa</span></span>
+<span class="block text-outline text-[9px]">Tração Estática</span>
+</div>
+<!-- Dilatação Térmica -->
+<div class="p-space-xs rounded bg-surface-container-low">
+<span class="block text-on-surface-variant font-body-sm text-[10px]">Dilatação (α)</span>
+<span class="text-on-surface font-bold text-[12px]">12.3 <span class="text-tertiary font-normal text-[10px]">µm/m·K</span></span>
+<span class="block text-outline text-[9px]">20°C a 200°C</span>
+</div>
+</div>
+<!-- Tribologia & Atrito -->
+<div class="p-space-xs rounded bg-surface-container-low flex items-center justify-between font-telemetry-num text-telemetry-num">
+<div>
+<span class="block text-on-surface-variant font-body-sm text-[10px]">Coeficientes de Atrito (Aço/Aço)</span>
+<div class="flex items-center gap-space-md mt-0.5">
+<span>µ_s (Estático): <strong class="text-primary">0.61</strong></span>
+<span>µ_k (Cinético): <strong class="text-secondary">0.47</strong></span>
+</div>
+</div>
+</div>
+<!-- Curva Tensão vs Deformação (Stress-Strain Curve SVG) -->
+<div class="p-space-sm rounded bg-surface-container-lowest flex flex-col gap-1">
+<div class="flex items-center justify-between font-label-sm text-label-sm text-on-surface-variant">
+<span>Curva Tensão vs. Deformação (σ - ε)</span>
+<span class="text-secondary font-telemetry-num text-[10px]">Elasto-Plástico</span>
+</div>
+<!-- Graphic Visualizer SVG -->
+<div class="w-full h-28 relative">
+<svg class="w-full h-full" viewbox="0 0 240 100" xmlns="http://www.w3.org/2000/svg">
+<!-- Grid lines -->
+<line stroke="#31353f" stroke-width="0.75" x1="25" x2="25" y1="10" y2="85"></line>
+<line stroke="#31353f" stroke-width="0.75" x1="25" x2="230" y1="85" y2="85"></line>
+<line stroke="#262a34" stroke-dasharray="2,2" stroke-width="0.5" x1="25" x2="230" y1="48" y2="48"></line>
+<!-- Elastic Regime Fill Area -->
+<polygon fill="#93ccff" fill-opacity="0.1" points="25,85 75,35 75,85"></polygon>
+<!-- Plastic Hardening Fill Area -->
+<path d="M 75,35 Q 140,15 195,18 L 195,85 L 75,85 Z" fill="#7bd0ff" fill-opacity="0.05"></path>
+<!-- Stress-Strain curve line -->
+<path d="M 25,85 L 75,35 Q 130,16 195,18 L 210,32" fill="none" stroke="#7bd0ff" stroke-width="2"></path>
+<!-- Yield point dot -->
+<circle cx="75" cy="35" fill="#38bdf8" r="3"></circle>
+<text fill="#93ccff" font-family="JetBrains Mono" font-size="8" x="82" y="38">σ_y (655 MPa)</text>
+<!-- Ultimate Tensile point dot -->
+<circle cx="195" cy="18" fill="#ef4444" r="3"></circle>
+<text fill="#ffb4ab" font-family="JetBrains Mono" font-size="8" x="140" y="14">σ_u (1020 MPa)</text>
+<!-- Rupture X -->
+<text fill="#ffb4ab" font-family="JetBrains Mono" font-size="9" font-weight="bold" x="212" y="34">×</text>
+<!-- Axes labels -->
+<text fill="#89929b" font-family="JetBrains Mono" font-size="7" x="12" y="15">σ (MPa)</text>
+<text fill="#89929b" font-family="JetBrains Mono" font-size="7" x="215" y="95">ε (mm/mm)</text>
+<text fill="#93ccff" font-family="JetBrains Mono" font-size="7" x="40" y="80">ELÁSTICO</text>
+<text fill="#8990a8" font-family="JetBrains Mono" font-size="7" x="105" y="80">PLÁSTICO</text>
+</svg>
+</div>
+<div class="flex items-center justify-between font-telemetry-num text-[9px] text-on-surface-variant pt-1">
+<span>Deformação de Ruptura: <strong class="text-on-surface">12.5%</strong></span>
+<span>Módulo Tangente: <strong class="text-on-surface">1.8 GPa</strong></span>
+</div>
+</div>
+<!-- Constitutive Law Toggle Selector -->
+<div class="flex flex-col gap-1 bg-surface-container-low p-space-xs rounded">
+<span class="font-label-sm text-label-sm text-on-surface-variant">Modelo Constitutivo:</span>
+<div class="flex items-center gap-1 font-label-sm text-[10px]">
+<span class="px-2 py-0.5 rounded bg-primary-container text-on-primary-container font-bold">Linear Elástico</span>
+<span class="px-2 py-0.5 rounded text-on-surface-variant hover:text-on-surface cursor-pointer">Ramberg-Osgood</span>
+<span class="px-2 py-0.5 rounded text-on-surface-variant hover:text-on-surface cursor-pointer">Johnson-Cook</span>
+</div>
+</div>
+</div>
+</aside>
+</div>
+</div></main><footer class="fixed bottom-0 left-0 right-0 h-6 bg-surface-container-lowest z-40 px-margin flex items-center justify-between"><div class="flex items-center gap-space-md font-telemetry-num text-telemetry-num text-on-surface-variant"><span>X: <span class="text-primary">142.500 mm</span></span><span>Y: <span class="text-primary">-88.125 mm</span></span><span>Z: <span class="text-primary">0.000 mm</span></span><span class="text-outline">|</span><span>Δ SNAP: <span class="text-secondary">0.500 mm</span></span></div><div class="flex items-center gap-space-lg font-telemetry-num text-telemetry-num"><div class="flex items-center gap-1"><span class="w-1.5 h-1.5 rounded-full bg-secondary"></span><span class="text-on-surface font-label-sm text-label-sm">SOLVER READY</span></div><span class="text-outline">|</span><span class="text-on-surface-variant font-label-sm text-label-sm">GRID: 1.0mm (TET10 MESH)</span></div></footer></body></html>

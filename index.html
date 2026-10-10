@@ -1,0 +1,77 @@
+<!DOCTYPE html>
+<html lang="pt-BR" class="dark">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>FisisCAD PRO - Simulação Física e Modelagem CAD/CAE</title>
+    <!-- Fonts -->
+    <link rel="preconnect" href="https://fonts.googleapis.com" />
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
+    <link href="https://fonts.googleapis.com/css2?family=Geist:wght@400;500;600;700&family=JetBrains+Mono:wght@400;500;600;700&display=swap" rel="stylesheet" />
+    <link href="https://fonts.googleapis.com/css2?family=Material+Symbols+Outlined:opsz,wght,FILL,GRAD@20..48,100..700,0..1,-50..200" rel="stylesheet" />
+    <!-- Tailwind CSS CDN -->
+    <script src="https://cdn.tailwindcss.com"></script>
+    <script>
+      tailwind.config = {
+        darkMode: 'class',
+        theme: {
+          extend: {
+            colors: {
+              'background': '#0f131c',
+              'surface': '#0f131c',
+              'surface-dim': '#0f131c',
+              'surface-bright': '#353943',
+              'surface-container-lowest': '#0a0e17',
+              'surface-container-low': '#181b25',
+              'surface-container': '#1c1f29',
+              'surface-container-high': '#262a34',
+              'surface-container-highest': '#31353f',
+              'on-surface': '#dfe2ef',
+              'on-surface-variant': '#bfc7d2',
+              'outline': '#89929b',
+              'outline-variant': '#3f4850',
+              'primary': '#93ccff',
+              'on-primary': '#003351',
+              'primary-container': '#3198dc',
+              'on-primary-container': '#002c47',
+              'secondary': '#7bd0ff',
+              'secondary-container': '#00a6e0',
+              'tertiary': '#bec6e0',
+              'tertiary-container': '#8990a8',
+              'error': '#ffb4ab',
+              'error-container': '#93000a',
+            },
+            fontFamily: {
+              sans: ['Geist', 'sans-serif'],
+              mono: ['JetBrains Mono', 'monospace'],
+            }
+          }
+        }
+      }
+    </script>
+    <style>
+      ::-webkit-scrollbar {
+        width: 6px;
+        height: 6px;
+      }
+      ::-webkit-scrollbar-track {
+        background: #0f131c;
+      }
+      ::-webkit-scrollbar-thumb {
+        background: #262a34;
+        border-radius: 3px;
+      }
+      ::-webkit-scrollbar-thumb:hover {
+        background: #3198dc;
+      }
+      body {
+        user-select: none;
+        overscroll-behavior: none;
+      }
+    </style>
+  </head>
+  <body class="bg-background text-on-surface font-sans antialiased overflow-hidden selection:bg-primary-container selection:text-on-primary">
+    <div id="root"></div>
+    <script type="module" src="/src/main.jsx"></script>
+  </body>
+</html>

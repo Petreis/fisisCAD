@@ -1,0 +1,160 @@
+<!DOCTYPE html><html class="dark" lang="pt-BR"><head><meta charset="utf-8"><meta content="width=device-width, initial-scale=1.0, maximum-scale=1.0, user-scalable=no, viewport-fit=cover" name="viewport"><meta content="mobile_tab" name="shell-type"><link href="https://fonts.googleapis.com/css2?family=Geist:wght@400;500;600;700&amp;family=JetBrains+Mono:wght@400;500;600&amp;family=Material+Symbols+Outlined:opsz,wght,FILL,GRAD@20..48,100..700,0..1,-50..200" rel="stylesheet">
+<link href="https://fonts.googleapis.com/css2?family=Material+Symbols+Outlined:wght,FILL@100..700,0..1&amp;display=swap" rel="stylesheet">
+<link href="https://fonts.googleapis.com/css2?family=Geist:wght@100..900&amp;family=JetBrains+Mono:wght@100..900&amp;display=swap" rel="stylesheet">
+<link href="https://fonts.googleapis.com/css2?family=Material+Symbols+Outlined:wght,FILL@100..700,0..1&amp;display=swap" rel="stylesheet">
+<link href="https://fonts.googleapis.com/css2?family=Material+Symbols+Outlined:wght,FILL@100..700,0..1&amp;display=swap" rel="stylesheet"><style>@layer base{html,body{width:100vw;margin:0;padding:0;}body{overscroll-behavior:none;}.pb-safe{padding-bottom:env(safe-area-inset-bottom,0px);}.pt-safe{padding-top:env(safe-area-inset-top,0px);}main>:first-child{margin-top:0!important;}main>:last-child{margin-bottom:0!important;}}::-webkit-scrollbar{display:none;}</style><script src="https://cdn.tailwindcss.com"></script><script id="tailwind-config">tailwind.config = { darkMode: "class", theme: { extend: { colors: { "inverse-primary": "#006398", "tertiary-fixed": "#dae2fd", "on-tertiary-container": "#22293d", "on-tertiary-fixed-variant": "#3f465c", "on-primary": "#003351", "on-secondary": "#00354a", "on-primary-container": "#002c47", "surface": "#0f131c", "surface-variant": "#31353f", "on-error-container": "#ffdad6", "surface-tint": "#93ccff", "on-tertiary": "#283044", "surface-container-lowest": "#0a0e17", "on-secondary-fixed": "#001e2c", "on-tertiary-fixed": "#131b2e", "surface-container-low": "#181b25", "tertiary-container": "#8990a8", "primary-fixed-dim": "#93ccff", "on-secondary-container": "#00374d", "on-background": "#dfe2ef", "surface-container": "#1c1f29", "on-secondary-fixed-variant": "#004c69", "surface-dim": "#0f131c", "outline-variant": "#3f4850", "on-surface-variant": "#bfc7d2", "secondary-fixed-dim": "#7bd0ff", "error": "#ffb4ab", "error-container": "#93000a", "secondary": "#7bd0ff", "primary-fixed": "#cce5ff", "on-error": "#690005", "on-primary-fixed": "#001d31", "inverse-on-surface": "#2c303a", "secondary-container": "#00a6e0", "on-primary-fixed-variant": "#004b73", "primary-container": "#3198dc", "tertiary": "#bec6e0", "primary": "#93ccff", "surface-container-high": "#262a34", "surface-bright": "#353943", "tertiary-fixed-dim": "#bec6e0", "outline": "#89929b", "inverse-surface": "#dfe2ef", "surface-container-highest": "#31353f", "on-surface": "#dfe2ef", "background": "#0f131c", "secondary-fixed": "#c4e7ff" }, borderRadius: { "DEFAULT": "0.125rem", "lg": "0.25rem", "xl": "0.5rem", "full": "0.75rem" }, spacing: { "space-xl": "1rem", "space-lg": "0.75rem", "space-md": "0.5rem", "margin": "0.75rem", "space-sm": "0.375rem", "space-xs": "0.25rem", "gutter": "0.5rem" }, fontFamily: { "headline-md": ["Geist"], "label-sm": ["JetBrains Mono"], "body-md": ["JetBrains Mono"], "title-md": ["Geist"], "body-lg": ["JetBrains Mono"], "body-sm": ["JetBrains Mono"], "telemetry-num": ["JetBrains Mono"], "headline-lg": ["Geist"], "label-md": ["JetBrains Mono"], "headline-sm": ["Geist"] }, fontSize: { "headline-md": ["1.25rem", { "lineHeight": "1.75rem", "letterSpacing": "-0.015em", "fontWeight": "600" }], "label-sm": ["0.625rem", { "lineHeight": "0.875rem", "letterSpacing": "0.04em", "fontWeight": "500" }], "body-md": ["0.75rem", { "lineHeight": "1.125rem", "letterSpacing": "0em", "fontWeight": "400" }], "title-md": ["0.875rem", { "lineHeight": "1.25rem", "letterSpacing": "0em", "fontWeight": "500" }], "body-lg": ["0.875rem", { "lineHeight": "1.375rem", "letterSpacing": "-0.01em", "fontWeight": "400" }], "body-sm": ["0.6875rem", { "lineHeight": "1rem", "letterSpacing": "0.01em", "fontWeight": "400" }], "telemetry-num": ["0.75rem", { "lineHeight": "1rem", "letterSpacing": "-0.02em", "fontWeight": "600" }], "headline-lg": ["1.5rem", { "lineHeight": "2rem", "letterSpacing": "-0.02em", "fontWeight": "600" }], "label-md": ["0.75rem", { "lineHeight": "1rem", "letterSpacing": "0.02em", "fontWeight": "500" }], "headline-sm": ["1rem", { "lineHeight": "1.5rem", "letterSpacing": "-0.01em", "fontWeight": "600" }] } } } };</script><style>
+    body {
+      min-height: max(884px, 100dvh);
+    }
+  </style>
+<style>
+    body {
+      min-height: max(884px, 100dvh);
+    }
+  </style>
+</head><body class="bg-surface text-on-surface font-body-md text-body-md flex flex-col min-h-screen"><header class="fixed top-0 w-full z-50 pt-safe bg-surface/90 backdrop-blur-xl shadow-[0_1px_8px_rgba(0,0,0,0.35)]"><div class="h-20 px-space-md flex flex-col justify-center gap-space-xs"><div class="flex items-center justify-between w-full"><div class="flex items-center gap-space-sm"><div class="w-11 h-11 flex items-center justify-center rounded-lg bg-surface-container-high text-primary"><span class="material-symbols-outlined text-[20px]">view_in_ar</span></div><div class="flex flex-col"><div class="flex items-center gap-space-xs"><span class="font-title-md text-title-md text-on-surface truncate max-w-[170px]">Suporte_Mancal_v2.fisis</span><span class="px-space-xs py-0.5 rounded-DEFAULT bg-primary-container/20 text-primary font-label-sm text-label-sm uppercase">Modo 3D Ativo</span></div><span class="font-label-sm text-label-sm text-on-surface-variant truncate">Modelagem</span></div></div><div class="flex items-center gap-space-xs"><div class="flex items-center bg-surface-container rounded-lg p-0.5"><button class="w-11 h-11 flex items-center justify-center text-on-surface-variant hover:text-on-surface transition-colors" title="Desfazer"><span class="material-symbols-outlined text-[18px]">undo</span></button><button class="w-11 h-11 flex items-center justify-center text-on-surface-variant hover:text-on-surface transition-colors" title="Refazer"><span class="material-symbols-outlined text-[18px]">redo</span></button></div><button class="w-11 h-11 flex items-center justify-center rounded-lg bg-surface-container text-on-surface-variant hover:text-on-surface transition-colors" title="Configurações de Malha"><span class="material-symbols-outlined text-[18px]">grain</span></button><button class="w-11 h-11 flex items-center justify-center rounded-lg bg-surface-container text-on-surface-variant hover:text-on-surface transition-colors" title="Exportar CAD/STEP"><span class="material-symbols-outlined text-[18px]">file_export</span></button><div class="w-8 h-8 rounded-full bg-primary flex items-center justify-center ml-space-xs"><span class="material-symbols-outlined text-on-primary text-[18px]">person</span></div></div></div></div></header><main class="flex flex-col relative w-full pt-20 pb-28 bg-surface"><div class="flex flex-col w-full">
+<!-- Dynamic Subheader: Solver Engine Status & Physics Pipeline -->
+<section class="flex flex-col gap-space-xs px-margin py-space-sm bg-surface-container-low shadow-sm">
+<div class="flex items-center justify-between gap-space-sm">
+<div class="flex items-center gap-space-xs truncate">
+<span class="w-2 h-2 rounded-full bg-secondary shadow-[0_0_8px_#7bd0ff] animate-ping"></span>
+<span class="font-label-sm text-label-sm text-secondary uppercase tracking-widest truncate">SOLVER RK4 DINÂMICO</span>
+</div>
+<div class="flex items-center gap-1 font-telemetry-num text-label-sm px-space-xs py-0.5 rounded-DEFAULT bg-surface-container-high text-primary">
+<span class="material-symbols-outlined text-[13px] text-secondary">memory</span>
+<span class="">ITER: 2964</span>
+</div>
+</div>
+<!-- Solver Details & Mode Selector -->
+<div class="flex items-center justify-between">
+<span class="font-body-sm text-body-sm text-on-surface-variant truncate">Suporte_Mancal_v3.fisis • Dinâmica de Corpos Rígidos (RBD) • Contato CCD</span>
+<span class="font-telemetry-num text-label-sm text-on-surface-variant">Δt: 0.5ms</span>
+</div>
+<!-- Physics Domain Switcher -->
+<div class="grid grid-cols-3 gap-1 p-0.5 rounded-lg bg-surface-container-lowest mt-space-xs"><button class="py-1 px-space-xs rounded-DEFAULT bg-transparent text-on-surface-variant hover:text-on-surface font-label-sm text-label-sm truncate flex items-center justify-center gap-1 transition-colors"><span class="material-symbols-outlined text-[14px]">air</span><span class="">CFD Túnel</span></button><button class="py-1 px-space-xs rounded-DEFAULT bg-primary-container text-on-primary-container font-label-sm text-label-sm font-semibold truncate flex items-center justify-center gap-1 shadow-sm"><span class="material-symbols-outlined text-[14px]">motion_blur</span><span class="">Colisão</span></button><button class="py-1 px-space-xs rounded-DEFAULT bg-transparent text-on-surface-variant hover:text-on-surface font-label-sm text-label-sm truncate flex items-center justify-center gap-1 transition-colors"><span class="material-symbols-outlined text-[14px]">hub</span><span class="">FEA Tensão</span></button></div>
+</section>
+<!-- Interactive 3D Physics Viewport -->
+<section class="relative w-full aspect-[4/3] bg-surface-container-lowest overflow-hidden select-none"><svg class="absolute inset-0 w-full h-full" fill="none" viewBox="0 0 390 292.5" xmlns="http://www.w3.org/2000/svg"><defs><linearGradient id="impactorGrad" x1="0%" x2="100%" y1="0%" y2="100%"><stop offset="0%" stop-color="#7bd0ff" stop-opacity="0.95"></stop><stop offset="70%" stop-color="#3198dc" stop-opacity="0.9"></stop><stop offset="100%" stop-color="#006398" stop-opacity="0.8"></stop></linearGradient><linearGradient id="mancalColGrad" x1="0%" x2="100%" y1="0%" y2="100%"><stop offset="0%" stop-color="#31353f"></stop><stop offset="50%" stop-color="#1c1f29"></stop><stop offset="100%" stop-color="#0f131c"></stop></linearGradient><marker id="arrowRed" markerHeight="6" markerWidth="6" orient="auto" refX="5" refY="3"><path d="M0,0 L6,3 L0,6 Z" fill="#ef4444"></path></marker><marker id="arrowAmberCol" markerHeight="6" markerWidth="6" orient="auto" refX="5" refY="3"><path d="M0,0 L6,3 L0,6 Z" fill="#f59e0b"></path></marker><marker id="arrowCyanCol" markerHeight="6" markerWidth="6" orient="auto" refX="5" refY="3"><path d="M0,0 L6,3 L0,6 Z" fill="#7bd0ff"></path></marker></defs><g opacity="0.08" stroke="#dfe2ef" stroke-dasharray="2,4" stroke-width="0.75"><line x1="0" x2="390" y1="48" y2="48"></line><line x1="0" x2="390" y1="96" y2="96"></line><line x1="0" x2="390" y1="144" y2="144"></line><line x1="0" x2="390" y1="192" y2="192"></line><line x1="0" x2="390" y1="240" y2="240"></line><line x1="65" x2="65" y1="0" y2="292.5"></line><line x1="130" x2="130" y1="0" y2="292.5"></line><line x1="195" x2="195" y1="0" y2="292.5"></line><line x1="260" x2="260" y1="0" y2="292.5"></line><line x1="325" x2="325" y1="0" y2="292.5"></line></g><path d="M 40 85 Q 85 105 130 146" fill="none" stroke="#7bd0ff" stroke-dasharray="4,3" stroke-width="1.5" opacity="0.6"></path><circle cx="55" cy="92" r="2.5" fill="#7bd0ff" opacity="0.4"></circle><circle cx="90" cy="112" r="2.5" fill="#7bd0ff" opacity="0.6"></circle><g id="corpo-impactor"><rect x="65" y="116" width="65" height="60" rx="6" fill="url(#impactorGrad)" stroke="#93ccff" stroke-width="1.5"></rect><rect x="60" y="111" width="75" height="70" rx="8" fill="none" stroke="#3198dc" stroke-dasharray="3,3" stroke-width="1" opacity="0.6"></rect><text fill="#002c47" font-family="JetBrains Mono" font-size="8" font-weight="600" x="72" y="148">IMPACTOR</text><text fill="#003351" font-family="JetBrains Mono" font-size="7" x="76" y="159">m=4.5kg</text></g><g id="suporte-mancal-alvo"><path d="M 162 205 L 238 205 L 234 222 L 166 222 Z" fill="#262a34" stroke="#7bd0ff" stroke-width="1"></path><circle cx="174" cy="214" fill="#0f131c" r="3" stroke="#bfc7d2" stroke-width="0.8"></circle><circle cx="226" cy="214" fill="#0f131c" r="3" stroke="#bfc7d2" stroke-width="0.8"></circle><rect fill="url(#mancalColGrad)" height="107" rx="6" stroke="#93ccff" stroke-width="1.5" width="65" x="170" y="98"></rect><rect x="165" y="93" width="75" height="117" rx="8" fill="none" stroke="#8990a8" stroke-dasharray="3,3" stroke-width="1" opacity="0.5"></rect><circle cx="202" cy="146" fill="#0a0e17" r="23" stroke="#3198dc" stroke-width="1.5"></circle><circle cx="202" cy="146" fill="#181b25" r="14" stroke="#7bd0ff" stroke-dasharray="4,2" stroke-width="1"></circle><circle cx="202" cy="146" fill="#7bd0ff" r="4"></circle></g><g id="ponto-contato"><circle cx="150" cy="146" r="14" fill="#ef4444" fill-opacity="0.15" stroke="#ef4444" stroke-width="1" stroke-dasharray="3,2"></circle><circle cx="150" cy="146" r="8" fill="#f59e0b" fill-opacity="0.2" stroke="#f59e0b" stroke-width="1.2"></circle><circle cx="150" cy="146" r="3" fill="#ef4444"></circle><line x1="150" y1="115" x2="150" y2="177" stroke="#ffdad6" stroke-width="1.5" stroke-dasharray="2,2"></line><rect fill="#0a0e17" height="13" opacity="0.9" rx="2" width="74" x="113" y="94"></rect><text fill="#ffdad6" font-family="JetBrains Mono" font-size="7.5" font-weight="600" x="116" y="104">CP: (124.5, 45.0)</text></g><g id="vetores-impacto"><line marker-end="url(#arrowRed)" stroke="#ef4444" stroke-width="2.5" x1="150" x2="225" y1="146" y2="146"></line><rect fill="#0a0e17" height="14" opacity="0.9" rx="2" width="66" x="175" y="128"></rect><text fill="#ef4444" font-family="JetBrains Mono" font-size="8" font-weight="600" x="178" y="139">Fn=18.4kN</text><line marker-end="url(#arrowAmberCol)" stroke="#f59e0b" stroke-width="2" x1="150" x2="150" y1="146" y2="188"></line><rect fill="#0a0e17" height="14" opacity="0.9" rx="2" width="62" x="155" y="170"></rect><text fill="#f59e0b" font-family="JetBrains Mono" font-size="8" font-weight="600" x="158" y="181">Ft=3.6kN</text><line marker-end="url(#arrowCyanCol)" stroke="#7bd0ff" stroke-width="2" x1="80" x2="42" y1="130" y2="110"></line><rect fill="#0a0e17" height="14" opacity="0.9" rx="2" width="58" x="30" y="88"></rect><text fill="#7bd0ff" font-family="JetBrains Mono" font-size="8" font-weight="600" x="33" y="99">v'=-4.8m/s</text></g></svg><div class="absolute top-2 left-2 flex flex-col gap-1 p-space-xs rounded-lg bg-surface-container-lowest/85 backdrop-blur-md shadow-md max-w-[175px]"><div class="flex items-center gap-1"><span class="w-1.5 h-1.5 rounded-full bg-secondary"></span><span class="font-label-sm text-label-sm text-on-surface font-semibold truncate">IMPULSO LINEAR (J)</span></div><div class="font-telemetry-num text-telemetry-num text-secondary">142.5 <span class="text-on-surface-variant font-label-sm text-label-sm">N·s</span></div><div class="font-label-sm text-label-sm text-on-surface-variant flex items-center justify-between"><span class="">Restituição (e):</span><span class="font-telemetry-num text-on-surface">0.65</span></div><span class="font-label-sm text-label-sm text-secondary truncate">Contato Rígido Inelástico</span></div><div class="absolute top-2 right-2 flex flex-col items-end gap-1 p-space-xs rounded-lg bg-surface-container-lowest/85 backdrop-blur-md shadow-md"><div class="flex items-center gap-1 font-label-sm text-label-sm text-on-surface-variant"><span class="material-symbols-outlined text-[13px] text-primary">verified</span><span class="">CCD DETECÇÃO</span></div><div class="font-telemetry-num text-label-sm text-primary flex items-center gap-1"><span class="">-0.02 mm</span><span class="material-symbols-outlined text-[14px] text-primary">check_circle</span></div><div class="text-[9px] font-label-sm text-outline">SEM PENETRAÇÃO (100%)</div></div><div class="absolute bottom-2 left-2 flex items-end gap-space-sm p-space-xs rounded-lg bg-surface-container-lowest/85 backdrop-blur-md shadow-md"><div class="flex flex-col items-center justify-center w-8 h-8 relative"><span class="absolute top-0 text-[8px] font-telemetry-num text-error font-bold">Z</span><span class="absolute bottom-0 text-[8px] font-telemetry-num text-secondary font-bold">Y</span><span class="absolute right-0 text-[8px] font-telemetry-num text-primary font-bold">X</span><span class="w-1.5 h-1.5 rounded-full bg-outline"></span></div><div class="flex flex-col gap-0.5"><div class="flex items-center justify-between font-label-sm text-label-sm text-on-surface-variant gap-2"><span class="">Pressão Contato</span><span class="font-telemetry-num text-on-surface">0 → 450 MPa</span></div><div class="w-28 h-2 rounded-full bg-gradient-to-r from-secondary via-primary-container via-amber-500 to-error"></div><div class="flex justify-between text-[8px] font-label-sm text-outline"><span class="">0 MPa</span><span class="">225</span><span class="">450 MPa</span></div></div></div><div class="absolute bottom-2 right-2 flex flex-col gap-1 p-0.5 rounded-lg bg-surface-container-high/90 backdrop-blur-md"><button class="w-7 h-7 flex items-center justify-center text-on-surface-variant hover:text-on-surface rounded-DEFAULT active:bg-surface-container" title="Redefinir Visão"><span class="material-symbols-outlined text-[16px]">center_focus_strong</span></button><button class="w-7 h-7 flex items-center justify-center text-on-surface-variant hover:text-on-surface rounded-DEFAULT active:bg-surface-container" title="Girar 90 Graus"><span class="material-symbols-outlined text-[16px]">3d_rotation</span></button></div></section>
+<!-- Live Dynamic Scalar Matrix (HUD Cards) -->
+<section class="flex flex-col gap-space-xs p-margin bg-surface">
+<div class="flex items-center justify-between">
+<span class="font-title-md text-title-md text-on-surface">Telemetria em Tempo Real</span>
+<span class="px-space-xs py-0.5 rounded-DEFAULT bg-surface-container-high font-label-sm text-label-sm text-secondary">
+        TAXA: 60 FPS
+      </span>
+</div>
+<!-- 4-Stat Metric Grid -->
+<div class="grid grid-cols-2 gap-space-xs"><div class="flex flex-col p-space-sm rounded-lg bg-surface-container-low shadow-sm"><div class="flex items-center justify-between text-on-surface-variant font-label-sm text-label-sm"><span class="">PICO DE FORÇA (F_max)</span><span class="material-symbols-outlined text-[14px] text-error">compress</span></div><div class="flex items-baseline gap-1 mt-0.5"><span class="font-headline-sm text-headline-sm text-error">18.42</span><span class="font-label-sm text-label-sm text-outline">kN</span></div><div class="w-full bg-surface-container-highest h-1 rounded-full mt-1.5 overflow-hidden"><div class="bg-error h-full rounded-full" style="width: 78%;"></div></div><span class="font-label-sm text-label-sm text-outline mt-0.5 truncate">Duração: 4.2 ms</span></div><div class="flex flex-col p-space-sm rounded-lg bg-surface-container-low shadow-sm"><div class="flex items-center justify-between text-on-surface-variant font-label-sm text-label-sm"><span class="">IMPULSO LINEAR (J)</span><span class="material-symbols-outlined text-[14px] text-primary">bolt</span></div><div class="flex items-baseline gap-1 mt-0.5"><span class="font-headline-sm text-headline-sm text-primary">142.5</span><span class="font-label-sm text-label-sm text-outline">N·s</span></div><div class="w-full bg-surface-container-highest h-1 rounded-full mt-1.5 overflow-hidden"><div class="bg-primary h-full rounded-full" style="width: 65%;"></div></div><span class="font-label-sm text-label-sm text-primary mt-0.5 truncate">Absorvido 78%</span></div><div class="flex flex-col p-space-sm rounded-lg bg-surface-container-low shadow-sm"><div class="flex items-center justify-between text-on-surface-variant font-label-sm text-label-sm"><span class="">ENERGIA DISSIPADA</span><span class="material-symbols-outlined text-[14px] text-secondary">local_fire_department</span></div><div class="flex items-baseline gap-1 mt-0.5"><span class="font-headline-sm text-headline-sm text-on-surface">86.4</span><span class="font-label-sm text-label-sm text-on-surface-variant">J</span></div><span class="font-label-sm text-label-sm text-secondary mt-0.5 truncate">Deformação + Atrito</span></div><div class="flex flex-col p-space-sm rounded-lg bg-surface-container-low shadow-sm"><div class="flex items-center justify-between text-on-surface-variant font-label-sm text-label-sm"><span class="">COEF. RESTITUIÇÃO (e)</span><span class="material-symbols-outlined text-[14px] text-secondary">sync_alt</span></div><div class="flex items-baseline gap-1 mt-0.5"><span class="font-headline-sm text-headline-sm text-on-surface">0.65</span><span class="font-label-sm text-label-sm text-on-surface-variant">adim.</span></div><span class="font-label-sm text-label-sm text-outline mt-0.5 truncate">Inelástico Parcial</span></div></div>
+<!-- Active Physical Layers Multi-select Toggle Tapes -->
+<div class="flex flex-col gap-1 mt-space-xs">
+<span class="font-label-sm text-label-sm text-on-surface-variant">Camadas de Visualização no Viewport</span>
+<div class="flex flex-wrap gap-1.5"><label class="flex items-center gap-1.5 px-space-xs py-1 rounded-DEFAULT bg-surface-container text-primary font-label-sm text-label-sm cursor-pointer shadow-sm"><input checked="" class="w-3.5 h-3.5 accent-primary rounded-DEFAULT bg-surface-container-highest cursor-pointer" type="checkbox"><span class="">Pontos de Contato</span></label><label class="flex items-center gap-1.5 px-space-xs py-1 rounded-DEFAULT bg-surface-container text-primary font-label-sm text-label-sm cursor-pointer shadow-sm"><input checked="" class="w-3.5 h-3.5 accent-primary rounded-DEFAULT bg-surface-container-highest cursor-pointer" type="checkbox"><span class="">Vetores de Impulso</span></label><label class="flex items-center gap-1.5 px-space-xs py-1 rounded-DEFAULT bg-surface-container-low text-on-surface-variant font-label-sm text-label-sm cursor-pointer"><input class="w-3.5 h-3.5 accent-primary rounded-DEFAULT bg-surface-container-highest cursor-pointer" type="checkbox"><span class="">Malha de Colisão</span></label><label class="flex items-center gap-1.5 px-space-xs py-1 rounded-DEFAULT bg-surface-container text-primary font-label-sm text-label-sm cursor-pointer shadow-sm"><input checked="" class="w-3.5 h-3.5 accent-primary rounded-DEFAULT bg-surface-container-highest cursor-pointer" type="checkbox"><span class="">Trajetória Pós-Choque</span></label></div>
+</div>
+</section>
+<!-- Simulation Playback Controller Deck (Timeline scrub & time-step) -->
+<section class="flex flex-col gap-space-xs px-margin py-space-sm bg-surface-container-low shadow-md">
+<!-- Timestamp & Buffer Information -->
+<div class="flex items-center justify-between font-telemetry-num text-telemetry-num">
+<div class="flex items-center gap-1">
+<span class="text-secondary font-bold">t =</span>
+<span class="text-on-surface text-title-md font-title-md" id="currentTime">1.482</span>
+<span class="text-outline text-label-sm font-label-sm">s</span>
+</div>
+<div class="flex items-center gap-space-xs text-label-sm font-label-sm text-on-surface-variant">
+<span class="">FRAME: 2964 / 5000</span>
+<span class="text-outline">|</span>
+<span class="">LIM: 2.500s</span>
+</div>
+</div>
+<!-- Timeline Progress Slider Track -->
+<div class="relative w-full flex items-center py-1 cursor-pointer">
+<div class="w-full h-2 rounded-full bg-surface-container-highest relative overflow-hidden">
+<!-- Buffer Cache Bar -->
+<div class="absolute left-0 top-0 h-full bg-surface-container-high rounded-full w-[82%]"></div>
+<!-- Solved Active Progress -->
+<div class="absolute left-0 top-0 h-full bg-gradient-to-r from-primary-container to-secondary rounded-full w-[59.3%]" id="simProgressBar"></div>
+</div>
+<!-- Draggable Scrub Head Indicator -->
+<div class="absolute left-[59.3%] -ml-2 w-4 h-4 rounded-full bg-surface-container-lowest shadow-[0_0_8px_#7bd0ff] flex items-center justify-center">
+<div class="w-2 h-2 rounded-full bg-secondary"></div>
+</div>
+</div>
+<!-- Playback Control Toolbar Buttons -->
+<div class="flex items-center justify-between mt-space-xs">
+<!-- Scrub Backwards -->
+<div class="flex items-center gap-1">
+<button class="w-9 h-9 flex items-center justify-center rounded-lg bg-surface-container text-on-surface-variant hover:text-on-surface active:bg-surface-container-high transition-colors" title="Voltar 1 Frame">
+<span class="material-symbols-outlined text-[18px]">skip_previous</span>
+</button>
+<button class="w-9 h-9 flex items-center justify-center rounded-lg bg-surface-container text-on-surface-variant hover:text-on-surface active:bg-surface-container-high transition-colors" title="Passo Lento Anterior">
+<span class="material-symbols-outlined text-[18px]">fast_rewind</span>
+</button>
+</div>
+<!-- Central Master Play/Pause CTA -->
+<button class="h-10 px-space-lg flex items-center justify-center gap-space-xs rounded-lg bg-primary-container text-on-primary-container font-title-md text-title-md font-semibold shadow-md active:scale-95 transition-all" id="playPauseBtn">
+<span class="material-symbols-outlined text-[20px]" id="playIcon">pause</span>
+<span id="playLabel" class="">PAUSAR</span>
+</button>
+<!-- Scrub Forward & Restart -->
+<div class="flex items-center gap-1">
+<button class="w-9 h-9 flex items-center justify-center rounded-lg bg-surface-container text-on-surface-variant hover:text-on-surface active:bg-surface-container-high transition-colors" title="Passo Lento Próximo">
+<span class="material-symbols-outlined text-[18px]">fast_forward</span>
+</button>
+<button class="w-9 h-9 flex items-center justify-center rounded-lg bg-surface-container text-on-surface-variant hover:text-on-surface active:bg-surface-container-high transition-colors" title="Reiniciar Simulação">
+<span class="material-symbols-outlined text-[18px]">replay</span>
+</button>
+</div>
+</div>
+<!-- Speed Multiplier Pill Toggles -->
+<div class="flex items-center justify-between pt-space-xs border-t-0">
+<span class="font-label-sm text-label-sm text-on-surface-variant">Velocidade:</span>
+<div class="flex items-center gap-1 bg-surface-container-lowest p-0.5 rounded-lg">
+<button class="px-space-xs py-0.5 rounded-DEFAULT text-on-surface-variant hover:text-on-surface font-label-sm text-label-sm">0.25×</button>
+<button class="px-space-xs py-0.5 rounded-DEFAULT text-on-surface-variant hover:text-on-surface font-label-sm text-label-sm">0.5×</button>
+<button class="px-space-xs py-0.5 rounded-DEFAULT bg-primary-container text-on-primary-container font-label-sm text-label-sm font-semibold">1.0×</button>
+<button class="px-space-xs py-0.5 rounded-DEFAULT text-on-surface-variant hover:text-on-surface font-label-sm text-label-sm">2.0×</button>
+</div>
+</div>
+</section>
+<!-- Primary CAD/CAE Bottom Actions -->
+<section class="flex flex-col gap-space-xs px-margin py-space-md bg-surface">
+<div class="grid grid-cols-2 gap-space-xs">
+<!-- Snapshot Telemetry -->
+<button class="h-11 flex items-center justify-center gap-space-xs rounded-lg bg-surface-container-high text-on-surface font-title-md text-title-md active:bg-surface-container-highest transition-colors shadow-sm">
+<span class="material-symbols-outlined text-[18px] text-secondary">camera_alt</span>
+<span class="">Capturar Frame</span>
+</button>
+<!-- Go to Analytics Report (Tela 5 transition) -->
+<a class="h-11 flex items-center justify-center gap-space-xs rounded-lg bg-secondary-container text-on-secondary-container font-title-md text-title-md font-semibold active:opacity-90 transition-opacity shadow-md" href="#">
+<span class="">Ver Relatório</span>
+<span class="material-symbols-outlined text-[18px]">arrow_forward</span>
+</a>
+</div>
+<!-- Computational Physics Boundary Context Notification -->
+<div class="flex items-center gap-space-xs p-space-xs rounded-lg bg-surface-container-lowest text-on-surface-variant font-label-sm text-label-sm"><span class="material-symbols-outlined text-[16px] text-secondary">info</span><span class="truncate">Solução de Contato: Penalidade e Lei de Atrito Coulomb (μ = 0.35).</span></div>
+</section>
+</div>
+<script>
+  // Simple micro-interaction for Play / Pause toggle
+  const playBtn = document.getElementById('playPauseBtn');
+  const playIcon = document.getElementById('playIcon');
+  const playLabel = document.getElementById('playLabel');
+  let isSimulating = true;
+
+  if (playBtn) {
+    playBtn.addEventListener('click', () => {
+      isSimulating = !isSimulating;
+      if (isSimulating) {
+        playIcon.textContent = 'pause';
+        playLabel.textContent = 'PAUSAR';
+        playBtn.className = 'h-10 px-space-lg flex items-center justify-center gap-space-xs rounded-lg bg-primary-container text-on-primary-container font-title-md text-title-md font-semibold shadow-md active:scale-95 transition-all';
+      } else {
+        playIcon.textContent = 'play_arrow';
+        playLabel.textContent = 'RETOMAR';
+        playBtn.className = 'h-10 px-space-lg flex items-center justify-center gap-space-xs rounded-lg bg-secondary text-on-secondary font-title-md text-title-md font-semibold shadow-md active:scale-95 transition-all';
+      }
+    });
+  }
+</script></main><footer class="fixed bottom-0 w-full z-50 pb-safe bg-surface/95 backdrop-blur-xl shadow-[0_-1px_12px_rgba(0,0,0,0.45)]"><div class="h-6 px-space-md bg-surface-container-lowest flex items-center justify-between font-telemetry-num text-telemetry-num"><div class="flex items-center gap-space-md text-on-surface-variant"><span class="flex items-center gap-1"><span class="text-error font-bold">X:</span>124.50</span><span class="flex items-center gap-1"><span class="text-secondary font-bold">Y:</span>45.00</span><span class="flex items-center gap-1"><span class="text-primary font-bold">Z:</span>82.20</span><span class="text-outline font-label-sm text-label-sm">mm</span></div><div class="flex items-center gap-space-md"><span class="inline-flex items-center gap-1 text-label-sm font-label-sm text-secondary"><span class="w-1.5 h-1.5 rounded-full bg-secondary animate-pulse"></span>SNAP: VÉRTICE</span><button class="px-space-xs py-0.5 rounded-DEFAULT bg-surface-container text-primary font-label-sm text-label-sm">UNIDADE: MM</button></div></div><nav class="h-16 px-space-xs flex items-center justify-around" data-active-classes="text-primary bg-surface-container-high font-semibold"><a class="flex-1 h-11 flex flex-col items-center justify-center rounded-lg text-on-surface-variant hover:text-on-surface transition-colors gap-0.5" data-path="modelagem" href="#"><span class="material-symbols-outlined text-[18px]">deployed_code</span><span class="font-label-sm text-label-sm">Modelagem</span></a><a class="flex-1 h-11 flex flex-col items-center justify-center rounded-lg text-on-surface-variant hover:text-on-surface transition-colors gap-0.5" data-path="materiais" href="#"><span class="material-symbols-outlined text-[18px]">layers</span><span class="font-label-sm text-label-sm">Materiais</span></a><a class="flex-1 h-11 flex flex-col items-center justify-center rounded-lg text-on-surface-variant hover:text-on-surface transition-colors gap-0.5" data-path="simulacao" href="#"><span class="material-symbols-outlined text-[18px]">speed</span><span class="font-label-sm text-label-sm">Simulação</span></a><a class="flex-1 h-11 flex flex-col items-center justify-center rounded-lg text-on-surface-variant hover:text-on-surface transition-colors gap-0.5" data-path="analise" href="#"><span class="material-symbols-outlined text-[18px]">insights</span><span class="font-label-sm text-label-sm">Análise</span></a></nav></footer>
+
+</body></html>

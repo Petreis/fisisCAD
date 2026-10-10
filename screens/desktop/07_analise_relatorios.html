@@ -1,0 +1,854 @@
+<!DOCTYPE html><html class="dark" lang="en"><head><meta charset="utf-8"><meta content="width=device-width, initial-scale=1.0" name="viewport"><meta content="web_standard" name="shell-type"><style>@layer base{html,body{margin:0;padding:0;}body{overscroll-behavior:none;}main>:first-child{margin-top:0!important;}main>:last-child{margin-bottom:0!important;}}::-webkit-scrollbar{display:none;}</style><link href="https://fonts.googleapis.com/css2?family=Material+Symbols+Outlined:opsz,wght,FILL,GRAD@20..48,100..700,0..1,-50..200" rel="stylesheet">
+<link href="https://fonts.googleapis.com/css2?family=Material+Symbols+Outlined:wght,FILL@100..700,0..1&amp;display=swap" rel="stylesheet"><script src="https://cdn.tailwindcss.com"></script><script id="tailwind-config">tailwind.config = {
+    darkMode: "class",
+    theme: {
+      extend: {
+        "colors": {
+          "secondary": "#7bd0ff",
+          "on-secondary-fixed": "#001e2c",
+          "primary-fixed-dim": "#93ccff",
+          "on-secondary-container": "#00374d",
+          "outline-variant": "#3f4850",
+          "on-background": "#dfe2ef",
+          "on-surface-variant": "#bfc7d2",
+          "inverse-on-surface": "#2c303a",
+          "surface-container-low": "#181b25",
+          "outline": "#89929b",
+          "surface-container-high": "#262a34",
+          "surface-container-highest": "#31353f",
+          "primary-fixed": "#cce5ff",
+          "on-primary-fixed": "#001d31",
+          "on-tertiary-container": "#22293d",
+          "tertiary": "#bec6e0",
+          "tertiary-fixed": "#dae2fd",
+          "on-error-container": "#ffdad6",
+          "surface-tint": "#93ccff",
+          "secondary-fixed": "#c4e7ff",
+          "error-container": "#93000a",
+          "on-tertiary": "#283044",
+          "surface-dim": "#0f131c",
+          "surface-bright": "#353943",
+          "error": "#ffb4ab",
+          "on-tertiary-fixed": "#131b2e",
+          "on-secondary-fixed-variant": "#004c69",
+          "on-error": "#690005",
+          "tertiary-container": "#8990a8",
+          "on-primary-container": "#002c47",
+          "surface-container-lowest": "#0a0e17",
+          "primary": "#93ccff",
+          "on-tertiary-fixed-variant": "#3f465c",
+          "surface": "#0f131c",
+          "inverse-surface": "#dfe2ef",
+          "tertiary-fixed-dim": "#bec6e0",
+          "primary-container": "#3198dc",
+          "background": "#0f131c",
+          "on-primary": "#003351",
+          "on-secondary": "#00354a",
+          "secondary-fixed-dim": "#7bd0ff",
+          "surface-variant": "#31353f",
+          "surface-container": "#1c1f29",
+          "on-surface": "#dfe2ef",
+          "inverse-primary": "#006398",
+          "secondary-container": "#00a6e0",
+          "on-primary-fixed-variant": "#004b73"
+        },
+        "borderRadius": {
+          "DEFAULT": "0.125rem",
+          "lg": "0.25rem",
+          "xl": "0.5rem",
+          "full": "0.75rem"
+        },
+        "spacing": {
+          "margin": "0.75rem",
+          "space-xl": "1rem",
+          "gutter": "0.5rem",
+          "space-md": "0.5rem",
+          "space-lg": "0.75rem",
+          "space-sm": "0.375rem",
+          "space-xs": "0.25rem"
+        },
+        "fontFamily": {
+          "headline-sm": [
+            "Geist"
+          ],
+          "telemetry-num": [
+            "JetBrains Mono"
+          ],
+          "label-sm": [
+            "JetBrains Mono"
+          ],
+          "body-md": [
+            "JetBrains Mono"
+          ],
+          "title-md": [
+            "Geist"
+          ],
+          "body-sm": [
+            "JetBrains Mono"
+          ],
+          "label-md": [
+            "JetBrains Mono"
+          ],
+          "headline-lg": [
+            "Geist"
+          ],
+          "body-lg": [
+            "JetBrains Mono"
+          ],
+          "headline-md": [
+            "Geist"
+          ]
+        },
+        "fontSize": {
+          "headline-sm": [
+            "1rem",
+            {
+              "lineHeight": "1.5rem",
+              "letterSpacing": "-0.01em",
+              "fontWeight": "600"
+            }
+          ],
+          "telemetry-num": [
+            "0.75rem",
+            {
+              "lineHeight": "1rem",
+              "letterSpacing": "-0.02em",
+              "fontWeight": "600"
+            }
+          ],
+          "label-sm": [
+            "0.625rem",
+            {
+              "lineHeight": "0.875rem",
+              "letterSpacing": "0.04em",
+              "fontWeight": "500"
+            }
+          ],
+          "body-md": [
+            "0.75rem",
+            {
+              "lineHeight": "1.125rem",
+              "letterSpacing": "0em",
+              "fontWeight": "400"
+            }
+          ],
+          "title-md": [
+            "0.875rem",
+            {
+              "lineHeight": "1.25rem",
+              "letterSpacing": "0em",
+              "fontWeight": "500"
+            }
+          ],
+          "body-sm": [
+            "0.6875rem",
+            {
+              "lineHeight": "1rem",
+              "letterSpacing": "0.01em",
+              "fontWeight": "400"
+            }
+          ],
+          "label-md": [
+            "0.75rem",
+            {
+              "lineHeight": "1rem",
+              "letterSpacing": "0.02em",
+              "fontWeight": "500"
+            }
+          ],
+          "headline-lg": [
+            "1.5rem",
+            {
+              "lineHeight": "2rem",
+              "letterSpacing": "-0.02em",
+              "fontWeight": "600"
+            }
+          ],
+          "body-lg": [
+            "0.875rem",
+            {
+              "lineHeight": "1.375rem",
+              "letterSpacing": "-0.01em",
+              "fontWeight": "400"
+            }
+          ],
+          "headline-md": [
+            "1.25rem",
+            {
+              "lineHeight": "1.75rem",
+              "letterSpacing": "-0.015em",
+              "fontWeight": "600"
+            }
+          ]
+        }
+      },
+    },
+  }</script></head><body class="bg-surface font-body-md text-on-surface select-none"><header class="fixed top-0 w-full z-50 bg-surface-container-low shadow-[0_1px_8px_rgba(0,0,0,0.04)]"><div class="h-12 w-full px-margin flex items-center justify-between bg-surface-container-lowest"><div class="flex items-center gap-space-lg"><div class="flex items-center gap-space-xs"><span class="material-symbols-outlined text-primary text-[20px]">view_in_ar</span><span class="font-title-md text-title-md font-bold tracking-tight text-on-surface">FisisCAD <span class="text-primary text-[10px] uppercase px-1 py-0.5 rounded bg-surface-container-high">PRO</span></span></div><div class="flex items-center gap-space-sm pl-space-md"><span class="font-body-sm text-body-sm text-on-surface-variant font-medium">Suporte_Mancal_v2.step</span><span class="px-1.5 py-0.5 rounded bg-surface-container-high text-secondary text-[9px] uppercase tracking-wider font-label-sm">v2.4-fea</span></div><div class="hidden lg:flex items-center gap-space-xs pl-space-md"><button class="p-1 text-on-surface-variant hover:text-on-surface hover:bg-surface-container rounded"><span class="material-symbols-outlined text-[16px]">undo</span></button><button class="p-1 text-on-surface-variant hover:text-on-surface hover:bg-surface-container rounded"><span class="material-symbols-outlined text-[16px]">redo</span></button></div></div><div class="flex items-center gap-space-md"><div class="hidden sm:flex items-center bg-surface-container px-space-sm py-0.5 rounded gap-space-xs"><button class="px-2 py-0.5 rounded text-on-surface bg-surface-container-high font-label-sm text-label-sm">3D Solid</button><button class="px-2 py-0.5 rounded text-on-surface-variant hover:text-on-surface font-label-sm text-label-sm">Physics SIM</button></div><div class="flex items-center gap-space-xs bg-surface-container-high px-2 py-1 rounded"><span class="font-label-sm text-label-sm text-secondary">UNIT: SI (mm/kg)</span></div><div class="flex items-center gap-space-sm pl-space-sm"><button class="flex items-center gap-1 px-2.5 py-1 rounded bg-surface-container hover:bg-surface-container-high text-on-surface text-label-sm font-label-sm"><span class="material-symbols-outlined text-[14px]">download</span><span class="">Export</span></button><div class="w-8 h-8 rounded-full bg-primary flex items-center justify-center"><span class="material-symbols-outlined text-on-primary text-[18px]">person</span></div></div></div></div><div class="h-8 w-full px-margin flex items-center justify-between bg-surface-container-low"><nav class="flex items-center gap-space-xs" data-active-classes="bg-primary-container text-on-primary-container font-bold rounded"><a class="px-3 py-1 font-label-md text-label-md text-on-surface-variant hover:text-on-surface transition-colors" data-path="modelagem-2d3d" href="#">1. Modelagem 2D/3D</a><a class="px-3 py-1 font-label-md text-label-md text-on-surface-variant hover:text-on-surface transition-colors" data-path="materiais-bcs" href="#">2. Materiais &amp; BCs</a><a class="px-3 py-1 font-label-md text-label-md text-on-surface-variant hover:text-on-surface transition-colors" data-path="simulacao-fisica" href="#">3. Simulação Física</a><a class="px-3 py-1 font-label-md text-label-md text-on-surface-variant hover:text-on-surface transition-colors" data-path="analise-relatorios" href="#">4. Análise &amp; Relatórios</a></nav><div class="hidden md:flex items-center gap-space-md"><span class="font-label-sm text-label-sm text-outline">SOLVER: OpenFOAM / CalculiX</span></div></div></header><main class="w-full pt-20 bg-surface min-h-[calc(100vh-1.5rem)]"><div class="flex flex-col w-full">
+<!-- Sub-header Breadcrumb / Simulation Run Context Bar -->
+<div class="w-full bg-surface-container-lowest px-margin py-space-sm flex flex-wrap items-center justify-between gap-space-md">
+<div class="flex items-center gap-space-md flex-wrap">
+<div class="flex items-center gap-space-xs text-primary">
+<span class="material-symbols-outlined text-[18px]">query_stats</span>
+<span class="font-headline-sm text-headline-sm tracking-tight text-on-surface">Ensaio #04: Impacto Balístico &amp; RBD</span>
+</div>
+<span class="text-outline-variant font-body-sm text-body-sm hidden md:inline">|</span>
+<span class="font-body-sm text-body-sm text-on-surface-variant">Solução Transiente Explícita — <code class="text-secondary font-telemetry-num text-telemetry-num">Suporte_Mancal_v2.step</code></span>
+<span class="inline-flex items-center gap-1 px-2 py-0.5 rounded bg-surface-container-high text-primary font-label-sm text-label-sm">
+<span class="w-1.5 h-1.5 rounded-full bg-secondary"></span>
+        RK4 100% CONVERGIDO (Δt_crit = 1.84 μs)
+      </span>
+</div>
+<!-- View Switcher Pills -->
+<div class="flex items-center bg-surface-container-low p-0.5 rounded gap-0.5">
+<button class="px-3 py-1 rounded bg-primary-container text-on-primary-container font-label-md text-label-md font-bold shadow-sm transition-all flex items-center gap-1">
+<span class="material-symbols-outlined text-[14px]">timeline</span>
+        Telemetria Transiente
+      </button>
+<button class="px-3 py-1 rounded text-on-surface-variant hover:text-on-surface hover:bg-surface-container font-label-md text-label-md transition-all flex items-center gap-1">
+<span class="material-symbols-outlined text-[14px]">grid_4x4</span>
+        Tensões Von Mises 3D
+      </button>
+<button class="px-3 py-1 rounded text-on-surface-variant hover:text-on-surface hover:bg-surface-container font-label-md text-label-md transition-all flex items-center gap-1">
+<span class="material-symbols-outlined text-[14px]">verified</span>
+        Dossiê ABNT/ISO
+      </button>
+</div>
+</div>
+<div class="p-margin flex flex-col gap-space-lg w-full">
+<!-- Top 5 Engineering KPI Cards -->
+<div class="grid grid-cols-1 sm:grid-cols-2 lg:grid-cols-5 gap-space-sm w-full">
+<!-- KPI 1 -->
+<div class="bg-surface-container-low rounded-lg p-space-md flex flex-col justify-between shadow-sm relative overflow-hidden group">
+<div class="absolute -right-2 -bottom-2 text-surface-container-highest opacity-20 pointer-events-none">
+<span class="material-symbols-outlined text-[64px]">priority_high</span>
+</div>
+<div class="flex items-center justify-between mb-space-xs">
+<span class="font-label-sm text-label-sm uppercase tracking-wider text-on-surface-variant">Força de Pico Máx. (F_max)</span>
+<span class="px-1.5 py-0.5 rounded bg-error-container text-on-error-container font-label-sm text-label-sm font-bold flex items-center gap-0.5">
+<span class="material-symbols-outlined text-[10px]">warning</span> ALERTA
+          </span>
+</div>
+<div class="flex items-baseline gap-1.5 my-space-xs">
+<span class="font-headline-lg text-headline-lg font-bold text-error tracking-tight font-telemetry-num">18.42</span>
+<span class="font-body-sm text-body-sm text-on-surface-variant font-medium">kN</span>
+</div>
+<div class="flex flex-col gap-0.5">
+<div class="flex items-center justify-between text-on-surface-variant font-label-sm text-label-sm">
+<span class="">F_adm: 15.00 kN</span>
+<span class="text-error font-telemetry-num text-telemetry-num font-semibold">+22.8%</span>
+</div>
+<span class="text-on-surface-variant font-telemetry-num text-telemetry-num text-[10px]">Registrado em t = 4.20 ms</span>
+</div>
+</div>
+<!-- KPI 2 -->
+<div class="bg-surface-container-low rounded-lg p-space-md flex flex-col justify-between shadow-sm relative overflow-hidden">
+<div class="flex items-center justify-between mb-space-xs">
+<span class="font-label-sm text-label-sm uppercase tracking-wider text-on-surface-variant">Impulso Linear Total (J)</span>
+<span class="px-1.5 py-0.5 rounded bg-surface-container-high text-secondary font-label-sm text-label-sm">NOMINAL</span>
+</div>
+<div class="flex items-baseline gap-1.5 my-space-xs">
+<span class="font-headline-lg text-headline-lg font-bold text-primary tracking-tight font-telemetry-num">142.5</span>
+<span class="font-body-sm text-body-sm text-on-surface-variant font-medium">N·s</span>
+</div>
+<div class="flex flex-col gap-0.5">
+<span class="text-on-surface-variant font-body-sm text-body-sm">∫ F(t) dt de 0 a 18.6 ms</span>
+<span class="text-on-surface-variant font-telemetry-num text-telemetry-num text-[10px]">Δp transferido: 100.0%</span>
+</div>
+</div>
+<!-- KPI 3 -->
+<div class="bg-surface-container-low rounded-lg p-space-md flex flex-col justify-between shadow-sm relative overflow-hidden">
+<div class="flex items-center justify-between mb-space-xs">
+<span class="font-label-sm text-label-sm uppercase tracking-wider text-on-surface-variant">Dissipação Energética (ΔE)</span>
+<span class="px-1.5 py-0.5 rounded bg-surface-container-high text-secondary font-label-sm text-label-sm">PLAST.</span>
+</div>
+<div class="flex items-baseline gap-1.5 my-space-xs">
+<span class="font-headline-lg text-headline-lg font-bold text-secondary tracking-tight font-telemetry-num">86.4</span>
+<span class="font-body-sm text-body-sm text-on-surface-variant font-medium">Joule</span>
+</div>
+<div class="flex flex-col gap-0.5">
+<div class="w-full bg-surface-container-highest h-1 rounded-full overflow-hidden">
+<div class="bg-secondary h-full rounded-full" style="width: 54.2%;"></div>
+</div>
+<span class="text-on-surface-variant font-telemetry-num text-telemetry-num text-[10px] mt-0.5">54.2% da E_cin cinética absorvida</span>
+</div>
+</div>
+<!-- KPI 4 -->
+<div class="bg-surface-container-low rounded-lg p-space-md flex flex-col justify-between shadow-sm relative overflow-hidden">
+<div class="flex items-center justify-between mb-space-xs">
+<span class="font-label-sm text-label-sm uppercase tracking-wider text-on-surface-variant">Tensão Máx Von Mises (σ_vM)</span>
+<span class="px-1.5 py-0.5 rounded bg-surface-container-high text-tertiary-fixed font-label-sm text-label-sm">FS = 1.12</span>
+</div>
+<div class="flex items-baseline gap-1.5 my-space-xs">
+<span class="font-headline-lg text-headline-lg font-bold text-on-surface tracking-tight font-telemetry-num">584.2</span>
+<span class="font-body-sm text-body-sm text-on-surface-variant font-medium">MPa</span>
+</div>
+<div class="flex flex-col gap-0.5">
+<div class="flex justify-between text-on-surface-variant font-label-sm text-label-sm">
+<span class="">Escoamento (σ_y): 655 MPa</span>
+</div>
+<span class="text-tertiary font-telemetry-num text-telemetry-num text-[10px]">Pico no Nó FEA #14.802</span>
+</div>
+</div>
+<!-- KPI 5 -->
+<div class="bg-surface-container-low rounded-lg p-space-md flex flex-col justify-between shadow-sm relative overflow-hidden">
+<div class="flex items-center justify-between mb-space-xs">
+<span class="font-label-sm text-label-sm uppercase tracking-wider text-on-surface-variant">Deformação Residual (δ_res)</span>
+<span class="px-1.5 py-0.5 rounded bg-surface-container-high text-primary font-label-sm text-label-sm">η = 77.2%</span>
+</div>
+<div class="flex items-baseline gap-1.5 my-space-xs">
+<span class="font-headline-lg text-headline-lg font-bold text-on-surface tracking-tight font-telemetry-num">0.42</span>
+<span class="font-body-sm text-body-sm text-on-surface-variant font-medium">mm</span>
+</div>
+<div class="flex flex-col gap-0.5">
+<span class="text-on-surface-variant font-body-sm text-body-sm">Recuperação elástica de 77.2%</span>
+<span class="text-on-surface-variant font-telemetry-num text-telemetry-num text-[10px]">Carga cíclica residual zerada</span>
+</div>
+</div>
+</div>
+<!-- Dual Large Engineering Charts Bento Row -->
+<div class="grid grid-cols-1 lg:grid-cols-2 gap-space-md w-full">
+<!-- Left Chart: Impact Force vs Time F(t) -->
+<div class="bg-surface-container-low rounded-lg p-space-lg shadow-sm flex flex-col">
+<div class="flex items-center justify-between mb-space-md">
+<div class="flex flex-col">
+<div class="flex items-center gap-space-xs">
+<span class="w-2 h-2 rounded-full bg-primary"></span>
+<h2 class="font-title-md text-title-md font-bold text-on-surface">Curva Força de Impacto vs. Tempo [F(t)]</h2>
+</div>
+<span class="font-body-sm text-body-sm text-on-surface-variant">Resposta transitória com limite dinâmico admissível e regime plástico</span>
+</div>
+<div class="flex items-center gap-space-xs font-label-sm text-label-sm">
+<span class="flex items-center gap-1 text-primary"><span class="w-3 h-0.5 bg-primary"></span> Força F(t)</span>
+<span class="flex items-center gap-1 text-error"><span class="w-3 h-0.5 bg-error border-b border-dashed"></span> F_adm (15.0 kN)</span>
+</div>
+</div>
+<!-- SVG Curve Display -->
+<div class="relative w-full h-64 bg-surface-container-lowest rounded p-space-sm flex flex-col justify-between overflow-hidden">
+<!-- Subtle Grid Lines -->
+<div class="absolute inset-0 grid grid-cols-8 grid-rows-4 pointer-events-none opacity-20">
+<div class="border-r border-b border-outline"></div>
+<div class="border-r border-b border-outline"></div>
+<div class="border-r border-b border-outline"></div>
+<div class="border-r border-b border-outline"></div>
+<div class="border-r border-b border-outline"></div>
+<div class="border-r border-b border-outline"></div>
+<div class="border-r border-b border-outline"></div>
+<div class="border-b border-outline"></div>
+<div class="border-r border-b border-outline"></div>
+<div class="border-r border-b border-outline"></div>
+<div class="border-r border-b border-outline"></div>
+<div class="border-r border-b border-outline"></div>
+<div class="border-r border-b border-outline"></div>
+<div class="border-r border-b border-outline"></div>
+<div class="border-r border-b border-outline"></div>
+<div class="border-b border-outline"></div>
+<div class="border-r border-b border-outline"></div>
+<div class="border-r border-b border-outline"></div>
+<div class="border-r border-b border-outline"></div>
+<div class="border-r border-b border-outline"></div>
+<div class="border-r border-b border-outline"></div>
+<div class="border-r border-b border-outline"></div>
+<div class="border-r border-b border-outline"></div>
+<div class="border-b border-outline"></div>
+<div class="border-r border-outline"></div>
+<div class="border-r border-outline"></div>
+<div class="border-r border-outline"></div>
+<div class="border-r border-outline"></div>
+<div class="border-r border-outline"></div>
+<div class="border-r border-outline"></div>
+<div class="border-r border-outline"></div>
+<div></div>
+</div>
+<!-- Graphic Render Curve -->
+<svg class="w-full h-full relative z-10 overflow-visible" preserveAspectRatio="none" viewBox="0 0 600 240">
+<defs>
+<linearGradient id="forceGradient" x1="0" x2="0" y1="0" y2="1">
+<stop offset="0%" stop-color="#93ccff" stop-opacity="0.38"></stop>
+<stop offset="70%" stop-color="#3198dc" stop-opacity="0.08"></stop>
+<stop offset="100%" stop-color="#3198dc" stop-opacity="0.0"></stop>
+</linearGradient>
+</defs>
+<!-- Admissible Limit Threshold Line (F_adm = 15.0 kN at y=70) -->
+<line stroke="#ffb4ab" stroke-dasharray="4,4" stroke-width="1.5" x1="40" x2="580" y1="70" y2="70"></line>
+<text fill="#ffb4ab" font-family="JetBrains Mono" font-size="9" font-weight="600" x="50" y="65">LIMIAR ADMISSÍVEL F_adm = 15.00 kN</text>
+<!-- Shaded Area Under Force Curve -->
+<path d="M 40 210 L 40 210 C 60 210, 80 205, 100 170 C 120 120, 140 32, 166 32 C 190 32, 210 110, 240 145 C 270 180, 310 172, 350 182 C 400 195, 480 210, 580 210 Z" fill="url(#forceGradient)"></path>
+<!-- Dynamic Force Curve Stroke -->
+<path d="M 40 210 C 60 210, 80 205, 100 170 C 120 120, 140 32, 166 32 C 190 32, 210 110, 240 145 C 270 180, 310 172, 350 182 C 400 195, 480 210, 580 210" fill="none" stroke="#93ccff" stroke-linecap="round" stroke-width="2.5"></path>
+<!-- Peak Callout Point -->
+<circle cx="166" cy="32" fill="#0f131c" r="5" stroke="#ffb4ab" stroke-width="2.5"></circle>
+<line opacity="0.6" stroke="#93ccff" stroke-dasharray="2,2" stroke-width="1" x1="166" x2="166" y1="32" y2="210"></line>
+</svg>
+<!-- Interactive HUD Floating Probe -->
+<div class="absolute left-[24%] top-3 z-20 bg-surface-container-lowest px-2.5 py-1.5 rounded shadow-lg flex flex-col gap-0.5">
+<div class="flex items-center gap-1 font-label-sm text-label-sm text-error">
+<span class="material-symbols-outlined text-[12px]">location_searching</span>
+<span class="font-bold">SONDA: PICO MÁXIMO</span>
+</div>
+<div class="font-telemetry-num text-telemetry-num text-on-surface">
+              t = <span class="text-primary font-bold">4.20 ms</span> | F = <span class="text-error font-bold">18.42 kN</span>
+</div>
+<span class="text-[9px] font-label-sm text-on-surface-variant">Sobrecarga elasto-plástica instantânea</span>
+</div>
+<!-- Axes Indicators -->
+<div class="flex justify-between items-center text-on-surface-variant font-telemetry-num text-[10px] pt-1 z-10 bg-surface-container-lowest">
+<span class="">0.0 ms (Contato)</span>
+<span class="">4.0 ms</span>
+<span class="">8.0 ms</span>
+<span class="">12.0 ms</span>
+<span class="">16.0 ms</span>
+<span class="">20.0 ms (Repouso)</span>
+</div>
+</div>
+<!-- Metric details summary footer -->
+<div class="grid grid-cols-3 gap-space-xs mt-space-sm pt-space-xs bg-surface-container p-space-sm rounded">
+<div class="flex flex-col">
+<span class="font-label-sm text-label-sm text-on-surface-variant">Área sob a Curva (Impulso)</span>
+<span class="font-telemetry-num text-telemetry-num text-on-surface font-semibold">142.50 N·s</span>
+</div>
+<div class="flex flex-col">
+<span class="font-label-sm text-label-sm text-on-surface-variant">Duração Pulso Principal</span>
+<span class="font-telemetry-num text-telemetry-num text-on-surface font-semibold">6.85 ms</span>
+</div>
+<div class="flex flex-col">
+<span class="font-label-sm text-label-sm text-on-surface-variant">Taxa dF/dt Inicial</span>
+<span class="font-telemetry-num text-telemetry-num text-secondary font-semibold">4.38 kN/ms</span>
+</div>
+</div>
+</div>
+<!-- Right Chart: Thermodynamic Energy Balance -->
+<div class="bg-surface-container-low rounded-lg p-space-lg shadow-sm flex flex-col">
+<div class="flex items-center justify-between mb-space-md">
+<div class="flex flex-col">
+<div class="flex items-center gap-space-xs">
+<span class="w-2 h-2 rounded-full bg-secondary"></span>
+<h2 class="font-title-md text-title-md font-bold text-on-surface">Balanço Energético do Sistema (ΣE)</h2>
+</div>
+<span class="font-body-sm text-body-sm text-on-surface-variant">Conservação termodinâmica global — Total: <span class="font-telemetry-num text-secondary font-semibold">159.4 J constante</span></span>
+</div>
+<div class="flex items-center gap-space-xs font-label-sm text-label-sm flex-wrap">
+<span class="flex items-center gap-1 text-primary"><span class="w-2.5 h-2.5 rounded-sm bg-primary"></span> Ek (Cinética)</span>
+<span class="flex items-center gap-1 text-secondary"><span class="w-2.5 h-2.5 rounded-sm bg-secondary"></span> Ee (Elástica)</span>
+<span class="flex items-center gap-1 text-tertiary"><span class="w-2.5 h-2.5 rounded-sm bg-tertiary-container"></span> W_diss (Plástica)</span>
+</div>
+</div>
+<!-- Energy Visualization Graphic -->
+<div class="relative w-full h-64 bg-surface-container-lowest rounded p-space-sm flex flex-col justify-between overflow-hidden">
+<svg class="w-full h-full relative z-10" preserveAspectRatio="none" viewBox="0 0 600 240">
+<!-- Background Reference Line at Total Energy = 159.4J (y = 20) -->
+<line opacity="0.4" stroke="#89929b" stroke-dasharray="3,3" stroke-width="1" x1="30" x2="570" y1="20" y2="20"></line>
+<text fill="#bfc7d2" font-family="JetBrains Mono" font-size="9" x="35" y="16">ΣE_total = 159.40 J (Conservação: ±0.02%)</text>
+<!-- Curve 1: Kinetic Energy Ek(t) decaying from 159.4J down to ~0J -->
+<path d="M 30 20 C 80 20, 110 50, 140 120 C 160 170, 180 200, 240 215 C 320 220, 480 220, 570 220" fill="none" stroke="#93ccff" stroke-width="2"></path>
+<!-- Curve 2: Elastic Strain Energy Ee(t) peaking at impact reversal then falling to small rebound -->
+<path d="M 30 220 C 80 220, 120 180, 160 70 C 190 70, 220 150, 260 185 C 320 190, 450 190, 570 192" fill="none" stroke="#7bd0ff" stroke-width="2"></path>
+<!-- Curve 3: Dissipated Energy W_diss(t) monotonically saturating to 86.4J (y = 110) -->
+<path d="M 30 220 C 100 220, 130 180, 160 135 C 190 115, 230 110, 300 110 C 400 110, 500 110, 570 110" fill="none" stroke="#8990a8" stroke-dasharray="5,2" stroke-width="2.5"></path>
+<!-- Intersect Annotation Markers -->
+<circle cx="160" cy="135" fill="#bec6e0" r="4"></circle>
+<circle cx="160" cy="70" fill="#7bd0ff" r="4"></circle>
+</svg>
+<!-- Floating Energy HUD Note -->
+<div class="absolute right-4 top-10 bg-surface-container-high px-2 py-1.5 rounded shadow flex flex-col gap-0.5">
+<span class="font-label-sm text-label-sm text-secondary font-bold">ESTADO TERMINAL (t = 20 ms)</span>
+<div class="font-telemetry-num text-telemetry-num text-on-surface">
+              W_diss: <span class="text-tertiary-fixed font-bold">86.4 J (54.2%)</span>
+</div>
+<div class="font-telemetry-num text-telemetry-num text-on-surface">
+              Ee_res: <span class="text-secondary font-bold">36.3 J (22.8%)</span>
+</div>
+<div class="font-telemetry-num text-telemetry-num text-on-surface">
+              Ek_res: <span class="text-primary font-bold">36.7 J (23.0%)</span>
+</div>
+</div>
+<!-- Chart Timeline X-Axis -->
+<div class="flex justify-between items-center text-on-surface-variant font-telemetry-num text-[10px] pt-1 z-10 bg-surface-container-lowest">
+<span class="">0.0 ms</span>
+<span class="">4.0 ms (Pico Ee)</span>
+<span class="">8.0 ms</span>
+<span class="">12.0 ms (Saturação)</span>
+<span class="">16.0 ms</span>
+<span class="">20.0 ms</span>
+</div>
+</div>
+<!-- Dynamic Energy Indicators Summary -->
+<div class="grid grid-cols-3 gap-space-xs mt-space-sm pt-space-xs bg-surface-container p-space-sm rounded">
+<div class="flex flex-col">
+<span class="font-label-sm text-label-sm text-on-surface-variant">Taxa de Dissipação</span>
+<span class="font-telemetry-num text-telemetry-num text-on-surface font-semibold">12.61 kW (Pico)</span>
+</div>
+<div class="flex flex-col">
+<span class="font-label-sm text-label-sm text-on-surface-variant">Eficiência Amortecedora</span>
+<span class="font-telemetry-num text-telemetry-num text-on-surface font-semibold">ψ = 0.542</span>
+</div>
+<div class="flex flex-col">
+<span class="font-label-sm text-label-sm text-on-surface-variant">Erro de Balanço ΔE/E0</span>
+<span class="font-telemetry-num text-telemetry-num text-primary font-semibold">&lt; 0.02% (Conforme)</span>
+</div>
+</div>
+</div>
+</div>
+<!-- Bottom Section: Detailed FEA Probe Data Table & Export / Certification Suite -->
+<div class="grid grid-cols-1 lg:grid-cols-12 gap-space-md w-full">
+<!-- Left Table: Nodal Sampling and Mechanical Extrema (8 cols) -->
+<div class="lg:col-span-8 bg-surface-container-low rounded-lg p-space-lg shadow-sm flex flex-col">
+<div class="flex items-center justify-between mb-space-md">
+<div class="flex items-center gap-space-xs">
+<span class="material-symbols-outlined text-primary text-[20px]">pin_drop</span>
+<div>
+<h3 class="font-title-md text-title-md font-bold text-on-surface">Sondas Pontuais e Extremos Mecânicos</h3>
+<p class="font-body-sm text-body-sm text-on-surface-variant">Valores amostrados nas regiões de maior solicitação dinâmica e pontos de fixação</p>
+</div>
+</div>
+<div class="flex items-center gap-space-xs">
+<button class="px-2 py-1 rounded bg-surface-container hover:bg-surface-container-high text-on-surface font-label-sm text-label-sm flex items-center gap-1">
+<span class="material-symbols-outlined text-[14px]">tune</span> Filtrar Nós Críticos
+            </button><button onclick="document.getElementById('report-modal').classList.remove('hidden')" class="px-2.5 py-1 rounded bg-primary-container text-on-primary-container hover:bg-primary font-label-sm text-label-sm flex items-center gap-1 font-semibold transition-colors">
+  <span class="material-symbols-outlined text-[14px]">assignment</span> Ver Dossiê Completo
+</button>
+</div>
+</div>
+<div class="w-full overflow-x-auto">
+<table class="w-full text-left font-body-sm text-body-sm">
+<thead class="bg-surface-container-highest text-on-surface-variant font-label-sm text-label-sm uppercase">
+<tr>
+<th class="py-2.5 px-3">Parâmetro Físico</th>
+<th class="py-2.5 px-3">Localização / Nó FEA</th>
+<th class="py-2.5 px-3">Magnitude Registrada</th>
+<th class="py-2.5 px-3">Limite Regulamentar</th>
+<th class="py-2.5 px-3 text-right">Margem / Status</th>
+</tr>
+</thead>
+<tbody class="divide-y-0 text-on-surface font-telemetry-num text-telemetry-num">
+<!-- Row 1 -->
+<tr class="hover:bg-surface-container transition-colors">
+<td class="py-2 px-3 font-medium flex items-center gap-1.5 font-body-md text-body-md">
+<span class="w-2 h-2 rounded-full bg-error"></span> Carga Normal de Impacto (Fn)
+                </td>
+<td class="py-2 px-3 text-on-surface-variant">Placa Frontal • Nó #08.411</td>
+<td class="py-2 px-3 font-bold text-error">18.42 kN</td>
+<td class="py-2 px-3 text-on-surface-variant">15.00 kN</td>
+<td class="py-2 px-3 text-right">
+<span class="px-2 py-0.5 rounded bg-error-container text-on-error-container font-label-sm text-label-sm font-semibold">
+                    -22.8% (EXCEDIDO)
+                  </span>
+</td>
+</tr>
+<!-- Row 2 -->
+<tr class="bg-surface-container-lowest/30 hover:bg-surface-container transition-colors"><td class="py-2 px-3 font-medium flex items-center gap-1.5 font-body-md text-body-md">
+  <span class="w-2 h-2 rounded-full bg-error animate-pulse"></span> Tensão Cisalhante Máx (τ_max)
+</td>
+<td class="py-2 px-3 text-on-surface-variant">
+  <div class="flex flex-col">
+    <span class="">Mancal Bipartido • Nó #12.094</span>
+    <button onclick="document.getElementById('report-modal').classList.remove('hidden')" class="text-primary text-[10px] hover:underline flex items-center gap-0.5 text-left mt-0.5">
+      <span class="material-symbols-outlined text-[11px]">visibility</span> Ver Decomposição Tensorial
+    </button>
+  </div>
+</td>
+<td class="py-2 px-3 font-bold text-error font-telemetry-num">368.4 MPa</td>
+<td class="py-2 px-3 text-on-surface-variant">378.0 MPa (τ_adm)</td>
+<td class="py-2 px-3 text-right">
+  <span class="px-2 py-0.5 rounded bg-error-container text-on-error-container font-label-sm text-label-sm font-bold">
+    CRÍTICO TRESCA (FS=1.05)
+  </span>
+</td></tr>
+<!-- Row 3 -->
+<tr class="hover:bg-surface-container transition-colors">
+<td class="py-2 px-3 font-medium flex items-center gap-1.5 font-body-md text-body-md">
+<span class="w-2 h-2 rounded-full bg-secondary"></span> Coeficiente Restituição (e)
+                </td>
+<td class="py-2 px-3 text-on-surface-variant">Ponto de Impacto • Superfície S3</td>
+<td class="py-2 px-3 font-bold text-secondary">0.482</td>
+<td class="py-2 px-3 text-on-surface-variant">0.450 ± 0.05</td>
+<td class="py-2 px-3 text-right">
+<span class="px-2 py-0.5 rounded bg-surface-container-high text-secondary font-label-sm text-label-sm font-semibold">
+                    CONFORME
+                  </span>
+</td>
+</tr>
+<!-- Row 4 -->
+<tr class="bg-surface-container-lowest/30 hover:bg-surface-container transition-colors">
+<td class="py-2 px-3 font-medium flex items-center gap-1.5 font-body-md text-body-md">
+<span class="w-2 h-2 rounded-full bg-primary"></span> Deformação Específica (ε_p)
+                </td>
+<td class="py-2 px-3 text-on-surface-variant">Raiz do Suporte • Nó #14.802</td>
+<td class="py-2 px-3 font-bold text-on-surface">3.84 %</td>
+<td class="py-2 px-3 text-on-surface-variant">12.00 % (ε_ruptura)</td>
+<td class="py-2 px-3 text-right">
+<span class="px-2 py-0.5 rounded bg-surface-container-high text-primary font-label-sm text-label-sm font-semibold">
+                    SEGURA (&gt;3x)
+                  </span>
+</td>
+</tr>
+<!-- Row 5 -->
+<tr class="hover:bg-surface-container transition-colors">
+<td class="py-2 px-3 font-medium flex items-center gap-1.5 font-body-md text-body-md">
+<span class="w-2 h-2 rounded-full bg-outline"></span> Fator Acumulado de Fadiga (D)
+                </td>
+<td class="py-2 px-3 text-on-surface-variant">Furo de Fixação • Nó #03.119</td>
+<td class="py-2 px-3 font-bold text-on-surface">0.042 / ciclo</td>
+<td class="py-2 px-3 text-on-surface-variant">1.000 (Regra Palmgren)</td>
+<td class="py-2 px-3 text-right">
+<span class="px-2 py-0.5 rounded bg-surface-container-high text-on-surface-variant font-label-sm text-label-sm font-semibold">
+                    N_ciclos = 24
+                  </span>
+</td>
+</tr>
+</tbody>
+</table>
+</div>
+<div class="mt-space-md pt-space-xs flex items-center justify-between text-on-surface-variant font-body-sm text-body-sm">
+<span class="flex items-center gap-1">
+<span class="material-symbols-outlined text-[14px]">info</span>
+            Malha: Tetraedro de 10 Nós (TET10) • 148.920 elementos • Formulação B-bar
+          </span>
+<span class="font-telemetry-num text-telemetry-num text-secondary">Amostragem em frequência: 500 kHz</span>
+</div>
+</div>
+<!-- Right Panel: Export, Formal Expert Opinion & Digital Verification (4 cols) -->
+<div class="lg:col-span-4 bg-surface-container-low rounded-lg p-space-lg shadow-sm flex flex-col justify-between">
+<div>
+<div class="flex items-center gap-space-xs mb-space-sm">
+<span class="material-symbols-outlined text-secondary text-[20px]">verified_user</span>
+<h3 class="font-title-md text-title-md font-bold text-on-surface">Laudo &amp; Certificação Técnica</h3>
+</div>
+<p class="font-body-sm text-body-sm text-on-surface-variant mb-space-md">
+            Geração direta de relatório auditável para homologação em conformidade com normas regulatórias internacionais.
+          </p>
+<!-- Checkbox Options Group -->
+<div class="bg-surface-container-lowest border border-outline-variant/50 rounded p-space-sm mb-space-md flex flex-col gap-space-xs">
+  <div class="flex items-center justify-between">
+    <span class="font-label-sm text-label-sm font-bold text-primary flex items-center gap-1">
+      <span class="material-symbols-outlined text-[14px]">matrix</span>
+      Tensor de Tensões de Cauchy &amp; Cisalhamento Máx (τ_max)
+    </span>
+    <span class="px-1 py-0.5 rounded bg-error-container text-on-error-container font-label-sm text-[9px] font-bold">ÁPICE CHOQUE OBLÍQUO</span>
+  </div>
+  <div class="font-telemetry-num text-[10px] bg-surface-container-high/70 p-1.5 rounded text-on-surface leading-tight font-mono">
+    <div class="text-outline text-[9px] mb-0.5">Matriz do Tensor [σ_ij] (MPa):</div>
+    <div class="grid grid-cols-3 gap-1 text-center py-0.5 border-b border-outline-variant/30">
+      <span class="">σ_xx: <strong class="text-primary">184.2</strong></span>
+      <span class="text-error font-bold bg-error-container/30 rounded px-0.5">τ_xy: 368.4</span>
+      <span class="">τ_xz: 84.1</span>
+    </div>
+    <div class="grid grid-cols-3 gap-1 text-center py-0.5 border-b border-outline-variant/30">
+      <span class="text-error font-bold bg-error-container/30 rounded px-0.5">τ_yx: 368.4</span>
+      <span class="">σ_yy: <strong class="text-primary">584.2</strong></span>
+      <span class="">τ_yz: 62.0</span>
+    </div>
+    <div class="grid grid-cols-3 gap-1 text-center py-0.5">
+      <span class="">τ_zx: 84.1</span>
+      <span class="">τ_zy: 62.0</span>
+      <span class="">σ_zz: <strong class="text-primary">112.5</strong></span>
+    </div>
+  </div>
+  <div class="bg-surface-container-high p-1.5 rounded flex flex-col gap-0.5 font-label-sm text-[10px]">
+    <div class="flex items-center justify-between text-on-surface">
+      <span class="">Critério Tresca: <strong class="text-error font-telemetry-num">τ_max = (σ1 - σ3)/2 = 368.4 MPa</strong></span>
+      <span class="px-1 rounded bg-error-container text-on-error-container font-bold">FS_Tresca = 1.05</span>
+    </div>
+    <span class="text-on-surface-variant text-[9px]">Regime Crítico de Escoamento sob Choque Oblíquo (τ_adm = 378.0 MPa)</span>
+  </div>
+</div><div class="bg-surface-container p-space-sm rounded mb-space-md flex flex-col gap-space-xs"><span class="font-label-sm text-label-sm uppercase tracking-wider text-secondary">Dados a Anexar no Pacote:</span>
+<label class="flex items-center gap-space-xs cursor-pointer text-on-surface font-body-sm text-body-sm hover:text-primary">
+  <input checked="" class="accent-primary rounded" type="checkbox">
+  <span class="">Incluir Malha FEA Deformada (.VTK)</span>
+</label>
+<label class="flex items-center gap-space-xs cursor-pointer text-on-surface font-body-sm text-body-sm hover:text-primary">
+  <input checked="" class="accent-primary rounded" type="checkbox">
+  <span class="">Séries Temporais de Alta Resolução (HDF5)</span>
+</label>
+<label class="flex items-center justify-between gap-space-xs cursor-pointer text-on-surface font-body-sm text-body-sm hover:text-primary bg-surface-container-high/60 p-1 rounded">
+  <div class="flex items-center gap-space-xs">
+    <input checked="" class="accent-primary rounded" type="checkbox">
+    <span class="font-medium text-primary">Tensores de Tensão de Cauchy Completos</span>
+  </div>
+  <span class="px-1.5 py-0.5 rounded bg-primary-container text-on-primary-container font-label-sm text-[9px] font-bold uppercase">ATIVO / INCLUSO NO LAUDO</span>
+</label>
+<label class="flex items-center gap-space-xs cursor-pointer text-on-surface font-body-sm text-body-sm hover:text-primary">
+  <input checked="" class="accent-primary rounded" type="checkbox">
+  <span class="">Normas ABNT NBR ISO 10303 (STEP AP242)</span>
+</label></div>
+<!-- Quick Format Selectors -->
+<div class="bg-surface-container-lowest border border-outline-variant/50 rounded p-space-sm mb-space-md flex flex-col gap-space-xs">
+  <div class="flex items-center justify-between">
+    <span class="font-label-sm text-label-sm font-bold text-primary flex items-center gap-1">
+      <span class="material-symbols-outlined text-[14px]">matrix</span>
+      Tensor de Tensões de Cauchy &amp; Cisalhamento Máx (τ_max)
+    </span>
+    <span class="px-1 py-0.5 rounded bg-error-container text-on-error-container font-label-sm text-[9px] font-bold">ÁPICE CHOQUE OBLÍQUO</span>
+  </div>
+  <div class="font-telemetry-num text-[10px] bg-surface-container-high/70 p-1.5 rounded text-on-surface leading-tight font-mono">
+    <div class="text-outline text-[9px] mb-0.5">Matriz do Tensor [σ_ij] (MPa):</div>
+    <div class="grid grid-cols-3 gap-1 text-center py-0.5 border-b border-outline-variant/30">
+      <span class="">σ_xx: <strong class="text-primary">184.2</strong></span>
+      <span class="text-error font-bold bg-error-container/30 rounded px-0.5">τ_xy: 368.4</span>
+      <span class="">τ_xz: 84.1</span>
+    </div>
+    <div class="grid grid-cols-3 gap-1 text-center py-0.5 border-b border-outline-variant/30">
+      <span class="text-error font-bold bg-error-container/30 rounded px-0.5">τ_yx: 368.4</span>
+      <span class="">σ_yy: <strong class="text-primary">584.2</strong></span>
+      <span class="">τ_yz: 62.0</span>
+    </div>
+    <div class="grid grid-cols-3 gap-1 text-center py-0.5">
+      <span class="">τ_zx: 84.1</span>
+      <span class="">τ_zy: 62.0</span>
+      <span class="">σ_zz: <strong class="text-primary">112.5</strong></span>
+    </div>
+  </div>
+  <div class="bg-surface-container-high p-1.5 rounded flex flex-col gap-0.5 font-label-sm text-[10px]">
+    <div class="flex items-center justify-between text-on-surface">
+      <span class="">Critério Tresca: <strong class="text-error font-telemetry-num">τ_max = (σ1 - σ3)/2 = 368.4 MPa</strong></span>
+      <span class="px-1 rounded bg-error-container text-on-error-container font-bold">FS_Tresca = 1.05</span>
+    </div>
+    <span class="text-on-surface-variant text-[9px]">Regime Crítico de Escoamento sob Choque Oblíquo (τ_adm = 378.0 MPa)</span>
+  </div>
+</div><div class="flex flex-col gap-space-xs mb-space-md">
+<span class="font-label-sm text-label-sm text-on-surface-variant uppercase">Formato do Relatório Final:</span>
+<div class="grid grid-cols-3 gap-space-xs">
+<button class="p-space-xs rounded bg-surface-container-high hover:bg-surface-container-highest text-primary font-label-md text-label-md flex flex-col items-center gap-0.5">
+<span class="material-symbols-outlined text-[18px]">picture_as_pdf</span>
+<span class="">PDF / A-1b</span>
+</button>
+<button class="p-space-xs rounded bg-surface-container hover:bg-surface-container-high text-on-surface-variant font-label-md text-label-md flex flex-col items-center gap-0.5">
+<span class="material-symbols-outlined text-[18px]">data_table</span>
+<span class="">CSV / DAT</span>
+</button>
+<button class="p-space-xs rounded bg-surface-container hover:bg-surface-container-high text-on-surface-variant font-label-md text-label-md flex flex-col items-center gap-0.5">
+<span class="material-symbols-outlined text-[18px]">deployed_code</span>
+<span class="">VTK / STEP</span>
+</button>
+</div>
+</div>
+</div>
+<!-- Digital Signature and Issue Button -->
+<div class="bg-surface-container-lowest p-space-sm rounded flex flex-col gap-space-xs">
+<div class="flex items-center justify-between text-on-surface-variant font-telemetry-num text-[10px]">
+<span class="">HASH SHA-256:</span>
+<span class="text-secondary truncate max-w-[170px]">e3b0c44298fc1c149afbf4c8996fb924</span>
+</div>
+<div class="flex items-center gap-1 text-[10px] text-on-surface-variant font-label-sm">
+<span class="w-1.5 h-1.5 rounded-full bg-secondary"></span>
+<span class="">Auditoria Criptográfica Conforme ISO/IEC 17025</span>
+</div>
+<button class="mt-space-xs w-full py-2 px-space-md rounded bg-primary text-on-primary font-title-md text-title-md font-bold flex items-center justify-center gap-2 hover:bg-primary-fixed transition-colors shadow" id="emitirLaudoBtn">
+<span class="material-symbols-outlined text-[18px]">verified</span>
+<span class="">Emitir Laudo Pericial Homologado</span>
+</button>
+</div>
+</div>
+</div>
+</div>
+<div id="report-modal" class="fixed inset-0 z-50 flex items-center justify-center bg-surface-container-lowest/80 p-margin backdrop-blur-sm hidden">
+  <div class="bg-surface-container-low border border-outline-variant/60 rounded-lg shadow-lg w-full max-w-3xl max-h-[90vh] flex flex-col overflow-hidden">
+    <!-- Modal Header -->
+    <div class="flex items-center justify-between px-space-lg py-space-md bg-surface-container-lowest border-b border-outline-variant/40">
+      <div class="flex items-center gap-space-xs">
+        <span class="material-symbols-outlined text-primary text-[22px]">verified</span>
+        <div>
+          <h3 class="font-title-md text-title-md font-bold text-on-surface">Dossiê Técnico Pericial Gerado — Ensaio #04: Impacto Balístico Oblíquo</h3>
+          <span class="font-label-sm text-label-sm text-on-surface-variant font-telemetry-num">HASH: e3b0c44298fc1c149afbf4c8996fb924 • ABNT NBR ISO 10303 / ISO/IEC 17025</span>
+        </div>
+      </div>
+      <button onclick="document.getElementById('report-modal').classList.add('hidden')" class="p-1 text-on-surface-variant hover:text-on-surface hover:bg-surface-container-high rounded transition-colors">
+        <span class="material-symbols-outlined text-[20px]">close</span>
+      </button>
+    </div>
+
+    <!-- Modal Content Scrollable -->
+    <div class="p-space-lg overflow-y-auto flex flex-col gap-space-md font-body-sm text-body-sm">
+      <div class="grid grid-cols-1 md:grid-cols-3 gap-space-sm">
+        <div class="bg-surface-container p-space-sm rounded">
+          <span class="text-on-surface-variant font-label-sm text-[10px] uppercase block">Força de Choque (F_max)</span>
+          <span class="font-telemetry-num font-bold text-error text-[16px]">18.42 kN</span>
+          <span class="text-[10px] text-error block">+22.8% sobre limite admissível</span>
+        </div>
+        <div class="bg-surface-container p-space-sm rounded">
+          <span class="text-on-surface-variant font-label-sm text-[10px] uppercase block">Cisalhamento Tresca (τ_max)</span>
+          <span class="font-telemetry-num font-bold text-error text-[16px]">368.4 MPa</span>
+          <span class="text-[10px] text-tertiary block">Fator de Segurança: 1.05 (Crítico)</span>
+        </div>
+        <div class="bg-surface-container p-space-sm rounded">
+          <span class="text-on-surface-variant font-label-sm text-[10px] uppercase block">Energia Dissipada Total</span>
+          <span class="font-telemetry-num font-bold text-secondary text-[16px]">86.4 J</span>
+          <span class="text-[10px] text-on-surface-variant block">54.2% da cinética absorvida</span>
+        </div>
+      </div>
+
+      <!-- Decomposição Tensorial de Cauchy -->
+      <div class="bg-surface-container-lowest p-space-md rounded border border-outline-variant/40 flex flex-col gap-space-xs">
+        <div class="flex items-center justify-between">
+          <span class="font-title-md text-title-md font-semibold text-primary flex items-center gap-1">
+            <span class="material-symbols-outlined text-[18px]">grid_view</span> Matriz Completa do Tensor de Tensão de Cauchy [σ_ij]
+          </span>
+          <span class="text-secondary font-telemetry-num text-[11px]">Amostrado no Nó #12.094 em t = 4.20 ms</span>
+        </div>
+        <div class="grid grid-cols-3 gap-space-xs font-telemetry-num text-[12px] bg-surface-container-high/60 p-space-sm rounded">
+          <div class="bg-surface-container-lowest p-1.5 rounded text-center"><span class="text-outline-variant block text-[9px]">σ_xx</span> <strong class="text-on-surface">184.2 MPa</strong></div>
+          <div class="bg-error-container/20 border border-error/30 p-1.5 rounded text-center"><span class="text-error block text-[9px] font-bold">τ_xy (Máx)</span> <strong class="text-error">368.4 MPa</strong></div>
+          <div class="bg-surface-container-lowest p-1.5 rounded text-center"><span class="text-outline-variant block text-[9px]">τ_xz</span> <strong class="text-on-surface">84.1 MPa</strong></div>
+          <div class="bg-error-container/20 border border-error/30 p-1.5 rounded text-center"><span class="text-error block text-[9px] font-bold">τ_yx (Simétrico)</span> <strong class="text-error">368.4 MPa</strong></div>
+          <div class="bg-surface-container-lowest p-1.5 rounded text-center"><span class="text-outline-variant block text-[9px]">σ_yy (Von Mises Peak)</span> <strong class="text-primary">584.2 MPa</strong></div>
+          <div class="bg-surface-container-lowest p-1.5 rounded text-center"><span class="text-outline-variant block text-[9px]">τ_yz</span> <strong class="text-on-surface">62.0 MPa</strong></div>
+          <div class="bg-surface-container-lowest p-1.5 rounded text-center"><span class="text-outline-variant block text-[9px]">τ_zx</span> <strong class="text-on-surface">84.1 MPa</strong></div>
+          <div class="bg-surface-container-lowest p-1.5 rounded text-center"><span class="text-outline-variant block text-[9px]">τ_zy</span> <strong class="text-on-surface">62.0 MPa</strong></div>
+          <div class="bg-surface-container-lowest p-1.5 rounded text-center"><span class="text-outline-variant block text-[9px]">σ_zz</span> <strong class="text-on-surface">112.5 MPa</strong></div>
+        </div>
+        <p class="text-on-surface-variant text-[11px] leading-relaxed mt-1">
+          Parecer do Engenheiro Calculista: O componente operou acima do limiar elástico na transição do suporte frontal. Recomenda-se aumentar o raio de concordância no mancal bipartido (Nó #12.094) em 1.5mm para atenuar o pico cisalhante de 368.4 MPa para valores abaixo de 290.0 MPa (FS &gt; 1.30).
+        </p>
+      </div>
+    </div>
+
+    <!-- Modal Footer Actions -->
+    <div class="px-space-lg py-space-md bg-surface-container-lowest border-t border-outline-variant/40 flex flex-wrap items-center justify-between gap-space-sm">
+      <div class="flex items-center gap-space-xs">
+        <button onclick="alert('Exportando Tensores de Cauchy (.CSV / .VTK)...')" class="px-3 py-1.5 rounded bg-surface-container hover:bg-surface-container-high text-on-surface font-label-md text-label-md flex items-center gap-1 transition-colors">
+          <span class="material-symbols-outlined text-[16px]">file_download</span>
+          Exportar Tensores (.CSV / .VTK)
+        </button>
+      </div>
+      <div class="flex items-center gap-space-xs">
+        <button onclick="document.getElementById('report-modal').classList.add('hidden')" class="px-3 py-1.5 rounded bg-surface-container hover:bg-surface-container-high text-on-surface-variant hover:text-on-surface font-label-md text-label-md transition-colors">
+          Fechar
+        </button>
+        <button onclick="alert('Download iniciado: Laudo_Pericial_Ensaio04_Homologado.pdf (Assinatura SHA-256 válida)'); document.getElementById('report-modal').classList.add('hidden');" class="px-4 py-1.5 rounded bg-primary text-on-primary hover:bg-primary-fixed font-title-md text-body-md font-bold flex items-center gap-2 transition-colors shadow">
+          <span class="material-symbols-outlined text-[18px]">download_for_offline</span>
+          Download Laudo Pericial Homologado (PDF/A-1b assinado com SHA-256)
+        </button>
+      </div>
+    </div>
+  </div>
+</div></div>
+<script>
+  (function() {
+    const emitBtn = document.getElementById('emitirLaudoBtn');
+    if (emitBtn) {
+      emitBtn.addEventListener('click', function() {
+        const originalContent = emitBtn.innerHTML;
+        emitBtn.disabled = true;
+        emitBtn.innerHTML = `
+          <span class="material-symbols-outlined text-[18px] animate-spin">progress_activity</span>
+          <span>Compilando Dossi&ecirc; ABNT...</span>
+        `;
+        setTimeout(() => {
+          emitBtn.innerHTML = `
+            <span class="material-symbols-outlined text-[18px]">check_circle</span>
+            <span>Dossi&ecirc; #04 Assinado com Sucesso!</span>
+          `;
+          emitBtn.classList.remove('bg-primary', 'text-on-primary');
+          emitBtn.classList.add('bg-secondary-container', 'text-on-secondary-container');
+          setTimeout(() => {
+            emitBtn.innerHTML = originalContent;
+            emitBtn.classList.remove('bg-secondary-container', 'text-on-secondary-container');
+            emitBtn.classList.add('bg-primary', 'text-on-primary');
+            emitBtn.disabled = false;
+          }, 3000);
+        }, 1200);
+      });
+    }
+  })();
+</script></main><footer class="fixed bottom-0 left-0 right-0 h-6 bg-surface-container-lowest z-40 px-margin flex items-center justify-between"><div class="flex items-center gap-space-md font-telemetry-num text-telemetry-num text-on-surface-variant"><span class="">X: <span class="text-primary">142.500 mm</span></span><span class="">Y: <span class="text-primary">-88.125 mm</span></span><span class="">Z: <span class="text-primary">0.000 mm</span></span><span class="text-outline">|</span><span class="">Δ SNAP: <span class="text-secondary">0.500 mm</span></span></div><div class="flex items-center gap-space-lg font-telemetry-num text-telemetry-num"><div class="flex items-center gap-1"><span class="w-1.5 h-1.5 rounded-full bg-secondary"></span><span class="text-on-surface font-label-sm text-label-sm">SOLVER READY</span></div><span class="text-outline">|</span><span class="text-on-surface-variant font-label-sm text-label-sm">GRID: 1.0mm (TET10 MESH)</span></div></footer>
+
+</body></html>

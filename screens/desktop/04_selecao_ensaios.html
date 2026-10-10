@@ -1,0 +1,469 @@
+<!DOCTYPE html>
+
+<html class="dark" lang="en"><head><meta charset="utf-8"/><meta content="width=device-width, initial-scale=1.0" name="viewport"/><meta content="web_standard" name="shell-type"/><title>FisisCAD PRO</title><link href="https://fonts.googleapis.com" rel="preconnect"/><link crossorigin="" href="https://fonts.gstatic.com" rel="preconnect"/><link href="https://fonts.googleapis.com/css2?family=Geist:wght@400;500;600;700&amp;family=JetBrains+Mono:wght@400;500;600&amp;display=swap" rel="stylesheet"/><link href="https://fonts.googleapis.com/css2?family=Material+Symbols+Outlined:opsz,wght,FILL,GRAD@20..48,100..700,0..1,-50..200" rel="stylesheet"/>
+<link href="https://fonts.googleapis.com/css2?family=Material+Symbols+Outlined:wght,FILL@100..700,0..1&amp;display=swap" rel="stylesheet"/><style>@layer base { html, body { margin: 0; padding: 0; } body { overscroll-behavior: none; } main > :first-child { margin-top: 0 !important; } main > :last-child { margin-bottom: 0 !important; } } ::-webkit-scrollbar { display: none; }</style><script src="https://cdn.tailwindcss.com"></script><script id="tailwind-config">tailwind.config = { darkMode: "class", theme: { extend: { "colors": { "secondary-fixed": "#c4e7ff", "on-tertiary-fixed": "#131b2e", "on-tertiary-container": "#22293d", "background": "#0f131c", "secondary": "#7bd0ff", "primary-fixed": "#cce5ff", "on-primary": "#003351", "tertiary-fixed-dim": "#bec6e0", "error": "#ffb4ab", "on-primary-container": "#002c47", "inverse-surface": "#dfe2ef", "surface-container-low": "#181b25", "secondary-container": "#00a6e0", "on-secondary": "#00354a", "inverse-primary": "#006398", "surface-container-high": "#262a34", "on-secondary-fixed": "#001e2c", "tertiary": "#bec6e0", "on-surface-variant": "#bfc7d2", "surface-container-highest": "#31353f", "outline": "#89929b", "surface-container": "#1c1f29", "surface-dim": "#0f131c", "on-surface": "#dfe2ef", "inverse-on-surface": "#2c303a", "on-primary-fixed-variant": "#004b73", "on-tertiary": "#283044", "on-error-container": "#ffdad6", "secondary-fixed-dim": "#7bd0ff", "surface-container-lowest": "#0a0e17", "primary": "#93ccff", "primary-container": "#3198dc", "surface-tint": "#93ccff", "tertiary-container": "#8990a8", "tertiary-fixed": "#dae2fd", "on-secondary-fixed-variant": "#004c69", "on-secondary-container": "#00374d", "on-error": "#690005", "on-tertiary-fixed-variant": "#3f465c", "primary-fixed-dim": "#93ccff", "surface-variant": "#31353f", "error-container": "#93000a", "outline-variant": "#3f4850", "on-background": "#dfe2ef", "on-primary-fixed": "#001d31", "surface": "#0f131c", "surface-bright": "#353943" }, "borderRadius": { "DEFAULT": "0.125rem", "lg": "0.25rem", "xl": "0.5rem", "full": "0.75rem" }, "spacing": { "space-xs": "0.25rem", "gutter": "0.5rem", "space-lg": "0.75rem", "margin": "0.75rem", "space-md": "0.5rem", "space-xl": "1rem", "space-sm": "0.375rem" }, "fontFamily": { "headline-md": [ "Geist" ], "headline-sm": [ "Geist" ], "headline-lg": [ "Geist" ], "label-md": [ "JetBrains Mono" ], "telemetry-num": [ "JetBrains Mono" ], "title-md": [ "Geist" ], "body-sm": [ "JetBrains Mono" ], "label-sm": [ "JetBrains Mono" ], "body-md": [ "JetBrains Mono" ], "body-lg": [ "JetBrains Mono" ] }, "fontSize": { "headline-md": [ "1.25rem", { "lineHeight": "1.75rem", "letterSpacing": "-0.015em", "fontWeight": "600" } ], "headline-sm": [ "1rem", { "lineHeight": "1.5rem", "letterSpacing": "-0.01em", "fontWeight": "600" } ], "headline-lg": [ "1.5rem", { "lineHeight": "2rem", "letterSpacing": "-0.02em", "fontWeight": "600" } ], "label-md": [ "0.75rem", { "lineHeight": "1rem", "letterSpacing": "0.02em", "fontWeight": "500" } ], "telemetry-num": [ "0.75rem", { "lineHeight": "1rem", "letterSpacing": "-0.02em", "fontWeight": "600" } ], "title-md": [ "0.875rem", { "lineHeight": "1.25rem", "letterSpacing": "0em", "fontWeight": "500" } ], "body-sm": [ "0.6875rem", { "lineHeight": "1rem", "letterSpacing": "0.01em", "fontWeight": "400" } ], "label-sm": [ "0.625rem", { "lineHeight": "0.875rem", "letterSpacing": "0.04em", "fontWeight": "500" } ], "body-md": [ "0.75rem", { "lineHeight": "1.125rem", "letterSpacing": "0em", "fontWeight": "400" } ], "body-lg": [ "0.875rem", { "lineHeight": "1.375rem", "letterSpacing": "-0.01em", "fontWeight": "400" } ] } } } };</script></head><body class="bg-background font-body-md text-on-surface antialiased selection:bg-primary-container selection:text-on-primary"><header class="fixed top-0 left-0 right-0 z-50 bg-surface-container-lowest/90 backdrop-blur-xl shadow-[0_1px_8px_rgba(0,0,0,0.35)]"><div class="h-14 w-full px-margin flex items-center justify-between gap-space-lg"><div class="flex items-center gap-space-lg shrink-0"><div class="flex items-center gap-space-sm"><div class="w-7 h-7 rounded bg-primary-container flex items-center justify-center"><span class="material-symbols-outlined text-on-primary-container text-[18px]">architecture</span></div><span class="font-headline-sm text-headline-sm font-bold tracking-tight text-primary">FisisCAD <span class="text-secondary font-mono text-label-sm font-semibold px-space-xs py-0.5 rounded bg-surface-container-high">PRO</span></span></div><div class="hidden lg:flex items-center gap-space-xs font-label-md text-label-md text-outline"><span class="material-symbols-outlined text-[14px]">folder</span><span class="hover:text-on-surface transition-colors cursor-pointer">Structural_Analysis</span><span class="text-outline-variant">/</span><span class="text-on-surface font-semibold">Beam_Section_Rev4.step</span></div></div><nav class="hidden xl:flex items-center gap-space-xs font-label-md text-label-md" data-active-classes="bg-primary-container text-on-primary-container font-semibold rounded-lg"><a class="px-space-md py-space-xs text-on-surface-variant hover:text-on-surface hover:bg-surface-container-high transition-all rounded" data-path="inicio-hub" href="#">1. Início / Hub</a><a class="px-space-md py-space-xs text-on-surface-variant hover:text-on-surface hover:bg-surface-container-high transition-all rounded" data-path="modelagem-cad" href="#">2. Modelagem CAD (AutoCAD/Inventor)</a><a class="px-space-md py-space-xs text-on-surface-variant hover:text-on-surface hover:bg-surface-container-high transition-all rounded" data-path="selecao-de-ensaios-fisicos" href="#">3. Seleção de Ensaios Físicos</a><a class="px-space-md py-space-xs text-on-surface-variant hover:text-on-surface hover:bg-surface-container-high transition-all rounded" data-path="simulacao-fea" href="#">4. Simulação &amp; FEA</a></nav><div class="flex items-center gap-space-md shrink-0"><div class="hidden sm:flex items-center gap-space-xs"><div class="flex items-center gap-space-xs px-space-sm py-0.5 rounded bg-surface-container-high font-telemetry-num text-telemetry-num"><span class="w-1.5 h-1.5 rounded-full bg-secondary animate-pulse"></span><span class="text-secondary font-semibold">SOLVER READY</span></div><div class="flex items-center px-space-sm py-0.5 rounded bg-surface-container font-label-sm text-label-sm text-on-surface-variant"><span class="font-semibold text-tertiary">SI (mm, N, MPa)</span></div></div><div class="w-8 h-8 rounded-full bg-primary flex items-center justify-center"><span class="material-symbols-outlined text-on-primary text-[18px]">person</span></div></div></div></header><main class="w-full pt-14 bg-background min-h-screen"><div class="flex flex-col w-full">
+<!-- Top Technical Breadcrumb & Solver Status Strip -->
+<div class="w-full bg-surface-container-lowest px-margin py-space-sm flex flex-wrap items-center justify-between gap-space-md">
+<div class="flex items-center gap-space-sm">
+<span class="font-label-sm text-label-sm text-outline uppercase tracking-wider">Módulo de Transição:</span>
+<span class="font-label-sm text-label-sm px-space-xs py-0.5 rounded bg-surface-container text-tertiary">CAD → FÍSICA APLICADA</span>
+<span class="text-outline-variant font-mono">/</span>
+<span class="font-label-sm text-label-sm text-primary flex items-center gap-space-xs">
+<span class="w-1.5 h-1.5 rounded-full bg-primary animate-ping"></span>
+        ETAPA 03: DOMÍNIO DO MEIO
+      </span>
+</div>
+<div class="flex items-center gap-space-lg">
+<div class="flex items-center gap-space-xs">
+<span class="material-symbols-outlined text-[15px] text-secondary">memory</span>
+<span class="font-label-sm text-label-sm text-on-surface-variant">Motor de Cálculo: <strong class="text-on-surface font-mono">OpenFOAM + ChronoEngine + PARDISO</strong></span>
+</div>
+<div class="h-3 w-px bg-surface-container-high hidden sm:block"></div>
+<div class="flex items-center gap-space-xs">
+<span class="material-symbols-outlined text-[15px] text-tertiary">tune</span>
+<span class="font-label-sm text-label-sm text-on-surface-variant">Kernel Discreto: <strong class="text-secondary font-mono">Euler-Lagrange FSI v4</strong></span>
+</div>
+</div>
+</div>
+<!-- Main Viewport Layout -->
+<div class="w-full max-w-[1720px] mx-auto px-margin py-space-xl flex flex-col gap-space-xl">
+<!-- Editorial Orientation Header -->
+<div class="flex flex-col lg:flex-row lg:items-end justify-between gap-space-lg">
+<div class="flex flex-col gap-space-xs max-w-4xl">
+<div class="flex items-center gap-space-sm">
+<span class="font-label-sm text-label-sm font-semibold tracking-widest text-secondary uppercase bg-surface-container-high px-space-sm py-0.5 rounded">
+            Condicionamento de Fronteira
+          </span>
+<span class="font-label-sm text-label-sm text-outline font-mono">Fase 3 de 5</span>
+</div>
+<h1 class="font-headline-lg text-headline-lg text-on-surface font-bold tracking-tight">
+          Selecione o Domínio do Ensaio Físico
+        </h1>
+<p class="font-title-md text-title-md text-on-surface-variant max-w-3xl">
+          Defina o meio físico onde as leis fundamentais da mecânica clássica, dinâmica dos corpos e transporte de quantidade de movimento por fluidos serão impostas à geometria recém-modelada.
+        </p>
+</div>
+<!-- Quick Preset Filter Indicators -->
+<div class="flex items-center gap-space-xs self-start lg:self-auto bg-surface-container-low p-space-xs rounded-xl shadow-inner">
+<button class="px-space-md py-space-xs rounded font-label-sm text-label-sm bg-primary-container text-on-primary-container font-semibold transition-all" id="mode-all">Todos os Regimes</button>
+<button class="px-space-md py-space-xs rounded font-label-sm text-label-sm text-on-surface-variant hover:text-on-surface hover:bg-surface-container transition-all" id="mode-fluid">Fluido Puro</button>
+<button class="px-space-md py-space-xs rounded font-label-sm text-label-sm text-on-surface-variant hover:text-on-surface hover:bg-surface-container transition-all" id="mode-solid">Sólido Puro</button>
+</div>
+</div>
+<!-- Comparative Technical Cards Grid (3 Cards) -->
+<div class="grid grid-cols-1 lg:grid-cols-3 gap-space-lg w-full">
+<!-- CARD 1: AMBIENTE AÉREO -->
+<div class="group relative rounded-xl bg-surface-container-low flex flex-col justify-between overflow-hidden shadow-xl transition-all duration-300 hover:bg-surface-container hover:shadow-2xl">
+<!-- Visual Technical Ribbon -->
+<div class="h-1.5 w-full bg-secondary-container"></div>
+<div class="p-space-xl flex flex-col gap-space-lg">
+<!-- Top Tag & Icon -->
+<div class="flex items-start justify-between">
+<div class="w-12 h-12 rounded-xl bg-surface-container-high flex items-center justify-center text-secondary shadow-inner">
+<span class="material-symbols-outlined text-[26px]">air</span>
+</div>
+<div class="flex flex-col items-end gap-1">
+<span class="font-label-sm text-label-sm font-mono text-secondary px-space-sm py-0.5 rounded bg-surface-container-highest">CFD / EULERIAN</span>
+<span class="font-telemetry-num text-telemetry-num text-outline">Re: 1.2e5 → 8.4e6</span>
+</div>
+</div>
+<!-- Titles -->
+<div class="flex flex-col gap-space-xs">
+<h2 class="font-headline-md text-headline-md text-on-surface font-semibold group-hover:text-secondary transition-colors">
+              Ambiente Aéreo
+            </h2>
+<p class="font-body-sm text-body-sm text-outline">
+              CFD / Aerodinâmica Computacional &amp; Túnel de Vento Virtual
+            </p>
+</div>
+<!-- Technical Schematic Preview (Inline SVG Graph) -->
+<div class="w-full h-36 rounded-lg bg-surface-container-lowest p-space-sm relative overflow-hidden flex flex-col justify-between">
+<div class="flex items-center justify-between text-outline text-[11px] font-mono z-10">
+<span class="text-secondary font-bold">STREAMLINES &amp; CAMADA LIMITE</span>
+<span class="text-outline-variant">U∞ = 45.0 m/s</span>
+</div>
+<!-- SVG Vector Field Representation -->
+<svg class="absolute inset-0 w-full h-full opacity-60 pointer-events-none" preserveaspectratio="none" viewbox="0 0 320 120">
+<!-- Coordinate Grid Lines -->
+<line class="text-surface-container-highest" stroke="currentColor" stroke-dasharray="2,2" stroke-width="0.5" x1="0" x2="320" y1="20" y2="20"></line>
+<line class="text-surface-container-highest" stroke="currentColor" stroke-dasharray="2,2" stroke-width="0.5" x1="0" x2="320" y1="60" y2="60"></line>
+<line class="text-surface-container-highest" stroke="currentColor" stroke-dasharray="2,2" stroke-width="0.5" x1="0" x2="320" y1="100" y2="100"></line>
+<!-- Streamlines -->
+<path class="animate-[pulse_3s_infinite]" d="M 0,35 Q 120,32 170,18 T 320,15" fill="none" stroke="#7bd0ff" stroke-dasharray="6,4" stroke-width="1.5"></path>
+<path d="M 0,55 Q 100,50 160,35 T 320,38" fill="none" stroke="#7bd0ff" stroke-width="2"></path>
+<path d="M 0,70 Q 110,68 180,68 T 320,70" fill="none" stroke="#3198dc" stroke-width="1.8"></path>
+<path d="M 0,85 Q 130,92 190,105 T 320,100" fill="none" stroke="#00a6e0" stroke-dasharray="4,2" stroke-width="1.5"></path>
+<!-- Obstacle (Airfoil/Piece contour) -->
+<path d="M 120,60 C 145,45 185,52 220,62 C 180,68 140,68 120,60 Z" fill="#262a34" stroke="#93ccff" stroke-width="1.5"></path>
+<circle cx="160" cy="54" fill="#ffb4ab" r="3"></circle>
+</svg>
+<div class="z-10 flex items-center justify-between font-telemetry-num text-telemetry-num text-outline-variant pt-space-xs">
+<span class="text-secondary">Δp: 1.48 kPa</span>
+<span>C_d: 0.284 | C_l: 1.120</span>
+</div>
+</div>
+<!-- Applied Physical Laws -->
+<div class="flex flex-col gap-space-xs">
+<span class="font-label-sm text-label-sm font-semibold text-on-surface uppercase tracking-wider flex items-center gap-space-xs">
+<span class="material-symbols-outlined text-[15px] text-secondary">balance</span>
+              Leis da Física Aplicadas
+            </span>
+<div class="p-space-sm rounded-lg bg-surface-container-lowest font-body-sm text-body-sm text-on-surface-variant flex flex-col gap-1.5">
+<div class="flex items-start gap-space-xs">
+<span class="text-secondary font-mono font-bold">•</span>
+<span><strong>Navier-Stokes (Incompressível/Compressível):</strong> Conservação de massa &amp; momento em volume finito.</span>
+</div>
+<div class="flex items-start gap-space-xs">
+<span class="text-secondary font-mono font-bold">•</span>
+<span><strong>Turbulência RANS (k-ε / k-ω SST):</strong> Tensão aparente de Reynolds e descolamento de camada.</span>
+</div>
+<div class="flex items-start gap-space-xs">
+<span class="text-secondary font-mono font-bold">•</span>
+<span><strong>Aerodinâmica Integral:</strong> Coeficiente de Arrasto (C<sub>d</sub>), Sustentação (C<sub>l</sub>) e Momento de Arfagem (C<sub>m</sub>).</span>
+</div>
+</div>
+</div>
+<!-- Use Cases List -->
+<div class="flex flex-col gap-space-xs">
+<span class="font-label-sm text-label-sm font-semibold text-outline uppercase tracking-wider">Casos de Uso Primários</span>
+<div class="flex flex-wrap gap-space-xs font-label-sm text-label-sm">
+<span class="px-space-xs py-0.5 rounded bg-surface-container-high text-tertiary">Aerofólios &amp; Drones</span>
+<span class="px-space-xs py-0.5 rounded bg-surface-container-high text-tertiary">Pás Eólicas</span>
+<span class="px-space-xs py-0.5 rounded bg-surface-container-high text-tertiary">Fuselagens Automotivas</span>
+<span class="px-space-xs py-0.5 rounded bg-surface-container-high text-tertiary">Túnel Subsônico</span>
+</div>
+</div>
+</div>
+<!-- Action Trigger -->
+<div class="p-space-lg bg-surface-container-high/40">
+<button class="w-full py-space-sm px-space-md rounded-lg bg-surface-container-highest hover:bg-secondary-container hover:text-on-secondary-container text-on-surface font-title-md text-title-md font-semibold transition-all duration-200 flex items-center justify-center gap-space-sm shadow-md" onclick="selectDomain('aereo')">
+<span>Configurar Ensaio Aéreo</span>
+<span class="material-symbols-outlined text-[18px]">arrow_forward</span>
+</button>
+</div>
+</div>
+<!-- CARD 2: AMBIENTE TERRESTRE -->
+<div class="group relative rounded-xl bg-surface-container-low flex flex-col justify-between overflow-hidden shadow-xl transition-all duration-300 hover:bg-surface-container hover:shadow-2xl">
+<!-- Visual Technical Ribbon -->
+<div class="h-1.5 w-full bg-primary-container"></div>
+<div class="p-space-xl flex flex-col gap-space-lg">
+<!-- Top Tag & Icon -->
+<div class="flex items-start justify-between">
+<div class="w-12 h-12 rounded-xl bg-surface-container-high flex items-center justify-center text-primary shadow-inner">
+<span class="material-symbols-outlined text-[26px]">landslide</span>
+</div>
+<div class="flex flex-col items-end gap-1">
+<span class="font-label-sm text-label-sm font-mono text-primary px-space-sm py-0.5 rounded bg-surface-container-highest">RBD / FEA EXPLÍCITO</span>
+<span class="font-telemetry-num text-telemetry-num text-outline">g: 9.80665 m/s²</span>
+</div>
+</div>
+<!-- Titles -->
+<div class="flex flex-col gap-space-xs">
+<h2 class="font-headline-md text-headline-md text-on-surface font-semibold group-hover:text-primary transition-colors">
+              Ambiente Terrestre
+            </h2>
+<p class="font-body-sm text-body-sm text-outline">
+              RBD / Dinâmica de Impacto, Atrito &amp; Análise Estrutural FEA
+            </p>
+</div>
+<!-- Technical Schematic Preview (Inline SVG Graph) -->
+<div class="w-full h-36 rounded-lg bg-surface-container-lowest p-space-sm relative overflow-hidden flex flex-col justify-between">
+<div class="flex items-center justify-between text-outline text-[11px] font-mono z-10">
+<span class="text-primary font-bold">COLISÃO &amp; TENSÃO VON MISES</span>
+<span class="text-outline-variant">σ_max: 342 MPa</span>
+</div>
+<!-- SVG Vector Mechanical Impact Representation -->
+<svg class="absolute inset-0 w-full h-full opacity-65 pointer-events-none" preserveaspectratio="none" viewbox="0 0 320 120">
+<!-- Ground Plane -->
+<rect fill="#1c1f29" height="24" width="320" x="0" y="96"></rect>
+<line stroke="#89929b" stroke-width="1.5" x1="0" x2="320" y1="96" y2="96"></line>
+<!-- Cross hatching ground -->
+<path d="M 0,116 L 20,96 M 40,116 L 60,96 M 80,116 L 100,96 M 120,116 L 140,96 M 160,116 L 180,96 M 200,116 L 220,96 M 240,116 L 260,96 M 280,116 L 300,96" stroke="#3f4850" stroke-width="1"></path>
+<!-- Structural Model In Impact / Stress distribution -->
+<polygon fill="#262a34" points="120,96 150,30 200,30 220,96" stroke="#93ccff" stroke-width="1.5"></polygon>
+<!-- Von Mises color map gradient inside component -->
+<path d="M 135,96 L 145,75 L 180,75 L 195,96 Z" fill="#93000a" opacity="0.8"></path>
+<path d="M 145,75 L 150,55 L 175,55 L 180,75 Z" fill="#3198dc" opacity="0.6"></path>
+<!-- Contact Vectors (Reaction force & friction) -->
+<line stroke="#ffb4ab" stroke-width="2" x1="165" x2="165" y1="96" y2="10"></line>
+<polygon fill="#ffb4ab" points="165,8 161,16 169,16"></polygon>
+<!-- Friction Vector -->
+<line stroke="#7bd0ff" stroke-width="2" x1="165" x2="225" y1="96" y2="96"></line>
+<polygon fill="#7bd0ff" points="228,96 220,92 220,100"></polygon>
+</svg>
+<div class="z-10 flex items-center justify-between font-telemetry-num text-telemetry-num text-outline-variant pt-space-xs">
+<span class="text-primary">F_impacto: 48.6 kN</span>
+<span>μ_cinético: 0.42 | e: 0.68</span>
+</div>
+</div>
+<!-- Applied Physical Laws -->
+<div class="flex flex-col gap-space-xs">
+<span class="font-label-sm text-label-sm font-semibold text-on-surface uppercase tracking-wider flex items-center gap-space-xs">
+<span class="material-symbols-outlined text-[15px] text-primary">balance</span>
+              Leis da Física Aplicadas
+            </span>
+<div class="p-space-sm rounded-lg bg-surface-container-lowest font-body-sm text-body-sm text-on-surface-variant flex flex-col gap-1.5">
+<div class="flex items-start gap-space-xs">
+<span class="text-primary font-mono font-bold">•</span>
+<span><strong>Newton &amp; Mecânica de Impacto:</strong> Conservação do momento linear/angular e restituição elasto-plástica (e).</span>
+</div>
+<div class="flex items-start gap-space-xs">
+<span class="text-primary font-mono font-bold">•</span>
+<span><strong>Tribologia &amp; Coulomb:</strong> Fricção seca e estática/cinética (μ), adesão tangencial e desgaste.</span>
+</div>
+<div class="flex items-start gap-space-xs">
+<span class="text-primary font-mono font-bold">•</span>
+<span><strong>Critérios de Escoamento FEA:</strong> Hipótese de Hooke generalizada, deformação finita e limites de Von Mises/Tresca.</span>
+</div>
+</div>
+</div>
+<!-- Use Cases List -->
+<div class="flex flex-col gap-space-xs">
+<span class="font-label-sm text-label-sm font-semibold text-outline uppercase tracking-wider">Casos de Uso Primários</span>
+<div class="flex flex-wrap gap-space-xs font-label-sm text-label-sm">
+<span class="px-space-xs py-0.5 rounded bg-surface-container-high text-tertiary">Colisão Estrutural</span>
+<span class="px-space-xs py-0.5 rounded bg-surface-container-high text-tertiary">Drop Test (Queda Livre)</span>
+<span class="px-space-xs py-0.5 rounded bg-surface-container-high text-tertiary">Atrito de Pista &amp; Rolamento</span>
+<span class="px-space-xs py-0.5 rounded bg-surface-container-high text-tertiary">Fadiga de Mancal</span>
+</div>
+</div>
+</div>
+<!-- Action Trigger -->
+<div class="p-space-lg bg-surface-container-high/40">
+<button class="w-full py-space-sm px-space-md rounded-lg bg-surface-container-highest hover:bg-primary-container hover:text-on-primary-container text-on-surface font-title-md text-title-md font-semibold transition-all duration-200 flex items-center justify-center gap-space-sm shadow-md" onclick="selectDomain('terrestre')">
+<span>Configurar Ensaio Terrestre</span>
+<span class="material-symbols-outlined text-[18px]">arrow_forward</span>
+</button>
+</div>
+</div>
+<!-- CARD 3: AMBIENTE HÍBRIDO (MULTIFÍSICA) -->
+<div class="group relative rounded-xl bg-surface-container-low flex flex-col justify-between overflow-hidden shadow-2xl transition-all duration-300 hover:bg-surface-container">
+<!-- Visual Technical Ribbon with Double Hue -->
+<div class="h-1.5 w-full bg-gradient-to-r from-secondary-container via-primary-container to-secondary"></div>
+<div class="p-space-xl flex flex-col gap-space-lg">
+<!-- Top Tag & Icon -->
+<div class="flex items-start justify-between">
+<div class="w-12 h-12 rounded-xl bg-surface-container-high flex items-center justify-center text-primary-fixed shadow-inner">
+<span class="material-symbols-outlined text-[26px]">cyclone</span>
+</div>
+<div class="flex flex-col items-end gap-1">
+<span class="font-label-sm text-label-sm font-mono text-on-primary bg-primary font-bold px-space-sm py-0.5 rounded shadow">
+                ★ MAIS ABRANGENTE
+              </span>
+<span class="font-telemetry-num text-telemetry-num text-secondary">FSI CO-SIMULAÇÃO 2-WAY</span>
+</div>
+</div>
+<!-- Titles -->
+<div class="flex flex-col gap-space-xs">
+<h2 class="font-headline-md text-headline-md text-on-surface font-semibold group-hover:text-primary-fixed-dim transition-colors">
+              Ambiente Híbrido
+            </h2>
+<p class="font-body-sm text-body-sm text-secondary">
+              Multifísica Total: Acoplamento Fluido-Estrutura (FSI) &amp; Solo
+            </p>
+</div>
+<!-- Technical Schematic Preview (Inline SVG Graph) -->
+<div class="w-full h-36 rounded-lg bg-surface-container-lowest p-space-sm relative overflow-hidden flex flex-col justify-between">
+<div class="flex items-center justify-between text-outline text-[11px] font-mono z-10">
+<span class="text-secondary font-bold">CINEMÁTICA BALÍSTICA &amp; VENTO CRUZADO</span>
+<span class="text-tertiary">Dt = 0.0001s</span>
+</div>
+<!-- SVG Multi-domain Interaction Vector -->
+<svg class="absolute inset-0 w-full h-full opacity-70 pointer-events-none" preserveaspectratio="none" viewbox="0 0 320 120">
+<!-- Ground Plane -->
+<rect fill="#181b25" height="20" width="320" x="0" y="100"></rect>
+<line stroke="#7bd0ff" stroke-dasharray="4,2" stroke-width="1" x1="0" x2="320" y1="100" y2="100"></line>
+<!-- Ballistic Curved Trajectory with Drag -->
+<path d="M 20,20 Q 140,10 230,100" fill="none" stroke="#dfe2ef" stroke-dasharray="3,3" stroke-width="1.5"></path>
+<!-- Cross-winds flow vectors -->
+<path d="M 0,35 H 80 M 0,55 H 120 M 0,75 H 160" opacity="0.6" stroke="#00a6e0" stroke-dasharray="5,3" stroke-width="1.2"></path>
+<!-- Flying Body descending to contact -->
+<g transform="translate(180, 52) rotate(24)">
+<rect fill="#31353f" height="16" rx="2" stroke="#7bd0ff" stroke-width="1.5" width="32" x="-16" y="-8"></rect>
+<!-- Drag vectors backward -->
+<line stroke="#ffb4ab" stroke-width="1.8" x1="-16" x2="-35" y1="0" y2="0"></line>
+<polygon fill="#ffb4ab" points="-38,0 -32,-3 -32,3"></polygon>
+<!-- Gravity vector downward -->
+<line stroke="#93ccff" stroke-width="1.8" x1="0" x2="0" y1="8" y2="28"></line>
+<polygon fill="#93ccff" points="0,31 -3,25 3,25"></polygon>
+</g>
+<!-- Bounce contact wave -->
+<circle cx="230" cy="100" fill="none" opacity="0.7" r="14" stroke="#ffb4ab" stroke-width="1.5"></circle>
+<circle cx="230" cy="100" fill="none" opacity="0.4" r="24" stroke="#ffb4ab" stroke-width="1"></circle>
+</svg>
+<div class="z-10 flex items-center justify-between font-telemetry-num text-telemetry-num text-outline-variant pt-space-xs">
+<span class="text-secondary">Coupled Solvers: OK</span>
+<span class="text-primary font-bold">Matriz Misto FSI Ativa</span>
+</div>
+</div>
+<!-- Applied Physical Laws -->
+<div class="flex flex-col gap-space-xs">
+<span class="font-label-sm text-label-sm font-semibold text-on-surface uppercase tracking-wider flex items-center gap-space-xs">
+<span class="material-symbols-outlined text-[15px] text-secondary">balance</span>
+              Leis da Física Aplicadas
+            </span>
+<div class="p-space-sm rounded-lg bg-surface-container-lowest font-body-sm text-body-sm text-on-surface-variant flex flex-col gap-1.5">
+<div class="flex items-start gap-space-xs">
+<span class="text-secondary font-mono font-bold">•</span>
+<span><strong>Interação Fluido-Estrutura (FSI):</strong> Transferência bidirecional de pressão dinâmica para a malha estrutural.</span>
+</div>
+<div class="flex items-start gap-space-xs">
+<span class="text-secondary font-mono font-bold">•</span>
+<span><strong>Balística Não-Linear:</strong> Trajetória sob ação gravitacional com resistência aerodinâmica e efeito Magnus.</span>
+</div>
+<div class="flex items-start gap-space-xs">
+<span class="text-secondary font-mono font-bold">•</span>
+<span><strong>Impacto com Atenuação Fluida:</strong> Amortecimento hidrodinâmico prévio à compressão rígida no terreno.</span>
+</div>
+</div>
+</div>
+<!-- Use Cases List -->
+<div class="flex flex-col gap-space-xs">
+<span class="font-label-sm text-label-sm font-semibold text-outline uppercase tracking-wider">Casos de Uso Primários</span>
+<div class="flex flex-wrap gap-space-xs font-label-sm text-label-sm">
+<span class="px-space-xs py-0.5 rounded bg-surface-container-high text-tertiary">Queda com Paraquedas</span>
+<span class="px-space-xs py-0.5 rounded bg-surface-container-high text-tertiary">Drones em Rajada &amp; Choque</span>
+<span class="px-space-xs py-0.5 rounded bg-surface-container-high text-tertiary">Frenagem Aero + Solo</span>
+<span class="px-space-xs py-0.5 rounded bg-surface-container-high text-tertiary">Projéteis Balísticos</span>
+</div>
+</div>
+</div>
+<!-- Action Trigger -->
+<div class="p-space-lg bg-surface-container-high/40">
+<button class="w-full py-space-sm px-space-md rounded-lg bg-primary hover:bg-primary-container text-on-primary hover:text-on-primary-container font-title-md text-title-md font-bold transition-all duration-200 flex items-center justify-center gap-space-sm shadow-lg" onclick="selectDomain('hibrido')">
+<span>Configurar Ensaio Multifísica Híbrido</span>
+<span class="material-symbols-outlined text-[18px]">rocket_launch</span>
+</button>
+</div>
+</div>
+</div>
+<!-- Bottom Panel: Loaded Model & Physical Constants Verification -->
+<div class="w-full rounded-xl bg-surface-container-low p-space-lg flex flex-col lg:flex-row gap-space-xl items-stretch justify-between shadow-lg">
+<!-- Left: CAD Loaded Model Info & Geometry Specs -->
+<div class="flex flex-col sm:flex-row gap-space-lg lg:w-5/12 items-start">
+<!-- 3D Mini Thumbnail -->
+<div class="w-28 h-28 rounded-lg bg-surface-container-lowest shrink-0 flex flex-col items-center justify-center relative p-space-xs overflow-hidden shadow-inner">
+<div class="absolute inset-0 bg-gradient-to-tr from-primary/10 to-transparent pointer-events-none"></div>
+<span class="material-symbols-outlined text-[42px] text-primary mb-1">view_in_ar</span>
+<span class="font-telemetry-num text-telemetry-num text-on-surface-variant font-bold">3D STEP</span>
+<span class="font-label-sm text-label-sm text-secondary font-mono">142k TET4</span>
+</div>
+<!-- Metadata Properties -->
+<div class="flex flex-col gap-space-xs min-w-0">
+<div class="flex items-center gap-space-xs flex-wrap">
+<span class="font-label-sm text-label-sm px-space-xs py-0.5 rounded bg-surface-container-high text-secondary font-mono">PARASOLID B-REP</span>
+<span class="font-label-sm text-label-sm text-on-surface-variant">Malha Pronta</span>
+</div>
+<h3 class="font-title-md text-title-md font-bold text-on-surface truncate">
+            Suporte_Mancal_Articulado_v2.step
+          </h3>
+<p class="font-body-sm text-body-sm text-outline">
+            Geometria paramétrica finalizada via FisisCAD Modeler. Pronta para imposição de malha volumétrica e equações governantes.
+          </p>
+<!-- Rapid Dimension Readouts -->
+<div class="grid grid-cols-3 gap-space-xs pt-1 font-telemetry-num text-telemetry-num text-on-surface-variant">
+<div class="flex flex-col">
+<span class="text-[10px] text-outline font-label-sm">MASSA</span>
+<span class="text-on-surface font-bold">3.482 kg</span>
+</div>
+<div class="flex flex-col">
+<span class="text-[10px] text-outline font-label-sm">VOLUME</span>
+<span class="text-on-surface font-bold">4.43e-4 m³</span>
+</div>
+<div class="flex flex-col">
+<span class="text-[10px] text-outline font-label-sm">MATERIAL</span>
+<span class="text-secondary font-bold">Al 7075-T6</span>
+</div>
+</div>
+</div>
+</div>
+<!-- Center / Right: Tunable Physical Constants Toolbar -->
+<div class="lg:w-7/12 flex flex-col justify-between gap-space-md bg-surface-container-lowest p-space-md rounded-lg shadow-inner">
+<div class="flex flex-wrap items-center justify-between gap-space-sm pb-space-xs">
+<div class="flex items-center gap-space-xs">
+<span class="material-symbols-outlined text-[16px] text-secondary">tune</span>
+<span class="font-label-sm text-label-sm font-semibold text-on-surface uppercase tracking-wide">Constantes Físicas do Meio (Editáveis)</span>
+</div>
+<span class="font-label-sm text-label-sm text-outline font-mono">Condições Normais (CNTP - 20°C, 101.3 kPa)</span>
+</div>
+<!-- 3 Interactive Input Fields with Units -->
+<div class="grid grid-cols-1 sm:grid-cols-3 gap-space-md">
+<!-- Constant 1: Gravity -->
+<div class="flex flex-col gap-1">
+<label class="font-label-sm text-label-sm text-on-surface-variant flex items-center justify-between">
+<span>Gravidade (g)</span>
+<span class="text-primary font-mono font-bold">9.807</span>
+</label>
+<div class="h-8 rounded bg-surface-container-high px-space-sm flex items-center justify-between shadow-inner">
+<input aria-label="Aceleração gravitacional" class="bg-transparent font-telemetry-num text-telemetry-num text-on-surface focus:outline-none w-20" type="text" value="9.80665"/>
+<span class="font-label-sm text-label-sm text-outline px-1 rounded bg-surface-container">m/s²</span>
+</div>
+</div>
+<!-- Constant 2: Air Density -->
+<div class="flex flex-col gap-1">
+<label class="font-label-sm text-label-sm text-on-surface-variant flex items-center justify-between">
+<span>Densidade do Ar (ρ)</span>
+<span class="text-secondary font-mono font-bold">1.225</span>
+</label>
+<div class="h-8 rounded bg-surface-container-high px-space-sm flex items-center justify-between shadow-inner">
+<input aria-label="Densidade atmosférica" class="bg-transparent font-telemetry-num text-telemetry-num text-on-surface focus:outline-none w-20" type="text" value="1.22500"/>
+<span class="font-label-sm text-label-sm text-outline px-1 rounded bg-surface-container">kg/m³</span>
+</div>
+</div>
+<!-- Constant 3: Dynamic Viscosity -->
+<div class="flex flex-col gap-1">
+<label class="font-label-sm text-label-sm text-on-surface-variant flex items-center justify-between">
+<span>Viscosidade Din. (μ)</span>
+<span class="text-tertiary font-mono font-bold">1.81e-5</span>
+</label>
+<div class="h-8 rounded bg-surface-container-high px-space-sm flex items-center justify-between shadow-inner">
+<input aria-label="Viscosidade cinemática" class="bg-transparent font-telemetry-num text-telemetry-num text-on-surface focus:outline-none w-20" type="text" value="1.81e-05"/>
+<span class="font-label-sm text-label-sm text-outline px-1 rounded bg-surface-container">Pa·s</span>
+</div>
+</div>
+</div>
+<!-- Quick Summary Bar with Pre-execution check -->
+<div class="flex items-center justify-between pt-space-xs text-outline font-label-sm text-label-sm">
+<div class="flex items-center gap-space-xs">
+<span class="material-symbols-outlined text-[15px] text-secondary">verified</span>
+<span>Malha volumétrica compatível com malhadores Tetraédricos e Poliédricos adaptativos.</span>
+</div>
+<button class="text-primary hover:text-secondary font-semibold transition-colors flex items-center gap-1 font-mono">
+<span>Restaurar Padrão ISO 2533</span>
+<span class="material-symbols-outlined text-[13px]">refresh</span>
+</button>
+</div>
+</div>
+</div>
+</div>
+<!-- Interactive Client-side Script -->
+<script>
+    function selectDomain(type) {
+      const names = {
+        'aereo': 'Ambiente Aéreo (CFD / Aerodinâmica)',
+        'terrestre': 'Ambiente Terrestre (RBD / FEA Mecânico)',
+        'hibrido': 'Ambiente Híbrido Multifísica (FSI Completo)'
+      };
+      // Visual feedback with micro-interaction toast simulation
+      alert(`Domínio [${names[type]}] selecionado!\nIniciando alocação de memória nos solvers e gerador de malha de contorno.`);
+    }
+
+    // Toggle filter buttons aesthetic
+    const btnAll = document.getElementById('mode-all');
+    const btnFluid = document.getElementById('mode-fluid');
+    const btnSolid = document.getElementById('mode-solid');
+
+    function setActiveBtn(active, inactives) {
+      active.className = 'px-space-md py-space-xs rounded font-label-sm text-label-sm bg-primary-container text-on-primary-container font-semibold transition-all shadow';
+      inactives.forEach(b => {
+        b.className = 'px-space-md py-space-xs rounded font-label-sm text-label-sm text-on-surface-variant hover:text-on-surface hover:bg-surface-container transition-all';
+      });
+    }
+
+    if (btnAll && btnFluid && btnSolid) {
+      btnAll.addEventListener('click', () => setActiveBtn(btnAll, [btnFluid, btnSolid]));
+      btnFluid.addEventListener('click', () => setActiveBtn(btnFluid, [btnAll, btnSolid]));
+      btnSolid.addEventListener('click', () => setActiveBtn(btnSolid, [btnAll, btnFluid]));
+    }
+  </script>
+</div></main><footer class="w-full bg-surface-container-lowest py-space-sm"><div class="w-full px-margin flex flex-wrap items-center justify-between gap-space-md text-on-surface-variant font-label-sm text-label-sm"><div><span>FisisCAD PRO v4.2.1-rc</span><span class="mx-space-xs text-outline-variant">|</span><span>PARASOLID KERNEL CONNECTED</span></div><div class="flex items-center gap-space-lg"><span class="font-telemetry-num text-telemetry-num text-on-surface">X: 0.000 Y: 0.000 Z: 0.000 mm</span><span class="text-outline-variant">|</span><span class="text-primary">SOLVER: DIRECT MULTIFRONTAL PARDISO</span></div></div></footer></body></html>
